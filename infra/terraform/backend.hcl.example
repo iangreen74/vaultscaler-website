@@ -1,0 +1,15 @@
+# Copy this file to backend.hcl and fill in your values
+# Do not commit backend.hcl to version control
+
+bucket         = "YOUR_TERRAFORM_STATE_BUCKET"
+key            = "vaultscaler-website/terraform.tfstate"
+region         = "YOUR_AWS_REGION"
+dynamodb_table = "YOUR_TERRAFORM_LOCKS_TABLE"  # Optional but recommended
+encrypt        = true
+
+# Example:
+# bucket         = "my-terraform-state-bucket"
+# key            = "vaultscaler-website/terraform.tfstate"
+# region         = "us-east-1"
+# dynamodb_table = "terraform-locks"
+# encrypt        = true
