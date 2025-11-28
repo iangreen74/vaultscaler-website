@@ -1,0 +1,21 @@
+<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- VaultScaler mark - upright infinity icon -->
+  
+  <!-- Rounded square background -->
+  <rect width="64" height="64" rx="14" fill="#020617"/>
+  
+  <!-- Upright Infinity Glyph centered -->
+  <g transform="translate(32, 32)">
+    <!-- Main infinity loop -->
+    <path d="M0 -18 C-6 -18 -10 -14 -10 -10 C-10 -6.5 -8 -3.5 -5.5 -1 C-8 1.5 -10 4.5 -10 8 C-10 12 -6 16 0 16 C6 16 10 12 10 8 C10 4.5 8 1.5 5.5 -1 C8 -3.5 10 -6.5 10 -10 C10 -14 6 -18 0 -18 Z M0 -14 C4 -14 7 -11.5 7 -10 C7 -7.2 4.5 -4.5 0 -4.5 C-4.5 -4.5 -7 -7.2 -7 -10 C-7 -11.5 -4 -14 0 -14 Z M0 1.5 C4.5 1.5 7 4.2 7 8 C7 9.5 4 12 0 12 C-4 12 -7 9.5 -7 8 C-7 4.2 -4.5 1.5 0 1.5 Z" 
+          fill="#F9FAFB" 
+          stroke="#2563EB" 
+          stroke-width="0.8"/>
+    
+    <!-- Engineered micro-detail -->
+    <rect x="-1.5" y="-2" width="3" height="3" fill="#F9FAFB"/>
+    
+    <!-- Optional accent highlight on top loop -->
+    <ellipse cx="0" cy="-10" rx="3" ry="2" fill="#38BDF8" opacity="0.3"/>
+  </g>
+</svg>
