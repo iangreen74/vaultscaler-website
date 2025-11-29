@@ -1,3 +1,4 @@
+// Route: /contact
 import { SITE } from "@/lib/site";
 
 export const metadata = {

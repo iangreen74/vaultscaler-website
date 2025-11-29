@@ -1,3 +1,4 @@
+// Route: /pricing
 import JsonLd from "@/components/JsonLd";
 import { SITE } from "@/lib/site";
 

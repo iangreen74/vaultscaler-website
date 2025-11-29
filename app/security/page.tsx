@@ -1,3 +1,4 @@
+// Route: /security
 import JsonLd from "@/components/JsonLd";
 import Link from "next/link";
 import { SITE } from "@/lib/site";

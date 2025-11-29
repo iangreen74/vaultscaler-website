@@ -1,3 +1,4 @@
+// Route: /team
 export const metadata = {
   title: 'Team — VaultScaler',
   description: 'Meet the VaultScaler team building Radix Core',

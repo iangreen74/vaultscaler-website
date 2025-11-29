@@ -1,3 +1,4 @@
+// Route: /docs
 export const metadata = {
   title: "Documentation — VaultScaler",
   description: "VaultScaler Radix Platform documentation coming soon.",
