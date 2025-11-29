@@ -9,8 +9,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        accent: '#0071e3',
-        'accent-hover': '#0077ed',
+        accent: '#39C5E4',
+        'accent-hover': '#32ACC7',
+        'stone-cream': {
+          1: '#F6EEE7',
+          2: '#ECE5DE',
+          3: '#CAC4BE',
+          4: '#A8A39E',
+          5: '#86827E',
+          6: '#4F4D4A',
+        },
+        'vs-blue': {
+          1: '#39C5E4',
+          2: '#32ACC7',
+          3: '#2A92AA',
+          4: '#23798D',
+          5: '#1C606F',
+          6: '#123D47',
+          7: '#0D2E35',
+        },
       },
     },
   },

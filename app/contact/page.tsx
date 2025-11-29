@@ -71,6 +71,13 @@ export default function Page() {
           Need logos, screenshots, or a one-pager? Email us and we'll share the latest bundle.
         </p>
       </div>
+
+      <div className="mt-10 rounded-2xl border-2 border-blue-200 bg-blue-50 p-8 text-center">
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">For Partners and Investors</h2>
+        <p className="text-lg text-gray-700 leading-relaxed">
+          VaultScaler is building deterministic AI operations for teams that train and deploy models in the real world. If you're exploring joint go-to-market, platform integration, or strategic investment in AI operations infrastructure, we'd love to talk.
+        </p>
+      </div>
     </main>
   );
 }
