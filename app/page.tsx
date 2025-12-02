@@ -1,201 +1,280 @@
 // Route: / (Home)
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Radix - AI Operations Platform | Train Faster, Deploy Smarter',
+  description: 'Cut training costs by 21% and govern every LLM call. The AI operations platform for teams that refuse to waste compute or compromise on governance.',
+  openGraph: {
+    title: 'Radix - AI Operations Platform',
+    description: 'Cut training costs by 21% and govern every LLM call. No stack changes. No vendor lock-in.',
+    type: 'website',
+  },
+};
 
 export default function Home() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative min-h-[85vh] flex items-center justify-center bg-gradient-to-b from-slate-50 via-white to-slate-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-3xl border border-slate-200/70 bg-white/80 backdrop-blur-sm p-8 md:p-10 shadow-sm space-y-6 text-center">
-            <h1 className="text-2xl md:text-3xl font-medium text-slate-700">
-              Democratizing and Economizing AI Operations
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto mb-8 leading-relaxed">
-              The Radix Platform combines Radix Core for GPU training and Radix Studio for LLM inference. It helps AI teams waste less GPU, escape pilot purgatory, and keep models governed in production. Proven up to 21.4% more training throughput on existing hardware.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-4">
-              <Link
-                href="/pricing"
-                className="px-10 py-5 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-full font-bold hover:from-blue-700 hover:to-blue-800 transition-all text-xl shadow-2xl hover:shadow-blue-500/50 hover:scale-105 transform"
-              >
-                Start Radix Core Trial
-              </Link>
-              <Link
-                href="/contact"
-                className="px-8 py-4 bg-white border-2 border-blue-600 text-blue-600 rounded-full font-semibold hover:bg-blue-50 transition-colors text-lg"
-              >
-                Join Radix Studio Early Access
-              </Link>
+      {/* Hero - Lead with Radix */}
+      <section className="relative min-h-[clamp(600px,90vh,1200px)] flex items-center justify-center bg-gradient-to-br from-vs-mint-7 via-vs-mint-6 to-vs-mint-5 overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-1/4 -right-1/4 w-[60%] h-[60%] rounded-full bg-accent/10 blur-3xl" />
+          <div className="absolute -bottom-1/4 -left-1/4 w-[50%] h-[50%] rounded-full bg-vs-mint-4/30 blur-3xl" />
+        </div>
+
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Radix Brand */}
+          <p className="text-5xl sm:text-6xl md:text-7xl font-bold text-accent mb-6 tracking-tight">
+            Radix
+          </p>
+
+          {/* Main Tagline - speaks to both technical and business audiences */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
+            Train Models Faster.<br className="hidden sm:block" /> Deploy LLMs Smarter.
+          </h1>
+
+          {/* Platform clarification */}
+          <p className="text-sm text-accent font-medium mb-4 tracking-wide uppercase">
+            One Platform. Two Products: Radix Core (Training) + Radix Studio (Inference)
+          </p>
+
+          {/* Subheadline - value prop for both audiences */}
+          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Cut training costs by 21%. Govern every LLM call.
+          </p>
+
+          {/* Primary CTAs - differentiated for technical vs business buyers */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <Link
+              href="/pricing"
+              className="px-10 py-5 bg-accent text-vs-mint-7 rounded-full font-bold hover:bg-white transition-all text-xl shadow-2xl hover:shadow-accent/50 hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-accent/50"
+            >
+              Start Free Trial
+            </Link>
+            <Link
+              href="/contact"
+              className="px-8 py-4 bg-transparent border-2 border-white/30 backdrop-blur-sm text-white rounded-full font-semibold hover:bg-white/10 hover:border-white/50 transition-all text-lg focus:outline-none focus:ring-4 focus:ring-white/30"
+            >
+              Request Demo
+            </Link>
+          </div>
+
+          {/* Value stats - concrete numbers */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-3xl mx-auto" role="region" aria-label="Platform results">
+            <div className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+              <p className="text-3xl sm:text-4xl font-bold text-accent mb-1">21%</p>
+              <p className="text-sm text-white/80 font-medium">Training Throughput Gains</p>
+            </div>
+            <div className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+              <p className="text-3xl sm:text-4xl font-bold text-accent mb-1">$250K</p>
+              <p className="text-sm text-white/80 font-medium">Saved per 100 GPUs/Year</p>
+            </div>
+            <div className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+              <p className="text-3xl sm:text-4xl font-bold text-accent mb-1">Zero</p>
+              <p className="text-sm text-white/80 font-medium">Stack Changes Required</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* AI Operations Are Broken */}
-      <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12">The AI Operations Bottleneck</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <h3 className="font-bold text-xl mb-3">Wasted GPU Capacity</h3>
-              <p className="text-gray-700 leading-relaxed">
-                40–60% of GPU capacity sits idle during training because schedulers treat GPUs as monolithic resources, ignoring memory, compute, and power imbalances.
-              </p>
-            </div>
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <h3 className="font-bold text-xl mb-3">Pilot Purgatory</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Most AI pilots never reach production. Teams lack robust MLOps foundations, governance, and integration paths to turn promising demos into durable systems.
-              </p>
-            </div>
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <h3 className="font-bold text-xl mb-3">Governance Anxiety</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Data and AI governance gaps, compliance requirements, and risk concerns stop projects cold, especially in regulated industries that need auditability and control.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Meet VaultScaler */}
+      {/* The Problem - Why AI Ops Are Broken */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-4">Meet VaultScaler</h2>
-          <p className="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-12">
-            VaultScaler is an AI engineering company building deterministic operations for modern AI workloads. We democratize and economize AI operations for teams that train and deploy models in the real world.
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-vs-mint-6">
+            AI Operations Are Harder Than They Should Be
+          </h2>
+          <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+            Teams building AI face invisible costs and governance gaps that slow everything down.
           </p>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Training Problem */}
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+              <div className="w-12 h-12 bg-vs-mint-1 rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-vs-mint-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                </svg>
+              </div>
+              <h3 className="font-bold text-xl mb-3 text-vs-mint-6">The Training Problem</h3>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                GPU schedulers treat hardware as monolithic units. They account for GPU count but ignore memory, compute, and power constraints across training runs.
+              </p>
+              <p className="text-vs-mint-5 font-semibold">
+                Up to 21% cost or training time overruns due to resource imbalances.
+              </p>
+            </div>
+
+            {/* Inference Problem */}
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+              <div className="w-12 h-12 bg-vs-mint-1 rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-vs-mint-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="font-bold text-xl mb-3 text-vs-mint-6">The Inference Problem</h3>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Every LLM call makes invisible tradeoffs: cost vs. quality, speed vs. accuracy. Without governance, you can't see these tradeoffs—let alone control them.
+              </p>
+              <p className="text-vs-mint-5 font-semibold">
+                62% of organizations cite governance gaps as their top AI blocker.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* The Radix Platform */}
+      {/* The Radix Platform - Two Products */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-4">The Radix Platform</h2>
-          <p className="text-xl text-center text-gray-600 mb-12">Two products. One mission: efficient, governed AI operations.</p>
-          
-          <div className="grid md:grid-cols-2 gap-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">
+            The Radix Platform
+          </h2>
+          <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            Two products. One mission: make AI operations efficient, governed, and predictable.
+          </p>
+
+          <div className="grid lg:grid-cols-2 gap-8">
             {/* Radix Core */}
-            <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-3">Radix Core</h3>
-              <p className="text-lg text-gray-800 mb-6 leading-relaxed">
-                Radix Core saves you 21.4% on model training costs on your existing infrastructure.
+            <div className="bg-gradient-to-br from-vs-mint-6 to-vs-mint-5 rounded-2xl p-8 text-white">
+              <h3 className="text-2xl font-bold mb-2">Radix Core</h3>
+              <p className="text-vs-mint-1 text-sm font-medium mb-4">Model Training Optimization</p>
+              <p className="text-white/90 mb-6 leading-relaxed">
+                Get 21% more throughput from your existing GPU infrastructure. Radix Core uses closed-loop control to balance memory, compute, and power across all training runs.
               </p>
-              <div className="bg-blue-600 text-white rounded-xl p-4 mb-6 text-center">
-                <p className="text-2xl font-bold">21.4% throughput improvement</p>
-                <p className="text-sm mt-1">(p &lt; 0.001 vs FIFO)</p>
-              </div>
-              <ul className="space-y-2 text-gray-800">
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">✓</span>
-                  <span>Closed-loop control for memory, compute, and power</span>
+
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start gap-3">
+                  <span className="text-accent font-bold">Light</span>
+                  <span className="text-white/80">Deploy to Kubernetes in minutes. No stack changes.</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">✓</span>
-                  <span>Works with Kubernetes, Slurm, and Ray</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent font-bold">Demonstrable</span>
+                  <span className="text-white/80">Leadership-ready dashboards comparing Radix vs. your current scheduler.</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">✓</span>
-                  <span>Shadow mode for zero-risk proof</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent font-bold">Adaptive</span>
+                  <span className="text-white/80">Continual scheduling refinement that improves over time.</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">✓</span>
-                  <span>Air-gapped or API-enabled deployment</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">✓</span>
-                  <span>14-day trial available now</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent font-bold">Secure</span>
+                  <span className="text-white/80">Built for air-gapped deployment with Zero egress. SLSA Level 3 attestations.</span>
                 </li>
               </ul>
+
+              <div className="bg-white/10 rounded-xl p-4 text-center">
+                <p className="text-2xl font-bold text-accent">$28/GPU/month</p>
+                <p className="text-sm text-white/70">14-day full trial</p>
+              </div>
             </div>
 
             {/* Radix Studio */}
-            <div className="bg-gray-50 border-2 border-gray-300 rounded-2xl p-8">
-              <div className="flex items-start justify-between mb-3">
-                <h3 className="text-2xl font-bold">Radix Studio</h3>
-                <span className="px-3 py-1 bg-yellow-400 text-yellow-900 rounded-full font-semibold text-xs">Coming Soon</span>
-              </div>
-              <p className="text-lg text-gray-800 mb-6 leading-relaxed">
-                Radix Studio optimizes LLM inference. Solve AI vendor lock-in. Build inference quality into your pipeline. Escape pilot purgatory, and keep models governed in production.
+            <div className="bg-gray-50 border-2 border-gray-200 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold mb-2 text-gray-900">Radix Studio</h3>
+              <p className="text-vs-mint-5 text-sm font-medium mb-4">LLM Inference Optimization</p>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Build governed LLM workflows with cost-aware routing. Chain LLM calls, RAG queries, and tools into production-ready pipelines—with full visibility and control.
               </p>
-              <ul className="space-y-2 text-gray-800">
-                <li className="flex items-start">
-                  <span className="text-gray-600 mr-2">•</span>
-                  <span>Build reusable multi-step AI workflows (LLM calls, RAG, tools)</span>
+
+              <ul className="space-y-3 mb-6 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <span className="text-vs-mint-5 font-bold">Reusable</span>
+                  <span>Build multi-step AI workflows with the Multi-Model Registry.</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-gray-600 mr-2">•</span>
-                  <span>Multi-model registry with external endpoint support</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-vs-mint-5 font-bold">Governed</span>
+                  <span>Enforce compliance policies, content filtering, and budget controls.</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-gray-600 mr-2">•</span>
-                  <span>Bring Your Own GPU (BYOG) via secure agent</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-vs-mint-5 font-bold">Transparent</span>
+                  <span>Real-time visibility with full execution traces.</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-gray-600 mr-2">•</span>
-                  <span>Per-tenant isolation, audit logs, and compliance guardrails</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-gray-600 mr-2">•</span>
-                  <span>Predictable per-execution pricing</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-vs-mint-5 font-bold">Flexible</span>
+                  <span>Bring Your Own GPU (BYOG) or use any AI vendor.</span>
                 </li>
               </ul>
-              <div className="mt-6">
-                <Link
-                  href="/contact"
-                  className="inline-block px-6 py-3 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors"
-                >
-                  Join Radix Studio Early Access
-                </Link>
+
+              <div className="bg-white rounded-xl p-4 text-center border border-gray-200">
+                <p className="text-2xl font-bold text-vs-mint-5">From $29/month</p>
+                <p className="text-sm text-gray-500">Per-execution pricing. No surprises.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Trust and Security */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-8">Trust and Security Built In</h2>
-          <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-            The Radix Platform is built for Enterprise AI Infrastructure. Radix Core supports air-gapped deployment with zero egress, and Radix Studio brings the same security-first approach to SaaS inference operations. All components use cryptographically signed artifacts.
-          </p>
-          <p className="text-lg text-gray-600 mb-10">
-            All Radix Core performance results are validated and reproducible with statistical rigor to ensure you have accurate performance data. <Link href="/security" className="text-blue-600 underline">Learn more about our security posture</Link>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      {/* Why Radix - Differentiators (without naming competitors) */}
+      <section className="py-20 bg-vs-mint-7">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">
+            The Radix Advantage
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+              <h3 className="font-bold text-lg mb-3 text-accent">No Stack Changes</h3>
+              <p className="text-white/80 text-sm leading-relaxed">
+                Install Radix agents on your existing Kubernetes cluster. Keep your current workflow. See results in minutes, not months.
+              </p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+              <h3 className="font-bold text-lg mb-3 text-accent">No Vendor Lock-in</h3>
+              <p className="text-white/80 text-sm leading-relaxed">
+                Use any AI provider. Bring your own GPUs. Switch models without rewriting code. Your infrastructure, your choice.
+              </p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+              <h3 className="font-bold text-lg mb-3 text-accent">No Hidden Costs</h3>
+              <p className="text-white/80 text-sm leading-relaxed">
+                Predictable per-GPU and per-execution pricing. Full visibility into where every dollar goes. No surprise bills.
+              </p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+              <h3 className="font-bold text-lg mb-3 text-accent">Proven Results</h3>
+              <p className="text-white/80 text-sm leading-relaxed">
+                21% throughput improvement validated with statistical rigor (p {'<'} 0.001). Every performance claim is reproducible.
+              </p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+              <h3 className="font-bold text-lg mb-3 text-accent">Built for Enterprise</h3>
+              <p className="text-white/80 text-sm leading-relaxed">
+                Air-gapped deployment. Multi-tenant isolation. Audit logs. Compliance guardrails. Security that satisfies your infosec team.
+              </p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+              <h3 className="font-bold text-lg mb-3 text-accent">Single Platform</h3>
+              <p className="text-white/80 text-sm leading-relaxed">
+                Training and inference in one place. No piecing together 4+ services. One dashboard. One vendor relationship.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
             <Link
               href="/pricing"
-              className="inline-block px-10 py-4 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition-colors text-lg shadow-lg hover:shadow-xl"
+              className="px-10 py-5 bg-accent text-vs-mint-7 rounded-full font-bold hover:bg-white transition-all text-xl shadow-lg hover:shadow-xl hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-accent/50"
             >
-              Start Radix Core Trial
+              Start Free Trial
             </Link>
             <Link
               href="/contact"
-              className="inline-block px-8 py-4 bg-black text-white rounded-full font-semibold hover:bg-gray-800 transition-colors text-lg"
+              className="px-8 py-4 bg-white/10 border-2 border-white/30 text-white rounded-full font-semibold hover:bg-white/20 hover:border-white/50 transition-all text-lg focus:outline-none focus:ring-4 focus:ring-white/30"
             >
-              Contact Us
+              Contact Sales
             </Link>
           </div>
         </div>
       </section>
 
-      {/* For Partners & Investors */}
+      {/* About VaultScaler - Brief */}
       <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border-2 border-gray-200 rounded-2xl p-10 text-center">
-            <h2 className="text-2xl font-bold mb-4">For Partners and Investors</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              VaultScaler is building deterministic AI operations for teams that train and deploy models in the real world. If you're exploring joint go-to-market, platform integration, or strategic investment in AI operations infrastructure, we'd love to talk.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block px-8 py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors"
-            >
-              Contact VaultScaler
-            </Link>
-          </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-sm text-gray-500 uppercase tracking-wide mb-3">Built by</p>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">VaultScaler Labs</h3>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            We harmonize AI operations at scale. Radix is for teams that train and deploy models in the real world—and refuse to waste compute or compromise on governance.
+          </p>
         </div>
       </section>
     </>

@@ -9,16 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        accent: '#39C5E4',
-        'accent-hover': '#32ACC7',
-        'stone-cream': {
-          1: '#F6EEE7',
-          2: '#ECE5DE',
-          3: '#CAC4BE',
-          4: '#A8A39E',
-          5: '#86827E',
-          6: '#4F4D4A',
-        },
+        accent: '#A8F1E0',
+        'accent-hover': '#69C7B1',
         'vs-blue': {
           1: '#39C5E4',
           2: '#32ACC7',
@@ -27,6 +19,15 @@ const config: Config = {
           5: '#1C606F',
           6: '#123D47',
           7: '#0D2E35',
+        },
+        'vs-mint': {
+          1: '#DCFFF7',
+          2: '#A8F1E0',
+          3: '#69C7B1',
+          4: '#399C85',
+          5: '#16725D',
+          6: '#014637',
+          7: '#223833',
         },
       },
     },
