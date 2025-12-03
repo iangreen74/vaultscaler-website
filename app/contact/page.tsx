@@ -1,84 +1,131 @@
 // Route: /contact
+import Link from "next/link";
 import { SITE } from "@/lib/site";
 
 export const metadata = {
   title: "Contact",
   description:
-    "Reach the VaultScaler team. Pre-launch now; GA target November 15, 2025.",
+    "Get in touch with the VaultScaler team. Reach out for enterprise licensing, partnerships, or to schedule a demo.",
   alternates: { canonical: `${SITE.url}/contact` },
 };
 
 export default function Page() {
   return (
-    <main className="mx-auto max-w-3xl px-6 py-16">
-      <h1 className="text-3xl font-semibold tracking-tight">Contact</h1>
-      <p className="mt-3 text-gray-700">
-        Whether you're optimizing GPU training, building production LLM systems, or stuck in AI pilot purgatory, we'd love to talk.
-      </p>
+    <>
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-br from-primary-4 via-primary-3 to-primary-3 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-1/4 -right-1/4 w-[60%] h-[60%] rounded-full bg-pop-light/10 blur-3xl" />
+          <div className="absolute -bottom-1/4 -left-1/4 w-[50%] h-[50%] rounded-full bg-pop-dark/30 blur-3xl" />
+        </div>
 
-      <div className="mt-6 rounded-2xl border p-6 bg-gray-50">
-        <h2 className="text-xl font-medium mb-4">Good reasons to reach out:</h2>
-        <ul className="space-y-2 text-gray-700">
-          <li className="flex items-start">
-            <span className="text-blue-600 mr-2">•</span>
-            <span>You're training models on GPUs and suspect you're wasting capacity</span>
-          </li>
-          <li className="flex items-start">
-            <span className="text-blue-600 mr-2">•</span>
-            <span>You're stuck in AI pilot purgatory and need an operations partner</span>
-          </li>
-          <li className="flex items-start">
-            <span className="text-blue-600 mr-2">•</span>
-            <span>You want to explore early access to the Radix Studio control plane</span>
-          </li>
-          <li className="flex items-start">
-            <span className="text-blue-600 mr-2">•</span>
-            <span>You run air-gapped or zero-egress environments and need secure AI ops</span>
-          </li>
-          <li className="flex items-start">
-            <span className="text-blue-600 mr-2">•</span>
-            <span>You're a strategic partner or investor evaluating AI operations infrastructure and want to understand where VaultScaler fits in your portfolio or ecosystem</span>
-          </li>
-        </ul>
-      </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Get in Touch
+          </h1>
+          <p className="text-xl text-white/80 max-w-2xl mx-auto">
+            Whether you need enterprise licensing, want to explore a partnership, or just have questions—we're here to help.
+          </p>
+        </div>
+      </section>
 
-      <div className="mt-6 rounded-2xl border p-6">
-        <h2 className="text-xl font-medium mb-4">Email</h2>
-        <div className="space-y-3">
-          <div>
-            <p className="text-sm text-gray-600 mb-1">Founder & Engineering</p>
-            <a
-              className="text-blue-600 underline underline-offset-4 text-lg"
-              href="mailto:ian@vaultscaler.com"
-            >
-              ian@vaultscaler.com
-            </a>
+      {/* Contact Options */}
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Sales & Licensing */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 flex flex-col">
+              <div className="flex-grow">
+                <div className="w-12 h-12 bg-primary-3 rounded-xl flex items-center justify-center mb-6">
+                  <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h2 className="text-2xl font-bold text-primary-3 mb-4">Sales & Licensing</h2>
+                <ul className="space-y-3 text-gray-600">
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary-3 mt-1">•</span>
+                    <span>Enterprise licensing for Core or Studio</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary-3 mt-1">•</span>
+                    <span>Custom deployment requirements</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary-3 mt-1">•</span>
+                    <span>Air-gapped or zero-egress environments</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary-3 mt-1">•</span>
+                    <span>Volume pricing and annual contracts</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-8">
+                <Link
+                  href="mailto:sales@vaultscaler.com?subject=Sales%20Inquiry"
+                  className="inline-block w-full text-center px-6 py-4 bg-primary-3 text-white rounded-full font-bold hover:bg-primary-4 transition-all"
+                >
+                  Contact Sales
+                </Link>
+                <p className="text-sm text-gray-500 mt-4 text-center">sales@vaultscaler.com</p>
+              </div>
+            </div>
+
+            {/* Partnerships & Investment */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 flex flex-col">
+              <div className="flex-grow">
+                <div className="w-12 h-12 bg-pop-light rounded-xl flex items-center justify-center mb-6">
+                  <svg className="w-6 h-6 text-primary-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h2 className="text-2xl font-bold text-pop-dark mb-4">Partnerships & Investment</h2>
+                <p className="text-gray-600 mb-6">
+                  VaultScaler is building deterministic AI operations for teams that train and deploy models in the real world.
+                </p>
+                <ul className="space-y-3 text-gray-600">
+                  <li className="flex items-start gap-3">
+                    <span className="text-pop-dark mt-1">•</span>
+                    <span>Joint go-to-market opportunities</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-pop-dark mt-1">•</span>
+                    <span>Platform integrations</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-pop-dark mt-1">•</span>
+                    <span>Strategic investment in AI operations</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-8">
+                <Link
+                  href="mailto:bpruess@vaultscaler.com?subject=Partnership%20Inquiry"
+                  className="inline-block w-full text-center px-6 py-4 bg-pop-light text-primary-4 rounded-full font-bold hover:bg-white hover:shadow-lg transition-all"
+                >
+                  Contact Partnerships
+                </Link>
+                <p className="text-sm text-gray-500 mt-4 text-center">bpruess@vaultscaler.com</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <p className="text-sm text-gray-600 mb-1">Operations & Partnerships</p>
-            <a
-              className="text-blue-600 underline underline-offset-4 text-lg"
-              href="mailto:bpruess@vaultscaler.com"
+
+          {/* General Contact */}
+          <div className="mt-12 bg-primary-3 rounded-2xl p-8 text-center">
+            <h2 className="text-2xl font-bold text-white mb-4">Need Help Getting Started?</h2>
+            <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+              Not sure which product is right for you? Our team can help you evaluate your AI operations needs and find the best solution.
+            </p>
+            <Link
+              href="mailto:ian@vaultscaler.com?subject=Getting%20Started%20with%20Radix"
+              className="inline-block px-8 py-4 bg-white text-primary-3 rounded-full font-bold hover:bg-gray-100 transition-all"
             >
-              bpruess@vaultscaler.com
-            </a>
+              Schedule a Call
+            </Link>
           </div>
         </div>
-      </div>
-
-      <div className="mt-6 rounded-2xl border p-6">
-        <h2 className="text-xl font-medium">Media kit</h2>
-        <p className="mt-3 text-gray-700">
-          Need logos, screenshots, or a one-pager? Email us and we'll share the latest bundle.
-        </p>
-      </div>
-
-      <div className="mt-10 rounded-2xl border-2 border-blue-200 bg-blue-50 p-8 text-center">
-        <h2 className="text-2xl font-bold mb-4 text-gray-900">For Partners and Investors</h2>
-        <p className="text-lg text-gray-700 leading-relaxed">
-          VaultScaler is building deterministic AI operations for teams that train and deploy models in the real world. If you're exploring joint go-to-market, platform integration, or strategic investment in AI operations infrastructure, we'd love to talk.
-        </p>
-      </div>
-    </main>
+      </section>
+    </>
   );
 }

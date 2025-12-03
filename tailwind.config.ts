@@ -9,26 +9,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        accent: '#A8F1E0',
-        'accent-hover': '#69C7B1',
-        'vs-blue': {
-          1: '#39C5E4',
-          2: '#32ACC7',
-          3: '#2A92AA',
-          4: '#23798D',
-          5: '#1C606F',
-          6: '#123D47',
-          7: '#0D2E35',
-        },
-        'vs-mint': {
-          1: '#DCFFF7',
-          2: '#A8F1E0',
-          3: '#69C7B1',
-          4: '#399C85',
-          5: '#16725D',
-          6: '#014637',
-          7: '#223833',
-        },
+        // Pop colors (Mint greens - 2 shades)
+        'pop-light': '#00e3aeff',
+        'pop-dark': '#00a881ff',
+        'pop-backup': '#00e3aeff',
+        
+        // Primary colors (Bold blues - 4 shades, 1=brightest, 4=darkest)
+        'primary-1': '#001A90',
+        'primary-2': '#001369',
+        'primary-3': '#000F53',
+        'primary-4': '#000e4A',
+
+        // Secondary colors (Greys - 6 shades, 1=lightest, 6=darkest)
+        'secondary-1': '#F9FAFB',
+        'secondary-2': '#F3F4F6',
+        'secondary-3': '#E5E7EB',
+        'secondary-4': '#D1D5DB',
+        'secondary-5': '#9CA3AF',
+        'secondary-6': '#6B7280',
       },
     },
   },

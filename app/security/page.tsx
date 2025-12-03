@@ -88,7 +88,7 @@ export default function Page() {
       {/* CTA */}
       <section className="text-center">
         <Link
-          href="/pricing"
+          href="/get-radix"
           className="inline-block px-8 py-4 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors text-lg"
         >
           Get Radix Core

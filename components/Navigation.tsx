@@ -16,14 +16,8 @@ export default function Navigation() {
             <Link href="/product" className="text-sm text-gray-700 hover:text-gray-900 transition-colors">
               Radix Platform
             </Link>
-            <Link href="/security" className="text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              Security
-            </Link>
-            <Link href="/pricing" className="text-sm text-gray-700 hover:text-gray-900 transition-colors">
+            <Link href="/get-radix" className="text-sm text-gray-700 hover:text-gray-900 transition-colors">
               Get Radix
-            </Link>
-            <Link href="/team" className="text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              Team
             </Link>
             <Link href="/contact" className="text-sm text-gray-700 hover:text-gray-900 transition-colors">
               Contact
@@ -32,7 +26,7 @@ export default function Navigation() {
               href="https://dashboard.vaultscaler.com/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="px-5 py-2 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors text-sm shadow-md hover:shadow-lg"
+              className="px-5 py-2 bg-primary-1 text-white rounded-full font-semibold hover:bg-primary-2 transition-colors text-sm shadow-md hover:shadow-lg"
             >
               Launch Dashboard
             </a>
