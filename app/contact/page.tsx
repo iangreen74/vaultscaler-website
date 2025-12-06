@@ -1,6 +1,6 @@
 // Route: /contact
-import Link from "next/link";
 import { SITE } from "@/lib/site";
+import { TrackedEmailLink } from "@/components/TrackedLink";
 
 export const metadata = {
   title: "Contact",
@@ -62,13 +62,13 @@ export default function Page() {
                 </ul>
               </div>
               <div className="mt-8">
-                <Link
-                  href="mailto:sales@vaultscaler.com?subject=Sales%20Inquiry"
+                <TrackedEmailLink
+                  href="mailto:bpruess@vaultscaler.com?subject=Sales%20Inquiry"
+                  trackingName="Sales Inquiry"
                   className="inline-block w-full text-center px-6 py-4 bg-primary-3 text-white rounded-full font-bold hover:bg-primary-4 transition-all"
                 >
                   Contact Sales
-                </Link>
-                <p className="text-sm text-gray-500 mt-4 text-center">sales@vaultscaler.com</p>
+                </TrackedEmailLink>
               </div>
             </div>
 
@@ -81,9 +81,6 @@ export default function Page() {
                   </svg>
                 </div>
                 <h2 className="text-2xl font-bold text-pop-dark mb-4">Partnerships & Investment</h2>
-                <p className="text-gray-600 mb-6">
-                  VaultScaler is building deterministic AI operations for teams that train and deploy models in the real world.
-                </p>
                 <ul className="space-y-3 text-gray-600">
                   <li className="flex items-start gap-3">
                     <span className="text-pop-dark mt-1">•</span>
@@ -100,13 +97,13 @@ export default function Page() {
                 </ul>
               </div>
               <div className="mt-8">
-                <Link
+                <TrackedEmailLink
                   href="mailto:bpruess@vaultscaler.com?subject=Partnership%20Inquiry"
+                  trackingName="Partnership Inquiry"
                   className="inline-block w-full text-center px-6 py-4 bg-pop-light text-primary-4 rounded-full font-bold hover:bg-white hover:shadow-lg transition-all"
                 >
                   Contact Partnerships
-                </Link>
-                <p className="text-sm text-gray-500 mt-4 text-center">bpruess@vaultscaler.com</p>
+                </TrackedEmailLink>
               </div>
             </div>
           </div>
@@ -117,12 +114,13 @@ export default function Page() {
             <p className="text-white/80 mb-6 max-w-2xl mx-auto">
               Not sure which product is right for you? Our team can help you evaluate your AI operations needs and find the best solution.
             </p>
-            <Link
-              href="mailto:ian@vaultscaler.com?subject=Getting%20Started%20with%20Radix"
+            <TrackedEmailLink
+              href="mailto:bpruess@vaultscaler.com?subject=Getting%20Started%20with%20Radix"
+              trackingName="Schedule a Call"
               className="inline-block px-8 py-4 bg-white text-primary-3 rounded-full font-bold hover:bg-gray-100 transition-all"
             >
               Schedule a Call
-            </Link>
+            </TrackedEmailLink>
           </div>
         </div>
       </section>

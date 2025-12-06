@@ -1,7 +1,7 @@
 // Route: /product
 import JsonLd from "@/components/JsonLd";
-import Link from "next/link";
 import { SITE } from "@/lib/site";
+import { TrackedCTALink } from "@/components/TrackedLink";
 
 export const metadata = {
   title: `Radix Platform — ${SITE.product}`,
@@ -125,12 +125,14 @@ export default function Page() {
             <p className="text-lg text-white/80 mb-6 max-w-2xl mx-auto">
               Full access to Radix Core. See precisely what throughput gains are possible. Run in shadow mode alongside your existing scheduler for zero-risk proof.
             </p>
-            <Link
+            <TrackedCTALink
               href="/get-radix"
+              trackingName="Start Core Trial"
+              trackingLocation="Product - Core Section"
               className="inline-block px-10 py-4 bg-white text-primary-3 rounded-full font-bold hover:bg-gray-100 transition-all text-lg shadow-lg hover:scale-105 transform"
             >
               Start Core Trial
-            </Link>
+            </TrackedCTALink>
           </div>
         </div>
       </section>
@@ -194,12 +196,14 @@ export default function Page() {
             <p className="text-lg text-primary-4/80 mb-6 max-w-2xl mx-auto">
               Full access to Radix Studio Team tier. Build pipelines, connect models, and see governance in action.
             </p>
-            <Link
+            <TrackedCTALink
               href="/get-radix"
+              trackingName="Start Studio Trial"
+              trackingLocation="Product - Studio Section"
               className="inline-block px-10 py-4 bg-primary-4 text-white rounded-full font-bold hover:bg-primary-3 transition-all text-lg shadow-lg hover:scale-105 transform"
             >
               Start Studio Trial
-            </Link>
+            </TrackedCTALink>
           </div>
         </div>
       </section>
@@ -219,9 +223,9 @@ export default function Page() {
               </p>
               <p className="text-2xl font-bold text-primary-3 mb-2">$28/GPU/mo</p>
               <p className="text-sm text-gray-500 mb-6">Up to 400 GPUs</p>
-              <Link href="/get-radix" className="block text-center px-6 py-3 bg-primary-3 text-white rounded-full font-semibold hover:bg-primary-3 transition-colors">
+              <TrackedCTALink href="/get-radix" trackingName="Get Core" trackingLocation="Product - Choose Path" className="block text-center px-6 py-3 bg-primary-3 text-white rounded-full font-semibold hover:bg-primary-3 transition-colors">
                 Get Core
-              </Link>
+              </TrackedCTALink>
             </div>
 
             {/* Studio Only - Cyan */}
@@ -232,9 +236,9 @@ export default function Page() {
               </p>
               <p className="text-2xl font-bold text-pop-dark mb-2">$29/mo</p>
               <p className="text-sm text-gray-500 mb-6">Team tier: 1 user, 3 models</p>
-              <Link href="/get-radix" className="block text-center px-6 py-3 bg-pop-light text-primary-4 rounded-full font-semibold hover:bg-primary-2 hover:text-white transition-colors">
+              <TrackedCTALink href="/get-radix" trackingName="Get Studio" trackingLocation="Product - Choose Path" className="block text-center px-6 py-3 bg-pop-light text-primary-4 rounded-full font-semibold hover:bg-primary-2 hover:text-white transition-colors">
                 Get Studio
-              </Link>
+              </TrackedCTALink>
             </div>
 
             {/* Platform Bundle - Combined */}
@@ -247,21 +251,23 @@ export default function Page() {
               </p>
               <p className="text-2xl font-bold text-pop-light mb-2">Core + Studio</p>
               <p className="text-sm text-white/70 mb-6">Bundle pricing available</p>
-              <Link href="/contact" className="block text-center px-6 py-3 bg-pop-light text-primary-4 rounded-full font-bold hover:bg-white transition-colors">
+              <TrackedCTALink href="/contact" trackingName="Contact Sales" trackingLocation="Product - Platform Bundle" className="block text-center px-6 py-3 bg-pop-light text-primary-4 rounded-full font-bold hover:bg-white transition-colors">
                 Contact Sales
-              </Link>
+              </TrackedCTALink>
             </div>
           </div>
 
           {/* Final CTA */}
           <div className="text-center">
             <p className="text-lg text-gray-600 mb-6">Not sure which is right for you?</p>
-            <Link
-              href="/contact"
+            <TrackedCTALink
+              href="mailto:bpruess@vaultscaler.com"
+              trackingName="Talk to Us"
+              trackingLocation="Product - Footer"
               className="inline-block px-8 py-4 bg-primary-4 text-white rounded-full font-semibold hover:bg-primary-3 transition-colors text-lg"
             >
               Talk to Us
-            </Link>
+            </TrackedCTALink>
           </div>
         </div>
       </section>

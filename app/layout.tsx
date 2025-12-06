@@ -4,8 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import JsonLd from "@/components/JsonLd";
 import { SITE } from "@/lib/site";
-
-const GA_MEASUREMENT_ID = "G-SKB7PPD72F";
+import { GA_MEASUREMENT_ID } from "@/lib/analytics";
 
 export const metadata: Metadata = {
   title: "VaultScaler",
@@ -91,6 +90,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <JsonLd data={organizationLD} />
+      </head>
+      <body className="antialiased">
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
@@ -103,9 +105,6 @@ export default function RootLayout({
             gtag('config', '${GA_MEASUREMENT_ID}');
           `}
         </Script>
-        <JsonLd data={organizationLD} />
-      </head>
-      <body className="antialiased">
         <Navigation />
         <main className="pt-16">
           {children}
@@ -114,7 +113,6 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center text-sm text-gray-400">
               <p>&copy; 2025 VaultScaler. All rights reserved.</p>
-              <p className="mt-2">Security contact: <a href={`mailto:${SITE.email}`} className="text-blue-400 hover:text-blue-300">{SITE.email}</a></p>
             </div>
           </div>
         </footer>

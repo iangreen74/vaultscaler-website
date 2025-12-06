@@ -1,6 +1,6 @@
 // Route: / (Home)
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import { TrackedCTALink } from '@/components/TrackedLink';
 
 export const metadata: Metadata = {
   title: 'Radix - AI Operations Platform | Train Faster, Deploy Smarter',
@@ -46,18 +46,22 @@ export default function Home() {
 
           {/* Primary CTAs - differentiated for technical vs business buyers */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Link
+            <TrackedCTALink
               href="/get-radix"
+              trackingName="Start Free Trial"
+              trackingLocation="Hero"
               className="px-10 py-5 bg-pop-light text-primary-4 rounded-full font-bold hover:bg-white transition-all text-xl shadow-2xl hover:shadow-pop-light/50 hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-pop-light/50"
             >
               Start Free Trial
-            </Link>
-            <Link
+            </TrackedCTALink>
+            <TrackedCTALink
               href="/contact"
+              trackingName="Request Demo"
+              trackingLocation="Hero"
               className="px-8 py-4 bg-transparent border-2 border-white/30 backdrop-blur-sm text-white rounded-full font-semibold hover:bg-white/10 hover:border-white/50 transition-all text-lg focus:outline-none focus:ring-4 focus:ring-white/30"
             >
               Request Demo
-            </Link>
+            </TrackedCTALink>
           </div>
 
           {/* Value stats - concrete numbers */}
@@ -140,7 +144,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-2">Radix Core</h3>
               <p className="text-pop-light text-sm font-medium mb-4">Model Training Optimization</p>
               <p className="text-white/90 mb-6 leading-relaxed">
-                Get 21% more throughput from your existing GPU infrastructure. Radix Core uses closed-loop control to balance memory, compute, and power across all training runs.
+                Get up to 21% more throughput from your existing GPU infrastructure. Radix Core uses closed-loop control to balance memory, compute, and power across all training runs.
               </p>
 
               <ul className="space-y-3 mb-6">
@@ -173,13 +177,13 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-2 text-gray-900">Radix Studio</h3>
               <p className="text-primary-3 text-sm font-medium mb-4">LLM Inference Optimization</p>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Build governed LLM workflows with cost-aware routing. Chain LLM calls, RAG queries, and tools into production-ready pipelines—with full visibility and control.
+                Take control of your AI Inference. Build governed LLM workflows with cost-aware routing. Chain LLM calls, RAG queries, and tools into production-ready pipelines with full visibility and control.
               </p>
 
               <ul className="space-y-3 mb-6 text-gray-700">
                 <li className="flex items-start gap-3">
                   <span className="text-primary-3 font-bold">Reusable</span>
-                  <span>Build multi-step AI workflows with the Multi-Model Registry.</span>
+                  <span>Build multi-step AI workflows with our Multi-Model Registry.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary-3 font-bold">Governed</span>
@@ -187,7 +191,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary-3 font-bold">Transparent</span>
-                  <span>Real-time visibility with full execution traces.</span>
+                  <span>Real-time visibility with full execution traces throughout all your pipelines.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary-3 font-bold">Flexible</span>
@@ -251,18 +255,22 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
-            <Link
+            <TrackedCTALink
               href="/get-radix"
+              trackingName="Start Free Trial"
+              trackingLocation="Advantages"
               className="px-10 py-5 bg-pop-light text-primary-4 rounded-full font-bold hover:bg-white transition-all text-xl shadow-lg hover:shadow-xl hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-pop-light/50"
             >
               Start Free Trial
-            </Link>
-            <Link
-              href="/contact"
+            </TrackedCTALink>
+            <TrackedCTALink
+              href="mailto:bpruess@vaultscaler.com"
+              trackingName="Contact Us"
+              trackingLocation="Advantages"
               className="px-8 py-4 bg-white/10 border-2 border-white/30 text-white rounded-full font-semibold hover:bg-white/20 hover:border-white/50 transition-all text-lg focus:outline-none focus:ring-4 focus:ring-white/30"
             >
-              Contact Sales
-            </Link>
+              Contact Us
+            </TrackedCTALink>
           </div>
         </div>
       </section>

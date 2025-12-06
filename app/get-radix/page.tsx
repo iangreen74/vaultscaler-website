@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import { SITE } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
+import { TrackedEmailLink, TrackedDownloadButton } from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Get Radix — Core & Studio Pricing",
@@ -98,9 +98,12 @@ export default function GetRadixPage() {
             Works with Kubernetes, Slurm, and Ray. No stack changes required.
           </p>
           <div className="text-center mb-12">
-            <button className="px-10 py-5 bg-primary-3 text-white rounded-full font-bold hover:bg-primary-4 transition-all text-xl shadow-xl hover:scale-105 transform">
+            <TrackedDownloadButton
+              trackingName="Radix Core Helm Chart - Hero"
+              className="px-10 py-5 bg-primary-3 text-white rounded-full font-bold hover:bg-primary-4 transition-all text-xl shadow-xl hover:scale-105 transform"
+            >
               Download Radix Core Helm Chart
-            </button>
+            </TrackedDownloadButton>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -115,9 +118,12 @@ export default function GetRadixPage() {
                 </p>
               </div>
 
-              <button className="w-full px-6 py-4 bg-primary-3 text-white rounded-full font-bold hover:bg-primary-4 transition-all shadow-lg hover:scale-105 transform">
+              <TrackedDownloadButton
+                trackingName="Radix Core Helm Chart - Trial"
+                className="w-full px-6 py-4 bg-primary-3 text-white rounded-full font-bold hover:bg-primary-4 transition-all shadow-lg hover:scale-105 transform"
+              >
                 Download Helm Chart
-              </button>
+              </TrackedDownloadButton>
             </div>
 
             {/* Production Version */}
@@ -131,12 +137,13 @@ export default function GetRadixPage() {
                   Full deployment with production support. Save $250K per 100 GPUs annually.
                 </p>
               </div>
-              <Link
+              <TrackedEmailLink
                 href={`mailto:${SITE.email}?subject=Radix%20Core%20Production`}
+                trackingName="Core Production Inquiry"
                 className="inline-block w-full text-center px-6 py-4 bg-white text-primary-3 rounded-full font-bold hover:bg-gray-100 transition-all"
               >
                 Get Core Production
-              </Link>
+              </TrackedEmailLink>
             </div>
           </div>
 
@@ -171,12 +178,13 @@ export default function GetRadixPage() {
           {/* Contact Sales CTA */}
           <div className="mt-12 text-center">
             <p className="text-gray-500 mb-4">Need more than 400 GPUs?</p>
-            <Link
-              href="mailto:sales@vaultscaler.com?subject=Radix%20Core%20Enterprise"
+            <TrackedEmailLink
+              href="mailto:bpruess@vaultscaler.com?subject=Radix%20Core%20Enterprise"
+              trackingName="Core Enterprise Sales"
               className="inline-block px-8 py-3 bg-gray-100 border border-gray-300 text-primary-3 rounded-full font-semibold hover:bg-gray-200 transition-all"
             >
               Contact Sales
-            </Link>
+            </TrackedEmailLink>
           </div>
         </div>
       </section>
@@ -218,12 +226,13 @@ export default function GetRadixPage() {
                 </ul>
               </div>
 
-              <Link
+              <TrackedEmailLink
                 href={`mailto:${SITE.email}?subject=Radix%20Studio%20Team`}
+                trackingName="Studio Team Trial"
                 className="w-full text-center px-6 py-4 bg-pop-light text-primary-4 rounded-full font-bold hover:bg-white transition-all shadow-lg hover:scale-105 transform inline-block"
               >
                 Start Team Trial
-              </Link>
+              </TrackedEmailLink>
             </div>
 
             {/* Professional Tier */}
@@ -248,24 +257,26 @@ export default function GetRadixPage() {
                   
                 </ul>
               </div>
-              <Link
+              <TrackedEmailLink
                 href={`mailto:${SITE.email}?subject=Radix%20Studio%20Professional`}
+                trackingName="Studio Professional Inquiry"
                 className="inline-block w-full text-center px-6 py-4 bg-primary-3 text-white rounded-full font-bold hover:bg-primary-4 transition-all"
               >
                 Get Professional
-              </Link>
+              </TrackedEmailLink>
             </div>
           </div>
 
           {/* Contact Sales CTA */}
           <div className="mt-12 text-center">
             <p className="text-white/80 mb-4">Need more users or custom limits?</p>
-            <Link
-              href="mailto:sales@vaultscaler.com?subject=Radix%20Studio%20Custom"
+            <TrackedEmailLink
+              href="mailto:bpruess@vaultscaler.com?subject=Radix%20Studio%20Custom"
+              trackingName="Studio Custom Sales"
               className="inline-block px-8 py-3 bg-white/10 border border-white/30 text-white rounded-full font-semibold hover:bg-white/20 transition-all"
             >
               Contact Sales
-            </Link>
+            </TrackedEmailLink>
           </div>
         </div>
       </section>

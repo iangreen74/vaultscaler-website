@@ -1,7 +1,7 @@
 // Route: /security
 import JsonLd from "@/components/JsonLd";
-import Link from "next/link";
 import { SITE } from "@/lib/site";
+import { TrackedCTALink } from "@/components/TrackedLink";
 
 export const metadata = {
   title: "Security and Trust",
@@ -87,12 +87,14 @@ export default function Page() {
 
       {/* CTA */}
       <section className="text-center">
-        <Link
+        <TrackedCTALink
           href="/get-radix"
+          trackingName="Get Radix Core"
+          trackingLocation="Security"
           className="inline-block px-8 py-4 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors text-lg"
         >
           Get Radix Core
-        </Link>
+        </TrackedCTALink>
         <p className="mt-4 text-gray-600">Deploy securely with guardrails you choose</p>
       </section>
 
