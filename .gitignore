@@ -13,6 +13,9 @@
 # Production
 /build
 
+# Docs for context
+/docs
+
 # Misc
 .DS_Store
 *.pem

@@ -1,20 +1,43 @@
 // Route: / (Home)
 import type { Metadata } from 'next';
 import { TrackedCTALink } from '@/components/TrackedLink';
+import { SITE } from '@/lib/site';
+import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Radix - AI Operations Platform | Train Faster, Deploy Smarter',
   description: 'Cut training costs by 21% and govern every LLM call. The AI operations platform for teams that refuse to waste compute or compromise on governance.',
+  alternates: {
+    canonical: SITE.url,
+  },
+  keywords: SITE.keywords,
   openGraph: {
     title: 'Radix - AI Operations Platform',
     description: 'Cut training costs by 21% and govern every LLM call. No stack changes. No vendor lock-in.',
     type: 'website',
+    url: SITE.url,
+    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Radix AI Operations Platform' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Radix - AI Operations Platform',
+    description: 'Cut training costs by 21% and govern every LLM call. No stack changes. No vendor lock-in.',
+    images: ['/og.jpg'],
   },
 };
 
 export default function Home() {
+  const webSiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "VaultScaler",
+    "url": SITE.url,
+    "description": "AI operations platform for GPU training optimization and LLM governance",
+  };
+
   return (
     <>
+      <JsonLd data={webSiteSchema} />
       {/* Hero - Lead with Radix */}
       <section className="relative min-h-[clamp(600px,90vh,1200px)] flex items-center justify-center bg-gradient-to-br from-primary-4 via-primary-3 to-primary-3 overflow-hidden">
         {/* Background decorative elements */}
@@ -47,12 +70,12 @@ export default function Home() {
           {/* Primary CTAs - differentiated for technical vs business buyers */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <TrackedCTALink
-              href="/get-radix"
-              trackingName="Start Free Trial"
+              href="/waitlist"
+              trackingName="Join Waitlist"
               trackingLocation="Hero"
               className="px-10 py-5 bg-pop-light text-primary-4 rounded-full font-bold hover:bg-white transition-all text-xl shadow-2xl hover:shadow-pop-light/50 hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-pop-light/50"
             >
-              Start Free Trial
+              Join Waitlist
             </TrackedCTALink>
             <TrackedCTALink
               href="/contact"
@@ -256,12 +279,12 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
             <TrackedCTALink
-              href="/get-radix"
-              trackingName="Start Free Trial"
+              href="/waitlist"
+              trackingName="Join Waitlist"
               trackingLocation="Advantages"
               className="px-10 py-5 bg-pop-light text-primary-4 rounded-full font-bold hover:bg-white transition-all text-xl shadow-lg hover:shadow-xl hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-pop-light/50"
             >
-              Start Free Trial
+              Join Waitlist
             </TrackedCTALink>
             <TrackedCTALink
               href="mailto:bpruess@vaultscaler.com"

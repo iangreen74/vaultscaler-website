@@ -3,10 +3,12 @@ import Script from "next/script";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import JsonLd from "@/components/JsonLd";
+import AnalyticsProvider from "@/components/AnalyticsProvider";
 import { SITE } from "@/lib/site";
 import { GA_MEASUREMENT_ID } from "@/lib/analytics";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE.url),
   title: "VaultScaler",
   description: "VaultScaler is democratizing and economizing AI operations for teams that train and deploy models in the real world.",
   keywords: ["GPU scheduling", "training optimization", "Kubernetes GPU", "GPU throughput", "model training", "GPU efficiency", "Slurm", "Ray", "closed-loop control", "AI operations", "MLOps"],
@@ -93,6 +95,13 @@ export default function RootLayout({
         <JsonLd data={organizationLD} />
       </head>
       <body className="antialiased">
+        {/* Skip to main content link for keyboard accessibility (WCAG 2.4.1) */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary-1 focus:text-white focus:rounded focus:outline-none focus:ring-2 focus:ring-white"
+        >
+          Skip to main content
+        </a>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
@@ -106,12 +115,13 @@ export default function RootLayout({
           `}
         </Script>
         <Navigation />
-        <main className="pt-16">
+        <AnalyticsProvider />
+        <main id="main-content" className="pt-16">
           {children}
         </main>
-        <footer className="bg-primary-4 text-white py-8 mt-20">
+        <footer className="bg-primary-4 text-white py-8 mt-20" role="contentinfo">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center text-sm text-gray-400">
+            <div className="text-center text-sm text-gray-300">
               <p>&copy; 2025 VaultScaler. All rights reserved.</p>
             </div>
           </div>

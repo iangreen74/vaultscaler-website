@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { trackCTAClick, trackEmailClick, trackDownload } from '@/lib/analytics';
+import { trackCTAClick, trackEmailClick, trackDownload, trackNavClick } from '@/lib/analytics';
 import { ReactNode } from 'react';
 
 interface TrackedLinkProps {
@@ -78,5 +78,29 @@ export function TrackedDownloadButton({
     >
       {children}
     </button>
+  );
+}
+
+interface TrackedAnchorProps {
+  href: string;
+  children: ReactNode;
+  className?: string;
+  trackingName: string;
+}
+
+export function TrackedAnchor({
+  href,
+  children,
+  className,
+  trackingName,
+}: TrackedAnchorProps) {
+  return (
+    <a
+      href={href}
+      onClick={() => trackNavClick(trackingName)}
+      className={className}
+    >
+      {children}
+    </a>
   );
 }

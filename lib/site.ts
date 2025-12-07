@@ -2,7 +2,7 @@ export const SITE = {
   name: "VaultScaler",
   product: "Radix Core",
   url: "https://vaultscaler.com",
-  email: "ian@vaultscaler.com",
+  email: "bpruess@vaultscaler.com",
   launchISO: "2025-11-15",
   description:
     "Get 21% more throughput from your training GPUs in 60 seconds. Radix solves the hidden GPU scheduling problem with real-time multi-dimensional optimization.",

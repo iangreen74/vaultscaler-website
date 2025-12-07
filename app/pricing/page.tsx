@@ -1,23 +1,38 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { SITE } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
-import { TrackedEmailLink, TrackedDownloadButton } from "@/components/TrackedLink";
+import { TrackedCTALink } from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
-  title: "Get Radix — Core & Studio Pricing",
+  title: "Pricing — Radix Core & Studio Plans",
   description: "Get Radix Core for GPU scheduling optimization ($28/GPU/month) or Radix Studio for LLM orchestration & governance (from $29/month). Start with a free trial.",
   alternates: {
-    canonical: `${SITE.url}/get-radix`,
+    canonical: `${SITE.url}/pricing`,
+  },
+  keywords: [...SITE.keywords, "pricing", "GPU scheduling pricing", "LLM governance pricing", "free trial"],
+  openGraph: {
+    title: 'Radix Pricing - Core & Studio Plans',
+    description: 'Radix Core: $28/GPU/month. Radix Studio: from $29/month. Start with a free 14-day trial.',
+    url: `${SITE.url}/pricing`,
+    type: 'website',
+    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Radix Pricing' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Radix Pricing - Core & Studio Plans',
+    description: 'Radix Core: $28/GPU/month. Radix Studio: from $29/month. Start with a free 14-day trial.',
+    images: ['/og.jpg'],
   },
 };
 
 const CheckIcon = ({ className = "text-primary-3" }: { className?: string }) => (
-  <svg className={`w-5 h-5 ${className} flex-shrink-0`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <svg className={`w-5 h-5 ${className} flex-shrink-0`} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
   </svg>
 );
 
-export default function GetRadixPage() {
+export default function PricingPage() {
   const coreSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -80,10 +95,50 @@ export default function GetRadixPage() {
     ],
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does Radix Core cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Radix Core costs $28/GPU/month for production use. A free 14-day trial with up to 400 GPUs is available."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does Radix Studio cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Radix Studio Team starts at $29/month for 1 user and 3 models. Studio Professional is $199/month for 5 users and 20 models."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a free trial?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Radix Core offers a full-featured 14-day trial. Radix Studio Team tier also includes a trial period."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What platforms does Radix Core support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Radix Core works with Kubernetes, Slurm, and Ray. No stack changes are required - install via Helm chart."
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <JsonLd data={coreSchema} />
       <JsonLd data={studioSchema} />
+      <JsonLd data={faqSchema} />
 
       {/* Radix Core Section - White Background */}
       <section className="bg-white py-20">
@@ -98,12 +153,9 @@ export default function GetRadixPage() {
             Works with Kubernetes, Slurm, and Ray. No stack changes required.
           </p>
           <div className="text-center mb-12">
-            <TrackedDownloadButton
-              trackingName="Radix Core Helm Chart - Hero"
-              className="px-10 py-5 bg-primary-3 text-white rounded-full font-bold hover:bg-primary-4 transition-all text-xl shadow-xl hover:scale-105 transform"
-            >
-              Download Radix Core Helm Chart
-            </TrackedDownloadButton>
+            <p className="inline-block px-6 py-4 bg-primary-3/10 text-primary-3 rounded-full font-medium text-sm mb-4">
+              Helm Chart Download Coming Soon
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -118,12 +170,14 @@ export default function GetRadixPage() {
                 </p>
               </div>
 
-              <TrackedDownloadButton
-                trackingName="Radix Core Helm Chart - Trial"
-                className="w-full px-6 py-4 bg-primary-3 text-white rounded-full font-bold hover:bg-primary-4 transition-all shadow-lg hover:scale-105 transform"
+              <TrackedCTALink
+                href="/waitlist"
+                trackingName="Join Waitlist"
+                trackingLocation="Pricing - Core Trial"
+                className="w-full text-center px-6 py-4 bg-primary-3 text-white rounded-full font-bold hover:bg-primary-4 transition-all shadow-lg hover:scale-105 transform inline-block"
               >
-                Download Helm Chart
-              </TrackedDownloadButton>
+                Join Waitlist
+              </TrackedCTALink>
             </div>
 
             {/* Production Version */}
@@ -137,54 +191,20 @@ export default function GetRadixPage() {
                   Full deployment with production support. Save $250K per 100 GPUs annually.
                 </p>
               </div>
-              <TrackedEmailLink
-                href={`mailto:${SITE.email}?subject=Radix%20Core%20Production`}
-                trackingName="Core Production Inquiry"
+              <TrackedCTALink
+                href="/waitlist"
+                trackingName="Join Waitlist"
+                trackingLocation="Pricing - Core Production"
                 className="inline-block w-full text-center px-6 py-4 bg-white text-primary-3 rounded-full font-bold hover:bg-gray-100 transition-all"
               >
-                Get Core Production
-              </TrackedEmailLink>
-            </div>
-          </div>
-
-          {/* After You Download */}
-          <div className="mt-16">
-            <h2 className="text-2xl font-bold text-primary-3 mb-8 text-center">
-              After You Download
-            </h2>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="w-10 h-10 rounded-full bg-primary-3 text-white flex items-center justify-center font-bold mx-auto mb-3">
-                  1
-                </div>
-                <p className="text-gray-600 text-sm">Install the Helm chart</p>
-              </div>
-              <div className="text-center">
-                <div className="w-10 h-10 rounded-full bg-primary-3 text-white flex items-center justify-center font-bold mx-auto mb-3">
-                  2
-                </div>
-                <p className="text-gray-600 text-sm">Port-forward the dashboard</p>
-              </div>
-              <div className="text-center">
-                <div className="w-10 h-10 rounded-full bg-primary-3 text-white flex items-center justify-center font-bold mx-auto mb-3">
-                  3
-                </div>
-                <p className="text-gray-600 text-sm">See GPU insights in 60 seconds</p>
-              </div>
+                Join Waitlist
+              </TrackedCTALink>
             </div>
           </div>
 
           {/* Contact Sales CTA */}
           <div className="mt-12 text-center">
-            <p className="text-gray-500 mb-4">Need more than 400 GPUs?</p>
-            <TrackedEmailLink
-              href="mailto:bpruess@vaultscaler.com?subject=Radix%20Core%20Enterprise"
-              trackingName="Core Enterprise Sales"
-              className="inline-block px-8 py-3 bg-gray-100 border border-gray-300 text-primary-3 rounded-full font-semibold hover:bg-gray-200 transition-all"
-            >
-              Contact Sales
-            </TrackedEmailLink>
+            <p className="text-gray-500 mb-4">Need more than 400 GPUs? <Link href="/contact" className="text-primary-3 hover:underline">Contact Sales</Link></p>
           </div>
         </div>
       </section>
@@ -222,17 +242,18 @@ export default function GetRadixPage() {
                     <CheckIcon className="text-pop-light mt-0.5" />
                     <span className="text-white/80">3 models & pipelines</span>
                   </li>
-                  
+
                 </ul>
               </div>
 
-              <TrackedEmailLink
-                href={`mailto:${SITE.email}?subject=Radix%20Studio%20Team`}
-                trackingName="Studio Team Trial"
+              <TrackedCTALink
+                href="/waitlist"
+                trackingName="Join Waitlist"
+                trackingLocation="Pricing - Studio Team"
                 className="w-full text-center px-6 py-4 bg-pop-light text-primary-4 rounded-full font-bold hover:bg-white transition-all shadow-lg hover:scale-105 transform inline-block"
               >
-                Start Team Trial
-              </TrackedEmailLink>
+                Join Waitlist
+              </TrackedCTALink>
             </div>
 
             {/* Professional Tier */}
@@ -254,29 +275,23 @@ export default function GetRadixPage() {
                     <CheckIcon className="text-pop-dark mt-0.5" />
                     <span className="text-gray-600">20 models & pipelines</span>
                   </li>
-                  
+
                 </ul>
               </div>
-              <TrackedEmailLink
-                href={`mailto:${SITE.email}?subject=Radix%20Studio%20Professional`}
-                trackingName="Studio Professional Inquiry"
+              <TrackedCTALink
+                href="/waitlist"
+                trackingName="Join Waitlist"
+                trackingLocation="Pricing - Studio Professional"
                 className="inline-block w-full text-center px-6 py-4 bg-primary-3 text-white rounded-full font-bold hover:bg-primary-4 transition-all"
               >
-                Get Professional
-              </TrackedEmailLink>
+                Join Waitlist
+              </TrackedCTALink>
             </div>
           </div>
 
           {/* Contact Sales CTA */}
           <div className="mt-12 text-center">
-            <p className="text-white/80 mb-4">Need more users or custom limits?</p>
-            <TrackedEmailLink
-              href="mailto:bpruess@vaultscaler.com?subject=Radix%20Studio%20Custom"
-              trackingName="Studio Custom Sales"
-              className="inline-block px-8 py-3 bg-white/10 border border-white/30 text-white rounded-full font-semibold hover:bg-white/20 transition-all"
-            >
-              Contact Sales
-            </TrackedEmailLink>
+            <p className="text-white/80 mb-4">Need more users or custom limits? <Link href="/contact" className="text-pop-light hover:underline">Contact Sales</Link></p>
           </div>
         </div>
       </section>

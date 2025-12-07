@@ -10,7 +10,7 @@ export function VaultScalerLogo({ compact = false }: VaultScalerLogoProps) {
     : "h-10 md:h-12 w-auto";
 
   return (
-    <div className="inline-flex items-center" aria-label="VaultScaler" role="img">
+    <div className="inline-flex items-center">
       <img
         src="/brand/vaultscaler-logo-dark.svg"
         alt="VaultScaler"

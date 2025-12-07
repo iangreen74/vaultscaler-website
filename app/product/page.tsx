@@ -1,14 +1,28 @@
 // Route: /product
+import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import { SITE } from "@/lib/site";
-import { TrackedCTALink } from "@/components/TrackedLink";
+import { TrackedCTALink, TrackedAnchor } from "@/components/TrackedLink";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: `Radix Platform — ${SITE.product}`,
   description:
     "The Radix Platform optimizes training and inference. Radix Core delivers measurable GPU training throughput improvements. Radix Studio provides LLM orchestration, governance, and cost control.",
   alternates: { canonical: `${SITE.url}/product` },
   keywords: SITE.keywords,
+  openGraph: {
+    title: 'Radix Platform - GPU Training & LLM Governance',
+    description: 'Radix Core for 21% GPU throughput gains. Radix Studio for LLM orchestration and governance.',
+    url: `${SITE.url}/product`,
+    type: 'website',
+    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Radix Platform' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Radix Platform - GPU Training & LLM Governance',
+    description: 'Radix Core for 21% GPU throughput gains. Radix Studio for LLM orchestration and governance.',
+    images: ['/og.jpg'],
+  },
 };
 
 export default function Page() {
@@ -45,15 +59,15 @@ export default function Page() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Core - Deep Blue theme */}
-            <a href="#radix-core" className="bg-white border-2 border-primary-3 rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl hover:border-primary-3 transition-all group">
+            <TrackedAnchor href="#radix-core" trackingName="Product - Radix Core Card" className="bg-white border-2 border-primary-3 rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl hover:border-primary-3 transition-all group focus:outline-none focus:ring-4 focus:ring-primary-1/50">
               <h2 className="text-2xl font-bold mb-2 text-primary-3">Radix Core</h2>
               <p className="text-lg text-gray-600">GPU scheduling optimization</p>
-            </a>
+            </TrackedAnchor>
             {/* Studio - Cyan/Accent theme */}
-            <a href="#radix-studio" className="bg-white border-2 border-secondary-4 rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl hover:border-pop-light transition-all group">
+            <TrackedAnchor href="#radix-studio" trackingName="Product - Radix Studio Card" className="bg-white border-2 border-secondary-4 rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl hover:border-pop-light transition-all group focus:outline-none focus:ring-4 focus:ring-pop-light/50">
               <h2 className="text-2xl font-bold mb-2 text-pop-light">Radix Studio</h2>
               <p className="text-lg text-gray-600">LLM governance & control</p>
-            </a>
+            </TrackedAnchor>
           </div>
         </div>
       </section>
@@ -126,12 +140,12 @@ export default function Page() {
               Full access to Radix Core. See precisely what throughput gains are possible. Run in shadow mode alongside your existing scheduler for zero-risk proof.
             </p>
             <TrackedCTALink
-              href="/get-radix"
-              trackingName="Start Core Trial"
+              href="/waitlist"
+              trackingName="Join Waitlist"
               trackingLocation="Product - Core Section"
               className="inline-block px-10 py-4 bg-white text-primary-3 rounded-full font-bold hover:bg-gray-100 transition-all text-lg shadow-lg hover:scale-105 transform"
             >
-              Start Core Trial
+              Join Waitlist
             </TrackedCTALink>
           </div>
         </div>
@@ -197,12 +211,12 @@ export default function Page() {
               Full access to Radix Studio Team tier. Build pipelines, connect models, and see governance in action.
             </p>
             <TrackedCTALink
-              href="/get-radix"
-              trackingName="Start Studio Trial"
+              href="/waitlist"
+              trackingName="Join Waitlist"
               trackingLocation="Product - Studio Section"
               className="inline-block px-10 py-4 bg-primary-4 text-white rounded-full font-bold hover:bg-primary-3 transition-all text-lg shadow-lg hover:scale-105 transform"
             >
-              Start Studio Trial
+              Join Waitlist
             </TrackedCTALink>
           </div>
         </div>
@@ -223,8 +237,8 @@ export default function Page() {
               </p>
               <p className="text-2xl font-bold text-primary-3 mb-2">$28/GPU/mo</p>
               <p className="text-sm text-gray-500 mb-6">Up to 400 GPUs</p>
-              <TrackedCTALink href="/get-radix" trackingName="Get Core" trackingLocation="Product - Choose Path" className="block text-center px-6 py-3 bg-primary-3 text-white rounded-full font-semibold hover:bg-primary-3 transition-colors">
-                Get Core
+              <TrackedCTALink href="/waitlist" trackingName="Join Waitlist" trackingLocation="Product - Choose Path" className="block text-center px-6 py-3 bg-primary-3 text-white rounded-full font-semibold hover:bg-primary-4 transition-colors">
+                Join Waitlist
               </TrackedCTALink>
             </div>
 
@@ -236,8 +250,8 @@ export default function Page() {
               </p>
               <p className="text-2xl font-bold text-pop-dark mb-2">$29/mo</p>
               <p className="text-sm text-gray-500 mb-6">Team tier: 1 user, 3 models</p>
-              <TrackedCTALink href="/get-radix" trackingName="Get Studio" trackingLocation="Product - Choose Path" className="block text-center px-6 py-3 bg-pop-light text-primary-4 rounded-full font-semibold hover:bg-primary-2 hover:text-white transition-colors">
-                Get Studio
+              <TrackedCTALink href="/waitlist" trackingName="Join Waitlist" trackingLocation="Product - Choose Path" className="block text-center px-6 py-3 bg-pop-light text-primary-4 rounded-full font-semibold hover:bg-primary-2 hover:text-white transition-colors">
+                Join Waitlist
               </TrackedCTALink>
             </div>
 

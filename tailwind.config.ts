@@ -11,7 +11,7 @@ const config: Config = {
       colors: {
         // Pop colors (Mint greens - 2 shades)
         'pop-light': '#00e3aeff',
-        'pop-dark': '#00a881ff',
+        'pop-dark': '#00d9a6ff',
         'pop-backup': '#00e3aeff',
         
         // Primary colors (Bold blues - 4 shades, 1=brightest, 4=darkest)

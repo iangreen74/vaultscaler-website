@@ -1,14 +1,21 @@
 // Route: /security
+import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import { SITE } from "@/lib/site";
 import { TrackedCTALink } from "@/components/TrackedLink";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Security and Trust",
   description:
     "Radix Trust Pack: air-gapped bundles, signed artifacts, SLSA provenance. Performance results backed by academic-grade statistical validation.",
   alternates: { canonical: `${SITE.url}/security` },
   keywords: [...SITE.keywords, "RBAC", "NetworkPolicy", "SBOM", "SLSA", "air-gapped", "trust pack"],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Security & Trust - VaultScaler',
+    description: 'Air-gapped deployment, SLSA Level 3 attestations, zero-egress architecture. Enterprise security for AI operations.',
+    images: ['/og.jpg'],
+  },
 };
 
 export default function Page() {
@@ -88,14 +95,14 @@ export default function Page() {
       {/* CTA */}
       <section className="text-center">
         <TrackedCTALink
-          href="/get-radix"
-          trackingName="Get Radix Core"
+          href="/waitlist"
+          trackingName="Join Waitlist"
           trackingLocation="Security"
           className="inline-block px-8 py-4 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors text-lg"
         >
-          Get Radix Core
+          Join Waitlist
         </TrackedCTALink>
-        <p className="mt-4 text-gray-600">Deploy securely with guardrails you choose</p>
+        <p className="mt-4 text-gray-600">Be first in line when we launch</p>
       </section>
 
       <JsonLd data={ld} />

@@ -1,17 +1,51 @@
 // Route: /contact
+import type { Metadata } from "next";
 import { SITE } from "@/lib/site";
 import { TrackedEmailLink } from "@/components/TrackedLink";
+import JsonLd from "@/components/JsonLd";
 
-export const metadata = {
-  title: "Contact",
+export const metadata: Metadata = {
+  title: "Contact VaultScaler - Enterprise Licensing & Demos",
   description:
     "Get in touch with the VaultScaler team. Reach out for enterprise licensing, partnerships, or to schedule a demo.",
   alternates: { canonical: `${SITE.url}/contact` },
+  keywords: [...SITE.keywords, "contact", "demo", "enterprise licensing"],
+  openGraph: {
+    title: 'Contact VaultScaler',
+    description: 'Reach out for enterprise licensing, partnerships, or to schedule a demo.',
+    url: `${SITE.url}/contact`,
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact VaultScaler',
+    description: 'Reach out for enterprise licensing, partnerships, or to schedule a demo.',
+    images: ['/og.jpg'],
+  },
 };
 
 export default function Page() {
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact VaultScaler",
+    "description": "Get in touch with the VaultScaler team for enterprise licensing, partnerships, or demos.",
+    "url": `${SITE.url}/contact`,
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "VaultScaler",
+      "email": "bpruess@vaultscaler.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "bpruess@vaultscaler.com",
+      },
+    },
+  };
+
   return (
     <>
+      <JsonLd data={contactSchema} />
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-primary-4 via-primary-3 to-primary-3 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -37,7 +71,7 @@ export default function Page() {
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 flex flex-col">
               <div className="flex-grow">
                 <div className="w-12 h-12 bg-primary-3 rounded-xl flex items-center justify-center mb-6">
-                  <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
@@ -76,7 +110,7 @@ export default function Page() {
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 flex flex-col">
               <div className="flex-grow">
                 <div className="w-12 h-12 bg-pop-light rounded-xl flex items-center justify-center mb-6">
-                  <svg className="w-6 h-6 text-primary-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-6 h-6 text-primary-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
