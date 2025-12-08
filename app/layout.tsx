@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: "VaultScaler",
   description: "VaultScaler is democratizing and economizing AI operations for teams that train and deploy models in the real world.",
-  keywords: ["GPU scheduling", "training optimization", "Kubernetes GPU", "GPU throughput", "model training", "GPU efficiency", "Slurm", "Ray", "closed-loop control", "AI operations", "MLOps"],
+  keywords: ["GPU scheduling", "training optimization", "Kubernetes GPU", "GPU throughput", "model training", "GPU efficiency", "Slurm", "Ray", "closed-loop control", "AIOps", "MLOps"],
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -73,14 +73,34 @@ export default function RootLayout({
     ],
     owns: {
       "@type": "SoftwareApplication",
-      name: SITE.product,
-      applicationCategory: "DevOps/Monitoring",
-      operatingSystem: "Kubernetes 1.26+",
+      name: SITE.products.join(" & "),
+      applicationCategory: "DevOps/AI Operations",
+      operatingSystem: "Kubernetes 1.26+, Slurm, Ray",
       description: SITE.description,
+      featureList: [
+        // Radix Core - Training Optimization
+        "Up to 21% GPU infrastructure cost savings",
+        "GPU fairness and administration controls",
+        "Closed-loop GPU scheduling optimization",
+        "Multi-dimensional resource balancing (memory, compute, power)",
+        "No stack changes required - Helm chart deployment",
+        "Leadership-ready performance dashboards",
+        // Radix Studio - Inference Governance
+        "LLM orchestration and pipeline management",
+        "Multi-model registry for any AI provider",
+        "Built-in governance and audit trails",
+        "Compliance policy enforcement",
+        "Content filtering and budget controls",
+        "Real-time execution traces and visibility",
+        "Cost-aware LLM routing",
+        "Bring Your Own GPU (BYOG) support",
+        "Solve LLM vendor lock-in",
+      ],
       offers: {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
+        description: "14-day full trial, no credit card required",
       },
     },
     keywords: SITE.keywords.join(", "),

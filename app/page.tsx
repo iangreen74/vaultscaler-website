@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { TrackedCTALink } from '@/components/TrackedLink';
 import { SITE } from '@/lib/site';
 import JsonLd from '@/components/JsonLd';
+import FAQ from '@/components/FAQ';
 
 export const metadata: Metadata = {
   title: 'Radix AI Operations Platform | VaultScaler',
@@ -26,6 +27,33 @@ export const metadata: Metadata = {
   },
 };
 
+const faqItems = [
+  {
+    question: "What is Radix?",
+    answer: "Radix is an AI operations platform with two products: Radix Core optimizes GPU training throughput by up to 21% through intelligent scheduling, while Radix Studio provides LLM orchestration with built-in governance, cost control, and audit trails.",
+  },
+  {
+    question: "Why do most AI pilots fail to reach production?",
+    answer: "88% of AI pilots fail not because the models are bad, but because the infrastructure is missing. Teams lack repeatable pipelines, governance frameworks, cost visibility, and drift detection. Radix addresses these gaps with production-ready tooling from day one.",
+  },
+  {
+    question: "How does Radix Core improve GPU training efficiency?",
+    answer: "Traditional schedulers treat GPUs as monolithic units, ignoring memory, compute, and power constraints. Radix Core uses closed-loop control to balance these resources across all training runs, delivering up to 21% throughput improvement without any changes to your existing workflow.",
+  },
+  {
+    question: "What platforms does Radix support?",
+    answer: "Radix Core works with Kubernetes, Slurm, and Ray clusters. Radix Studio integrates with any LLM provider and supports Bring Your Own GPU (BYOG) deployments. Both products deploy without stack changes—install via Helm chart and see results in minutes.",
+  },
+  {
+    question: "How is Radix different from SageMaker or other MLOps platforms?",
+    answer: "Unlike cloud-locked platforms, Radix is multi-cloud and lets you bring your own infrastructure. We focus specifically on the two hardest problems in AI ops: training efficiency and inference governance. No vendor lock-in, no surprise bills, and governance is built-in rather than bolted on.",
+  },
+  {
+    question: "Is there a free trial?",
+    answer: "Yes. Radix Core offers a full-featured 14-day trial with support for up to 400 GPUs. Radix Studio Team tier also includes a trial period. No credit card required to start.",
+  },
+];
+
 export default function Home() {
   const webSiteSchema = {
     "@context": "https://schema.org",
@@ -35,9 +63,23 @@ export default function Home() {
     "description": "AI operations platform for GPU training optimization and LLM governance",
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map((item) => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer,
+      },
+    })),
+  };
+
   return (
     <>
       <JsonLd data={webSiteSchema} />
+      <JsonLd data={faqSchema} />
       {/* Hero - Lead with Radix */}
       <section className="relative min-h-[clamp(600px,90vh,1200px)] flex items-center justify-center bg-gradient-to-br from-primary-4 via-primary-3 to-primary-3 overflow-hidden">
         {/* Background decorative elements */}
@@ -298,13 +340,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-primary-3">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-lg text-gray-600 text-center mb-12">
+            Everything you need to know about Radix and VaultScaler.
+          </p>
+          <FAQ items={faqItems} />
+        </div>
+      </section>
+
       {/* About VaultScaler - Brief */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm text-gray-500 uppercase tracking-wide mb-3">Built by</p>
           <h3 className="text-2xl font-bold text-gray-900 mb-4">VaultScaler Labs</h3>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            We harmonize AI operations at scale. Radix is for teams that train and deploy models in the real world—and refuse to waste compute or compromise on governance.
+            VaultScaler Labs harmonizes AI operations at scale. <br />Radix Core gives you GPU cost savings and governance policies for model training. <br />Radix Studio gives you visibility, standardization and governance for every LLM call so you can deploy with confidence. <br />Radix is for those who refuse to waste compute or compromise on governance.
           </p>
         </div>
       </section>

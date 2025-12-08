@@ -29,7 +29,7 @@ export default function Page() {
   const ld = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: SITE.product,
+    name: SITE.products[0],
     applicationCategory: "DevOps/Monitoring",
     operatingSystem: "Kubernetes 1.26+",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },

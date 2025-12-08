@@ -59,6 +59,14 @@ export default function WaitlistPage() {
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Honeypot field for bot detection - hidden from users */}
+            <input
+              type="text"
+              name="_gotcha"
+              style={{ display: 'none' }}
+              tabIndex={-1}
+              autoComplete="off"
+            />
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                 Email address
