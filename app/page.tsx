@@ -5,14 +5,14 @@ import { SITE } from '@/lib/site';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Radix - AI Operations Platform | Train Faster, Deploy Smarter',
+  title: 'Radix AI Operations Platform | VaultScaler',
   description: 'Cut training costs by 21% and govern every LLM call. The AI operations platform for teams that refuse to waste compute or compromise on governance.',
   alternates: {
     canonical: SITE.url,
   },
   keywords: SITE.keywords,
   openGraph: {
-    title: 'Radix - AI Operations Platform',
+    title: 'Radix AI Operations Platform | VaultScaler',
     description: 'Cut training costs by 21% and govern every LLM call. No stack changes. No vendor lock-in.',
     type: 'website',
     url: SITE.url,
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Radix - AI Operations Platform',
+    title: 'Radix AI Operations Platform | VaultScaler',
     description: 'Cut training costs by 21% and govern every LLM call. No stack changes. No vendor lock-in.',
     images: ['/og.jpg'],
   },

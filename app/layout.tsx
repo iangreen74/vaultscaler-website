@@ -85,7 +85,7 @@ export default function RootLayout({
     },
     keywords: SITE.keywords.join(", "),
     sameAs: [
-      "https://github.com/vaultscaler",
+      "https://github.com/iangreen74",
     ],
   };
 

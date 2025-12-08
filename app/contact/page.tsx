@@ -5,20 +5,20 @@ import { TrackedEmailLink } from "@/components/TrackedLink";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Contact VaultScaler - Enterprise Licensing & Demos",
+  title: "Contact | VaultScaler",
   description:
     "Get in touch with the VaultScaler team. Reach out for enterprise licensing, partnerships, or to schedule a demo.",
   alternates: { canonical: `${SITE.url}/contact` },
   keywords: [...SITE.keywords, "contact", "demo", "enterprise licensing"],
   openGraph: {
-    title: 'Contact VaultScaler',
+    title: 'Contact | VaultScaler',
     description: 'Reach out for enterprise licensing, partnerships, or to schedule a demo.',
     url: `${SITE.url}/contact`,
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact VaultScaler',
+    title: 'Contact | VaultScaler',
     description: 'Reach out for enterprise licensing, partnerships, or to schedule a demo.',
     images: ['/og.jpg'],
   },

@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Join the Radix Waitlist",
+  title: "Join the Radix Waitlist | VaultScaler",
   description:
     "Be first in line when Radix launches. Get early access to GPU scheduling optimization and LLM governance.",
   alternates: { canonical: `${SITE.url}/waitlist` },
   keywords: [...SITE.keywords, "waitlist", "early access", "beta"],
   openGraph: {
-    title: "Join the Radix Waitlist",
+    title: "Join the Radix Waitlist | VaultScaler",
     description:
       "Be first in line when Radix launches. Get early access to GPU scheduling optimization and LLM governance.",
     url: `${SITE.url}/waitlist`,
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Join the Radix Waitlist",
+    title: "Join the Radix Waitlist | VaultScaler",
     description:
       "Be first in line when Radix launches. Get early access to GPU scheduling optimization and LLM governance.",
     images: ["/og.jpg"],

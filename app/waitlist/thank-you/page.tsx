@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "You're on the List — Radix",
+  title: "You're on the List | VaultScaler",
   robots: { index: false, follow: false },
 };
 

@@ -5,14 +5,14 @@ import JsonLd from "@/components/JsonLd";
 import { TrackedCTALink } from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
-  title: "Pricing — Radix Core & Studio Plans",
+  title: "Pricing | VaultScaler",
   description: "Get Radix Core for GPU scheduling optimization ($28/GPU/month) or Radix Studio for LLM orchestration & governance (from $29/month). Start with a free trial.",
   alternates: {
     canonical: `${SITE.url}/pricing`,
   },
   keywords: [...SITE.keywords, "pricing", "GPU scheduling pricing", "LLM governance pricing", "free trial"],
   openGraph: {
-    title: 'Radix Pricing - Core & Studio Plans',
+    title: 'Pricing | VaultScaler',
     description: 'Radix Core: $28/GPU/month. Radix Studio: from $29/month. Start with a free 14-day trial.',
     url: `${SITE.url}/pricing`,
     type: 'website',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Radix Pricing - Core & Studio Plans',
+    title: 'Pricing | VaultScaler',
     description: 'Radix Core: $28/GPU/month. Radix Studio: from $29/month. Start with a free 14-day trial.',
     images: ['/og.jpg'],
   },

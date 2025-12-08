@@ -5,13 +5,13 @@ import { SITE } from "@/lib/site";
 import { TrackedCTALink, TrackedAnchor } from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
-  title: `Radix Platform — ${SITE.product}`,
+  title: "Radix Platform | VaultScaler",
   description:
     "The Radix Platform optimizes training and inference. Radix Core delivers measurable GPU training throughput improvements. Radix Studio provides LLM orchestration, governance, and cost control.",
   alternates: { canonical: `${SITE.url}/product` },
   keywords: SITE.keywords,
   openGraph: {
-    title: 'Radix Platform - GPU Training & LLM Governance',
+    title: 'Radix Platform | VaultScaler',
     description: 'Radix Core for 21% GPU throughput gains. Radix Studio for LLM orchestration and governance.',
     url: `${SITE.url}/product`,
     type: 'website',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Radix Platform - GPU Training & LLM Governance',
+    title: 'Radix Platform | VaultScaler',
     description: 'Radix Core for 21% GPU throughput gains. Radix Studio for LLM orchestration and governance.',
     images: ['/og.jpg'],
   },

@@ -3,7 +3,7 @@ import { SITE } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Exclude /team (noindex for privacy) and /docs (external links only)
-  const pages = ["", "product", "security", "pricing", "roadmap", "contact"];
+  const pages = ["", "product", "security", "pricing", "roadmap", "contact", "waitlist"];
   const now = new Date().toISOString();
   return pages.map((p) => ({
     url: `${SITE.url}/${p}`,
