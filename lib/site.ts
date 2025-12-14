@@ -3,7 +3,7 @@ export const SITE = {
   products: ["Radix Core", "Radix Studio"],
   url: "https://vaultscaler.com",
   email: "bpruess@vaultscaler.com",
-  launchISO: "2025-11-15",
+  launchISO: "2026-01-15",
   description:
     "VaultScaler Labs harmonizes AI operations at scale. Radix Core gives you GPU cost savings and governance policies for model training. Radix Studio gives you visibility, standardization and governance for every LLM call so you can deploy with confidence.",
   keywords: [

@@ -36,7 +36,7 @@ export default function Page() {
     author: { "@type": "Organization", name: "VaultScaler" },
     url: `${SITE.url}/product`,
     description: metadata.description,
-    releaseNotes: "GA December 2025.",
+    releaseNotes: "General Availability January 15, 2026.",
   };
 
   return (

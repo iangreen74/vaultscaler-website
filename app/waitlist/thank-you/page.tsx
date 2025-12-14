@@ -22,7 +22,7 @@ export default function ThankYouPage() {
           </h1>
 
           <p className="text-gray-600 mb-8">
-            Thanks for your interest in Radix. We&apos;ll be in touch as soon as we launch.
+            You&apos;re all set for our January 15, 2026 launch. We&apos;ll email you with early access details one week before launch day.
           </p>
 
           <div className="space-y-4">

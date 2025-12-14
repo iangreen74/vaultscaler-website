@@ -154,7 +154,7 @@ export default function PricingPage() {
           </p>
           <div className="text-center mb-12">
             <p className="inline-block px-6 py-4 bg-primary-3/10 text-primary-3 rounded-full font-medium text-sm mb-4">
-              Helm Chart Download Coming Soon
+              Helm Chart Available January 15, 2026
             </p>
           </div>
 

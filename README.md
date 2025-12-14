@@ -239,6 +239,6 @@ site/
 
 ---
 
-**Target Launch: November 15, 2025**
+**Target Launch: January 15, 2026**
 
 Built with Next.js 14 • Deployed on AWS S3 + CloudFront
