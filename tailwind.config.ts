@@ -14,11 +14,11 @@ const config: Config = {
         'pop-dark': '#00d9a6ff',
         'pop-backup': '#00e3aeff',
         
-        // Primary colors (Bold blues - 4 shades, 1=brightest, 4=darkest)
-        'primary-1': '#001A90',
-        'primary-2': '#001369',
-        'primary-3': '#000F53',
-        'primary-4': '#000e4A',
+        // Primary colors (Brand blues based on #052152 - 4 shades, 1=brightest, 4=darkest)
+        'primary-1': '#052152',
+        'primary-2': '#041a42',
+        'primary-3': '#031432',
+        'primary-4': '#020e24',
 
         // Secondary colors (Greys - 6 shades, 1=lightest, 6=darkest)
         'secondary-1': '#F9FAFB',

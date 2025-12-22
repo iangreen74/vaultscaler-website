@@ -1,0 +1,33 @@
+{
+	"folders": [
+		{
+			"path": "../../radix/radix"
+		},
+		{
+			"path": "../../Users/benpr/OneDrive/Desktop/radix_local"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"github.copilot.enable": {
+			"*": true,
+			"yaml": true,
+			"plaintext": true,
+			"markdown": true,
+			"python": true,
+			"terraform": true,
+			"dockerfile": true,
+			"json": true,
+			"toml": true
+		},
+		"github.copilot.chat.localeOverride": "en",
+		"files.associations": {
+			"*.tf": "terraform",
+			"*.tfvars": "terraform",
+			"*.hcl": "terraform",
+			"*.rego": "rego"
+		}
+	}
+}

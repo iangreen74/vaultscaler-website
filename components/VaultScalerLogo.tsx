@@ -12,7 +12,7 @@ export function VaultScalerLogo({ compact = false }: VaultScalerLogoProps) {
   return (
     <div className="inline-flex items-center">
       <img
-        src="/brand/vaultscaler-logo-dark.svg"
+        src="/brand/vaultscaler-icon-v1.0/svg/vaultscaler-icon-primary.svg"
         alt="VaultScaler"
         className={sizeClass}
       />
