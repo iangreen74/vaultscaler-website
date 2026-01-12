@@ -37,7 +37,7 @@ export default function PricingPage() {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Radix Core",
-    "description": "AI training GPU scheduler that increases throughput by 21% through memory-aware, power-aware job placement",
+    "description": "AI training GPU scheduler that increases throughput by up to 21% through memory-aware, power-aware job placement",
     "brand": {
       "@type": "Organization",
       "name": SITE.name,

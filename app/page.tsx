@@ -7,14 +7,14 @@ import FAQ from '@/components/FAQ';
 
 export const metadata: Metadata = {
   title: 'Radix AI Operations Platform | VaultScaler',
-  description: 'Cut training costs by 21% and govern every LLM call. The AI operations platform for teams that refuse to waste compute or compromise on governance.',
+  description: 'Cut training costs by up to 21% and govern every LLM call. The AI operations platform for teams that refuse to waste compute or compromise on governance.',
   alternates: {
     canonical: SITE.url,
   },
   keywords: SITE.keywords,
   openGraph: {
     title: 'Radix AI Operations Platform | VaultScaler',
-    description: 'Cut training costs by 21% and govern every LLM call. No stack changes. No vendor lock-in.',
+    description: 'Cut training costs by up to 21% and govern every LLM call. No stack changes. No vendor lock-in.',
     type: 'website',
     url: SITE.url,
     images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Radix AI Operations Platform' }],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Radix AI Operations Platform | VaultScaler',
-    description: 'Cut training costs by 21% and govern every LLM call. No stack changes. No vendor lock-in.',
+    description: 'Cut training costs by up to 21% and govern every LLM call. No stack changes. No vendor lock-in.',
     images: ['/og.jpg'],
   },
 };
@@ -106,7 +106,7 @@ export default function Home() {
 
           {/* Subheadline - value prop for both audiences */}
           <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Cut training costs by 21%. Govern every LLM call.
+            Cut training costs by up to 21%. Govern every LLM call.
           </p>
 
           {/* Primary CTAs - differentiated for technical vs business buyers */}
@@ -132,7 +132,7 @@ export default function Home() {
           {/* Value stats - concrete numbers */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-3xl mx-auto" role="region" aria-label="Platform results">
             <div className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
-              <p className="text-3xl sm:text-4xl font-bold text-pop-light mb-1">21%</p>
+              <p className="text-3xl sm:text-4xl font-bold text-pop-light mb-1">Up to 21%</p>
               <p className="text-sm text-white/80 font-medium">Training Throughput Gains</p>
             </div>
             <div className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
@@ -302,7 +302,7 @@ export default function Home() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <h3 className="font-bold text-lg mb-3 text-pop-light">Proven Results</h3>
               <p className="text-white/80 text-sm leading-relaxed">
-                21% throughput improvement validated with statistical rigor (p {'<'} 0.001). Every performance claim is reproducible.
+                Up to 21% throughput improvement in testing. Every performance claim is reproducible.
               </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
@@ -357,9 +357,9 @@ export default function Home() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm text-gray-500 uppercase tracking-wide mb-3">Built by</p>
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">VaultScaler Labs</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">VaultScaler</h3>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            VaultScaler Labs harmonizes AI operations at scale. <br />Radix Core gives you GPU cost savings and governance policies for model training. <br />Radix Studio gives you visibility, standardization and governance for every LLM call so you can deploy with confidence. <br />Radix is for those who refuse to waste compute or compromise on governance.
+            VaultScaler harmonizes AI operations at scale. <br />Radix Core gives you GPU cost savings and governance policies for model training. <br />Radix Studio gives you visibility, standardization and governance for every LLM call so you can deploy with confidence. <br />Radix is for those who refuse to waste compute or compromise on governance.
           </p>
         </div>
       </section>

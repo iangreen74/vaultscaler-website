@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   keywords: SITE.keywords,
   openGraph: {
     title: 'Radix Platform | VaultScaler',
-    description: 'Radix Core for 21% GPU throughput gains. Radix Studio for LLM orchestration and governance.',
+    description: 'Radix Core for up to 21% GPU throughput gains. Radix Studio for LLM orchestration and governance.',
     url: `${SITE.url}/product`,
     type: 'website',
     images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Radix Platform' }],
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Radix Platform | VaultScaler',
-    description: 'Radix Core for 21% GPU throughput gains. Radix Studio for LLM orchestration and governance.',
+    description: 'Radix Core for up to 21% GPU throughput gains. Radix Studio for LLM orchestration and governance.',
     images: ['/og.jpg'],
   },
 };

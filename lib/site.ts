@@ -5,7 +5,7 @@ export const SITE = {
   email: "bpruess@vaultscaler.com",
   launchISO: "2026-03-02",
   description:
-    "VaultScaler Labs harmonizes AI operations at scale. Radix Core gives you GPU cost savings and governance policies for model training. Radix Studio gives you visibility, standardization and governance for every LLM call so you can deploy with confidence.",
+    "VaultScaler harmonizes AI operations at scale. Radix Core gives you GPU cost savings and governance policies for model training. Radix Studio gives you visibility, standardization and governance for every LLM call so you can deploy with confidence.",
   keywords: [
     // Pain point keywords (what people search when frustrated)
     "AI policy",

@@ -31,7 +31,7 @@ export default function Navigation() {
               Home
             </Link>
             <Link href="/product" onClick={() => trackNavClick('Product')} className="text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              Radix Platform
+              Platform
             </Link>
             <Link href="/pricing" onClick={() => trackNavClick('Pricing')} className="text-sm text-gray-700 hover:text-gray-900 transition-colors">
               Pricing
@@ -89,7 +89,7 @@ export default function Navigation() {
               onClick={() => handleMobileNavClick('Product')}
               className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
             >
-              Radix Platform
+              Platform
             </Link>
             <Link
               href="/pricing"
