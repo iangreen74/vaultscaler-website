@@ -48,7 +48,7 @@ export default function WaitlistPage() {
         <div className="bg-white rounded-2xl p-8 md:p-12 shadow-2xl">
           <div className="text-center mb-8">
             <p className="text-sm font-medium text-primary-3 uppercase tracking-wide mb-2">
-              Launching January 15, 2026
+              Launching March 2, 2026
             </p>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Join the Radix Waitlist
@@ -149,7 +149,7 @@ export default function WaitlistPage() {
           </form>
 
           <p className="text-center text-gray-500 text-sm mt-6">
-            No spam. We&apos;ll email you one week before our January 15, 2026 launch.
+            No spam. We&apos;ll email you one week before our March 2, 2026 launch.
           </p>
         </div>
       </div>
