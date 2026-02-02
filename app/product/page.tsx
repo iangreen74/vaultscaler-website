@@ -5,22 +5,22 @@ import { SITE } from "@/lib/site";
 import { TrackedCTALink, TrackedAnchor } from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
-  title: "Radix Platform | VaultScaler",
+  title: "Radix Platform - GPU Training & LLM Governance | VaultScaler",
   description:
-    "The Radix Platform optimizes training and inference. Radix Core delivers measurable GPU training throughput improvements. Radix Studio provides LLM orchestration, governance, and cost control.",
+    "Complete AI operations platform. Radix Core: up to 21% GPU throughput gains with zero code changes. Radix Studio: LLM orchestration, governance & cost control. Deploy in minutes.",
   alternates: { canonical: `${SITE.url}/product` },
   keywords: SITE.keywords,
   openGraph: {
-    title: 'Radix Platform | VaultScaler',
-    description: 'Radix Core for up to 21% GPU throughput gains. Radix Studio for LLM orchestration and governance.',
+    title: 'Radix Platform - GPU Training & LLM Governance | VaultScaler',
+    description: 'Complete AI operations. Radix Core: 21% GPU gains. Radix Studio: LLM governance & orchestration.',
     url: `${SITE.url}/product`,
     type: 'website',
     images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Radix Platform' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Radix Platform | VaultScaler',
-    description: 'Radix Core for up to 21% GPU throughput gains. Radix Studio for LLM orchestration and governance.',
+    title: 'Radix Platform - GPU Training & LLM Governance | VaultScaler',
+    description: 'Complete AI operations. Radix Core: 21% GPU gains. Radix Studio: LLM governance & orchestration.',
     images: ['/og.jpg'],
   },
 };
@@ -39,8 +39,28 @@ export default function Page() {
     releaseNotes: "General Availability March 2, 2026.",
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": SITE.url
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Product",
+        "item": `${SITE.url}/product`
+      }
+    ]
+  };
+
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       {/* Platform Overview - Hero */}
       <section className="relative py-20 bg-gradient-to-br from-primary-4 via-primary-3 to-primary-3 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -52,10 +72,6 @@ export default function Page() {
           <p className="text-xl text-white/90 text-center max-w-3xl mx-auto mb-8 leading-relaxed">
             Complete AI operations across the lifecycle. Optimize training. Govern inference. Control costs.
           </p>
-
-          <div className="text-center mb-12">
-
-          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Core - Deep Blue theme */}
@@ -86,8 +102,7 @@ export default function Page() {
           <div className="bg-primary-3 text-white rounded-2xl p-8 text-center mb-12 border-2 border-primary-3">
             <p className="text-3xl font-bold mb-2">Up to 21.4% throughput improvement</p>
             <p className="text-xl text-gray-200">over industry-standard FIFO scheduling</p>
-            <p className="text-lg text-white/70 mt-4">Save roughly $250,000/year with 100 GPUs, or get your jobs to production quicker in cloud </p>
-          </div>
+            </div>
 
           {/* Four Pillars */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -130,7 +145,7 @@ export default function Page() {
                 <p className="text-gray-600">Get GPU insights in 60 seconds</p>
               </div>
             </div>
-            <p className="text-center text-gray-500 mt-6">Works with Kubernetes, Slurm, and Ray. Your data scientists submit jobs exactly as they do today.</p>
+            <p className="text-center text-gray-500 mt-6">Works with Kubernetes and Slurm. Your team's workflow stays the same.</p>
           </div>
 
           {/* Core Trial CTA */}
@@ -159,6 +174,13 @@ export default function Page() {
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
               The control plane for LLM operations. Governance, cost control, and multi-model orchestration.
             </p>
+          </div>
+
+          {/* Key Insight */}
+          <div className="bg-pop-light text-primary-4 rounded-2xl p-8 text-center mb-12 border-2 border-pop-light">
+            <p className="text-3xl font-bold mb-2">88% of AI pilots never reach production</p>
+            <p className="text-xl text-primary-4/80">The models work. The infrastructure doesn't.</p>
+            <p className="text-lg text-primary-4/70 mt-4">Missing pipelines. No governance. Runaway costs. No drift detection. Radix Studio fills these gaps from day one.</p>
           </div>
 
           {/* Four Pillars */}
@@ -204,6 +226,34 @@ export default function Page() {
             </div>
           </div>
 
+          {/* Why Radix - Differentiation */}
+          <div className="bg-white/10 backdrop-blur rounded-2xl p-8 mb-12 border border-white/20">
+            <h3 className="text-2xl font-bold mb-6 text-white text-center">Why Radix Over Cloud-Locked Platforms?</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-pop-light text-primary-4 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <h4 className="font-bold text-pop-light mb-2">Multi-Cloud Freedom</h4>
+                <p className="text-white/70 text-sm">Bring your own infrastructure. No vendor lock-in. Run anywhere.</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-pop-light text-primary-4 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                </div>
+                <h4 className="font-bold text-pop-light mb-2">Governance Built-In</h4>
+                <p className="text-white/70 text-sm">Compliance, audit logs, and policies from day one—not bolted on later.</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-pop-light text-primary-4 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <h4 className="font-bold text-pop-light mb-2">No Surprise Bills</h4>
+                <p className="text-white/70 text-sm">Predictable pricing with cost controls and usage caps you define.</p>
+              </div>
+            </div>
+          </div>
+
           {/* Studio Trial CTA */}
           <div className="bg-pop-light rounded-2xl p-8 text-center text-primary-4">
             <h3 className="text-2xl font-bold mb-4">Try Radix Studio Free</h3>
@@ -225,8 +275,7 @@ export default function Page() {
       {/* Choose Your Path */}
       <section className="py-20 bg-gradient-to-b from-gray-200 to-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-4 text-primary-3">Choose Your Path</h2>
-          <p className="text-xl text-center text-gray-600 mb-12">Start with what you need. Expand when you're ready.</p>
+          <h2 className="text-4xl font-bold text-center mb-4 text-primary-3">Build Your Stack</h2>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Core Only - Deep Blue */}
@@ -235,22 +284,22 @@ export default function Page() {
               <p className="text-gray-600 mb-6">
                 You're training models on GPUs and want more throughput plus better observability. Deterministic scheduling improvements without changing workflows.
               </p>
-              <p className="text-2xl font-bold text-primary-3 mb-2">$28/GPU/mo</p>
-              <p className="text-sm text-gray-500 mb-6">Up to 400 GPUs</p>
+              <p className="text-2xl font-bold text-primary-3 mb-2">$45/GPU/mo</p>
+              <p className="text-sm text-gray-500 mb-6">Corporate pricing ($30 academic)</p>
               <TrackedCTALink href="/waitlist" trackingName="Join Waitlist" trackingLocation="Product - Choose Path" className="block text-center px-6 py-3 bg-primary-3 text-white rounded-full font-semibold hover:bg-primary-4 transition-colors">
                 Join Waitlist
               </TrackedCTALink>
             </div>
 
-            {/* Studio Only - Cyan */}
-            <div className="bg-white border-2 border-pop-light rounded-2xl p-8 shadow-xl">
-              <h3 className="text-xl font-bold mb-4 text-pop-dark">Radix Studio</h3>
+            {/* Studio - Deep Blue */}
+            <div className="bg-white border-2 border-primary-3 rounded-2xl p-8 shadow-xl">
+              <h3 className="text-xl font-bold mb-4 text-primary-3">Radix Studio</h3>
               <p className="text-gray-600 mb-6">
                 You're running LLM applications in production and need control over models, pipelines, costs, and governance. A control plane, not just API wrappers.
               </p>
-              <p className="text-2xl font-bold text-pop-dark mb-2">$29/mo</p>
-              <p className="text-sm text-gray-500 mb-6">Team tier: 1 user, 3 models</p>
-              <TrackedCTALink href="/waitlist" trackingName="Join Waitlist" trackingLocation="Product - Choose Path" className="block text-center px-6 py-3 bg-pop-light text-primary-4 rounded-full font-semibold hover:bg-primary-2 hover:text-white transition-colors">
+              <p className="text-2xl font-bold text-primary-3 mb-2">$45/user/mo</p>
+              <p className="text-sm text-gray-500 mb-6">Corporate pricing ($30 academic)</p>
+              <TrackedCTALink href="/waitlist" trackingName="Join Waitlist" trackingLocation="Product - Choose Path" className="block text-center px-6 py-3 bg-primary-3 text-white rounded-full font-semibold hover:bg-primary-4 transition-colors">
                 Join Waitlist
               </TrackedCTALink>
             </div>

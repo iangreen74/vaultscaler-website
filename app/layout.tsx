@@ -9,9 +9,9 @@ import { GA_MEASUREMENT_ID } from "@/lib/analytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: "VaultScaler",
-  description: "VaultScaler is democratizing and economizing AI operations for teams that train and deploy models in the real world.",
-  keywords: ["GPU scheduling", "training optimization", "Kubernetes GPU", "GPU throughput", "model training", "GPU efficiency", "Slurm", "Ray", "closed-loop control", "AIOps", "MLOps"],
+  title: "VaultScaler - GPU Optimization & LLM Governance Platform",
+  description: "Optimize GPU training throughput up to 21% and control LLM costs with complete governance. AI operations platform for Kubernetes, Slurm & Ray. Deploy in minutes.",
+  keywords: ["GPU optimization", "LLM governance", "AI operations platform", "GPU scheduler", "model training", "GPU cost reduction", "Kubernetes GPU", "Slurm optimization", "Ray clusters", "AI cost control", "MLOps", "AIOps"],
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "VaultScaler — Democratizing and Economizing AI Operations",
-    description: "VaultScaler is democratizing and economizing AI operations for teams that train and deploy models in the real world.",
+    title: "VaultScaler - GPU Optimization & LLM Governance Platform",
+    description: "Up to 21% GPU throughput gains. Complete LLM governance. Deploy in minutes on Kubernetes, Slurm or Ray.",
     url: "https://vaultscaler.com",
     siteName: "VaultScaler",
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: "VaultScaler",
+        alt: "VaultScaler - GPU Optimization & LLM Governance",
       },
     ],
     locale: "en_US",
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "VaultScaler — Democratizing and Economizing AI Operations",
-    description: "VaultScaler is democratizing and economizing AI operations for teams that train and deploy models in the real world.",
+    title: "VaultScaler - GPU Optimization & LLM Governance Platform",
+    description: "Up to 21% GPU throughput gains. Complete LLM governance. Deploy in minutes on Kubernetes, Slurm or Ray.",
     images: ["/og.jpg"],
   },
 };

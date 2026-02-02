@@ -4,8 +4,16 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { trackNavClick } from '@/lib/analytics';
 
+const solutionLinks = [
+  { href: '/solutions/gpu-fleet-optimization/', label: 'Hyperscale & Frontier AI' },
+  { href: '/solutions/corporate/', label: 'Corporate AI Teams' },
+  { href: '/solutions/research/', label: 'Research Labs' },
+];
+
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
 
   const handleMobileNavClick = (label: string) => {
     trackNavClick(label);
@@ -30,6 +38,38 @@ export default function Navigation() {
             <Link href="/" onClick={() => trackNavClick('Home')} className="text-sm text-gray-700 hover:text-gray-900 transition-colors">
               Home
             </Link>
+            {/* Solutions Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setSolutionsOpen(true)}
+              onMouseLeave={() => setSolutionsOpen(false)}
+            >
+              <button
+                className="text-sm text-gray-700 hover:text-gray-900 transition-colors flex items-center gap-1 py-2"
+                onClick={() => setSolutionsOpen(!solutionsOpen)}
+              >
+                Solutions
+                <svg className={`w-4 h-4 transition-transform ${solutionsOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {solutionsOpen && (
+                <div className="absolute top-full left-0 pt-1 w-56">
+                  <div className="bg-white rounded-lg shadow-lg border border-gray-200 py-2">
+                    {solutionLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => { trackNavClick(`Solutions - ${link.label}`); setSolutionsOpen(false); }}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
             <Link href="/product" onClick={() => trackNavClick('Product')} className="text-sm text-gray-700 hover:text-gray-900 transition-colors">
               Platform
             </Link>
@@ -84,6 +124,32 @@ export default function Navigation() {
             >
               Home
             </Link>
+            {/* Mobile Solutions Accordion */}
+            <div>
+              <button
+                onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}
+                className="flex items-center justify-between w-full px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+              >
+                Solutions
+                <svg className={`w-4 h-4 transition-transform ${mobileSolutionsOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileSolutionsOpen && (
+                <div className="pl-4 space-y-1">
+                  {solutionLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => handleMobileNavClick(`Solutions - ${link.label}`)}
+                      className="block px-3 py-2 rounded-md text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
             <Link
               href="/product"
               onClick={() => handleMobileNavClick('Product')}

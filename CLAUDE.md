@@ -1,6 +1,48 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+## Custom Agents
+
+This project has specialized agents for startup operations. Invoke with `/[agent-name]`:
+
+| Command | Agent | Purpose |
+|---------|-------|---------|
+| `/saas` | SaaS Agreements | Draft MSAs, order forms, license terms |
+| `/fundraising` | Fundraising & Capital | Runway models, investor targeting, dataroom |
+| `/gtm` | GTM & Revenue | ICP, pricing, sales scripts, funnel design |
+| `/pitch` | Deck & Story | Investor decks, one-pagers, pitch narratives |
+| `/risk` | Risk & Structure | Incorporation, equity, cap table, tax planning |
+| `/mentor` | Mentor | Cofounder, investor, partner negotiations |
+| `/customer` | Product & Discovery | Pain mapping, roadmap, interview analysis |
+| `/tech` | Technical Architecture | MVP planning, build vs buy, system design |
+| `/metrics` | Metrics & Feedback | KPIs, weekly summaries, experiment tracking |
+| `/finance` | Startup Finance | Unit economics, P&L, scenario modeling |
+| `/frontend` | Frontend Dev | Next.js, React, TypeScript, Tailwind |
+| `/growth` | Growth | SEO, analytics, conversion optimization |
+| `/messaging` | Website Messaging | Headlines, CTAs, conversion copy |
+| `/security` | Web Security | Forms, headers, scripts, PCI readiness |
+| `/prospect` | University Prospecting | Research labs, stakeholders, LinkedIn intel, pain signals |
+
+## Agent Collaboration
+
+Agents are designed to work together:
+- **Prospect** finds qualified leads, feeds to **GTM** for outreach sequences
+- **GTM** feeds ICP to **Customer**, **Messaging**, and **Prospect**
+- **Customer** pain points inform **Pitch**, **Product**, and **Prospect** targeting
+- **Tech** validates promises made by **GTM** and **Pitch**
+- **Finance** pulls from **GTM** (revenue) and **Tech** (costs)
+- **Fundraising** uses **Pitch** materials and **Finance** models
+- **Risk** reviews equity/legal implications across all agents
+- **Security** escalates infrastructure to **Tech**, legal to **Risk**
+- **Metrics** tracks **Prospect** → **GTM** → customer conversion rates
+
+## Guardrails
+
+All agents follow these principles:
+- No fabricated metrics or false claims
+- Label assumptions clearly
+- Escalate high-stakes decisions (equity, legal, compliance)
+- Optimize for long-term trust over short-term wins
+
 
 ## Build & Development Commands
 
