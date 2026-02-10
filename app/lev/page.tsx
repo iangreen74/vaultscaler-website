@@ -11,7 +11,7 @@ export default function LevPage() {
       {/* Hero - Lev */}
       <section className="relative min-h-[clamp(600px,90vh,1200px)] flex items-center justify-center bg-gradient-to-br from-primary-4 via-primary-3 to-primary-3 overflow-hidden">
         {/* Plaid pattern on undulating fabric, bottom-right corner */}
-        <div className="absolute inset-0 overflow-hidden">
+        {/* <div className="absolute inset-0 overflow-hidden">
           <div
             className="absolute inset-0"
             style={{
@@ -56,6 +56,51 @@ export default function LevPage() {
               maskImage: 'radial-gradient(200% 90% at 65% 110%, black 0%, black 30%, transparent 70%)',
             }}
           />
+        </div> */}
+
+        {/* Horizontal graduated lines - bottom left, movement up and to the right, fade lev-light to lev-dark */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div
+            className="absolute inset-0"
+            style={{
+              background: `
+                repeating-linear-gradient(-5deg,
+                  transparent 0px,
+                  transparent 16px,
+                  rgba(226,214,167,0.4) 17px,
+                  rgba(226,214,167,0.4) 19px,
+                  transparent 20px,
+                  transparent 24px,
+                  rgba(226,214,167,0.35) 25px,
+                  rgba(226,214,167,0.35) 26px,
+                  transparent 27px,
+                  transparent 32px,
+                  rgba(226,214,167,0.3) 33px,
+                  rgba(226,214,167,0.3) 34px,
+                  transparent 35px,
+                  transparent 42px,
+                  rgba(226,214,167,0.25) 43px,
+                  rgba(226,214,167,0.25) 44px,
+                  transparent 45px,
+                  transparent 54px,
+                  rgba(81,77,60,0.2) 55px,
+                  rgba(81,77,60,0.2) 56px,
+                  transparent 57px,
+                  transparent 68px,
+                  rgba(81,77,60,0.25) 69px,
+                  rgba(81,77,60,0.25) 70px,
+                  transparent 71px,
+                  transparent 85px,
+                  rgba(81,77,60,0.3) 86px,
+                  rgba(81,77,60,0.3) 87px,
+                  transparent 88px,
+                  transparent 105px
+                )
+              `,
+              WebkitMaskImage: 'radial-gradient(ellipse 140% 120% at 0% 100%, black 0%, black 20%, transparent 60%)',
+              maskImage: 'radial-gradient(ellipse 140% 120% at 0% 100%, black 0%, black 20%, transparent 60%)',
+            }}
+          />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -66,14 +111,21 @@ export default function LevPage() {
 
           {/* Main Tagline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
-            Complete Agentic Engineering<br className="hidden sm:inline" />
+            AI engineering. Actual delivery.
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-lev-bold max-w-3xl mx-auto mb-10 leading-relaxed">
-            Lev takes you from idea to production support with predictability.<br className="hidden sm:inline" />
-            Own your systems from end to end.
+            One system that architects, builds, deploys, and supports your software — with a living spec that prevents your codebase from churning backward.
           </p>
+
+          {/* CTA */}
+          <a
+            href="#pricing"
+            className="inline-block px-10 py-5 bg-lev-bold text-primary-4 rounded-full font-bold text-xl hover:bg-lev-light transition-all shadow-2xl hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-lev-bold/50"
+          >
+            Get Lev
+          </a>
 
         </div>
       </section>
@@ -394,7 +446,7 @@ export default function LevPage() {
       </section>
 
       {/* Pricing */}
-      <section className="py-20 bg-white">
+      <section id="pricing" className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-primary-3">
             Simple, Predictable Pricing
@@ -410,7 +462,7 @@ export default function LevPage() {
               <p className="text-gray-500 text-sm mb-6">For founders shipping their first products</p>
 
               <div className="mb-6">
-                <span className="text-4xl font-bold text-primary-3">$999</span>
+                <span className="text-4xl font-bold text-primary-3">$1,499</span>
                 <span className="text-gray-500 text-sm"> / project / month</span>
               </div>
 
@@ -502,6 +554,13 @@ export default function LevPage() {
 
           <div className="space-y-6">
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
+              <h3 className="font-bold text-lg text-primary-3 mb-3">Does Lev replace my engineering team?</h3>
+              <p className="text-gray-600 leading-relaxed">
+                No. Lev works with your senior product and technical people to accelerate what they're already capable of delivering. Your people stay in the driver's seat—defining direction, making judgment calls, and owning the outcome. Lev amplifies their expertise by handling the execution heavy lifting, so they can focus on sustainable progress instead of fighting AI-generated code that doesn't compound. Think of it as expanding your team's capacity, not replacing their judgment.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
               <h3 className="font-bold text-lg text-primary-3 mb-3">How is Lev different from Cursor, Copilot, or Devin?</h3>
               <p className="text-gray-600 leading-relaxed">
                 Those tools generate code and stop. Lev owns the entire lifecycle—from collaborative spec creation through deployment through production support. When their code breaks at 2 AM, you're on your own. When Lev's code needs attention, SRE already has the context to fix it without breaking something else. We're not a coding assistant. We're a complete engineering system.
@@ -547,6 +606,13 @@ export default function LevPage() {
               <h3 className="font-bold text-lg text-primary-3 mb-3">What if I already use AI coding tools?</h3>
               <p className="text-gray-600 leading-relaxed">
                 Lev isn't replacing your IDE or your copilot. Your developers can keep using Cursor, Copilot, or whatever tools they prefer for day-to-day coding. Lev operates at a different level—owning the spec, the architecture, the deployment, and production support. Think of it as the system that makes sure all that AI-generated code actually works together, ships reliably, and stays maintainable.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
+              <h3 className="font-bold text-lg text-primary-3 mb-3">Who owns the code Lev creates?</h3>
+              <p className="text-gray-600 leading-relaxed">
+                You do. All of it—100% of the IP, 100% of the rights. Lev is completely separate from the code it produces. There's no proprietary runtime baked in, no vendor SDK woven into your output, and no phone-home dependencies. The code Lev writes is standard, clean, production-grade code that any engineer can read, maintain, and extend without Lev in the picture. Think of it like hiring a contractor to build your house—when the job is done, you own the house. Lev is a tool you use, not a co-owner of what you build.
               </p>
             </div>
 
