@@ -277,7 +277,7 @@ export default function Page() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-4 text-primary-3">Build Your Stack</h2>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
             {/* Core Only - Deep Blue */}
             <div className="bg-white border-2 border-primary-3 rounded-2xl p-8 shadow-xl">
               <h3 className="text-xl font-bold mb-4 text-primary-3">Radix Core</h3>
@@ -285,7 +285,7 @@ export default function Page() {
                 You're training models on GPUs and want more throughput plus better observability. Deterministic scheduling improvements without changing workflows.
               </p>
               <p className="text-2xl font-bold text-primary-3 mb-2">$45/GPU/mo</p>
-              <p className="text-sm text-gray-500 mb-6">Corporate pricing ($30 academic)</p>
+              <p className="text-sm text-gray-500 mb-6">Corporate pricing</p>
               <TrackedCTALink href="/waitlist" trackingName="Join Waitlist" trackingLocation="Product - Choose Path" className="block text-center px-6 py-3 bg-primary-3 text-white rounded-full font-semibold hover:bg-primary-4 transition-colors">
                 Join Waitlist
               </TrackedCTALink>
@@ -298,7 +298,7 @@ export default function Page() {
                 You're running LLM applications in production and need control over models, pipelines, costs, and governance. A control plane, not just API wrappers.
               </p>
               <p className="text-2xl font-bold text-primary-3 mb-2">$45/user/mo</p>
-              <p className="text-sm text-gray-500 mb-6">Corporate pricing ($30 academic)</p>
+              <p className="text-sm text-gray-500 mb-6">Corporate pricing</p>
               <TrackedCTALink href="/waitlist" trackingName="Join Waitlist" trackingLocation="Product - Choose Path" className="block text-center px-6 py-3 bg-primary-3 text-white rounded-full font-semibold hover:bg-primary-4 transition-colors">
                 Join Waitlist
               </TrackedCTALink>

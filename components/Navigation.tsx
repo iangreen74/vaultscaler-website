@@ -7,7 +7,6 @@ import { trackNavClick } from '@/lib/analytics';
 const solutionLinks = [
   { href: '/solutions/gpu-fleet-optimization/', label: 'Hyperscale & Frontier AI' },
   { href: '/solutions/corporate/', label: 'Corporate AI Teams' },
-  { href: '/solutions/research/', label: 'Research Labs' },
 ];
 
 export default function Navigation() {

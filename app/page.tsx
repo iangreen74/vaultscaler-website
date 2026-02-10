@@ -77,7 +77,7 @@ export default function Home() {
             Teams building AI face invisible costs and governance gaps that slow everything down.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {/* Training Problem */}
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
               <div className="w-12 h-12 bg-pop-light rounded-xl flex items-center justify-center mb-4">
@@ -107,22 +107,6 @@ export default function Home() {
               </p>
               <p className="text-primary-3 font-semibold">
                 62% of organizations cite governance gaps as their top AI blocker.
-              </p>
-            </div>
-
-            {/* Research Problem */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
-              <div className="w-12 h-12 bg-pop-light rounded-xl flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-primary-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                </svg>
-              </div>
-              <h3 className="font-bold text-xl mb-3 text-primary-3">The Research Problem</h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Campus clusters grow at one-third the pace of industry. Jobs routinely waste 75% of allocated GPU memory. PIs spend their time managing infrastructure instead of advancing research.
-              </p>
-              <p className="text-primary-3 font-semibold">
-                18% annual growth vs. 54% industry standards. Innovation is falling behind.
               </p>
             </div>
           </div>
@@ -209,7 +193,7 @@ export default function Home() {
             Radix adapts to your environment. Find the solution built for your use case.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             <a href="/solutions/gpu-fleet-optimization/" className="group bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-lg hover:border-primary-1 transition-all">
               <div className="w-12 h-12 bg-primary-1/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary-1/20 transition-colors">
                 <svg className="w-6 h-6 text-primary-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -234,22 +218,6 @@ export default function Home() {
               </div>
               <h3 className="font-bold text-xl mb-2 text-gray-900 group-hover:text-primary-1 transition-colors">Corporate AI Teams</h3>
               <p className="text-gray-600 mb-4">Gaming, healthcare, fintech, startups. Train faster, control inference costs, govern AI at scale.</p>
-              <span className="text-primary-1 font-semibold text-sm flex items-center gap-1">
-                Learn more
-                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </span>
-            </a>
-
-            <a href="/solutions/research/" className="group bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-lg hover:border-primary-1 transition-all">
-              <div className="w-12 h-12 bg-primary-1/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary-1/20 transition-colors">
-                <svg className="w-6 h-6 text-primary-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                </svg>
-              </div>
-              <h3 className="font-bold text-xl mb-2 text-gray-900 group-hover:text-primary-1 transition-colors">Research Labs</h3>
-              <p className="text-gray-600 mb-4">Universities, government labs, academic research. Publish faster with reproducible experiments. Academic pricing available.</p>
               <span className="text-primary-1 font-semibold text-sm flex items-center gap-1">
                 Learn more
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">

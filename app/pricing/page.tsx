@@ -6,14 +6,14 @@ import { TrackedCTALink } from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Radix Pricing - GPU Optimization & LLM Governance | VaultScaler",
-  description: "Simple, transparent pricing for GPU optimization and LLM governance. Radix Core from $45/GPU/mo. Radix Studio from $45/user/mo. 33% academic discount. Free 14-day trial.",
+  description: "Simple, transparent pricing for GPU optimization and LLM governance. Radix Core from $45/GPU/mo. Radix Studio from $45/user/mo. Free 14-day trial.",
   alternates: {
     canonical: `${SITE.url}/pricing`,
   },
-  keywords: [...SITE.keywords, "pricing", "GPU scheduling pricing", "LLM governance pricing", "academic pricing", "corporate pricing", "free trial", "GPU cost optimization"],
+  keywords: [...SITE.keywords, "pricing", "GPU scheduling pricing", "LLM governance pricing", "corporate pricing", "free trial", "GPU cost optimization"],
   openGraph: {
     title: 'Radix Pricing - GPU Optimization & LLM Governance | VaultScaler',
-    description: 'Transparent pricing: Radix Core $45/GPU/mo, Radix Studio $45/user/mo. 33% academic discount. Free 14-day trial.',
+    description: 'Transparent pricing: Radix Core $45/GPU/mo, Radix Studio $45/user/mo. Free 14-day trial.',
     url: `${SITE.url}/pricing`,
     type: 'website',
     images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Radix Pricing' }],
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Radix Pricing - GPU Optimization & LLM Governance | VaultScaler',
-    description: 'Transparent pricing: Radix Core $45/GPU/mo, Radix Studio $45/user/mo. 33% academic discount. Free 14-day trial.',
+    description: 'Transparent pricing: Radix Core $45/GPU/mo, Radix Studio $45/user/mo. Free 14-day trial.',
     images: ['/og.jpg'],
   },
 };
@@ -51,15 +51,6 @@ export default function PricingPage() {
         "availability": "https://schema.org/InStock",
         "priceValidUntil": "2026-12-31",
         "description": "Full access to Radix Core for 14 days with up to 400 GPUs",
-      },
-      {
-        "@type": "Offer",
-        "name": "Academic Edition",
-        "price": "30",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "priceValidUntil": "2026-12-31",
-        "description": "Academic pricing at $30/GPU/month (33% discount for universities)",
       },
       {
         "@type": "Offer",
@@ -94,15 +85,6 @@ export default function PricingPage() {
     "offers": [
       {
         "@type": "Offer",
-        "name": "Academic Edition",
-        "price": "30",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "priceValidUntil": "2026-12-31",
-        "description": "Academic pricing at $30/user/month (33% discount for universities)",
-      },
-      {
-        "@type": "Offer",
         "name": "Corporate Edition",
         "price": "45",
         "priceCurrency": "USD",
@@ -122,15 +104,7 @@ export default function PricingPage() {
         "name": "How much does Radix Core cost?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Radix Core offers flexible pricing: Academic pricing at $30/GPU/month (33% discount for universities), Corporate pricing at $45/GPU/month, and custom pricing for Hyperscale & Frontier AI deployments (1,000+ GPUs). A free 14-day trial with up to 400 GPUs is available."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the academic pricing for Radix Core?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Academic institutions receive 33% off at $30/GPU/month for research labs and educational use cases with full production support."
+          "text": "Radix Core offers flexible pricing: Corporate pricing at $45/GPU/month, and custom pricing for Hyperscale & Frontier AI deployments (1,000+ GPUs). A free 14-day trial with up to 400 GPUs is available."
         }
       },
       {
@@ -138,7 +112,7 @@ export default function PricingPage() {
         "name": "How much does Radix Studio cost?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Radix Studio offers Academic pricing at $30/user/month (33% discount) and Corporate pricing at $45/user/month for experiment orchestration and evidence features."
+          "text": "Radix Studio offers Corporate pricing at $45/user/month for experiment orchestration and evidence features."
         }
       },
       {
@@ -222,42 +196,6 @@ export default function PricingPage() {
                 href="/waitlist"
                 trackingName="Join Waitlist"
                 trackingLocation="Pricing - Core Trial"
-                className="w-full text-center px-4 py-3 bg-primary-3 text-white text-sm rounded-full font-bold hover:bg-primary-4 transition-all shadow-lg hover:scale-105 transform inline-block"
-              >
-                Join Waitlist
-              </TrackedCTALink>
-            </div>
-
-            {/* Academic Version */}
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-2xl p-6 flex flex-col">
-              <div className="flex-grow">
-                <h2 className="text-xl font-bold text-primary-3 mb-3">
-                  Academic
-                </h2>
-                <p className="text-2xl font-bold text-primary-3 mb-2">$30<span className="text-sm font-normal text-gray-500">/GPU/mo</span></p>
-                <p className="text-sm text-gray-600 mb-4">
-                  33% discount for universities
-                </p>
-                <ul className="space-y-2 mb-6 text-sm">
-                  <li className="flex items-start gap-2">
-                    <CheckIcon className="text-primary-3 mt-0.5 w-4 h-4" />
-                    <span className="text-gray-600">Research labs & departments</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon className="text-primary-3 mt-0.5 w-4 h-4" />
-                    <span className="text-gray-600">Production support</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon className="text-primary-3 mt-0.5 w-4 h-4" />
-                    <span className="text-gray-600">Educational use cases</span>
-                  </li>
-                </ul>
-              </div>
-
-              <TrackedCTALink
-                href="/waitlist"
-                trackingName="Join Waitlist"
-                trackingLocation="Pricing - Core Academic"
                 className="w-full text-center px-4 py-3 bg-primary-3 text-white text-sm rounded-full font-bold hover:bg-primary-4 transition-all shadow-lg hover:scale-105 transform inline-block"
               >
                 Join Waitlist
@@ -352,43 +290,7 @@ export default function PricingPage() {
             Chain LLM calls with recipes, advanced governance & budget controls, policy control and auditability, solve LLM vendor lock-in.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Academic Tier */}
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 flex flex-col">
-              <div className="flex-grow">
-                <h3 className="text-2xl font-bold text-white mb-2">
-                  Academic
-                </h3>
-                <p className="text-3xl font-bold text-pop-light mb-2">$30<span className="text-lg font-normal text-white/70">/user/mo</span></p>
-                <p className="text-white/70 mb-6">
-                  33% discount for universities and research institutions.
-                </p>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start gap-3">
-                    <CheckIcon className="text-pop-light mt-0.5" />
-                    <span className="text-white/80">Research labs & departments</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckIcon className="text-pop-light mt-0.5" />
-                    <span className="text-white/80">Full orchestration features</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckIcon className="text-pop-light mt-0.5" />
-                    <span className="text-white/80">Educational use cases</span>
-                  </li>
-                </ul>
-              </div>
-
-              <TrackedCTALink
-                href="/waitlist"
-                trackingName="Join Waitlist"
-                trackingLocation="Pricing - Studio Academic"
-                className="w-full text-center px-6 py-4 bg-pop-light text-primary-4 rounded-full font-bold hover:bg-white transition-all shadow-lg hover:scale-105 transform inline-block"
-              >
-                Join Waitlist
-              </TrackedCTALink>
-            </div>
-
+          <div className="grid md:grid-cols-1 gap-8 max-w-2xl mx-auto">
             {/* Corporate Tier */}
             <div className="bg-white rounded-2xl p-8 flex flex-col">
               <div className="flex-grow">

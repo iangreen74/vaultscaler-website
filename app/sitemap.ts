@@ -7,7 +7,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const solutionPages = [
     "solutions/gpu-fleet-optimization",
     "solutions/corporate",
-    "solutions/research",
   ];
   const now = new Date().toISOString();
 
