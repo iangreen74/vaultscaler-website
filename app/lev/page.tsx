@@ -1,13 +1,123 @@
 // Route: /lev
-export const metadata = {
-  title: "LEV — VaultScaler",
-  description: "LEV.",
-  robots: { index: false, follow: false },
+import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { SITE } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Lev — AI Engineering That Only Moves Forward | VaultScaler",
+  description:
+    "Lev is a complete Agentic Engineering System that architects, builds, deploys, and supports your software. Golden Spec methodology prevents churn. Integrated SRE keeps production stable.",
+  alternates: { canonical: `${SITE.url}/lev` },
+  keywords: [
+    "AI software engineering",
+    "AI coding platform",
+    "AI development team",
+    "automated software delivery",
+    "AI SRE",
+    "golden spec",
+    "agentic coding",
+    "Agentic Engineering System",
+    "full SDLC automation",
+    "production AI coding",
+  ],
+  openGraph: {
+    title: "Lev — AI Engineering That Only Moves Forward | VaultScaler",
+    description:
+      "One system that architects, builds, deploys, and supports your software — with a living spec that prevents your codebase from churning backward.",
+    url: `${SITE.url}/lev`,
+    type: "website",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Lev by VaultScaler" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lev — AI Engineering That Only Moves Forward | VaultScaler",
+    description:
+      "One system that architects, builds, deploys, and supports your software — with a living spec that prevents your codebase from churning backward.",
+    images: ["/og.jpg"],
+  },
 };
 
 export default function LevPage() {
+  const ld = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Lev",
+    applicationCategory: "DeveloperApplication",
+    operatingSystem: "Cloud",
+    offers: [
+      {
+        "@type": "Offer",
+        name: "Startup",
+        price: "1499",
+        priceCurrency: "USD",
+        unitText: "per project per month",
+      },
+      {
+        "@type": "Offer",
+        name: "Enterprise",
+        price: "0",
+        priceCurrency: "USD",
+        description: "Custom quoted pricing",
+      },
+    ],
+    author: { "@type": "Organization", name: "VaultScaler" },
+    url: `${SITE.url}/lev`,
+    description: metadata.description,
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url },
+      { "@type": "ListItem", position: 2, name: "Lev", item: `${SITE.url}/lev` },
+    ],
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Does Lev replace my engineering team?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "No. Lev works with your senior product and technical people to accelerate what they're already capable of delivering. Your people stay in the driver's seat.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How is Lev different from Cursor, Copilot, or Devin?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Those tools generate code and stop. Lev owns the entire lifecycle—from collaborative spec creation through deployment through production support.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What exactly is the Golden Spec?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The Golden Spec is a living blueprint that Lev builds collaboratively with you before writing any code. It captures every requirement, every architectural decision, and the reasoning behind each choice.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can Lev work with my existing codebase?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Lev handles both greenfield projects and existing codebases through a Golden Spec discovery process.",
+        },
+      },
+    ],
+  };
   return (
     <>
+      <JsonLd data={ld} />
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={faqSchema} />
+
       {/* Hero - Lev */}
       <section className="relative min-h-[clamp(600px,90vh,1200px)] flex items-center justify-center bg-gradient-to-br from-primary-4 via-primary-3 to-primary-3 overflow-hidden">
         {/* Plaid pattern on undulating fabric, bottom-right corner */}

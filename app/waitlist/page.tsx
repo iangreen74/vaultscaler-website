@@ -7,7 +7,7 @@ import { trackFormSubmit } from '@/lib/analytics';
 export default function WaitlistPage() {
   const router = useRouter();
   const [email, setEmail] = useState('');
-  const [interest, setInterest] = useState<'core' | 'studio' | 'both'>('both');
+  const [interest, setInterest] = useState<string[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
 
@@ -24,13 +24,13 @@ export default function WaitlistPage() {
         },
         body: JSON.stringify({
           email,
-          interest,
-          _subject: `Radix Waitlist: ${interest} - ${email}`,
+          interest: interest.join(', '),
+          _subject: `VaultScaler Waitlist: ${interest.join(', ')} - ${email}`,
         }),
       });
 
       if (response.ok) {
-        trackFormSubmit('Waitlist', { interest });
+        trackFormSubmit('Waitlist', { interest: interest.join(', ') });
         router.push('/waitlist/thank-you');
       } else {
         setError('Something went wrong. Please try again.');
@@ -48,10 +48,10 @@ export default function WaitlistPage() {
         <div className="bg-white rounded-2xl p-8 md:p-12 shadow-2xl">
           <div className="text-center mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-              Join the Radix Waitlist
+              Join the Waitlist
             </h1>
-            <p className="text-sm text-pop-dark font-semibold mb-3 uppercase tracking-wide">
-              March 31, 2026
+            <p className="text-sm text-primary-3 font-semibold mb-3 uppercase tracking-wide">
+              April 6, 2026
             </p>
             <p className="text-gray-600">
               Secure your spot before launch day. Early adopters get priority onboarding.
@@ -88,50 +88,31 @@ export default function WaitlistPage() {
                 I&apos;m interested in
               </label>
               <div className="space-y-3">
-                <label className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
-                  <input
-                    type="radio"
-                    name="interest"
-                    value="core"
-                    checked={interest === 'core'}
-                    onChange={() => setInterest('core')}
-                    className="w-4 h-4 text-primary-3 focus:ring-primary-3"
-                  />
-                  <div className="ml-3">
-                    <span className="font-medium text-gray-900">Radix Core</span>
-                    <span className="text-gray-500 text-sm ml-2">GPU scheduling optimization</span>
-                  </div>
-                </label>
-
-                <label className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
-                  <input
-                    type="radio"
-                    name="interest"
-                    value="studio"
-                    checked={interest === 'studio'}
-                    onChange={() => setInterest('studio')}
-                    className="w-4 h-4 text-primary-3 focus:ring-primary-3"
-                  />
-                  <div className="ml-3">
-                    <span className="font-medium text-gray-900">Radix Studio</span>
-                    <span className="text-gray-500 text-sm ml-2">LLM orchestration & governance</span>
-                  </div>
-                </label>
-
-                <label className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
-                  <input
-                    type="radio"
-                    name="interest"
-                    value="both"
-                    checked={interest === 'both'}
-                    onChange={() => setInterest('both')}
-                    className="w-4 h-4 text-primary-3 focus:ring-primary-3"
-                  />
-                  <div className="ml-3">
-                    <span className="font-medium text-gray-900">Both</span>
-                    <span className="text-gray-500 text-sm ml-2">Full Radix Platform</span>
-                  </div>
-                </label>
+                {[
+                  { value: 'core', label: 'Radix Core', desc: 'GPU scheduling optimization' },
+                  { value: 'studio', label: 'Radix Studio', desc: 'LLM orchestration & governance' },
+                  { value: 'lev', label: 'Lev', desc: 'Agentic Engineering System' },
+                ].map((option) => (
+                  <label key={option.value} className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
+                    <input
+                      type="checkbox"
+                      value={option.value}
+                      checked={interest.includes(option.value)}
+                      onChange={(e) => {
+                        if (e.target.checked) {
+                          setInterest([...interest, option.value]);
+                        } else {
+                          setInterest(interest.filter((i) => i !== option.value));
+                        }
+                      }}
+                      className="w-4 h-4 rounded text-primary-3 focus:ring-primary-3"
+                    />
+                    <div className="ml-3">
+                      <span className="font-medium text-gray-900">{option.label}</span>
+                      <span className="text-gray-500 text-sm ml-2">{option.desc}</span>
+                    </div>
+                  </label>
+                ))}
               </div>
             </div>
 

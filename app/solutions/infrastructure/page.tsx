@@ -8,8 +8,8 @@ export default function InfrastructureRedirect() {
   const router = useRouter();
 
   useEffect(() => {
-    // Redirect to GPU fleet optimization page
-    router.replace('/solutions/gpu-fleet-optimization/');
+    // Redirect to Hyperscale solutions page
+    router.replace('/solutions/hyperscale/');
   }, [router]);
 
   return (

@@ -6,6 +6,8 @@ This project has specialized agents for startup operations. Invoke with `/[agent
 
 | Command | Agent | Purpose |
 |---------|-------|---------|
+| `/brand` | Brand Architect | Vision, mission, values, voice, brand identity |
+| `/category` | Category Design | Market framing, competitive worldview, thought leadership |
 | `/saas` | SaaS Agreements | Draft MSAs, order forms, license terms |
 | `/fundraising` | Fundraising & Capital | Runway models, investor targeting, dataroom |
 | `/gtm` | GTM & Revenue | ICP, pricing, sales scripts, funnel design |
@@ -21,10 +23,23 @@ This project has specialized agents for startup operations. Invoke with `/[agent
 | `/messaging` | Website Messaging | Headlines, CTAs, conversion copy |
 | `/security` | Web Security | Forms, headers, scripts, PCI readiness |
 | `/prospect` | University Prospecting | Research labs, stakeholders, LinkedIn intel, pain signals |
+| `/brand-orchestrator` | Brand Orchestrator | Orchestrate market-facing deliverables through Brand → Category → execution |
 
 ## Agent Collaboration
 
-Agents are designed to work together:
+Agents are designed to work together with a clear upstream/downstream hierarchy:
+
+### Brand & Identity Layer (upstream — informs everything external)
+- **Brand** owns vision, mission, voice, and identity — all external-facing agents consult Brand first
+- **Category** owns market framing and competitive worldview — feeds Pitch, GTM, Growth, Messaging
+
+### Execution Layer (downstream — executes within brand guardrails)
+- **Messaging** translates brand voice into page-level conversion copy
+- **Pitch** adapts brand narrative for investor audiences
+- **GTM** applies brand positioning to sales motions and ICP targeting
+- **Growth** applies brand voice to content strategy and SEO
+
+### Operational Collaboration
 - **Prospect** finds qualified leads, feeds to **GTM** for outreach sequences
 - **GTM** feeds ICP to **Customer**, **Messaging**, and **Prospect**
 - **Customer** pain points inform **Pitch**, **Product**, and **Prospect** targeting

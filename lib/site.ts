@@ -1,11 +1,11 @@
 export const SITE = {
   name: "VaultScaler",
-  products: ["Radix Core", "Radix Studio"],
+  products: ["Radix Core", "Radix Studio", "Lev"],
   url: "https://vaultscaler.com",
   email: "bpruess@vaultscaler.com",
   launchISO: "2026-03-02",
   description:
-    "VaultScaler harmonizes AI operations at scale. Radix Core gives you GPU cost savings and governance policies for model training. Radix Studio gives you visibility, standardization and governance for every LLM call so you can deploy with confidence.",
+    "VaultScaler harmonizes AI operations at scale. Radix Core optimizes GPU training throughput. Radix Studio governs every LLM inference call. Lev delivers AI engineering with actual results.",
   keywords: [
     // Pain point keywords (what people search when frustrated)
     "reduce GPU costs",
@@ -22,7 +22,7 @@ export const SITE = {
     "AI infrastructure cost reduction",
     // Solution keywords
     "GPU optimizer",
-    "AI operations platform",
+    "AI Operations Platform",
     "LLM governance platform",
     "GPU scheduler",
     "AI pipeline orchestration",
@@ -31,7 +31,6 @@ export const SITE = {
     "AI cost optimization",
     // Technical keywords
     "Kubernetes GPU scheduling",
-    "Slurm GPU optimization",
     "MLOps platform",
     "AIOps platform",
     "GPU cluster optimization",

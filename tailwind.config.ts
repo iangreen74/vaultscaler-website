@@ -14,11 +14,11 @@ const config: Config = {
         'pop-dark': '#00d9a6ff',
         'pop-backup': '#00e3aeff',
         
-        // Primary colors (Brand blues based on #052152 - 4 shades, 1=brightest, 4=darkest)
-        'primary-1': '#052152',
-        'primary-2': '#041a42',
-        'primary-3': '#031432',
-        'primary-4': '#020e24',
+        // Primary colors (Brand blues - 4 shades, 1=lightest, 4=darkest)
+        'primary-1': '#D3E3F0',
+        'primary-2': '#95AFC5',
+        'primary-3': '#234D70',
+        'primary-4': '#122E46',
 
         // Lev colors (Yellow monochrome)
         'lev-bold': '#E6B907',

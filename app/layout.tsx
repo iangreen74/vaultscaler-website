@@ -10,8 +10,8 @@ import { GA_MEASUREMENT_ID } from "@/lib/analytics";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: "VaultScaler - GPU Optimization & LLM Governance Platform",
-  description: "Optimize GPU training throughput up to 21% and control LLM costs with complete governance. AI operations platform for Kubernetes, Slurm & Ray. Deploy in minutes.",
-  keywords: ["GPU optimization", "LLM governance", "AI operations platform", "GPU scheduler", "model training", "GPU cost reduction", "Kubernetes GPU", "Slurm optimization", "Ray clusters", "AI cost control", "MLOps", "AIOps"],
+  description: "Optimize GPU training throughput up to 21% and control LLM costs with complete governance. AI operations platform for Kubernetes. Deploy in minutes.",
+  keywords: ["GPU optimization", "LLM governance", "AI Operations Platform", "GPU scheduler", "model training", "GPU cost reduction", "Kubernetes GPU", "AI cost control", "MLOps", "AIOps"],
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "VaultScaler - GPU Optimization & LLM Governance Platform",
-    description: "Up to 21% GPU throughput gains. Complete LLM governance. Deploy in minutes on Kubernetes, Slurm or Ray.",
+    description: "Up to 21% GPU throughput gains. Complete LLM governance. Deploy in minutes on Kubernetes.",
     url: "https://vaultscaler.com",
     siteName: "VaultScaler",
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "VaultScaler - GPU Optimization & LLM Governance Platform",
-    description: "Up to 21% GPU throughput gains. Complete LLM governance. Deploy in minutes on Kubernetes, Slurm or Ray.",
+    description: "Up to 21% GPU throughput gains. Complete LLM governance. Deploy in minutes on Kubernetes.",
     images: ["/og.jpg"],
   },
 };
@@ -76,7 +76,7 @@ export default function RootLayout({
       "@type": "SoftwareApplication",
       name: SITE.products.join(" & "),
       applicationCategory: "DevOps/AI Operations",
-      operatingSystem: "Kubernetes 1.26+, Slurm, Ray",
+      operatingSystem: "Kubernetes 1.26+",
       description: SITE.description,
       featureList: [
         // Radix Core - Training Optimization
@@ -140,7 +140,7 @@ export default function RootLayout({
         <main id="main-content" className="pt-16">
           {children}
         </main>
-        <footer className="bg-primary-4 text-white py-8 mt-20" role="contentinfo">
+        <footer className="bg-primary-3 text-white py-8 mt-20" role="contentinfo">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center text-sm text-gray-300">
               <p>&copy; 2025 VaultScaler. All rights reserved.</p>

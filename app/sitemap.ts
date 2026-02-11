@@ -2,11 +2,12 @@ import { MetadataRoute } from "next";
 import { SITE } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Exclude /team and /docs (noindex pages)
-  const pages = ["", "product", "pricing", "contact", "waitlist"];
+  // Exclude /team, /docs (noindex), /product, /pricing (redirects)
+  const pages = ["", "radix", "radix/core", "radix/studio", "lev", "contact", "waitlist"];
   const solutionPages = [
-    "solutions/gpu-fleet-optimization",
-    "solutions/corporate",
+    "solutions/hyperscale",
+    "solutions/ml-teams",
+    "solutions/product-teams",
   ];
   const now = new Date().toISOString();
 
@@ -14,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${SITE.url}/${p}`,
     lastModified: now,
     changeFrequency: "weekly" as const,
-    priority: p === "" ? 1 : 0.8,
+    priority: p === "" ? 1 : p === "radix" || p === "radix/core" || p === "radix/studio" || p === "lev" ? 0.9 : 0.8,
   }));
 
   const solutions = solutionPages.map((p) => ({

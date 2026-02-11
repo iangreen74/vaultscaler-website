@@ -49,8 +49,8 @@ export default function Page() {
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-primary-4 via-primary-3 to-primary-3 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-1/4 -right-1/4 w-[60%] h-[60%] rounded-full bg-pop-light/10 blur-3xl" />
-          <div className="absolute -bottom-1/4 -left-1/4 w-[50%] h-[50%] rounded-full bg-pop-dark/30 blur-3xl" />
+          <div className="absolute -top-1/4 -right-1/4 w-[60%] h-[60%] rounded-full bg-primary-2/20 blur-3xl" />
+          <div className="absolute -bottom-1/4 -left-1/4 w-[50%] h-[50%] rounded-full bg-primary-1/10 blur-3xl" />
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -109,23 +109,23 @@ export default function Page() {
             {/* Partnerships & Investment */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 flex flex-col">
               <div className="flex-grow">
-                <div className="w-12 h-12 bg-pop-light rounded-xl flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-primary-1 rounded-xl flex items-center justify-center mb-6">
                   <svg className="w-6 h-6 text-primary-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <h2 className="text-2xl font-bold text-pop-dark mb-4">Partnerships & Investment</h2>
+                <h2 className="text-2xl font-bold text-primary-3 mb-4">Partnerships & Investment</h2>
                 <ul className="space-y-3 text-gray-600">
                   <li className="flex items-start gap-3">
-                    <span className="text-pop-dark mt-1">•</span>
+                    <span className="text-primary-3 mt-1">•</span>
                     <span>Joint go-to-market opportunities</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-pop-dark mt-1">•</span>
+                    <span className="text-primary-3 mt-1">•</span>
                     <span>Platform integrations</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-pop-dark mt-1">•</span>
+                    <span className="text-primary-3 mt-1">•</span>
                     <span>Strategic investment in AI operations</span>
                   </li>
                 </ul>
@@ -134,7 +134,7 @@ export default function Page() {
                 <TrackedEmailLink
                   href="mailto:bpruess@vaultscaler.com?subject=Partnership%20Inquiry"
                   trackingName="Partnership Inquiry"
-                  className="inline-block w-full text-center px-6 py-4 bg-pop-light text-primary-4 rounded-full font-bold hover:bg-white hover:shadow-lg transition-all"
+                  className="inline-block w-full text-center px-6 py-4 bg-primary-3 text-white rounded-full font-bold hover:bg-primary-4 transition-all"
                 >
                   Contact Partnerships
                 </TrackedEmailLink>

@@ -4,14 +4,23 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { trackNavClick } from '@/lib/analytics';
 
+const productLinks = [
+  { href: '/lev/', label: 'Lev', description: 'Agentic Engineering System' },
+  { href: '/radix/core/', label: 'Radix Core', description: 'GPU Training Optimization' },
+  { href: '/radix/studio/', label: 'Radix Studio', description: 'LLM Inference Governance' },
+];
+
 const solutionLinks = [
-  { href: '/solutions/gpu-fleet-optimization/', label: 'Hyperscale & Frontier AI' },
-  { href: '/solutions/corporate/', label: 'Corporate AI Teams' },
+  { href: '/solutions/hyperscale/', label: 'Hyperscale & Frontier AI' },
+  { href: '/solutions/ml-teams/', label: 'ML & AI Development Teams' },
+  { href: '/solutions/product-teams/', label: 'Product & Engineering Teams' },
 ];
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [productsOpen, setProductsOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
 
   const handleMobileNavClick = (label: string) => {
@@ -29,14 +38,44 @@ export default function Navigation() {
               alt=""
               className="h-6 w-auto"
             />
-            <span className="text-primary-1">VaultScaler</span>
+            <span className="text-primary-3">VaultScaler</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" onClick={() => trackNavClick('Home')} className="text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              Home
-            </Link>
+            {/* Products Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setProductsOpen(true)}
+              onMouseLeave={() => setProductsOpen(false)}
+            >
+              <button
+                className="text-sm text-gray-700 hover:text-gray-900 transition-colors flex items-center gap-1 py-2"
+                onClick={() => setProductsOpen(!productsOpen)}
+              >
+                Products
+                <svg className={`w-4 h-4 transition-transform ${productsOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {productsOpen && (
+                <div className="absolute top-full left-0 pt-1 w-56">
+                  <div className="bg-white rounded-lg shadow-lg border border-gray-200 py-2">
+                    {productLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => { trackNavClick(`Products - ${link.label}`); setProductsOpen(false); }}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+                      >
+                        <span className="font-medium">{link.label}</span>
+                        <span className="block text-gray-500 text-xs mt-0.5">{link.description}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
             {/* Solutions Dropdown */}
             <div
               className="relative"
@@ -69,19 +108,13 @@ export default function Navigation() {
                 </div>
               )}
             </div>
-            <Link href="/product" onClick={() => trackNavClick('Product')} className="text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              Platform
-            </Link>
-            <Link href="/pricing" onClick={() => trackNavClick('Pricing')} className="text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              Pricing
-            </Link>
             <Link href="/contact" onClick={() => trackNavClick('Contact')} className="text-sm text-gray-700 hover:text-gray-900 transition-colors">
               Contact
             </Link>
             <Link
               href="/waitlist"
               onClick={() => trackNavClick('Join Waitlist')}
-              className="px-5 py-2 bg-primary-1 text-white rounded-full font-semibold hover:bg-primary-2 transition-colors text-sm shadow-md hover:shadow-lg"
+              className="px-5 py-2 bg-primary-3 text-white rounded-full font-semibold hover:bg-primary-4 transition-colors text-sm shadow-md hover:shadow-lg"
             >
               Join Waitlist
             </Link>
@@ -90,7 +123,7 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="md:hidden p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-1"
+            className="md:hidden p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-3"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
@@ -116,13 +149,33 @@ export default function Navigation() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-3 space-y-1">
-            <Link
-              href="/"
-              onClick={() => handleMobileNavClick('Home')}
-              className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-            >
-              Home
-            </Link>
+            {/* Mobile Products Accordion */}
+            <div>
+              <button
+                onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
+                className="flex items-center justify-between w-full px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+              >
+                Products
+                <svg className={`w-4 h-4 transition-transform ${mobileProductsOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileProductsOpen && (
+                <div className="pl-4 space-y-1">
+                  {productLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => handleMobileNavClick(`Products - ${link.label}`)}
+                      className="block px-3 py-2 rounded-md text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                    >
+                      <span className="font-medium">{link.label}</span>
+                      <span className="block text-gray-400 text-xs mt-0.5">{link.description}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
             {/* Mobile Solutions Accordion */}
             <div>
               <button
@@ -150,20 +203,6 @@ export default function Navigation() {
               )}
             </div>
             <Link
-              href="/product"
-              onClick={() => handleMobileNavClick('Product')}
-              className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-            >
-              Platform
-            </Link>
-            <Link
-              href="/pricing"
-              onClick={() => handleMobileNavClick('Pricing')}
-              className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-            >
-              Pricing
-            </Link>
-            <Link
               href="/contact"
               onClick={() => handleMobileNavClick('Contact')}
               className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
@@ -173,7 +212,7 @@ export default function Navigation() {
             <Link
               href="/waitlist"
               onClick={() => handleMobileNavClick('Join Waitlist')}
-              className="block px-3 py-3 mt-2 bg-primary-1 text-white rounded-md text-base font-semibold text-center hover:bg-primary-2"
+              className="block px-3 py-3 mt-2 bg-primary-3 text-white rounded-md text-base font-semibold text-center hover:bg-primary-4"
             >
               Join Waitlist
             </Link>
