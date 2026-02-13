@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Radix Studio: Control Every LLM Inference Call | VaultScaler',
   description: 'Radix Studio is the control plane for LLM operations. Build governed AI workflows with cost-aware routing, multi-model orchestration, and full visibility into every inference call.',
   alternates: {
-    canonical: `${SITE.url}/radix/studio`,
+    canonical: `${SITE.url}/radix/studio/`,
   },
   keywords: [
     'LLM governance platform',
@@ -27,14 +27,14 @@ export const metadata: Metadata = {
     title: 'Radix Studio: Control Every LLM Inference Call',
     description: 'The control plane for LLM operations. Governed AI workflows, cost-aware routing, and full visibility.',
     type: 'website',
-    url: `${SITE.url}/radix/studio`,
-    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Radix Studio - LLM Inference Optimization' }],
+    url: `${SITE.url}/radix/studio/`,
+    images: [{ url: '/og/radix-studio.png', width: 1200, height: 630, alt: 'Radix Studio - LLM Inference Optimization' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Radix Studio: Control Every LLM Inference Call',
     description: 'The control plane for LLM operations. Governed AI workflows, cost-aware routing, and full visibility.',
-    images: ['/og.jpg'],
+    images: ['/og/radix-studio.png'],
   },
 };
 
@@ -51,7 +51,7 @@ export default function RadixStudioPage() {
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE.url },
       { "@type": "ListItem", "position": 2, "name": "Radix", "item": `${SITE.url}/radix` },
-      { "@type": "ListItem", "position": 3, "name": "Radix Studio", "item": `${SITE.url}/radix/studio` },
+      { "@type": "ListItem", "position": 3, "name": "Radix Studio", "item": `${SITE.url}/radix/studio/` },
     ]
   };
 
@@ -66,9 +66,9 @@ export default function RadixStudioPage() {
       { "@type": "Offer", name: "Radix Studio", price: "45", priceCurrency: "USD", description: "Per user per month" },
     ],
     author: { "@type": "Organization", name: "VaultScaler" },
-    url: `${SITE.url}/radix/studio`,
+    url: `${SITE.url}/radix/studio/`,
     description: metadata.description,
-    releaseNotes: "General Availability March 2, 2026.",
+    releaseNotes: "General Availability April 6, 2026.",
   };
 
   return (
@@ -98,7 +98,7 @@ export default function RadixStudioPage() {
           </h1>
 
           <p className="text-lg md:text-xl text-pop-light max-w-3xl mx-auto mb-10 leading-relaxed">
-            The control plane for LLM operations. Governance, cost control, and multi-model orchestration — so your AI pilots actually reach production.
+            The control plane for LLM operations. Governance, cost control, and multi-model orchestration. So your AI pilots actually reach production.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -129,7 +129,7 @@ export default function RadixStudioPage() {
             The Inference Problem
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            Every LLM call makes invisible tradeoffs: cost vs. quality, speed vs. accuracy. Without governance, you can't see these tradeoffs — let alone control them.
+            Every LLM call makes invisible tradeoffs: cost vs. quality, speed vs. accuracy. Without governance, you can't see these tradeoffs, let alone control them.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -141,7 +141,7 @@ export default function RadixStudioPage() {
               </div>
               <h3 className="font-bold text-xl mb-3 text-primary-3">Governance Gaps</h3>
               <p className="text-gray-600 leading-relaxed">
-                62% of organizations cite governance gaps as their top AI blocker. Without policy enforcement, AI stays a science project.
+                62% of organizations cite governance gaps as their top AI blocker (VaultScaler estimate based on IBM, Vanta, and NACD surveys, 2025). Without policy enforcement, AI stays a science project.
               </p>
             </div>
 
@@ -176,6 +176,7 @@ export default function RadixStudioPage() {
       <section className="py-16 bg-primary-3">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-3xl sm:text-4xl font-bold text-white mb-2">88% of AI pilots never reach production</p>
+          <p className="text-sm text-white/50 mb-2">(IDC/Lenovo, 2024)</p>
           <p className="text-xl text-gray-200">The models work. The infrastructure doesn't.</p>
           <p className="text-lg text-white/70 mt-4 max-w-2xl mx-auto">Missing pipelines. No governance. Runaway costs. No drift detection. Radix Studio fills these gaps from day one.</p>
         </div>
@@ -205,7 +206,7 @@ export default function RadixStudioPage() {
             <div className="bg-gray-50 rounded-2xl p-8 border-l-4 border-pop-dark">
               <h3 className="font-bold text-xl mb-3 text-primary-3">Governance & Audit</h3>
               <p className="text-gray-600 leading-relaxed">
-                Create and enforce policies for content safety, team fairness, and cluster health — all with comprehensive audit logs for compliance. Built for regulated industries.
+                Create and enforce policies for content safety, team fairness, and cluster health, all with comprehensive audit logs for compliance. Built for regulated industries.
               </p>
             </div>
             <div className="bg-gray-50 rounded-2xl p-8 border-l-4 border-pop-dark">

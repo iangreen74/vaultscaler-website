@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'ML & AI Development Teams: Training Optimization + LLM Governance | VaultScaler',
   description: 'Complete ML infrastructure for AI development teams. Maximize GPU throughput with Radix Core, orchestrate LLM pipelines with Radix Studio, and ship production AI with governance built-in.',
   alternates: {
-    canonical: `${SITE.url}/solutions/ml-teams`,
+    canonical: `${SITE.url}/solutions/ml-teams/`,
   },
   keywords: [
     'ML operations platform',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: 'ML & AI Development Teams: Training Optimization + LLM Governance | VaultScaler',
     description: 'Complete ML infrastructure for AI development teams. Maximize GPU throughput, orchestrate LLM pipelines, and ship production AI.',
     type: 'website',
-    url: `${SITE.url}/solutions/ml-teams`,
+    url: `${SITE.url}/solutions/ml-teams/`,
     images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'ML & AI Development Teams Solutions' }],
   },
   twitter: {
@@ -46,11 +46,11 @@ export default function MLTeamsPage() {
     "@type": "WebPage",
     "name": "ML & AI Development Teams Solutions",
     "description": "Complete ML infrastructure for AI development teams. Radix Core optimizes GPU training throughput. Radix Studio governs LLM inference pipelines.",
-    "url": `${SITE.url}/solutions/ml-teams`,
+    "url": `${SITE.url}/solutions/ml-teams/`,
     "provider": {
       "@type": "Organization",
       "name": "VaultScaler",
-      "url": SITE.url,
+      "url": `${SITE.url}/`,
     },
   };
 
@@ -67,14 +67,8 @@ export default function MLTeamsPage() {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Solutions",
-        "item": `${SITE.url}/solutions`
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
         "name": "ML & AI Development Teams",
-        "item": `${SITE.url}/solutions/ml-teams`
+        "item": `${SITE.url}/solutions/ml-teams/`
       }
     ]
   };
@@ -153,7 +147,7 @@ export default function MLTeamsPage() {
                 Memory-bound jobs block compute-bound jobs. Power limits throttle entire nodes. Traditional schedulers treat GPUs as identical units, ignoring the resource imbalances that kill utilization.
               </p>
               <p className="text-primary-3 font-semibold text-sm">
-                Up to 21% of training throughput lost to naive scheduling.
+                Up to 21% of training throughput lost to naive scheduling (VaultScaler internal benchmarks).
               </p>
             </div>
 
@@ -165,7 +159,7 @@ export default function MLTeamsPage() {
               </div>
               <h3 className="font-bold text-xl mb-3 text-primary-3">Inference Is a Black Box</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                No visibility into which models are being called, how often, at what cost. Every LLM call makes invisible tradeoffs between cost and quality. Without governance, you can't see these tradeoffs—let alone control them.
+                No visibility into which models are being called, how often, at what cost. Every LLM call makes invisible tradeoffs between cost and quality. Without governance, you can't see these tradeoffs, let alone control them.
               </p>
               <p className="text-primary-3 font-semibold text-sm">
                 Vendor lock-in prevents switching to better or cheaper models.
@@ -183,7 +177,7 @@ export default function MLTeamsPage() {
                 Without policy enforcement, content filters, and audit logs, AI pilots stay experiments. Compliance teams block deployment. CFOs lose patience with runaway LLM costs.
               </p>
               <p className="text-primary-3 font-semibold text-sm">
-                88% of AI pilots never reach production. The models work. The infrastructure doesn't.
+                88% of AI pilots never reach production (IDC/Lenovo, 2024). The models work. The infrastructure doesn't.
               </p>
             </div>
           </div>
@@ -199,7 +193,7 @@ export default function MLTeamsPage() {
               The Radix Platform
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Everything you need to move from AI pilot to production. Training optimization, LLM orchestration, and governance—unified in one platform.
+              Everything you need to move from AI pilot to production. Training optimization, LLM orchestration, and governance, unified in one platform.
             </p>
           </div>
 
@@ -215,7 +209,7 @@ export default function MLTeamsPage() {
                   </div>
                   <h3 className="text-2xl font-bold text-primary-3">Radix Core</h3>
                 </div>
-                <p className="text-xl font-semibold text-primary-3 mb-4">Up to 21% Faster GPU Training</p>
+                <p className="text-xl font-semibold text-primary-3 mb-4">Up to 21% Faster GPU Training <span className="text-xs font-normal text-gray-400">(internal benchmarks)</span></p>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Closed-loop GPU scheduling that balances memory, compute, and power across all training runs. No stack changes. Works with your existing Kubernetes clusters. Deploy via Helm chart and see results the same day.
                 </p>
@@ -251,18 +245,18 @@ export default function MLTeamsPage() {
                     <div className="w-full bg-gray-200 rounded-full h-3">
                       <div className="bg-red-400 h-3 rounded-full" style={{width: '67%'}}></div>
                     </div>
-                    <p className="text-xs text-gray-600 mt-1">67% avg utilization (FIFO scheduling)</p>
+                    <p className="text-xs text-gray-600 mt-1">67% avg utilization (FIFO scheduling; industry-reported baseline)</p>
                   </div>
                   <div>
                     <p className="text-sm text-gray-500 mb-1">After Radix Core</p>
                     <div className="w-full bg-gray-200 rounded-full h-3">
                       <div className="bg-green-500 h-3 rounded-full" style={{width: '88%'}}></div>
                     </div>
-                    <p className="text-xs text-gray-600 mt-1">Up to 88% avg utilization (closed-loop scheduling)</p>
+                    <p className="text-xs text-gray-600 mt-1">Up to 88% avg utilization (closed-loop scheduling; VaultScaler internal benchmarks)</p>
                   </div>
                   <div className="pt-4 border-t border-gray-300">
                     <p className="text-2xl font-bold text-primary-3 mb-1">21% throughput gain</p>
-                    <p className="text-sm text-gray-600">Same hardware. Same training code. More work done.</p>
+                    <p className="text-sm text-gray-600">Same hardware. Same training code. More work done. <span className="text-xs text-gray-400">(VaultScaler internal benchmarks)</span></p>
                   </div>
                 </div>
               </div>
@@ -303,7 +297,7 @@ export default function MLTeamsPage() {
                 </div>
                 <p className="text-xl font-semibold text-pop-light mb-4">LLM Governance & Orchestration</p>
                 <p className="text-white/90 leading-relaxed mb-6">
-                  The control plane for LLM operations. Build reusable multi-step AI workflows. Register models from any vendor or self-hosted. Enforce governance policies, content filters, and budget controls—so your AI pilots actually reach production.
+                  The control plane for LLM operations. Build reusable multi-step AI workflows. Register models from any vendor or self-hosted. Enforce governance policies, content filters, and budget controls so your AI pilots actually reach production.
                 </p>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start gap-3">
@@ -345,11 +339,11 @@ export default function MLTeamsPage() {
             Built for teams who need production-grade AI infrastructure without vendor lock-in.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
               <h3 className="font-bold text-xl mb-3 text-primary-3">No Vendor Lock-in</h3>
               <p className="text-gray-600 leading-relaxed">
-                Register models from any provider—OpenAI, Anthropic, Cohere, or self-hosted. Switch providers without rewriting code. Bring Your Own GPU (BYOG) via secure Docker agent.
+                Register models from any provider: OpenAI, Anthropic, Cohere, or self-hosted. Switch providers without rewriting code. Bring Your Own GPU (BYOG) via secure Docker agent.
               </p>
             </div>
 
@@ -367,12 +361,6 @@ export default function MLTeamsPage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
-              <h3 className="font-bold text-xl mb-3 text-primary-3">Built for Regulated Industries</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Air-gapped deployment. Content filtering policies. Comprehensive audit logs. Compliance-ready from day one for healthcare, finance, and government.
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -398,7 +386,7 @@ export default function MLTeamsPage() {
                   <svg className="w-4 h-4 text-primary-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-gray-700">Up to 21% throughput gains</span>
+                  <span className="text-gray-700">Up to 21% throughput gains (internal benchmarks)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg className="w-4 h-4 text-primary-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">

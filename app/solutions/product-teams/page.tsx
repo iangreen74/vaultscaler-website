@@ -7,9 +7,9 @@ import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Product & Engineering Teams: Ship AI Products Faster | VaultScaler',
-  description: 'Complete system for AI-powered product development. Lev handles the engineering lifecycle with Golden Spec methodology so you ship features that compound—not churn. From architecture to production support.',
+  description: 'Complete system for AI-powered product development. Lev handles the engineering lifecycle with Golden Spec methodology so you ship features that compound instead of churn. From architecture to production support.',
   alternates: {
-    canonical: `${SITE.url}/solutions/product-teams`,
+    canonical: `${SITE.url}/solutions/product-teams/`,
   },
   keywords: [
     'AI product development',
@@ -27,15 +27,15 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Product & Engineering Teams: Ship AI Products Faster | VaultScaler',
-    description: 'Complete system for AI-powered product development. Lev handles the engineering lifecycle so you ship features that compound—not churn.',
+    description: 'Complete system for AI-powered product development. Lev handles the engineering lifecycle so you ship features that compound instead of churn.',
     type: 'website',
-    url: `${SITE.url}/solutions/product-teams`,
+    url: `${SITE.url}/solutions/product-teams/`,
     images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Product & Engineering Teams Solutions' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Product & Engineering Teams: Ship AI Products Faster | VaultScaler',
-    description: 'Complete system for AI-powered product development. Lev handles the engineering lifecycle so you ship features that compound—not churn.',
+    description: 'Complete system for AI-powered product development. Lev handles the engineering lifecycle so you ship features that compound instead of churn.',
     images: ['/og.jpg'],
   },
 };
@@ -46,11 +46,11 @@ export default function ProductTeamsPage() {
     "@type": "WebPage",
     "name": "Product & Engineering Teams Solutions",
     "description": "Complete system for AI-powered product development. Lev is an agentic engineering system that architects, builds, deploys, and supports your software with Golden Spec methodology.",
-    "url": `${SITE.url}/solutions/product-teams`,
+    "url": `${SITE.url}/solutions/product-teams/`,
     "provider": {
       "@type": "Organization",
       "name": "VaultScaler",
-      "url": SITE.url,
+      "url": `${SITE.url}/`,
     },
   };
 
@@ -67,14 +67,8 @@ export default function ProductTeamsPage() {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Solutions",
-        "item": `${SITE.url}/solutions`
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
         "name": "Product & Engineering Teams",
-        "item": `${SITE.url}/solutions/product-teams`
+        "item": `${SITE.url}/solutions/product-teams/`
       }
     ]
   };
@@ -145,7 +139,7 @@ export default function ProductTeamsPage() {
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-lev-bold max-w-3xl mx-auto mb-10 leading-relaxed">
-            Lev handles architecture, builds, deploys, and support — so your team ships features that compound, not churn.
+            Lev handles architecture, builds, deploys, and support. Your team ships features that compound, not churn.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -191,7 +185,7 @@ export default function ProductTeamsPage() {
                 You invested in AI copilots. You retooled workflows. Your competitors claim 10x productivity and your board is asking where the ROI is. Copilot generates code nobody understands. "80% done" demos take 3 months to reach production. Engineering velocity tanked, not improved.
               </p>
               <p className="text-lev-dark font-semibold text-sm">
-                The more unique your product, the less AI can help—with the tools that exist today.
+                The more unique your product, the less today's AI tools can help.
               </p>
             </div>
 
@@ -203,7 +197,7 @@ export default function ProductTeamsPage() {
               </div>
               <h3 className="font-bold text-xl mb-3 text-primary-3">Nobody Owns the Code</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Every line AI writes is a line nobody truly understands. When something breaks at 2 AM, the team is debugging code they didn't write and can't reason about. The fix might work—or it might cascade into something worse. Nobody can say for certain.
+                Every line AI writes is a line nobody truly understands. When something breaks at 2 AM, the team is debugging code they didn't write and can't reason about. The fix might work, or it might cascade into something worse. Nobody can say for certain.
               </p>
               <p className="text-lev-dark font-semibold text-sm">
                 You can't maintain what you don't understand. And you can't scale what you can't maintain.
@@ -251,7 +245,7 @@ export default function ProductTeamsPage() {
               </div>
               <h3 className="font-bold text-xl mb-3 text-primary-3">Golden Spec Prevents Churn</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Before Lev writes a line of code, it builds a Golden Spec with you—a living blueprint that captures every requirement, every decision, and every reason why. Each iteration progressively hardens your spec, so the AI never rewrites what already works.
+                Before Lev writes a line of code, it builds a Golden Spec with you: a living blueprint that captures every requirement, every decision, and every reason why. Each iteration progressively hardens your spec, so the AI never rewrites what already works.
               </p>
               <p className="text-lev-dark font-semibold text-sm">
                 Stop rebuilding. Start compounding.
@@ -307,8 +301,8 @@ export default function ProductTeamsPage() {
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-lev-bold text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">3</div>
-                <h4 className="font-semibold text-primary-3 mb-2">Deploy to AWS</h4>
-                <p className="text-gray-600 text-sm">Terraform-managed infrastructure provisioned as part of SDLC</p>
+                <h4 className="font-semibold text-primary-3 mb-2">Deploy</h4>
+                <p className="text-gray-600 text-sm">Lev manages deployment, testing, and rollback if necessary.</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-lev-bold text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">4</div>
@@ -340,7 +334,7 @@ export default function ProductTeamsPage() {
               </div>
               <h3 className="font-bold text-xl mb-3 text-primary-3">Startups</h3>
               <p className="text-gray-600 leading-relaxed mb-5">
-                You're racing a runway and building something that doesn't exist yet. Every sprint that churns instead of ships is a sprint you can't afford. Lev gives you a complete engineering team without the six-month hiring cycle—so you get to market with software you can actually support once customers show up.
+                You're racing a runway and building something that doesn't exist yet. Every sprint that churns instead of ships is a sprint you can't afford. Lev gives you a complete engineering team without the six-month hiring cycle. You get to market with software you can actually support once customers show up.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -349,11 +343,11 @@ export default function ProductTeamsPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-lev-bold font-bold text-lg leading-tight">✓</span>
-                  <span className="text-gray-700 text-sm">Full SDLC coverage from day one—no gaps between "built" and "supported"</span>
+                  <span className="text-gray-700 text-sm">Full SDLC coverage from day one. No gaps between "built" and "supported"</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-lev-bold font-bold text-lg leading-tight">✓</span>
-                  <span className="text-gray-700 text-sm">$1,499/project/month flat pricing—no per-seat explosion as you grow</span>
+                  <span className="text-gray-700 text-sm">$1,499/project/month flat pricing. No per-seat explosion as you grow</span>
                 </li>
               </ul>
             </div>
@@ -367,7 +361,7 @@ export default function ProductTeamsPage() {
               </div>
               <h3 className="font-bold text-xl mb-3 text-primary-3">Enterprise</h3>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Your board approved the AI tooling budget. Your teams adopted it. The productivity gains haven't materialized and now you're fielding questions you can't answer with confidence. Lev gives you the predictability to make commitments you can keep—and the governance to prove it's working.
+                Your board approved the AI tooling budget. Your teams adopted it. The productivity gains haven't materialized and now you're fielding questions you can't answer with confidence. Lev gives you the predictability to make commitments you can keep, and the governance to prove it's working.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -376,7 +370,7 @@ export default function ProductTeamsPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-lev-bold font-bold text-lg leading-tight">✓</span>
-                  <span className="text-gray-700 text-sm">Golden Spec creates an auditable trail of decisions—no more "why did we build it this way?"</span>
+                  <span className="text-gray-700 text-sm">Golden Spec creates an auditable trail of decisions. No more "why did we build it this way?"</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-lev-bold font-bold text-lg leading-tight">✓</span>
@@ -412,7 +406,7 @@ export default function ProductTeamsPage() {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-3">
                   <span className="text-lev-bold font-bold text-lg leading-tight">✓</span>
-                  <span className="text-gray-700 text-sm">Full SDLC — architecture through production support</span>
+                  <span className="text-gray-700 text-sm">Full SDLC, from architecture through production support</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-lev-bold font-bold text-lg leading-tight">✓</span>
@@ -434,7 +428,7 @@ export default function ProductTeamsPage() {
                 trackingLocation="Product Teams Pricing - Startup"
                 className="block text-center px-8 py-4 bg-primary-3 text-white rounded-full font-semibold hover:bg-primary-4 transition-colors"
               >
-                Join Waitlist — 14 Days Free
+                Join Waitlist. 14 Days Free.
               </TrackedCTALink>
             </div>
 
@@ -507,7 +501,7 @@ export default function ProductTeamsPage() {
               trackingLocation="Product Teams CTA"
               className="px-10 py-5 bg-lev-bold text-primary-4 rounded-full font-bold hover:bg-lev-light transition-all text-xl shadow-2xl hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-lev-bold/50"
             >
-              Join Waitlist — 14 Days Free
+              Join Waitlist. 14 Days Free.
             </TrackedCTALink>
             <TrackedCTALink
               href="/contact"

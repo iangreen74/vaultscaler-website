@@ -2,11 +2,9 @@
 
 export const GA_MEASUREMENT_ID = "G-SKB7PPD72F";
 
-// Debug mode: enabled via NODE_ENV=development or ?ga_debug=true query param
+// Debug mode: enabled only in development
 const isDebugMode = (): boolean => {
-  if (typeof window === "undefined") return false;
-  if (process.env.NODE_ENV === "development") return true;
-  return new URLSearchParams(window.location.search).has("ga_debug");
+  return process.env.NODE_ENV === "development";
 };
 
 // Extend window type for gtag

@@ -2,14 +2,6 @@
 'use client';
 
 import { useEffect } from 'react';
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  robots: {
-    index: false,
-    follow: true,
-  },
-};
 
 export default function CorporateRedirect() {
   useEffect(() => {
@@ -18,6 +10,7 @@ export default function CorporateRedirect() {
 
   return (
     <>
+      <meta name="robots" content="noindex, follow" />
       <meta httpEquiv="refresh" content="0;url=/solutions/ml-teams/" />
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">

@@ -9,14 +9,14 @@ export const metadata: Metadata = {
   title: 'Radix: Train Models Faster. Deploy LLMs Smarter. | VaultScaler',
   description: 'Radix Core for up to 21% faster GPU training. Radix Studio to control every inference. One platform. Two products. No stack changes required.',
   alternates: {
-    canonical: `${SITE.url}/radix`,
+    canonical: `${SITE.url}/radix/`,
   },
   keywords: SITE.keywords,
   openGraph: {
     title: 'Radix: Train Models Faster. Deploy LLMs Smarter.',
     description: 'Radix Core for up to 21% faster training. Radix Studio to control every inference. One platform for AI operations.',
     type: 'website',
-    url: `${SITE.url}/radix`,
+    url: `${SITE.url}/radix/`,
     images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Radix AI Operations Platform' }],
   },
   twitter: {
@@ -39,7 +39,7 @@ export default function RadixPage() {
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE.url },
-      { "@type": "ListItem", "position": 2, "name": "Radix", "item": `${SITE.url}/radix` },
+      { "@type": "ListItem", "position": 2, "name": "Radix", "item": `${SITE.url}/radix/` },
     ]
   };
 
@@ -55,9 +55,9 @@ export default function RadixPage() {
       { "@type": "Offer", name: "Radix Studio", price: "45", priceCurrency: "USD", description: "Per user per month" },
     ],
     author: { "@type": "Organization", name: "VaultScaler" },
-    url: `${SITE.url}/radix`,
+    url: `${SITE.url}/radix/`,
     description: metadata.description,
-    releaseNotes: "General Availability March 2, 2026.",
+    releaseNotes: "General Availability April 6, 2026.",
   };
 
   return (
@@ -126,7 +126,7 @@ export default function RadixPage() {
                 GPU schedulers treat hardware as monolithic units. They account for GPU count but ignore memory, compute, and power constraints across training runs.
               </p>
               <p className="text-primary-3 font-semibold mb-4">
-                Up to 21% training throughput lost to naive scheduling.
+                Up to 21% training throughput lost to naive scheduling (VaultScaler internal benchmarks).
               </p>
               <Link href="/radix/core/" className="text-primary-3 font-semibold text-sm flex items-center gap-1 hover:gap-2 transition-all">
                 Radix Core solves this
@@ -142,10 +142,10 @@ export default function RadixPage() {
               </div>
               <h3 className="font-bold text-xl mb-3 text-primary-3">The Inference Problem</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Every LLM call makes invisible tradeoffs: cost vs. quality, speed vs. accuracy. Without governance, you can't see these tradeoffs — let alone control them.
+                Every LLM call makes invisible tradeoffs: cost vs. quality, speed vs. accuracy. Without governance, you can't see these tradeoffs. Much less control them.
               </p>
               <p className="text-primary-3 font-semibold mb-4">
-                62% of organizations cite governance gaps as their top AI blocker.
+                62% of organizations cite governance gaps as their top AI blocker (VaultScaler estimate based on IBM, Vanta, and NACD surveys, 2025).
               </p>
               <Link href="/radix/studio/" className="text-primary-3 font-semibold text-sm flex items-center gap-1 hover:gap-2 transition-all">
                 Radix Studio solves this
@@ -172,7 +172,7 @@ export default function RadixPage() {
               <h3 className="text-2xl font-bold mb-2">Radix Core</h3>
               <p className="text-pop-light text-sm font-medium mb-4">GPU Training Optimization</p>
               <p className="text-white/90 mb-6 leading-relaxed">
-                Get up to 21% more throughput from your existing GPU infrastructure. Closed-loop control that balances memory, compute, and power across all training runs.
+                Get up to 21% more throughput from your existing GPU infrastructure (internal benchmarks). Closed-loop control that balances memory, compute, and power across all training runs.
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-3">
@@ -201,7 +201,7 @@ export default function RadixPage() {
             {/* Radix Studio */}
             <Link href="/radix/studio/" className="group bg-gray-50 border-2 border-gray-200 rounded-2xl p-8 hover:shadow-xl hover:border-primary-1 transition-all">
               <h3 className="text-2xl font-bold mb-2 text-gray-900">Radix Studio</h3>
-              <p className="text-primary-3 text-sm font-medium mb-4">LLM Inference Optimization</p>
+              <p className="text-primary-3 text-sm font-medium mb-4">LLM Inference Governance</p>
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Take control of your AI inference. Build governed LLM workflows with cost-aware routing. Chain LLM calls, RAG queries, and tools into production-ready pipelines.
               </p>
@@ -281,7 +281,7 @@ export default function RadixPage() {
             Simple, Transparent Pricing
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Start with a free 14-day trial. Buy what you need — Core, Studio, or both.
+            Start with a free 14-day trial. Buy what you need. Core, Studio, or both.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -390,8 +390,8 @@ export default function RadixPage() {
               </p>
               <p className="text-2xl font-bold text-white mb-2">Custom</p>
               <p className="text-sm text-white/70 mb-6">Volume pricing available</p>
-              <TrackedCTALink href="/contact" trackingName="Book Architecture Call" trackingLocation="Radix Pricing - Hyperscale" className="inline-block text-center px-6 py-3 bg-white text-primary-3 rounded-full font-bold hover:bg-gray-100 transition-colors">
-                Book Architecture Call
+              <TrackedCTALink href="/contact" trackingName="Get in Touch" trackingLocation="Radix Pricing - Hyperscale" className="inline-block text-center px-6 py-3 bg-white text-primary-3 rounded-full font-bold hover:bg-gray-100 transition-colors">
+                Get in Touch
               </TrackedCTALink>
             </div>
           </div>
@@ -427,7 +427,7 @@ export default function RadixPage() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <h3 className="font-bold text-lg mb-3 text-pop-light">Proven Results</h3>
               <p className="text-white/80 text-sm leading-relaxed">
-                Up to 21% throughput improvement in testing. Every performance claim is reproducible. Deterministic results you can trust.
+                Up to 21% throughput improvement in internal testing. Every performance claim is reproducible. Deterministic results you can trust.
               </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">

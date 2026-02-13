@@ -22,12 +22,12 @@ export default function ThankYouPage() {
           </h1>
 
           <p className="text-gray-600 mb-8">
-            You&apos;re all set for our March 2, 2026 launch. We&apos;ll email you with early access details one week before launch day.
+            You&apos;re all set for our April 6, 2026 launch. We&apos;ll email you with early access details one week before launch day.
           </p>
 
           <div className="space-y-4">
             <Link
-              href="/product"
+              href="/radix"
               className="inline-block px-8 py-3 bg-primary-3 text-white rounded-full font-semibold hover:bg-primary-4 transition-colors"
             >
               Explore the Platform

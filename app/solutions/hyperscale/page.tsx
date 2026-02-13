@@ -1,14 +1,14 @@
 // Route: /solutions/hyperscale (Hyperscale & Frontier AI Landing Page)
 import type { Metadata } from 'next';
-import { TrackedEmailLink } from '@/components/TrackedLink';
+import { TrackedEmailLink, TrackedCTALink } from '@/components/TrackedLink';
 import { SITE } from '@/lib/site';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Hyperscale & Frontier AI: GPU Fleet Optimization | VaultScaler',
-  description: 'Maximize GPU utilization across your fleet. Up to 21% training throughput gains, $2.5M saved per 1K GPUs annually. Deploy via Helm chart with zero stack changes.',
+  description: 'Maximize GPU utilization across your fleet. Up to 21% training throughput gains (internal benchmarks), estimated $2.5M saved per 1K GPUs annually. Deploy via Helm chart with zero stack changes.',
   alternates: {
-    canonical: `${SITE.url}/solutions/hyperscale`,
+    canonical: `${SITE.url}/solutions/hyperscale/`,
   },
   keywords: [
     'GPU fleet optimization',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: 'Hyperscale & Frontier AI: GPU Fleet Optimization | VaultScaler',
     description: 'Maximize GPU utilization across your fleet. Up to 21% training throughput gains with zero stack changes.',
     type: 'website',
-    url: `${SITE.url}/solutions/hyperscale`,
+    url: `${SITE.url}/solutions/hyperscale/`,
     images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Hyperscale & Frontier AI GPU Optimization' }],
   },
   twitter: {
@@ -43,11 +43,11 @@ export default function HyperscalePage() {
     "@type": "WebPage",
     "name": "Hyperscale & Frontier AI: GPU Fleet Optimization",
     "description": "Maximize GPU utilization across your fleet with Radix Core. Up to 21% training throughput gains, enterprise-grade security, and zero stack changes.",
-    "url": `${SITE.url}/solutions/hyperscale`,
+    "url": `${SITE.url}/solutions/hyperscale/`,
     "provider": {
       "@type": "Organization",
       "name": "VaultScaler",
-      "url": SITE.url,
+      "url": `${SITE.url}/`,
     },
   };
 
@@ -64,14 +64,8 @@ export default function HyperscalePage() {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Solutions",
-        "item": `${SITE.url}/solutions`
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
         "name": "Hyperscale & Frontier AI",
-        "item": `${SITE.url}/solutions/hyperscale`
+        "item": `${SITE.url}/solutions/hyperscale/`
       }
     ]
   };
@@ -101,9 +95,28 @@ export default function HyperscalePage() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-10 leading-relaxed">
             Increase fleet utilization and customer satisfaction without new buildout. Radix Core maximizes utilization across your entire fleet, turning idle capacity into throughput gains your CFO will notice.
           </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <TrackedCTALink
+              href="/contact"
+              trackingName="Contact Sales"
+              trackingLocation="Hyperscale Hero"
+              className="px-10 py-5 bg-pop-light text-primary-4 rounded-full font-bold text-xl hover:bg-white transition-all shadow-2xl hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-pop-light/50"
+            >
+              Contact Sales
+            </TrackedCTALink>
+            <TrackedCTALink
+              href="/waitlist"
+              trackingName="Join Waitlist"
+              trackingLocation="Hyperscale Hero"
+              className="px-8 py-4 border-2 border-white/30 text-white rounded-full font-semibold hover:bg-white/10 hover:border-white/50 transition-all text-lg"
+            >
+              Join Waitlist
+            </TrackedCTALink>
+          </div>
         </div>
       </section>
 
@@ -227,11 +240,11 @@ radix-observer-6d4b2a9c8-q7w3  1/1    Running   0          46s`}</code>
               Security That Satisfies Your Infosec Team
             </h2>
             <p className="text-lg text-white/80 max-w-3xl mx-auto">
-              Your GPU fleet processes sensitive training data. Radix Core is built for the most demanding security environments, with air-gapped deployment, zero data egress, and enterprise compliance certifications.
+              Your GPU fleet processes sensitive training data. Radix Core is built for the most demanding security environments, with air-gapped deployment and zero data egress options.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="w-12 h-12 bg-pop-light/20 rounded-xl flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-pop-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -241,18 +254,6 @@ radix-observer-6d4b2a9c8-q7w3  1/1    Running   0          46s`}</code>
               <h3 className="font-bold text-lg mb-2 text-pop-light">Air-Gapped Ready</h3>
               <p className="text-white/70 text-sm leading-relaxed">
                 Deploy in fully disconnected environments. No internet access required after installation.
-              </p>
-            </div>
-
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="w-12 h-12 bg-pop-light/20 rounded-xl flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-pop-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="font-bold text-lg mb-2 text-pop-light">SOC2 Ready</h3>
-              <p className="text-white/70 text-sm leading-relaxed">
-                Built with SOC2 Type II compliance in mind. Full audit trails and access controls.
               </p>
             </div>
 
@@ -294,10 +295,10 @@ radix-observer-6d4b2a9c8-q7w3  1/1    Running   0          46s`}</code>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <TrackedEmailLink
               href="mailto:bpruess@vaultscaler.com?subject=Architecture%20Call%20Request%20-%20Hyperscale%20GPU%20Fleet"
-              trackingName="Book Architecture Call"
+              trackingName="Get in Touch"
               className="px-10 py-5 bg-pop-light text-primary-4 rounded-full font-bold hover:bg-white transition-all text-xl shadow-2xl hover:shadow-pop-light/50 hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-pop-light/50"
             >
-              Book Architecture Call
+              Get in Touch
             </TrackedEmailLink>
 
           </div>

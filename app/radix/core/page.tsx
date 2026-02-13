@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Radix Core: Up to 21% Faster GPU Training | VaultScaler',
   description: 'Radix Core uses closed-loop control to balance memory, compute, and power across training runs. Up to 21% throughput improvement over FIFO scheduling. Deploy via Helm chart with zero stack changes.',
   alternates: {
-    canonical: `${SITE.url}/radix/core`,
+    canonical: `${SITE.url}/radix/core/`,
   },
   keywords: [
     'GPU scheduling optimization',
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
     title: 'Radix Core: Up to 21% Faster GPU Training',
     description: 'Closed-loop GPU scheduling that balances memory, compute, and power. Up to 21% throughput improvement. Zero stack changes.',
     type: 'website',
-    url: `${SITE.url}/radix/core`,
-    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Radix Core - GPU Training Optimization' }],
+    url: `${SITE.url}/radix/core/`,
+    images: [{ url: '/og/radix-core.png', width: 1200, height: 630, alt: 'Radix Core - GPU Training Optimization' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Radix Core: Up to 21% Faster GPU Training',
     description: 'Closed-loop GPU scheduling that balances memory, compute, and power. Up to 21% throughput improvement.',
-    images: ['/og.jpg'],
+    images: ['/og/radix-core.png'],
   },
 };
 
@@ -50,7 +50,7 @@ export default function RadixCorePage() {
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE.url },
       { "@type": "ListItem", "position": 2, "name": "Radix", "item": `${SITE.url}/radix` },
-      { "@type": "ListItem", "position": 3, "name": "Radix Core", "item": `${SITE.url}/radix/core` },
+      { "@type": "ListItem", "position": 3, "name": "Radix Core", "item": `${SITE.url}/radix/core/` },
     ]
   };
 
@@ -65,9 +65,9 @@ export default function RadixCorePage() {
       { "@type": "Offer", name: "Radix Core", price: "45", priceCurrency: "USD", description: "Per GPU per month" },
     ],
     author: { "@type": "Organization", name: "VaultScaler" },
-    url: `${SITE.url}/radix/core`,
+    url: `${SITE.url}/radix/core/`,
     description: metadata.description,
-    releaseNotes: "General Availability March 2, 2026.",
+    releaseNotes: "General Availability April 6, 2026.",
   };
 
   return (
@@ -152,7 +152,7 @@ export default function RadixCorePage() {
               </div>
               <h3 className="font-bold text-xl mb-3 text-primary-3">Throughput Degradation</h3>
               <p className="text-gray-600 leading-relaxed">
-                Up to 21% training throughput is lost to naive scheduling. At fleet scale, that's millions in wasted compute every year.
+                Up to 21% training throughput is lost to naive scheduling (VaultScaler internal benchmarks). At fleet scale, that's millions in wasted compute every year.
               </p>
             </div>
 
@@ -175,6 +175,7 @@ export default function RadixCorePage() {
       <section className="py-16 bg-primary-3">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-3xl sm:text-4xl font-bold text-white mb-2">Up to 21.4% throughput improvement</p>
+          <p className="text-sm text-white/50 mb-2">(VaultScaler internal benchmarks)</p>
           <p className="text-xl text-gray-200">over industry-standard FIFO scheduling</p>
         </div>
       </section>
@@ -270,7 +271,7 @@ radix-observer-6d4b2a9c8-q7w3  1/1    Running   0          46s`}</code>
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
               <span className="text-pop-dark font-bold text-lg">Secure</span>
               <p className="text-gray-600 leading-relaxed mt-2">
-                Built for air-gapped deployment with zero egress. SLSA Level 3 attestations. SOC2-ready. Your data never leaves your infrastructure.
+                Originally built for air-gapped deployment with zero egress. SLSA Level 3 attestations. Your data never leaves your infrastructure.
               </p>
             </div>
           </div>
@@ -289,17 +290,11 @@ radix-observer-6d4b2a9c8-q7w3  1/1    Running   0          46s`}</code>
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <h3 className="font-bold text-lg mb-2 text-pop-light">Air-Gapped Ready</h3>
               <p className="text-white/70 text-sm leading-relaxed">
                 Deploy in fully disconnected environments. No internet access required after installation.
-              </p>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <h3 className="font-bold text-lg mb-2 text-pop-light">SOC2 Ready</h3>
-              <p className="text-white/70 text-sm leading-relaxed">
-                Built with SOC2 Type II compliance in mind. Full audit trails and access controls.
               </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
@@ -414,11 +409,11 @@ radix-observer-6d4b2a9c8-q7w3  1/1    Running   0          46s`}</code>
               </div>
               <TrackedCTALink
                 href="/contact"
-                trackingName="Book Architecture Call"
+                trackingName="Get in Touch"
                 trackingLocation="Radix Core Pricing - Hyperscale"
                 className="inline-block w-full text-center px-4 py-3 bg-pop-light text-primary-4 text-sm rounded-full font-bold hover:bg-white transition-all"
               >
-                Book Architecture Call
+                Get in Touch
               </TrackedCTALink>
             </div>
           </div>
@@ -452,10 +447,10 @@ radix-observer-6d4b2a9c8-q7w3  1/1    Running   0          46s`}</code>
             </TrackedCTALink>
             <TrackedEmailLink
               href="mailto:bpruess@vaultscaler.com?subject=Architecture%20Call%20-%20Radix%20Core"
-              trackingName="Book Architecture Call"
+              trackingName="Get in Touch"
               className="px-8 py-4 border-2 border-white/30 text-white rounded-full font-semibold hover:bg-white/10 hover:border-white/50 transition-all text-lg"
             >
-              Book Architecture Call
+              Get in Touch
             </TrackedEmailLink>
           </div>
         </div>

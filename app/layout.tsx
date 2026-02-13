@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import JsonLd from "@/components/JsonLd";
 import AnalyticsProvider from "@/components/AnalyticsProvider";
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "VaultScaler",
     images: [
       {
-        url: "/og.jpg",
+        url: "/og/vaultscaler.png",
         width: 1200,
         height: 630,
         alt: "VaultScaler - GPU Optimization & LLM Governance",
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "VaultScaler - GPU Optimization & LLM Governance Platform",
     description: "Up to 21% GPU throughput gains. Complete LLM governance. Deploy in minutes on Kubernetes.",
-    images: ["/og.jpg"],
+    images: ["/og/vaultscaler.png"],
   },
 };
 
@@ -53,8 +54,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: SITE.name,
-    url: SITE.url,
-    logo: `${SITE.url}/og.jpg`,
+    url: `${SITE.url}/`,
+    logo: `${SITE.url}/og/vaultscaler.png`,
     description: SITE.description,
     email: SITE.email,
     foundingDate: "2024",
@@ -143,7 +144,10 @@ export default function RootLayout({
         <footer className="bg-primary-3 text-white py-8 mt-20" role="contentinfo">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center text-sm text-gray-300">
-              <p>&copy; 2025 VaultScaler. All rights reserved.</p>
+              <p>&copy; 2026 VaultScaler. All rights reserved.</p>
+              <p className="mt-2">
+                <Link href="/privacy/" className="hover:text-white transition-colors">Privacy Policy</Link>
+              </p>
             </div>
           </div>
         </footer>

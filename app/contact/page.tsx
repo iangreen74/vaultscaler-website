@@ -3,17 +3,18 @@ import type { Metadata } from "next";
 import { SITE } from "@/lib/site";
 import { TrackedEmailLink } from "@/components/TrackedLink";
 import JsonLd from "@/components/JsonLd";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact | VaultScaler",
   description:
     "Get in touch with the VaultScaler team. Reach out for enterprise licensing, partnerships, or to schedule a demo.",
-  alternates: { canonical: `${SITE.url}/contact` },
+  alternates: { canonical: `${SITE.url}/contact/` },
   keywords: [...SITE.keywords, "contact", "demo", "enterprise licensing"],
   openGraph: {
     title: 'Contact | VaultScaler',
     description: 'Reach out for enterprise licensing, partnerships, or to schedule a demo.',
-    url: `${SITE.url}/contact`,
+    url: `${SITE.url}/contact/`,
     type: 'website',
   },
   twitter: {
@@ -30,7 +31,7 @@ export default function Page() {
     "@type": "ContactPage",
     "name": "Contact VaultScaler",
     "description": "Get in touch with the VaultScaler team for enterprise licensing, partnerships, or demos.",
-    "url": `${SITE.url}/contact`,
+    "url": `${SITE.url}/contact/`,
     "mainEntity": {
       "@type": "Organization",
       "name": "VaultScaler",
@@ -58,14 +59,22 @@ export default function Page() {
             Get in Touch
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
-            Whether you need enterprise licensing, want to explore a partnership, or just have questions—we're here to help.
+            We're here to help, whether you need enterprise licensing, want to explore a partnership, or just have questions.
           </p>
         </div>
       </section>
 
-      {/* Contact Options */}
+      {/* Contact Form */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ContactForm />
+        </div>
+      </section>
+
+      {/* Email Contact Options */}
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 text-center mb-10">Prefer Email?</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {/* Sales & Licensing */}
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 flex flex-col">
@@ -79,7 +88,7 @@ export default function Page() {
                 <ul className="space-y-3 text-gray-600">
                   <li className="flex items-start gap-3">
                     <span className="text-primary-3 mt-1">•</span>
-                    <span>Enterprise licensing for Core or Studio</span>
+                    <span>Enterprise licensing for Radix Core or Radix Studio</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-primary-3 mt-1">•</span>
@@ -149,11 +158,11 @@ export default function Page() {
               Not sure which product is right for you? Our team can help you evaluate your AI operations needs and find the best solution.
             </p>
             <TrackedEmailLink
-              href="mailto:bpruess@vaultscaler.com?subject=Getting%20Started%20with%20Radix"
-              trackingName="Schedule a Call"
+              href="mailto:bpruess@vaultscaler.com?subject=Getting%20Started%20with%20VaultScaler"
+              trackingName="Get in Touch"
               className="inline-block px-8 py-4 bg-white text-primary-3 rounded-full font-bold hover:bg-gray-100 transition-all"
             >
-              Schedule a Call
+              Get in Touch
             </TrackedEmailLink>
           </div>
         </div>

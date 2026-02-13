@@ -8,14 +8,14 @@ export const metadata: Metadata = {
   title: 'VaultScaler | AI Operations, Harmonized',
   description: 'VaultScaler builds products that harmonize AI operations at scale. Radix optimizes GPU training and governs LLM inference. Lev delivers AI engineering with actual results.',
   alternates: {
-    canonical: SITE.url,
+    canonical: `${SITE.url}/`,
   },
   keywords: SITE.keywords,
   openGraph: {
     title: 'VaultScaler | AI Operations, Harmonized',
     description: 'Products that harmonize AI operations at scale. GPU training optimization, LLM governance, and AI engineering.',
     type: 'website',
-    url: SITE.url,
+    url: `${SITE.url}/`,
     images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'VaultScaler' }],
   },
   twitter: {
@@ -31,7 +31,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "VaultScaler",
-    "url": SITE.url,
+    "url": `${SITE.url}/`,
     "description": "VaultScaler builds products that harmonize AI operations at scale.",
   };
 
@@ -84,7 +84,7 @@ export default function Home() {
                 className="group bg-white/95 backdrop-blur-sm rounded-2xl p-6 border-l-4 border-lev-bold hover:bg-white hover:shadow-xl hover:scale-[1.02] transition-all"
               >
                 <p className="text-sm text-gray-600 mb-3 leading-relaxed">
-                  Full lifecycle agentic engineering and agentic support.
+                  Full lifecycle agentic engineering and support.
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-gray-900">Lev</span>
@@ -110,7 +110,7 @@ export default function Home() {
               </div>
               <p className="text-primary-3 text-sm font-medium mb-4">AI Operations Platform</p>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Optimize GPU training throughput by up to 21%. Govern every LLM inference call. One platform for the full AI lifecycle — no stack changes required.
+                Optimize GPU training throughput by up to 21% (internal benchmarks). Govern every LLM inference call. One platform for the full AI lifecycle. No stack changes required.
               </p>
               <div className="flex flex-col gap-3">
                 <Link href="/radix/core" className="group/core flex items-center justify-between p-3 bg-gray-50 rounded-xl hover:bg-primary-3/5 transition-colors">
@@ -173,7 +173,7 @@ export default function Home() {
             </p>
 
             <p>
-               We wanted to be part of the solution—to build tools that work, that you can actually use, that address the problems we were tired of living with.
+               We wanted to be part of the solution. To build tools that work, that you can actually use, that address the problems we were tired of living with.
             </p>
 
             <p>
@@ -196,7 +196,7 @@ export default function Home() {
             href="/contact/"
             className="inline-block px-8 py-4 bg-white text-primary-3 rounded-full font-bold hover:bg-gray-100 transition-all text-lg shadow-lg hover:scale-105 transform"
           >
-            Schedule a Call
+            Get in Touch
           </Link>
         </div>
       </section>

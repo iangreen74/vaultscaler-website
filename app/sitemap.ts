@@ -3,7 +3,7 @@ import { SITE } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Exclude /team, /docs (noindex), /product, /pricing (redirects)
-  const pages = ["", "radix", "radix/core", "radix/studio", "lev", "contact", "waitlist"];
+  const pages = ["", "radix", "radix/core", "radix/studio", "lev", "contact", "waitlist", "privacy"];
   const solutionPages = [
     "solutions/hyperscale",
     "solutions/ml-teams",
@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString();
 
   const mainPages = pages.map((p) => ({
-    url: `${SITE.url}/${p}`,
+    url: p ? `${SITE.url}/${p}/` : `${SITE.url}/`,
     lastModified: now,
     changeFrequency: "weekly" as const,
     priority: p === "" ? 1 : p === "radix" || p === "radix/core" || p === "radix/studio" || p === "lev" ? 0.9 : 0.8,
