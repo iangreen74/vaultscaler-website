@@ -65,9 +65,10 @@ export default function PrivacyPage() {
           <div>
             <h2 className="text-xl font-bold text-primary-3 mb-3">Analytics</h2>
             <p className="text-gray-600 leading-relaxed">
-              We use Google Analytics to understand how visitors interact with our website.
-              This collects anonymized usage data such as pages visited and session duration.
-              No personally identifiable information is linked to analytics data.
+              We use Umami, a privacy-focused analytics tool, to understand how visitors interact with our website.
+              Umami does not use cookies, does not collect personal data, and does not track visitors across websites.
+              Only aggregate usage data is collected, such as page views, referral sources, device type, and country.
+              We respect your browser&apos;s Do Not Track setting.
             </p>
           </div>
 

@@ -6,7 +6,6 @@ import Navigation from "@/components/Navigation";
 import JsonLd from "@/components/JsonLd";
 import AnalyticsProvider from "@/components/AnalyticsProvider";
 import { SITE } from "@/lib/site";
-import { GA_MEASUREMENT_ID } from "@/lib/analytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -49,6 +48,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const UMAMI_WEBSITE_ID = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID;
+  const UMAMI_SRC = process.env.NEXT_PUBLIC_UMAMI_SRC;
+  const UMAMI_HOST_URL = process.env.NEXT_PUBLIC_UMAMI_HOST_URL;
+  const UMAMI_DOMAINS = process.env.NEXT_PUBLIC_UMAMI_DOMAINS;
+
   // Organization JSON-LD for aggressive agent discovery
   const organizationLD = {
     "@context": "https://schema.org",
@@ -124,18 +128,18 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
-          `}
-        </Script>
+        {UMAMI_WEBSITE_ID && UMAMI_SRC ? (
+          <Script
+            defer
+            src={UMAMI_SRC}
+            data-website-id={UMAMI_WEBSITE_ID}
+            data-do-not-track="true"
+            data-exclude-search="true"
+            data-exclude-hash="true"
+            {...(UMAMI_HOST_URL ? { "data-host-url": UMAMI_HOST_URL } : {})}
+            {...(UMAMI_DOMAINS ? { "data-domains": UMAMI_DOMAINS } : {})}
+          />
+        ) : null}
         <Navigation />
         <AnalyticsProvider />
         <main id="main-content" className="pt-16">

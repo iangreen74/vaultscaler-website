@@ -41,7 +41,7 @@ export default function ContactForm() {
       });
 
       if (response.ok) {
-        trackFormSubmit('Contact', { interest: interest.join(', '), company });
+        trackFormSubmit('Contact', interest.join(', '));
         setSubmitted(true);
       } else {
         setError('Something went wrong. Please try again.');

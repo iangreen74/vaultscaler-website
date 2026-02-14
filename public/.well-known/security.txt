@@ -1,0 +1,3 @@
+Contact: mailto:ian@vaultscaler.com
+Preferred-Languages: en
+Canonical: https://www.vaultscaler.com/.well-known/security.txt

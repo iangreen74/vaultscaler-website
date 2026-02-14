@@ -31,7 +31,7 @@ export default function WaitlistForm() {
       });
 
       if (response.ok) {
-        trackFormSubmit('Waitlist', { interest: interest.join(', ') });
+        trackFormSubmit('Waitlist', interest.join(', '));
         router.push('/waitlist/thank-you');
       } else {
         setError('Something went wrong. Please try again.');

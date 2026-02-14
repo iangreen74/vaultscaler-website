@@ -1,20 +1,20 @@
-// Google Analytics 4 Configuration and Helpers
-
-export const GA_MEASUREMENT_ID = "G-SKB7PPD72F";
+// Privacy-friendly analytics helpers (Umami self-hosting friendly)
 
 // Debug mode: enabled only in development
 const isDebugMode = (): boolean => {
   return process.env.NODE_ENV === "development";
 };
 
-// Extend window type for gtag
+type UmamiEventData = Record<string, unknown>;
+
+interface UmamiTracker {
+  track: (event: string, data?: UmamiEventData) => void;
+}
+
+// Extend window type for umami
 declare global {
   interface Window {
-    gtag?: (
-      command: "event" | "config" | "js",
-      targetId: string | Date,
-      params?: Record<string, unknown>
-    ) => void;
+    umami?: UmamiTracker;
   }
 }
 
@@ -36,22 +36,21 @@ interface TrackEventParams {
 }
 
 /**
- * Track a custom event in Google Analytics
+ * Track a custom event via Umami
  */
 export function trackEvent({ action, category, label, value }: TrackEventParams): void {
-  const eventParams: Record<string, unknown> = {
-    event_category: category,
-  };
+  const eventName = `${category}:${action}`;
+  const eventData: UmamiEventData = {};
 
-  if (label) eventParams.event_label = label;
-  if (value !== undefined) eventParams.value = value;
+  if (label) eventData.label = label;
+  if (value !== undefined) eventData.value = value;
 
   if (isDebugMode()) {
-    console.log("[GA Debug]", { action, ...eventParams });
+    console.log("[Analytics Debug]", { eventName, ...eventData });
   }
 
-  if (typeof window !== "undefined" && window.gtag) {
-    window.gtag("event", action, eventParams);
+  if (typeof window !== "undefined" && window.umami?.track) {
+    window.umami.track(eventName, eventData);
   }
 }
 
@@ -97,11 +96,11 @@ export function trackDownload(fileName: string): void {
   });
 }
 
-export function trackFormSubmit(formName: string, data?: Record<string, string>): void {
+export function trackFormSubmit(formName: string, interestCategory?: string): void {
   trackEvent({
     action: "submit",
     category: "form",
-    label: data ? `${formName} - ${JSON.stringify(data)}` : formName,
+    label: interestCategory ? `${formName} - ${interestCategory}` : formName,
   });
 }
 
