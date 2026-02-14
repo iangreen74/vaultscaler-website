@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import FAQ from "@/components/FAQ";
 import { SITE } from "@/lib/site";
-import { TrackedCTALink, TrackedEmailLink } from "@/components/TrackedLink";
+import { TrackedCTALink } from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Lev - AI engineering. Actual delivery.",
@@ -601,13 +601,14 @@ export default function LevPage() {
                 </li>
               </ul>
 
-              <TrackedEmailLink
-                href="mailto:bpruess@vaultscaler.com"
+              <TrackedCTALink
+                href="/contact/"
                 trackingName="Contact Sales"
+                trackingLocation="Lev Pricing"
                 className="block text-center px-8 py-4 bg-lev-bold text-primary-4 rounded-full font-semibold hover:bg-lev-light transition-colors"
               >
                 Contact Sales
-              </TrackedEmailLink>
+              </TrackedCTALink>
             </div>
           </div>
         </div>

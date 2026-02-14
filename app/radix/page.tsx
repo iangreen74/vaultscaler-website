@@ -390,7 +390,7 @@ export default function RadixPage() {
               </p>
               <p className="text-2xl font-bold text-white mb-2">Custom</p>
               <p className="text-sm text-white/70 mb-6">Volume pricing available</p>
-              <TrackedCTALink href="/contact" trackingName="Get in Touch" trackingLocation="Radix Pricing - Hyperscale" className="inline-block text-center px-6 py-3 bg-white text-primary-3 rounded-full font-bold hover:bg-gray-100 transition-colors">
+              <TrackedCTALink href="/contact/" trackingName="Get in Touch" trackingLocation="Radix Pricing - Hyperscale" className="inline-block text-center px-6 py-3 bg-white text-primary-3 rounded-full font-bold hover:bg-gray-100 transition-colors">
                 Get in Touch
               </TrackedCTALink>
             </div>

@@ -1,7 +1,7 @@
 // Route: /radix/core (Radix Core - GPU Training Optimization)
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { TrackedCTALink, TrackedEmailLink } from '@/components/TrackedLink';
+import { TrackedCTALink } from '@/components/TrackedLink';
 import { SITE } from '@/lib/site';
 import JsonLd from '@/components/JsonLd';
 
@@ -408,7 +408,7 @@ radix-observer-6d4b2a9c8-q7w3  1/1    Running   0          46s`}</code>
                 </ul>
               </div>
               <TrackedCTALink
-                href="/contact"
+                href="/contact/"
                 trackingName="Get in Touch"
                 trackingLocation="Radix Core Pricing - Hyperscale"
                 className="inline-block w-full text-center px-4 py-3 bg-pop-light text-primary-4 text-sm rounded-full font-bold hover:bg-white transition-all"
@@ -445,13 +445,14 @@ radix-observer-6d4b2a9c8-q7w3  1/1    Running   0          46s`}</code>
             >
               Join Waitlist
             </TrackedCTALink>
-            <TrackedEmailLink
-              href="mailto:bpruess@vaultscaler.com?subject=Architecture%20Call%20-%20Radix%20Core"
+            <TrackedCTALink
+              href="/contact/"
               trackingName="Get in Touch"
+              trackingLocation="Radix Core CTA"
               className="px-8 py-4 border-2 border-white/30 text-white rounded-full font-semibold hover:bg-white/10 hover:border-white/50 transition-all text-lg"
             >
               Get in Touch
-            </TrackedEmailLink>
+            </TrackedCTALink>
           </div>
         </div>
       </section>

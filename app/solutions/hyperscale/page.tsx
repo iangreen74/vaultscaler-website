@@ -1,6 +1,6 @@
 // Route: /solutions/hyperscale (Hyperscale & Frontier AI Landing Page)
 import type { Metadata } from 'next';
-import { TrackedEmailLink, TrackedCTALink } from '@/components/TrackedLink';
+import { TrackedCTALink } from '@/components/TrackedLink';
 import { SITE } from '@/lib/site';
 import JsonLd from '@/components/JsonLd';
 
@@ -293,13 +293,14 @@ radix-observer-6d4b2a9c8-q7w3  1/1    Running   0          46s`}</code>
 
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <TrackedEmailLink
-              href="mailto:bpruess@vaultscaler.com?subject=Architecture%20Call%20Request%20-%20Hyperscale%20GPU%20Fleet"
+            <TrackedCTALink
+              href="/contact/"
               trackingName="Get in Touch"
+              trackingLocation="Hyperscale CTA"
               className="px-10 py-5 bg-pop-light text-primary-4 rounded-full font-bold hover:bg-white transition-all text-xl shadow-2xl hover:shadow-pop-light/50 hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-pop-light/50"
             >
               Get in Touch
-            </TrackedEmailLink>
+            </TrackedCTALink>
 
           </div>
 
