@@ -6,14 +6,14 @@ import { trackNavClick } from '@/lib/analytics';
 
 const productLinks = [
   { href: '/lev/', label: 'Lev', description: 'Agentic Engineering System' },
+  { href: '/ortobahn/', label: 'Ortobahn', description: 'Autonomous Content Operations' },
   { href: '/radix/core/', label: 'Radix Core', description: 'GPU Training Optimization' },
-  { href: '/radix/studio/', label: 'Radix Studio', description: 'LLM Inference Governance' },
 ];
 
 const solutionLinks = [
   { href: '/solutions/hyperscale/', label: 'Hyperscale & Frontier AI' },
-  { href: '/solutions/ml-teams/', label: 'ML & AI Development Teams' },
   { href: '/solutions/product-teams/', label: 'Product & Engineering Teams' },
+  { href: '/ortobahn/', label: 'Content & Marketing Teams' },
 ];
 
 export default function Navigation() {

@@ -23,6 +23,7 @@ This project has specialized agents for startup operations. Invoke with `/[agent
 | `/messaging` | Website Messaging | Headlines, CTAs, conversion copy |
 | `/security` | Web Security | Forms, headers, scripts, PCI readiness |
 | `/prospect` | University Prospecting | Research labs, stakeholders, LinkedIn intel, pain signals |
+| `/social` | Social Media Strategist | Content planning, post drafting, tone consistency, X/LinkedIn |
 | `/brand-orchestrator` | Brand Orchestrator | Orchestrate market-facing deliverables through Brand → Category → execution |
 
 ## Agent Collaboration
@@ -38,6 +39,7 @@ Agents are designed to work together with a clear upstream/downstream hierarchy:
 - **Pitch** adapts brand narrative for investor audiences
 - **GTM** applies brand positioning to sales motions and ICP targeting
 - **Growth** applies brand voice to content strategy and SEO
+- **Social** translates brand voice and category angles into founder-led social content
 
 ### Operational Collaboration
 - **Prospect** finds qualified leads, feeds to **GTM** for outreach sequences
@@ -49,6 +51,8 @@ Agents are designed to work together with a clear upstream/downstream hierarchy:
 - **Risk** reviews equity/legal implications across all agents
 - **Security** escalates infrastructure to **Tech**, legal to **Risk**
 - **Metrics** tracks **Prospect** → **GTM** → customer conversion rates
+- **Social** receives angles from **Category**, voice from **Brand**, ICP from **GTM**
+- **Social** engagement insights feed to **Metrics** and **Prospect**
 
 ## Guardrails
 

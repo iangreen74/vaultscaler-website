@@ -7,7 +7,8 @@ import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
   title: 'ML & AI Development Teams: Training Optimization + LLM Governance | VaultScaler',
-  description: 'Complete ML infrastructure for AI development teams. Maximize GPU throughput with Radix Core, orchestrate LLM pipelines with Radix Studio, and ship production AI with governance built-in.',
+  description: 'Complete ML infrastructure for AI development teams. Maximize GPU throughput with Radix Core and ship production AI with governance built-in.',
+  robots: { index: false, follow: false },
   alternates: {
     canonical: `${SITE.url}/solutions/ml-teams/`,
   },
@@ -45,7 +46,7 @@ export default function MLTeamsPage() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "ML & AI Development Teams Solutions",
-    "description": "Complete ML infrastructure for AI development teams. Radix Core optimizes GPU training throughput. Radix Studio governs LLM inference pipelines.",
+    "description": "Complete ML infrastructure for AI development teams. Radix Core optimizes GPU training throughput.",
     "url": `${SITE.url}/solutions/ml-teams/`,
     "provider": {
       "@type": "Organization",
@@ -263,69 +264,6 @@ export default function MLTeamsPage() {
             </div>
           </div>
 
-          {/* Radix Studio */}
-          <div className="bg-primary-4 rounded-3xl p-8 sm:p-12">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                  <p className="text-sm text-pop-light mb-3 font-semibold uppercase tracking-wide">Pipeline Example</p>
-                  <div className="space-y-3 font-mono text-sm">
-                    <div className="bg-white/5 rounded px-4 py-2 text-white">
-                      <span className="text-pop-light">1.</span> RAG Retrieval → Vector DB
-                    </div>
-                    <div className="bg-white/5 rounded px-4 py-2 text-white">
-                      <span className="text-pop-light">2.</span> LLM Call → GPT-4 (routed by cost)
-                    </div>
-                    <div className="bg-white/5 rounded px-4 py-2 text-white">
-                      <span className="text-pop-light">3.</span> Content Filter → Policy check
-                    </div>
-                    <div className="bg-white/5 rounded px-4 py-2 text-white">
-                      <span className="text-pop-light">4.</span> Post-process → Format & return
-                    </div>
-                  </div>
-                  <p className="text-xs text-white/70 mt-4">Full execution traces. Audit logs. Budget controls.</p>
-                </div>
-              </div>
-              <div className="order-1 lg:order-2">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-pop-light rounded-xl flex items-center justify-center">
-                    <svg className="w-6 h-6 text-primary-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">Radix Studio</h3>
-                </div>
-                <p className="text-xl font-semibold text-pop-light mb-4">LLM Governance & Orchestration</p>
-                <p className="text-white/90 leading-relaxed mb-6">
-                  The control plane for LLM operations. Build reusable multi-step AI workflows. Register models from any vendor or self-hosted. Enforce governance policies, content filters, and budget controls so your AI pilots actually reach production.
-                </p>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-pop-light mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-white/90">Multi-model registry (OpenAI, Anthropic, self-hosted, BYOG)</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-pop-light mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-white/90">Cost-aware routing and budget controls</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-pop-light mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-white/90">Audit logs and compliance-ready governance</span>
-                  </li>
-                </ul>
-                <p className="text-lg font-semibold text-pop-light">$45/user/month</p>
-                <Link href="/radix/studio/" className="text-pop-light font-semibold hover:underline text-sm mt-2 inline-block">
-                  Learn more about Radix Studio →
-                </Link>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -372,7 +310,7 @@ export default function MLTeamsPage() {
             Simple, Transparent Pricing
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Start with a free 14-day trial. Choose Radix Core, Radix Studio, or the full platform bundle.
+            Start with a free 14-day trial. No stack changes required.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -411,76 +349,38 @@ export default function MLTeamsPage() {
               </TrackedCTALink>
             </div>
 
-            {/* Studio */}
-            <div className="bg-gray-50 border-2 border-gray-200 rounded-2xl p-6">
-              <h3 className="text-xl font-bold text-primary-3 mb-3">Radix Studio</h3>
-              <p className="text-3xl font-bold text-primary-3 mb-2">$45<span className="text-base font-normal text-gray-500">/user/mo</span></p>
-              <p className="text-sm text-gray-600 mb-6">LLM orchestration & governance</p>
-              <ul className="space-y-3 mb-6 text-sm">
-                <li className="flex items-start gap-2">
-                  <svg className="w-4 h-4 text-primary-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-gray-700">Pipeline orchestration</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-4 h-4 text-primary-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-gray-700">Multi-model registry</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-4 h-4 text-primary-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-gray-700">14-day free trial</span>
-                </li>
-              </ul>
-              <TrackedCTALink
-                href="/waitlist"
-                trackingName="Join Waitlist"
-                trackingLocation="ML Teams Pricing - Studio"
-                className="w-full block text-center px-6 py-3 bg-primary-3 text-white rounded-full font-semibold hover:bg-primary-4 transition-all"
-              >
-                Join Waitlist
-              </TrackedCTALink>
-            </div>
-
-            {/* Platform Bundle */}
+            {/* Enterprise */}
             <div className="bg-primary-3 rounded-2xl p-6 border-2 border-primary-2 relative">
-              <div className="absolute top-4 right-4 bg-pop-light text-primary-4 text-xs font-bold px-3 py-1 rounded-full">
-                Recommended
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">Platform Bundle</h3>
-              <p className="text-3xl font-bold text-white mb-2">Core + Studio</p>
-              <p className="text-sm text-white/80 mb-6">Complete ML infrastructure</p>
+              <h3 className="text-xl font-bold text-white mb-3">Enterprise</h3>
+              <p className="text-3xl font-bold text-white mb-2">Custom</p>
+              <p className="text-sm text-white/80 mb-6">Volume pricing for large deployments</p>
               <ul className="space-y-3 mb-6 text-sm">
                 <li className="flex items-start gap-2">
                   <svg className="w-4 h-4 text-pop-light mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-white/90">Training + inference unified</span>
+                  <span className="text-white/90">1,000+ GPU deployments</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg className="w-4 h-4 text-pop-light mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-white/90">Full ML lifecycle coverage</span>
+                  <span className="text-white/90">Dedicated support & SLAs</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg className="w-4 h-4 text-pop-light mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-white/90">14-day free trial</span>
+                  <span className="text-white/90">Architecture review</span>
                 </li>
               </ul>
               <TrackedCTALink
-                href="/waitlist"
-                trackingName="Join Waitlist"
-                trackingLocation="ML Teams Pricing - Bundle"
+                href="/contact"
+                trackingName="Contact Sales"
+                trackingLocation="ML Teams Pricing - Enterprise"
                 className="w-full block text-center px-6 py-3 bg-pop-light text-primary-4 rounded-full font-semibold hover:bg-white transition-all"
               >
-                Join Waitlist
+                Contact Sales
               </TrackedCTALink>
             </div>
           </div>

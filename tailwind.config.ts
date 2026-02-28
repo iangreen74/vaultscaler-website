@@ -27,6 +27,13 @@ const config: Config = {
         'lev-dark': '#514D3C',
         'lev-darkest': '#1B1910',
 
+        // Ortobahn colors (Orchid monochrome)
+        'orto-bold': '#8966ca',
+        'orto-light': '#af98d8',
+        'orto-lighter': '#b9add1',
+        'orto-dark': '#4f3b75',
+        'orto-darkest': '#1e162c',
+
         // Secondary colors (Greys - 6 shades, 1=lightest, 6=darkest)
         'secondary-1': '#F9FAFB',
         'secondary-2': '#F3F4F6',

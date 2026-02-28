@@ -90,9 +90,9 @@ export default function WaitlistForm() {
               </label>
               <div className="space-y-3">
                 {[
-                  { value: 'core', label: 'Radix Core', desc: 'GPU scheduling optimization' },
-                  { value: 'studio', label: 'Radix Studio', desc: 'LLM orchestration & governance' },
                   { value: 'lev', label: 'Lev', desc: 'Agentic Engineering System' },
+                  { value: 'ortobahn', label: 'Ortobahn', desc: 'Autonomous content engine' },
+                  { value: 'core', label: 'Radix Core', desc: 'GPU scheduling optimization' },
                 ].map((option) => (
                   <label key={option.value} className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
                     <input

@@ -5,7 +5,6 @@ import { trackFormSubmit } from '@/lib/analytics';
 
 const productOptions = [
   { value: 'core', label: 'Radix Core', desc: 'GPU scheduling optimization' },
-  { value: 'studio', label: 'Radix Studio', desc: 'LLM orchestration & governance' },
   { value: 'lev', label: 'Lev', desc: 'Agentic Engineering System' },
 ];
 

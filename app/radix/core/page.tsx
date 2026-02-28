@@ -1,6 +1,5 @@
 // Route: /radix/core (Radix Core - GPU Training Optimization)
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { TrackedCTALink } from '@/components/TrackedLink';
 import { SITE } from '@/lib/site';
 import JsonLd from '@/components/JsonLd';
@@ -49,8 +48,7 @@ export default function RadixCorePage() {
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE.url },
-      { "@type": "ListItem", "position": 2, "name": "Radix", "item": `${SITE.url}/radix` },
-      { "@type": "ListItem", "position": 3, "name": "Radix Core", "item": `${SITE.url}/radix/core/` },
+      { "@type": "ListItem", "position": 2, "name": "Radix Core", "item": `${SITE.url}/radix/core/` },
     ]
   };
 
@@ -83,10 +81,6 @@ export default function RadixCorePage() {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm text-pop-light font-medium mb-4 tracking-wide uppercase">
-            Part of the <Link href="/radix/" className="underline underline-offset-2 hover:text-white transition-colors">Radix Platform</Link>
-          </p>
-
           <p className="text-5xl sm:text-6xl md:text-7xl font-bold text-pop-light mb-6 tracking-tight">
             Radix Core
           </p>
@@ -132,7 +126,7 @@ export default function RadixCorePage() {
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-md hover:border-gray-300 transition-all">
               <div className="w-12 h-12 bg-pop-light rounded-xl flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-primary-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
@@ -144,7 +138,7 @@ export default function RadixCorePage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-md hover:border-gray-300 transition-all">
               <div className="w-12 h-12 bg-pop-light rounded-xl flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-primary-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
@@ -156,7 +150,7 @@ export default function RadixCorePage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-md hover:border-gray-300 transition-all">
               <div className="w-12 h-12 bg-pop-light rounded-xl flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-primary-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -250,25 +244,25 @@ radix-observer-6d4b2a9c8-q7w3  1/1    Running   0          46s`}</code>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-md hover:border-gray-300 transition-all">
               <span className="text-pop-dark font-bold text-lg">Light</span>
               <p className="text-gray-600 leading-relaxed mt-2">
                 Deploy to Kubernetes in minutes. No existing stack changes. No migration. No retraining your team.
               </p>
             </div>
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-md hover:border-gray-300 transition-all">
               <span className="text-pop-dark font-bold text-lg">Demonstrable</span>
               <p className="text-gray-600 leading-relaxed mt-2">
                 Leadership-ready dashboards comparing Radix vs. your current scheduler. CFO-defensible ROI from day one.
               </p>
             </div>
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-md hover:border-gray-300 transition-all">
               <span className="text-pop-dark font-bold text-lg">Adaptive</span>
               <p className="text-gray-600 leading-relaxed mt-2">
                 Closed-loop control with continual scheduling refinement that improves over time as it learns your workload patterns.
               </p>
             </div>
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-md hover:border-gray-300 transition-all">
               <span className="text-pop-dark font-bold text-lg">Secure</span>
               <p className="text-gray-600 leading-relaxed mt-2">
                 Originally built for air-gapped deployment with zero egress. SLSA Level 3 attestations. Your data never leaves your infrastructure.
@@ -291,19 +285,19 @@ radix-observer-6d4b2a9c8-q7w3  1/1    Running   0          46s`}</code>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all">
               <h3 className="font-bold text-lg mb-2 text-pop-light">Air-Gapped Ready</h3>
               <p className="text-white/70 text-sm leading-relaxed">
                 Deploy in fully disconnected environments. No internet access required after installation.
               </p>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all">
               <h3 className="font-bold text-lg mb-2 text-pop-light">SLSA Level 3</h3>
               <p className="text-white/70 text-sm leading-relaxed">
                 Cryptographic attestations for build provenance. Verified supply chain security.
               </p>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all">
               <h3 className="font-bold text-lg mb-2 text-pop-light">Zero Egress</h3>
               <p className="text-white/70 text-sm leading-relaxed">
                 Your training data never leaves your infrastructure. Telemetry is opt-in only.
@@ -325,7 +319,7 @@ radix-observer-6d4b2a9c8-q7w3  1/1    Running   0          46s`}</code>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {/* Trial */}
-            <div className="bg-gray-50 border-2 border-gray-200 rounded-2xl p-6 flex flex-col">
+            <div className="bg-gray-50 border-2 border-gray-200 rounded-2xl p-6 flex flex-col hover:shadow-md hover:border-gray-300 transition-all">
               <div className="flex-grow">
                 <h3 className="text-xl font-bold text-primary-3 mb-3">Trial</h3>
                 <p className="text-2xl font-bold text-primary-3 mb-2">Free</p>
@@ -356,7 +350,7 @@ radix-observer-6d4b2a9c8-q7w3  1/1    Running   0          46s`}</code>
             </div>
 
             {/* Core */}
-            <div className="bg-primary-3 rounded-2xl p-6 flex flex-col">
+            <div className="bg-primary-3 rounded-2xl p-6 flex flex-col hover:shadow-md hover:bg-primary-3/90 transition-all">
               <div className="flex-grow">
                 <h3 className="text-xl font-bold text-white mb-3">Radix Core</h3>
                 <p className="text-2xl font-bold text-white mb-2">$45<span className="text-sm font-normal text-white/70">/GPU/mo</span></p>
@@ -387,7 +381,7 @@ radix-observer-6d4b2a9c8-q7w3  1/1    Running   0          46s`}</code>
             </div>
 
             {/* Hyperscale */}
-            <div className="bg-gradient-to-br from-primary-4 to-primary-3 text-white rounded-2xl p-6 border-2 border-primary-2 flex flex-col">
+            <div className="bg-gradient-to-br from-primary-4 to-primary-3 text-white rounded-2xl p-6 border-2 border-primary-2 flex flex-col hover:shadow-md hover:border-primary-1 transition-all">
               <div className="flex-grow">
                 <h3 className="text-xl font-bold text-white mb-3">Hyperscale</h3>
                 <p className="text-2xl font-bold text-white mb-2">Custom</p>
@@ -418,12 +412,6 @@ radix-observer-6d4b2a9c8-q7w3  1/1    Running   0          46s`}</code>
             </div>
           </div>
 
-          {/* Platform cross-link */}
-          <div className="mt-8 text-center">
-            <p className="text-gray-500 text-sm">
-              Need LLM inference governance too? <Link href="/radix/studio/" className="text-primary-3 font-semibold hover:underline">Explore Radix Studio</Link> or get the <Link href="/radix/" className="text-primary-3 font-semibold hover:underline">full Radix Platform</Link> bundle.
-            </p>
-          </div>
         </div>
       </section>
 

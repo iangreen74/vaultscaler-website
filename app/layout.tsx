@@ -9,9 +9,9 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: "VaultScaler - GPU Optimization & LLM Governance Platform",
-  description: "Optimize GPU training throughput up to 21% and control LLM costs with complete governance. AI operations platform for Kubernetes. Deploy in minutes.",
-  keywords: ["GPU optimization", "LLM governance", "AI Operations Platform", "GPU scheduler", "model training", "GPU cost reduction", "Kubernetes GPU", "AI cost control", "MLOps", "AIOps"],
+  title: "VaultScaler — Build More. Manage Less.",
+  description: "VaultScaler builds products that help you scale and accelerate. Lev for agentic engineering, Ortobahn for autonomous content, Radix for GPU orchestration.",
+  keywords: ["agentic engineering", "AI engineering team", "autonomous content", "content automation", "GPU orchestration", "GPU training optimization", "AI development tools", "social content automation", "MLOps", "AIOps"],
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "VaultScaler - GPU Optimization & LLM Governance Platform",
-    description: "Up to 21% GPU throughput gains. Complete LLM governance. Deploy in minutes on Kubernetes.",
+    title: "VaultScaler — Build More. Manage Less.",
+    description: "Lev for agentic engineering. Ortobahn for autonomous content. Radix for GPU orchestration. Products that help you scale and accelerate.",
     url: "https://vaultscaler.com",
     siteName: "VaultScaler",
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         url: "/og/vaultscaler.png",
         width: 1200,
         height: 630,
-        alt: "VaultScaler - GPU Optimization & LLM Governance",
+        alt: "VaultScaler — Build More. Manage Less.",
       },
     ],
     locale: "en_US",
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "VaultScaler - GPU Optimization & LLM Governance Platform",
-    description: "Up to 21% GPU throughput gains. Complete LLM governance. Deploy in minutes on Kubernetes.",
+    title: "VaultScaler — Build More. Manage Less.",
+    description: "Lev for agentic engineering. Ortobahn for autonomous content. Radix for GPU orchestration. Products that help you scale and accelerate.",
     images: ["/og/vaultscaler.png"],
   },
 };
@@ -77,38 +77,42 @@ export default function RootLayout({
         description: "Enterprise solutions leader with 20 years in healthcare tech",
       },
     ],
-    owns: {
-      "@type": "SoftwareApplication",
-      name: SITE.products.join(" & "),
-      applicationCategory: "DevOps/AI Operations",
-      operatingSystem: "Kubernetes 1.26+",
-      description: SITE.description,
-      featureList: [
-        // Radix Core - Training Optimization
-        "Up to 21% GPU infrastructure cost savings",
-        "GPU fairness and administration controls",
-        "Closed-loop GPU scheduling optimization",
-        "Multi-dimensional resource balancing (memory, compute, power)",
-        "No stack changes required - Helm chart deployment",
-        "Leadership-ready performance dashboards",
-        // Radix Studio - Inference Governance
-        "LLM orchestration and pipeline management",
-        "Multi-model registry for any AI provider",
-        "Built-in governance and audit trails",
-        "Compliance policy enforcement",
-        "Content filtering and budget controls",
-        "Real-time execution traces and visibility",
-        "Cost-aware LLM routing",
-        "Bring Your Own GPU (BYOG) support",
-        "Solve LLM vendor lock-in",
-      ],
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "USD",
-        description: "14-day full trial, no credit card required",
+    owns: [
+      {
+        "@type": "SoftwareApplication",
+        name: "Lev",
+        applicationCategory: "AI Engineering",
+        description: "Full lifecycle agentic engineering and support. AI engineering that actually delivers — build quicker, launch with confidence, and let Lev handle upkeep.",
+        featureList: [
+          "AI engineering",
+          "Development acceleration",
+          "24/7 support agent",
+        ],
       },
-    },
+      {
+        "@type": "SoftwareApplication",
+        name: "Ortobahn",
+        applicationCategory: "Content Automation",
+        description: "Autonomous closed-loop social, articles, and image content across X, Bluesky, Reddit, LinkedIn, Medium, and Substack.",
+        featureList: [
+          "Multi-platform content automation",
+          "Voice learning",
+          "Fully autonomous or approval-based",
+        ],
+      },
+      {
+        "@type": "SoftwareApplication",
+        name: "Radix Core",
+        applicationCategory: "GPU Orchestration",
+        operatingSystem: "Kubernetes 1.26+",
+        description: "GPU orchestration for serious training workloads. Optimize GPU training throughput by up to 21%. No stack changes required.",
+        featureList: [
+          "Up to 21% GPU training throughput improvement",
+          "Closed-loop GPU scheduling optimization",
+          "No stack changes required - Helm chart deployment",
+        ],
+      },
+    ],
     keywords: SITE.keywords.join(", "),
     sameAs: [
       "https://github.com/iangreen74",

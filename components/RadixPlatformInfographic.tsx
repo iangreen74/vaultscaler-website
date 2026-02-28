@@ -1,5 +1,5 @@
 // Radix Platform Market Positioning Infographic
-// Shows how Core and Studio serve different levels of the AI stack
+// Shows how Radix Core serves the AI stack
 
 interface RadixPlatformInfographicProps {
   className?: string;
@@ -17,7 +17,7 @@ export default function RadixPlatformInfographic({ className = "" }: RadixPlatfo
       >
         <title id="infographic-title">Radix Platform Market Positioning</title>
         <desc id="infographic-desc">
-          Venn diagram showing how Radix Core serves all AI stack levels while Radix Studio serves model consumers
+          Venn diagram showing how Radix Core serves all AI stack levels
         </desc>
 
         <defs>
@@ -26,11 +26,6 @@ export default function RadixPlatformInfographic({ className = "" }: RadixPlatfo
             <stop offset="0%" stopColor="#052152" />
             <stop offset="100%" stopColor="#031432" />
           </linearGradient>
-          <linearGradient id="studioGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#00e3ae" />
-            <stop offset="100%" stopColor="#00d9a6" />
-          </linearGradient>
-
           {/* Clip paths for Venn overlap effects */}
           <clipPath id="leftCircleClip">
             <circle cx="250" cy="200" r="160" />
@@ -124,45 +119,27 @@ export default function RadixPlatformInfographic({ className = "" }: RadixPlatfo
 
         {/* === PRODUCT BOXES === */}
 
-        {/* Radix Core - Spans ALL (full width under diagram) */}
+        {/* Radix Core - Spans full width under diagram */}
         <rect
           x="50"
           y="400"
-          width="440"
+          width="700"
           height="90"
           rx="12"
           fill="url(#coreGradient)"
         />
-        <text x="270" y="438" fill="white" fontSize="22" fontWeight="700" textAnchor="middle">
+        <text x="400" y="438" fill="white" fontSize="22" fontWeight="700" textAnchor="middle">
           Radix Core
         </text>
-        <text x="270" y="468" fill="white" fontSize="14" opacity="0.85" textAnchor="middle">
+        <text x="400" y="468" fill="white" fontSize="14" opacity="0.85" textAnchor="middle">
           Training Efficiency at Scale
-        </text>
-
-        {/* Radix Studio - Right side only (consumers) */}
-        <rect
-          x="510"
-          y="400"
-          width="240"
-          height="90"
-          rx="12"
-          fill="url(#studioGradient)"
-        />
-        <text x="630" y="438" fill="#020e24" fontSize="22" fontWeight="700" textAnchor="middle">
-          Radix Studio
-        </text>
-        <text x="630" y="468" fill="#020e24" fontSize="14" opacity="0.85" textAnchor="middle">
-          Inference Policy & Control
         </text>
 
         {/* === CONNECTOR LINES (subtle) === */}
         {/* Core connects to all three segments */}
         <line x1="160" y1="360" x2="160" y2="400" stroke="#052152" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
-        <line x1="400" y1="340" x2="350" y2="400" stroke="#052152" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
-
-        {/* Studio connects to right segment only */}
-        <line x1="580" y1="360" x2="600" y2="400" stroke="#00d9a6" strokeWidth="2" strokeDasharray="4,4" opacity="0.6" />
+        <line x1="400" y1="340" x2="400" y2="400" stroke="#052152" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
+        <line x1="580" y1="360" x2="580" y2="400" stroke="#052152" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
 
       </svg>
     </div>
@@ -177,10 +154,6 @@ export function getStandaloneSVG(): string {
     <linearGradient id="coreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#052152"/>
       <stop offset="100%" stop-color="#031432"/>
-    </linearGradient>
-    <linearGradient id="studioGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00e3ae"/>
-      <stop offset="100%" stop-color="#00d9a6"/>
     </linearGradient>
     <clipPath id="leftCircleClip">
       <circle cx="250" cy="200" r="160"/>
@@ -219,18 +192,14 @@ export function getStandaloneSVG(): string {
   <text x="640" y="220" fill="#020e24" font-size="15" font-weight="600" text-anchor="middle" font-family="system-ui, sans-serif">Industry</text>
   <text x="620" y="265" fill="#020e24" font-size="15" font-weight="600" text-anchor="middle" font-family="system-ui, sans-serif">Consumer</text>
 
-  <!-- Product Boxes -->
-  <rect x="50" y="400" width="440" height="90" rx="12" fill="url(#coreGradient)"/>
-  <text x="270" y="438" fill="white" font-size="22" font-weight="700" text-anchor="middle" font-family="system-ui, sans-serif">Radix Core</text>
-  <text x="270" y="468" fill="white" font-size="14" opacity="0.85" text-anchor="middle" font-family="system-ui, sans-serif">Training Efficiency at Scale</text>
-
-  <rect x="510" y="400" width="240" height="90" rx="12" fill="url(#studioGradient)"/>
-  <text x="630" y="438" fill="#020e24" font-size="22" font-weight="700" text-anchor="middle" font-family="system-ui, sans-serif">Radix Studio</text>
-  <text x="630" y="468" fill="#020e24" font-size="14" opacity="0.85" text-anchor="middle" font-family="system-ui, sans-serif">Inference Policy &amp; Control</text>
+  <!-- Product Box -->
+  <rect x="50" y="400" width="700" height="90" rx="12" fill="url(#coreGradient)"/>
+  <text x="400" y="438" fill="white" font-size="22" font-weight="700" text-anchor="middle" font-family="system-ui, sans-serif">Radix Core</text>
+  <text x="400" y="468" fill="white" font-size="14" opacity="0.85" text-anchor="middle" font-family="system-ui, sans-serif">Training Efficiency at Scale</text>
 
   <!-- Connector Lines -->
   <line x1="160" y1="360" x2="160" y2="400" stroke="#052152" stroke-width="2" stroke-dasharray="4,4" opacity="0.5"/>
-  <line x1="400" y1="340" x2="350" y2="400" stroke="#052152" stroke-width="2" stroke-dasharray="4,4" opacity="0.5"/>
-  <line x1="580" y1="360" x2="600" y2="400" stroke="#00d9a6" stroke-width="2" stroke-dasharray="4,4" opacity="0.6"/>
+  <line x1="400" y1="340" x2="400" y2="400" stroke="#052152" stroke-width="2" stroke-dasharray="4,4" opacity="0.5"/>
+  <line x1="580" y1="360" x2="580" y2="400" stroke="#052152" stroke-width="2" stroke-dasharray="4,4" opacity="0.5"/>
 </svg>`;
 }
