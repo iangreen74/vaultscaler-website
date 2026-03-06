@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { TrackedCTALink } from '@/components/TrackedLink';
 import { SITE } from '@/lib/site';
 import JsonLd from '@/components/JsonLd';
+import FAQ from '@/components/FAQ';
 
 export const metadata: Metadata = {
   title: 'Radix Core: Up to 21% Faster GPU Training | VaultScaler',
@@ -68,10 +69,58 @@ export default function RadixCorePage() {
     releaseNotes: "General Availability April 6, 2026.",
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is Radix Core?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Radix Core is a GPU training optimization platform that uses closed-loop control to balance memory, compute, and power across training runs. It delivers up to 21% throughput improvement over standard FIFO scheduling based on VaultScaler internal benchmarks.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How does Radix Core improve GPU training throughput?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Standard GPU schedulers treat hardware as monolithic units, accounting for GPU count but ignoring memory, compute, and power constraints. Radix Core uses closed-loop multi-dimensional scheduling that continuously balances all three dimensions across training runs, recovering stranded capacity that naive schedulers leave on the table.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Does Radix Core require changes to my existing stack?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "No. Radix Core deploys via Helm chart on your existing Kubernetes 1.26+ cluster. No changes to your training code, workflow, or infrastructure are required. Your team's workflow stays the same.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can Radix Core run in air-gapped environments?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Radix Core was originally built for air-gapped deployment with zero egress. Your training data never leaves your infrastructure. Telemetry is opt-in only. It includes SLSA Level 3 attestations for verified supply chain security.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How much does Radix Core cost?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Radix Core costs $45 per GPU per month. A free 14-day trial is available for up to 400 GPUs. Custom hyperscale pricing is available for deployments of 1,000+ GPUs.",
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={softwareSchema} />
+      <JsonLd data={faqSchema} />
 
       {/* Hero */}
       <section className="relative min-h-[clamp(600px,90vh,1200px)] flex items-center justify-center bg-gradient-to-br from-primary-4 via-primary-3 to-primary-3 overflow-hidden">
@@ -412,6 +461,45 @@ radix-observer-6d4b2a9c8-q7w3  1/1    Running   0          46s`}</code>
             </div>
           </div>
 
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-primary-3">
+            Frequently Asked Questions
+          </h2>
+
+          <FAQ
+            items={[
+              {
+                question: "What is Radix Core?",
+                answer:
+                  "Radix Core is a GPU training optimization platform that uses closed-loop control to balance memory, compute, and power across training runs. It delivers up to 21% throughput improvement over standard FIFO scheduling based on VaultScaler internal benchmarks.",
+              },
+              {
+                question: "How does Radix Core improve GPU training throughput?",
+                answer:
+                  "Standard GPU schedulers treat hardware as monolithic units, accounting for GPU count but ignoring memory, compute, and power constraints. Radix Core uses closed-loop multi-dimensional scheduling that continuously balances all three dimensions across training runs, recovering stranded capacity that naive schedulers leave on the table.",
+              },
+              {
+                question: "Does Radix Core require changes to my existing stack?",
+                answer:
+                  "No. Radix Core deploys via Helm chart on your existing Kubernetes 1.26+ cluster. No changes to your training code, workflow, or infrastructure are required. Your team\u2019s workflow stays the same.",
+              },
+              {
+                question: "Can Radix Core run in air-gapped environments?",
+                answer:
+                  "Yes. Radix Core was originally built for air-gapped deployment with zero egress. Your training data never leaves your infrastructure. Telemetry is opt-in only. It includes SLSA Level 3 attestations for verified supply chain security.",
+              },
+              {
+                question: "How much does Radix Core cost?",
+                answer:
+                  "Radix Core costs $45 per GPU per month. A free 14-day trial is available for up to 400 GPUs. Custom hyperscale pricing is available for deployments of 1,000+ GPUs.",
+              },
+            ]}
+          />
         </div>
       </section>
 

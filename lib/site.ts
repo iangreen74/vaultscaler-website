@@ -5,7 +5,7 @@ export const SITE = {
   email: "bpruess@vaultscaler.com",
   launchISO: "2026-04-06",
   description:
-    "VaultScaler builds products that help you scale and accelerate. Lev is your agentic engineering team. Ortobahn runs autonomous content across platforms. Radix Core optimizes GPU training throughput.",
+    "VaultScaler is a software company that builds three products: Lev, an agentic engineering system for full SDLC automation; Ortobahn, an autonomous content pipeline for social and long-form publishing; and Radix Core, a GPU training optimizer that delivers up to 21% throughput improvement.",
   keywords: [
     // Pain point keywords (what people search when frustrated)
     "slow AI development",

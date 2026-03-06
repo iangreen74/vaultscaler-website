@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 <style>
-  .icon { fill: #001369; }
+  .icon { fill: #234D70; }
   @media (prefers-color-scheme: dark) {
     .icon { fill: #ffffff; }
   }

@@ -11,6 +11,12 @@ export default function robots(): MetadataRoute.Robots {
         allow: ["/"],
         disallow: ["/docs", "/solutions/ml-teams"],
       },
+      // Explicitly allow AI crawlers
+      {
+        userAgent: ["GPTBot", "ChatGPT-User", "Google-Extended", "ClaudeBot", "anthropic-ai", "PerplexityBot", "Bytespider", "CCBot", "cohere-ai"],
+        allow: ["/"],
+        disallow: ["/docs", "/solutions/ml-teams"],
+      },
     ],
     sitemap: `${SITE.url}/sitemap.xml`,
     host: SITE.url,

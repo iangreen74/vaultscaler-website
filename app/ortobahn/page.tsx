@@ -164,9 +164,7 @@ export default function OrtoBahnPage() {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm text-orto-light font-medium mb-4 tracking-wide uppercase">
-            A VaultScaler Product
-          </p>
+
 
           <p className="text-5xl sm:text-6xl md:text-7xl font-bold text-orto-bold mb-6 tracking-tight">
             Ortobahn
@@ -181,14 +179,12 @@ export default function OrtoBahnPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <TrackedCTALink
-              href="/waitlist"
-              trackingName="Join Waitlist"
-              trackingLocation="Ortobahn Hero"
+            <a
+              href="https://ortobahn.com/#request-access"
               className="px-10 py-5 bg-orto-bold text-white rounded-full font-bold text-xl hover:bg-orto-light hover:text-primary-4 transition-all shadow-2xl hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-orto-bold/50"
             >
               Start Free Trial
-            </TrackedCTALink>
+            </a>
             <a
               href="#how-it-works"
               className="px-8 py-4 border-2 border-white/30 text-white rounded-full font-semibold hover:bg-white/10 hover:border-white/50 transition-all text-lg"
@@ -545,21 +541,19 @@ export default function OrtoBahnPage() {
                   </li>
                 </ul>
               </div>
-              <TrackedCTALink
-                href="/waitlist"
-                trackingName="Join Waitlist"
-                trackingLocation="Ortobahn Pricing - Trial"
+              <a
+                href="https://ortobahn.com/#request-access"
                 className="w-full text-center px-4 py-3 bg-primary-3 text-white text-sm rounded-full font-bold hover:bg-primary-4 transition-all shadow-lg hover:scale-105 transform inline-block"
               >
                 Start Free Trial
-              </TrackedCTALink>
+              </a>
             </div>
 
             {/* Ortobahn */}
             <div className="bg-primary-3 rounded-2xl p-6 flex flex-col">
               <div className="flex-grow">
                 <h3 className="text-xl font-bold text-white mb-3">Ortobahn</h3>
-                <p className="text-2xl font-bold text-white mb-2">$15<span className="text-sm font-normal text-white/70">/client/mo</span></p>
+                <p className="text-2xl font-bold text-white mb-2">$49<span className="text-sm font-normal text-white/70">/client/mo</span></p>
                 <p className="text-sm text-white/80 mb-4">Autonomous content pipeline</p>
                 <ul className="space-y-2 mb-6 text-sm">
                   <li className="flex items-start gap-2">
@@ -576,14 +570,12 @@ export default function OrtoBahnPage() {
                   </li>
                 </ul>
               </div>
-              <TrackedCTALink
-                href="/waitlist"
-                trackingName="Join Waitlist"
-                trackingLocation="Ortobahn Pricing - Ortobahn"
+              <a
+                href="https://ortobahn.com/#request-access"
                 className="inline-block w-full text-center px-4 py-3 bg-white text-primary-3 text-sm rounded-full font-bold hover:bg-gray-100 transition-all"
               >
                 Start Free Trial
-              </TrackedCTALink>
+              </a>
             </div>
 
             {/* Agency */}
@@ -687,14 +679,12 @@ export default function OrtoBahnPage() {
             Start a free 14-day trial, or talk to us about running Ortobahn across your client portfolio.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <TrackedCTALink
-              href="/waitlist"
-              trackingName="Join Waitlist"
-              trackingLocation="Ortobahn CTA"
+            <a
+              href="https://ortobahn.com/#request-access"
               className="px-10 py-5 bg-orto-bold text-white rounded-full font-bold hover:bg-orto-light hover:text-primary-4 transition-all text-xl shadow-lg hover:shadow-xl hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-orto-bold/50"
             >
               Start Free Trial
-            </TrackedCTALink>
+            </a>
             <TrackedCTALink
               href="/contact/"
               trackingName="Contact Sales"

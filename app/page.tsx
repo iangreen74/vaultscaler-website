@@ -6,7 +6,7 @@ import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
   title: 'VaultScaler | Build More. Manage Less.',
-  description: 'VaultScaler builds products that help you scale and accelerate. Lev is your agentic engineering team. Ortobahn runs autonomous content across platforms. Radix optimizes GPU training throughput.',
+  description: 'VaultScaler is a software company that builds three products: Lev, an agentic engineering system for full SDLC automation; Ortobahn, an autonomous content pipeline for social and long-form publishing; and Radix Core, a GPU training optimizer that delivers up to 21% throughput improvement.',
   alternates: {
     canonical: `${SITE.url}/`,
   },
@@ -32,7 +32,7 @@ export default function Home() {
     "@type": "WebSite",
     "name": "VaultScaler",
     "url": `${SITE.url}/`,
-    "description": "VaultScaler builds products that help you scale and accelerate. Agentic engineering, autonomous content, and GPU orchestration.",
+    "description": "VaultScaler is a software company that builds three products: Lev (agentic engineering system), Ortobahn (autonomous content pipeline), and Radix Core (GPU training optimization). Launching April 2026.",
   };
 
   return (
@@ -56,7 +56,7 @@ export default function Home() {
               </h1>
 
               <p className="text-lg md:text-xl text-primary-1 max-w-2xl leading-relaxed">
-                VaultScaler builds products that help you scale and accelerate.
+                VaultScaler builds tools that remove the drag so your team delivers faster.
               </p>
             </div>
 
