@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { QRCodeSVG } from "qrcode.react";
 
 const PASSCODE = "7412";
@@ -52,7 +52,7 @@ const slides: Slide[] = [
 
         <div className="border-t border-gray-200 pt-6 mt-6">
           <p className="text-gray-700 text-sm">
-            Ian Green, CEO&ensp;|&ensp;Ben Pruess, COO / President
+            Ian Green, CEO&ensp;|&ensp;Ben Pruess, President
           </p>
           <p className="text-gray-400 text-xs mt-1">Founded 2025&ensp;&middot;&ensp;Las Vegas, NV</p>
         </div>
@@ -76,13 +76,13 @@ const slides: Slide[] = [
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-lg sm:max-w-xl mx-auto mb-10">
           <div className="bg-white/10 rounded-xl p-6 text-center">
-            <p className="text-3xl sm:text-4xl font-extrabold text-pop-light">$7.4B</p>
+            <p className="text-3xl sm:text-4xl font-extrabold text-lev-bold">$7.4B</p>
             <p className="text-gray-300 text-sm mt-2">
               spent on AI code tools in 2025
             </p>
           </div>
           <div className="bg-white/10 rounded-xl p-6 text-center">
-            <p className="text-3xl sm:text-4xl font-extrabold text-pop-light">58%</p>
+            <p className="text-3xl sm:text-4xl font-extrabold text-lev-bold">58%</p>
             <p className="text-gray-300 text-sm mt-2">
               best agentic success rate on SWE-bench
             </p>
@@ -141,55 +141,9 @@ const slides: Slide[] = [
       "Cursor ($29.3B valuation): editor. No deploy, no ops. Replit ($9B valuation): builds and hosts. You don\u2019t own the infra. Devin ($10.2B valuation): autonomous agent. Black box. No SRE. Copilot (42% market share): autocomplete. Not agentic. Lovable ($6.6B): prototypes. Not production systems. The competitive landscape has $55B+ in combined valuations across tools that each stop at \u201Ccode generated.\u201D The lifecycle after that \u2014 architecture rationale, deployment, incident response \u2014 is unaddressed.",
   },
 
-  /* ── Slide 4 — Origin ── */
+  /* ── Slide 4 — Introducing Lev ── */
   {
-    title: "We Didn\u2019t Set Out to Build a Dev Tool.",
-    content: (
-      <div className="py-4">
-        <p className="text-gray-600 text-lg leading-relaxed mb-8">
-          We were building <span className="font-semibold text-primary-3">Radix Core</span> &mdash; a control-theoretic GPU training optimizer. Novel problem. Hard engineering.
-        </p>
-        <p className="text-gray-600 text-lg leading-relaxed mb-8">
-          We used every agentic coding tool on the market.
-        </p>
-
-        <div className="bg-gray-50 rounded-xl p-6 mb-8 border border-gray-200">
-          <p className="font-semibold text-gray-800 mb-4">What broke:</p>
-          <ul className="space-y-3 text-gray-600">
-            <li className="flex items-start gap-3">
-              <span className="text-red-400 mt-0.5">&times;</span>
-              <span>Agents &ldquo;forgot&rdquo; working code and rewrote it</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-red-400 mt-0.5">&times;</span>
-              <span>AI was &ldquo;helpful&rdquo; &mdash; adding features nobody asked for</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-red-400 mt-0.5">&times;</span>
-              <span>Context evaporated between sessions</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-red-400 mt-0.5">&times;</span>
-              <span>No tool could deploy or operate what it built</span>
-            </li>
-          </ul>
-        </div>
-
-        <p className="text-gray-600 text-lg leading-relaxed mb-2">
-          We hit the boundary where off-the-shelf LLMs couldn&rsquo;t handle the complexity. So we built the system we needed.
-        </p>
-        <p className="text-primary-3 font-bold text-xl">
-          That system became Lev.
-        </p>
-      </div>
-    ),
-    notes:
-      "This is the Slack narrative. Slack was built as an internal tool for a game studio (Tiny Speck / Glitch). The game failed. The communication tool became a $27B company. Our version: We were building a genuinely novel product (Radix Core \u2014 FEP/MIMO control-theoretic GPU scheduling). Existing AI tools couldn\u2019t handle the architectural complexity. We built Lev to solve our own problem. We\u2019ve been dogfooding it ever since. Key credibility signal: We\u2019re not theorizing about what engineering teams need. We ARE the engineering team. We built Lev because nothing else could ship our product.",
-  },
-
-  /* ── Slide 5 — Introducing Lev ── */
-  {
-    title: "Lev: The Senior Engineering Team You Can\u2019t Afford to Hire",
+    title: "Lev: A Senior Engineering Team at a Fraction of the Cost",
     content: (
       <div className="py-4">
         <p className="text-gray-500 font-semibold text-sm uppercase tracking-widest mb-6">
@@ -516,7 +470,7 @@ const slides: Slide[] = [
           </div>
           <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
             <p className="font-bold text-gray-800 text-lg mb-1">Ben Pruess</p>
-            <p className="text-sm text-lev-bold font-semibold mb-3">COO / President</p>
+            <p className="text-sm text-lev-bold font-semibold mb-3">President</p>
             <p className="text-gray-600 text-sm leading-relaxed">
               20-year healthcare technology leader. Operational expertise in regulated, high-stakes environments. Knows how to scale products in industries where &ldquo;move fast and break things&rdquo; gets people hurt.
             </p>
@@ -548,11 +502,11 @@ const slides: Slide[] = [
 
   /* ── Slide 11 — The Ask ── */
   {
-    title: "Raising $285,000 to Capture the Lifecycle Layer",
+    title: "Raising $385,000 to Capture the Lifecycle Layer",
     variant: "dark",
     content: (
       <div className="py-4">
-        <p className="text-sm font-semibold text-pop-light uppercase tracking-widest mb-6">
+        <p className="text-sm font-semibold text-lev-bold uppercase tracking-widest mb-6">
           Use of Funds
         </p>
 
@@ -581,7 +535,7 @@ const slides: Slide[] = [
           </table>
         </div>
 
-        <p className="text-sm font-semibold text-pop-light uppercase tracking-widest mb-4">
+        <p className="text-sm font-semibold text-lev-bold uppercase tracking-widest mb-4">
           Milestones This Capital Unlocks
         </p>
 
@@ -615,9 +569,55 @@ const slides: Slide[] = [
    ════════════════════════════════════════════════════════ */
 
 const appendix: Slide[] = [
-  /* ── Addendum A — Radix Core ── */
+  /* ── Addendum — Origin Story ── */
   {
-    title: "Product 2: GPU Training Optimization",
+    title: "We Didn\u2019t Set Out to Build a Dev Tool.",
+    content: (
+      <div className="py-4">
+        <p className="text-gray-600 text-lg leading-relaxed mb-8">
+          We were building <span className="font-semibold text-primary-3">Radix Core</span> &mdash; a control-theoretic GPU training optimizer. Novel problem. Hard engineering.
+        </p>
+        <p className="text-gray-600 text-lg leading-relaxed mb-8">
+          We used every agentic coding tool on the market.
+        </p>
+
+        <div className="bg-gray-50 rounded-xl p-6 mb-8 border border-gray-200">
+          <p className="font-semibold text-gray-800 mb-4">What broke:</p>
+          <ul className="space-y-3 text-gray-600">
+            <li className="flex items-start gap-3">
+              <span className="text-red-400 mt-0.5">&times;</span>
+              <span>Agents &ldquo;forgot&rdquo; working code and rewrote it</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-red-400 mt-0.5">&times;</span>
+              <span>AI was &ldquo;helpful&rdquo; &mdash; adding features nobody asked for</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-red-400 mt-0.5">&times;</span>
+              <span>Context evaporated between sessions</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-red-400 mt-0.5">&times;</span>
+              <span>No tool could deploy or operate what it built</span>
+            </li>
+          </ul>
+        </div>
+
+        <p className="text-gray-600 text-lg leading-relaxed mb-2">
+          We hit the boundary where off-the-shelf LLMs couldn&rsquo;t handle the complexity. So we built the system we needed.
+        </p>
+        <p className="text-primary-3 font-bold text-xl">
+          That system became Lev.
+        </p>
+      </div>
+    ),
+    notes:
+      "This is the Slack narrative. Slack was built as an internal tool for a game studio (Tiny Speck / Glitch). The game failed. The communication tool became a $27B company. Our version: We were building a genuinely novel product (Radix Core \u2014 FEP/MIMO control-theoretic GPU scheduling). Existing AI tools couldn\u2019t handle the architectural complexity. We built Lev to solve our own problem. We\u2019ve been dogfooding it ever since. Key credibility signal: We\u2019re not theorizing about what engineering teams need. We ARE the engineering team. We built Lev because nothing else could ship our product.",
+  },
+
+  /* ── Addendum — Radix Core ── */
+  {
+    title: "The Original Product: GPU Training Optimization",
     content: (
       <div className="py-4">
         <p className="text-gray-600 text-lg leading-relaxed mb-8">
@@ -916,6 +916,24 @@ const appendix: Slide[] = [
 ];
 
 /* ════════════════════════════════════════════════════════
+   NAV LABELS
+   ════════════════════════════════════════════════════════ */
+
+const NAV_LABELS = [
+  "Title",
+  "Problem",
+  "Gap",
+  "Product",
+  "Beachhead",
+  "Market",
+  "Competition",
+  "Pricing",
+  "Founders",
+  "Ask",
+  "Appendix",
+] as const;
+
+/* ════════════════════════════════════════════════════════
    COMPONENT
    ════════════════════════════════════════════════════════ */
 
@@ -925,7 +943,11 @@ export default function DeckClient() {
   const [error, setError] = useState(false);
   const [showNotes, setShowNotes] = useState(false);
   const [showQrModal, setShowQrModal] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const navItemRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   function handleDigit(index: number, value: string) {
     if (!/^\d?$/.test(value)) return;
@@ -964,6 +986,75 @@ export default function DeckClient() {
       setUnlocked(true);
     }
   });
+
+  // Scroll-spy: detect which section is in view
+  useEffect(() => {
+    if (!unlocked) return;
+
+    let observer: IntersectionObserver | null = null;
+
+    const timer = setTimeout(() => {
+      // Track which sections are currently visible
+      const visibleSet = new Set<number>();
+
+      // Account for sticky headers: nav (64px) + mobile carousel (~44px) = ~108px
+      const topClip = window.innerWidth >= 1024 ? 80 : 120;
+
+      observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            const idx = sectionRefs.current.findIndex((r) => r === entry.target);
+            if (idx === -1) continue;
+            if (entry.isIntersecting) {
+              visibleSet.add(idx);
+            } else {
+              visibleSet.delete(idx);
+            }
+          }
+          // Activate the lowest-indexed (topmost) visible section
+          if (visibleSet.size > 0) {
+            setActiveIndex(Math.min(...visibleSet));
+          }
+        },
+        {
+          rootMargin: `-${topClip}px 0px -40% 0px`,
+          threshold: 0,
+        }
+      );
+
+      sectionRefs.current.forEach((ref) => {
+        if (ref) observer!.observe(ref);
+      });
+    }, 150);
+
+    return () => {
+      clearTimeout(timer);
+      observer?.disconnect();
+    };
+  }, [unlocked]);
+
+  // Auto-scroll carousel to keep active item centered
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    const activeItem = navItemRefs.current[activeIndex];
+    if (!carousel || !activeItem) return;
+
+    const scrollLeft =
+      activeItem.offsetLeft -
+      carousel.offsetWidth / 2 +
+      activeItem.offsetWidth / 2;
+
+    carousel.scrollTo({ left: scrollLeft, behavior: "smooth" });
+  }, [activeIndex]);
+
+  const scrollToSection = useCallback((index: number) => {
+    const el = sectionRefs.current[index];
+    if (!el) return;
+    // nav (64) + mobile carousel (~40) + gap
+    const offset = window.innerWidth >= 1024 ? 80 : 120;
+    const y = el.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  }, []);
 
   if (!unlocked) {
     return (
@@ -1022,13 +1113,22 @@ export default function DeckClient() {
 
         {/* Slide body */}
         <div
-          className={`rounded-2xl p-8 sm:p-12 border ${
+          className={`relative rounded-2xl p-8 sm:p-12 border ${
             s.variant === "dark"
               ? "bg-gray-800 border-gray-700"
               : "bg-white border-gray-200"
           }`}
         >
           {s.content}
+
+          {/* Invisible notes toggle — bottom-right corner */}
+          {s.notes && (
+            <button
+              onClick={() => setShowNotes((v) => !v)}
+              className="absolute bottom-0 right-0 w-16 h-16"
+              aria-label="Toggle speaker notes"
+            />
+          )}
         </div>
 
         {/* Notes */}
@@ -1043,75 +1143,119 @@ export default function DeckClient() {
   }
 
   return (
-    <section className="min-h-screen bg-gray-100">
-      {/* Toolbar */}
-      <div className="sticky top-16 z-20 bg-gray-500/95 backdrop-blur border-b border-gray-400/50">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <span className="text-white font-bold text-sm tracking-wide">VAULTSCALER DECK</span>
+    <section className="min-h-screen bg-gray-100 lg:pl-52">
+      {/* Mobile carousel nav — below site nav, hidden on lg+ */}
+      <div className="lg:hidden sticky top-16 z-[19] bg-gray-600/95 backdrop-blur border-b border-gray-500/50">
+        <div
+          ref={carouselRef}
+          className="flex gap-1.5 overflow-x-auto scrollbar-hide px-3 py-2"
+        >
+          {/* QR thumbnail — leftmost in mobile carousel */}
+          <button
+            onClick={() => setShowQrModal(true)}
+            className="flex-shrink-0 flex items-center justify-center px-2"
+            title="Scan QR code to open deck"
+          >
+            <QRCodeSVG
+              value="https://vaultscaler.com/deck/"
+              size={22}
+              bgColor="transparent"
+              fgColor="#ffffff"
+              level="M"
+            />
+          </button>
+          {NAV_LABELS.map((label, i) => (
             <button
-              onClick={() => setShowQrModal(true)}
-              className="flex items-center"
-              title="Scan QR code to open deck"
-            >
-              <QRCodeSVG
-                value="https://vaultscaler.com/deck/"
-                size={28}
-                bgColor="transparent"
-                fgColor="#ffffff"
-                level="M"
-              />
-            </button>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <button
-              onClick={() => setShowNotes(!showNotes)}
-              className={`text-xs px-3 py-1.5 rounded-full border transition-colors ${
-                showNotes
-                  ? "bg-transparent text-transparent border-transparent font-semibold"
-                  : "text-transparent border-transparent"
+              key={label}
+              ref={(el) => { navItemRefs.current[i] = el; }}
+              onClick={() => scrollToSection(i)}
+              className={`flex-shrink-0 text-xs px-3 py-1.5 rounded-full transition-all whitespace-nowrap ${
+                activeIndex === i
+                  ? "bg-white text-gray-900 font-semibold shadow-sm"
+                  : "text-gray-300 hover:text-white"
               }`}
             >
-              {showNotes ? "Hide Notes" : "Show Notes"}
+              {label}
             </button>
-          </div>
+          ))}
         </div>
       </div>
+
+      {/* Desktop sidebar — fixed left, hidden below lg */}
+      <nav className="hidden lg:flex lg:flex-col lg:fixed lg:left-0 lg:top-16 lg:w-52 lg:h-[calc(100vh-4rem)] lg:bg-gray-100 lg:border-r lg:border-gray-200 lg:z-10">
+        {/* QR thumbnail — top of sidebar */}
+        <div className="pt-6 px-4 flex justify-center">
+          <button
+            onClick={() => setShowQrModal(true)}
+            className="opacity-60 hover:opacity-100 transition-opacity"
+            title="Scan QR code to open deck"
+          >
+            <QRCodeSVG
+              value="https://vaultscaler.com/deck/"
+              size={36}
+              bgColor="transparent"
+              fgColor="#6b7280"
+              level="M"
+            />
+          </button>
+        </div>
+        <div className="pt-4 pb-8 px-4 space-y-0.5 overflow-y-auto flex-1">
+          {NAV_LABELS.map((label, i) => (
+            <button
+              key={label}
+              onClick={() => scrollToSection(i)}
+              className={`w-full text-left text-sm px-3 py-2.5 rounded-lg transition-all ${
+                activeIndex === i
+                  ? "bg-primary-3 text-white font-semibold shadow-sm"
+                  : "text-gray-500 hover:text-gray-800 hover:bg-gray-200/70"
+              }`}
+            >
+              <span className={`inline-block w-6 text-xs tabular-nums ${activeIndex === i ? "text-primary-1" : "text-gray-400"}`}>
+                {i < 10 ? i + 1 : ""}
+              </span>
+              {label}
+            </button>
+          ))}
+        </div>
+      </nav>
 
       {/* Main deck slides */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {slides.map((s, i) =>
-          renderSlide(s, i, i > 0, String(i + 1).padStart(2, "0"))
-        )}
+        {slides.map((s, i) => (
+          <div key={`section-${i}`} ref={(el) => { sectionRefs.current[i] = el; }}>
+            {renderSlide(s, i, i > 0, String(i + 1).padStart(2, "0"))}
+          </div>
+        ))}
       </div>
 
-      {/* ── Appendix divider ── */}
-      <div className="bg-gray-700 border-y border-gray-600">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <p className="text-xs font-semibold text-gray-400 uppercase tracking-[0.3em] mb-2">
-            Appendix
-          </p>
-          <p className="text-2xl sm:text-3xl font-bold text-white">
-            Supporting Materials
-          </p>
+      {/* ── Appendix section ── */}
+      <div ref={(el) => { sectionRefs.current[10] = el; }}>
+        <div className="bg-gray-700 border-y border-gray-600">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-[0.3em] mb-2">
+              Appendix
+            </p>
+            <p className="text-2xl sm:text-3xl font-bold text-white">
+              Supporting Materials
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-gray-700">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            {appendix.map((s, i) =>
+              renderSlide(
+                s,
+                i,
+                i > 0,
+                `A${String.fromCharCode(65 + i)}`,
+                true
+              )
+            )}
+          </div>
         </div>
       </div>
 
-      {/* Appendix slides */}
-      <div className="bg-gray-700">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {appendix.map((s, i) =>
-            renderSlide(
-              s,
-              i,
-              i > 0,
-              `A${String.fromCharCode(65 + i)}`,
-              true
-            )
-          )}
-        </div>
-      </div>
       {/* QR Code Modal */}
       {showQrModal && (
         <div
