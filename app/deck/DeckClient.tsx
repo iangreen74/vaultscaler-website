@@ -13,7 +13,7 @@ type Slide = {
 };
 
 /* ════════════════════════════════════════════════════════
-   MAIN DECK — Slides 1-11
+   MAIN DECK — Slides 1-10
    ════════════════════════════════════════════════════════ */
 
 const slides: Slide[] = [
@@ -35,20 +35,15 @@ const slides: Slide[] = [
           </span>
         </div>
 
-        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary-2 mb-10">
-          The Engineering Intelligence Company
+        <p className="text-lg sm:text-xl font-semibold text-lev-bold mb-2">
+          Lev
         </p>
-
-        <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-12 mb-10">
-          <div>
-            <p className="text-lg font-bold text-lev-bold">Lev</p>
-            <p className="text-sm text-gray-500">Agentic Engineering System</p>
-          </div>
-          <div>
-            <p className="text-lg font-bold text-primary-3">Radix Core</p>
-            <p className="text-sm text-gray-500">GPU Training Optimizer</p>
-          </div>
-        </div>
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary-2 mb-4">
+          Agentic Engineering System
+        </p>
+        <p className="text-gray-500 text-sm mb-10">
+          Born from building <span className="font-semibold text-primary-3">Radix Core</span>, a GPU training optimizer
+        </p>
 
         <div className="border-t border-gray-200 pt-6 mt-6">
           <p className="text-gray-700 text-sm">
@@ -59,22 +54,22 @@ const slides: Slide[] = [
       </div>
     ),
     notes:
-      "Clean open. Don\u2019t oversell on the title slide. Let the story do the work. Two products, one thesis: intelligence applied to the most expensive bottlenecks in building and running AI software.",
+      "Clean open. Lead with Lev as the company story. Radix Core is the origin \u2014 the hard problem that proved we needed Lev. Don\u2019t split focus. One product, one thesis: the lifecycle layer that every other tool skips.",
   },
 
-  /* ── Slide 2 — The $7B Gap ── */
+  /* ── Slide 2 — The Problem ── */
   {
-    title: "The $7B Gap",
+    title: "The $7B Blind Spot",
     variant: "dark",
     content: (
       <div className="py-4">
-        <h3 className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-10">
-          AI Promised 10x Engineering.
+        <h3 className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-8">
+          10x Engineering Was Promised.
           <br />
-          It Delivered Code Nobody Owns.
+          58% Success Rate Was Delivered.
         </h3>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-lg sm:max-w-xl mx-auto mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-lg sm:max-w-xl mx-auto mb-8">
           <div className="bg-white/10 rounded-xl p-6 text-center">
             <p className="text-3xl sm:text-4xl font-extrabold text-lev-bold">$7.4B</p>
             <p className="text-gray-300 text-sm mt-2">
@@ -89,59 +84,92 @@ const slides: Slide[] = [
           </div>
         </div>
 
-        <p className="text-gray-400 text-lg italic">
-          The tools generate code. Then they walk away.
-        </p>
-      </div>
-    ),
-    notes:
-      "$7.4B: Mordor Intelligence, AI Code Tools Market 2025. 58% success rate: SWE-bench Verified, mid-2025. 24% scaled to production: McKinsey, 2025. The gap: tools produce code, but nobody owns architecture, deployment, or ops. Teams spend weeks hardening \u201C80% done\u201D demos into shippable products. Engineering velocity declined at many orgs despite tool adoption.",
-  },
-
-  /* ── Slide 3 — Why This Happens ── */
-  {
-    title: "The Lifecycle Gap",
-    content: (
-      <div className="py-4">
-        <div className="overflow-x-auto mb-10">
+        <div className="overflow-x-auto mb-8">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b-2 border-gray-200">
-                <th className="text-left py-3 pr-6 font-semibold text-gray-800">What AI Tools Do</th>
-                <th className="text-left py-3 font-semibold text-gray-800">What Shipping Software Requires</th>
+              <tr className="border-b border-white/20">
+                <th className="text-left py-2.5 pr-6 font-semibold text-gray-400">What AI Tools Do</th>
+                <th className="text-left py-2.5 font-semibold text-gray-400">What Shipping Requires</th>
               </tr>
             </thead>
-            <tbody className="text-gray-600">
-              <tr className="border-b border-gray-100">
-                <td className="py-3 pr-6">Generate code from prompts</td>
-                <td className="py-3">Architectural decisions with reasoning</td>
+            <tbody className="text-gray-300">
+              <tr className="border-b border-white/10">
+                <td className="py-2.5 pr-6">Generate code from prompts</td>
+                <td className="py-2.5">Architectural decisions with reasoning</td>
               </tr>
-              <tr className="border-b border-gray-100">
-                <td className="py-3 pr-6">Work in sandbox environments</td>
-                <td className="py-3">Deploy to real infrastructure</td>
-              </tr>
-              <tr className="border-b border-gray-100">
-                <td className="py-3 pr-6">Forget context between sessions</td>
-                <td className="py-3">Maintain institutional memory</td>
+              <tr className="border-b border-white/10">
+                <td className="py-2.5 pr-6">Forget context between sessions</td>
+                <td className="py-2.5">Maintain institutional memory</td>
               </tr>
               <tr>
-                <td className="py-3 pr-6">Produce output, hope it works</td>
-                <td className="py-3">Own production reliability</td>
+                <td className="py-2.5 pr-6">Produce output, hope it works</td>
+                <td className="py-2.5">Own production reliability</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <p className="text-primary-3 font-bold text-lg">
+        <p className="text-lev-bold font-bold text-lg">
           Every tool on the market solves one slice. Nobody owns the outcome.
         </p>
       </div>
     ),
     notes:
-      "Cursor ($29.3B valuation): editor. No deploy, no ops. Replit ($9B valuation): builds and hosts. You don\u2019t own the infra. Devin ($10.2B valuation): autonomous agent. Black box. No SRE. Copilot (42% market share): autocomplete. Not agentic. Lovable ($6.6B): prototypes. Not production systems. The competitive landscape has $55B+ in combined valuations across tools that each stop at \u201Ccode generated.\u201D The lifecycle after that \u2014 architecture rationale, deployment, incident response \u2014 is unaddressed.",
+      "$7.4B: Mordor Intelligence, AI Code Tools Market 2025. 58% success rate: SWE-bench Verified, mid-2025. 24% scaled to production: McKinsey, 2025. The gap: tools produce code, but nobody owns architecture, deployment, or ops. Teams spend weeks hardening \u201C80% done\u201D demos into shippable products. Engineering velocity declined at many orgs despite tool adoption. Cursor ($29.3B valuation): editor. No deploy, no ops. Replit ($9B valuation): builds and hosts. You don\u2019t own the infra. Devin ($10.2B valuation): autonomous agent. Black box. No SRE. Copilot (42% market share): autocomplete. Not agentic. $55B+ in combined valuations across tools that each stop at \u201Ccode generated.\u201D",
   },
 
-  /* ── Slide 4 — Introducing Lev ── */
+  /* ── Slide 3 — Why Now ── */
+  {
+    title: "The Window Is Open Right Now",
+    content: (
+      <div className="py-4">
+        <div className="grid sm:grid-cols-2 gap-6 mb-8">
+          <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-3">Market Shift</p>
+            <ul className="space-y-3 text-gray-600 text-sm">
+              <li className="flex items-start gap-3">
+                <span className="text-primary-3 font-bold mt-0.5">&rarr;</span>
+                <span>Cursor hit $1B ARR in 18 months &mdash; fastest dev tool adoption ever</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-3 font-bold mt-0.5">&rarr;</span>
+                <span>85% of developers now use AI coding tools (GitHub, 2025)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-3 font-bold mt-0.5">&rarr;</span>
+                <span>Autocomplete is commoditizing &mdash; lifecycle management is the next layer</span>
+              </li>
+            </ul>
+          </div>
+          <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-3">Validation Signals</p>
+            <ul className="space-y-3 text-gray-600 text-sm">
+              <li className="flex items-start gap-3">
+                <span className="text-primary-3 font-bold mt-0.5">&rarr;</span>
+                <span>NVIDIA acquired Run:ai ($700M) and SchedMD/Slurm &mdash; validating GPU orchestration</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-3 font-bold mt-0.5">&rarr;</span>
+                <span>$55B+ in combined valuations across tools that stop at &ldquo;code generated&rdquo;</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-3 font-bold mt-0.5">&rarr;</span>
+                <span>Only 24% of AI agents reach production (McKinsey, 2025)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p className="text-primary-3 font-bold text-lg">
+          The market proved the demand. Nobody has claimed the lifecycle layer. That&rsquo;s our opening.
+        </p>
+      </div>
+    ),
+    notes:
+      "This is the timing slide. Cursor proved developers will pay for AI-native tooling at massive scale. But every incumbent stopped at code generation. The lifecycle gap (spec \u2192 build \u2192 deploy \u2192 operate) is wide open. NVIDIA\u2019s acquisitions validate GPU orchestration as a category. McKinsey data shows 76% of AI agents fail to reach production \u2014 that\u2019s the exact gap Lev fills. Window is time-limited: incumbents will eventually expand into lifecycle management. First-mover with a working product has 12\u201318 months of positioning advantage.",
+  },
+
+  /* ── Slide 4 — Product: Lev ── */
   {
     title: "Lev: A Senior Engineering Team at a Fraction of the Cost",
     content: (
@@ -169,14 +197,14 @@ const slides: Slide[] = [
               <span className="text-lev-bold font-bold text-sm">1</span>
             </div>
             <h4 className="font-bold text-gray-800 mb-2">Golden Spec</h4>
-            <p className="text-gray-500 text-sm">Living blueprint before code. Every decision captured with reasoning.</p>
+            <p className="text-gray-500 text-sm">Living blueprint before code. Every decision captured with reasoning. Recursive Learning.</p>
           </div>
           <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
             <div className="w-8 h-8 bg-lev-bold/15 rounded-lg flex items-center justify-center mb-3">
               <span className="text-lev-bold font-bold text-sm">2</span>
             </div>
             <h4 className="font-bold text-gray-800 mb-2">Integrated SRE</h4>
-            <p className="text-gray-500 text-sm">Production support with full architectural context.</p>
+            <p className="text-gray-500 text-sm">Production support with full architectural context. Proactive bug issue identification and resolution.</p>
           </div>
           <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
             <div className="w-8 h-8 bg-lev-bold/15 rounded-lg flex items-center justify-center mb-3">
@@ -192,154 +220,66 @@ const slides: Slide[] = [
       "Golden Spec is the core IP. It solves \u201Ccontext amnesia\u201D \u2014 the #1 failure mode of agentic coding. The spec progressively hardens so working code is never rewritten by an overeager agent. SRE with context: When an incident fires, Lev knows WHY the architecture was designed that way, not just what the code does. This is the difference between \u201Crestart the pod\u201D and \u201Cthis service was separated from the monolith in Sprint 3 because of memory pressure under concurrent load \u2014 the fix is X.\u201D BYOK model: Users bring their own LLM API keys. Multi-LLM routing selects optimal models per task. No model lock-in. Supports greenfield and existing codebases.",
   },
 
-  /* ── Slide 6 — The Wedge ── */
+  /* ── Slide 5 — Market ── */
   {
-    title: "2\u201310 Person Teams Building the Next Unicorns",
+    title: "Market Opportunity",
     content: (
       <div className="py-4">
-        <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-6">
-          The hiring math &mdash; minimum viable dev team
-        </p>
-
-        <div className="overflow-x-auto mb-8">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b-2 border-gray-200">
-                <th className="text-left py-3 pr-4 font-semibold text-gray-800"></th>
-                <th className="text-left py-3 px-4 font-semibold text-gray-800">US Onshore</th>
-                <th className="text-left py-3 px-4 font-semibold text-gray-800">Offshore</th>
-                <th className="text-left py-3 px-4 font-semibold text-lev-bold">Lev</th>
-              </tr>
-            </thead>
-            <tbody className="text-gray-600">
-              <tr className="border-b border-gray-100">
-                <td className="py-3 pr-4 font-medium text-gray-700">Full team cost</td>
-                <td className="py-3 px-4">$500K&ndash;$850K/yr</td>
-                <td className="py-3 px-4">$120K&ndash;$300K/yr</td>
-                <td className="py-3 px-4 font-bold text-lev-bold">$18K/yr</td>
-              </tr>
-              <tr className="border-b border-gray-100">
-                <td className="py-3 pr-4 font-medium text-gray-700">Time to productivity</td>
-                <td className="py-3 px-4">1&ndash;2 months</td>
-                <td className="py-3 px-4">5&ndash;8 months</td>
-                <td className="py-3 px-4 font-bold text-lev-bold">Days</td>
-              </tr>
-              <tr className="border-b border-gray-100">
-                <td className="py-3 pr-4 font-medium text-gray-700">You own architecture</td>
-                <td className="py-3 px-4">Yes</td>
-                <td className="py-3 px-4">Varies</td>
-                <td className="py-3 px-4 font-bold text-lev-bold">Yes</td>
-              </tr>
-              <tr className="border-b border-gray-100">
-                <td className="py-3 pr-4 font-medium text-gray-700">Deploy + Ops included</td>
-                <td className="py-3 px-4">No</td>
-                <td className="py-3 px-4">No</td>
-                <td className="py-3 px-4 font-bold text-lev-bold">Yes</td>
-              </tr>
-              <tr>
-                <td className="py-3 pr-4 font-medium text-gray-700">Ramp risk</td>
-                <td className="py-3 px-4">Low</td>
-                <td className="py-3 px-4">High</td>
-                <td className="py-3 px-4 font-bold text-lev-bold">None</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div className="bg-primary-3/5 rounded-xl p-6 border border-primary-3/15 mb-6">
-          <p className="text-primary-3 font-bold text-lg mb-1">
-            Lev at $1,499/mo per project = 2&ndash;4% the cost of an onshore team.
-          </p>
-          <p className="text-gray-600 text-sm">
-            6&ndash;15% the cost of offshore &mdash; and offshore doesn&rsquo;t include deployment, SRE, or architectural reasoning.
-          </p>
-        </div>
-
-        <p className="text-gray-700 font-semibold">
-          These teams need to focus on product, not hiring.
-        </p>
-      </div>
-    ),
-    notes:
-      "Full team cost breakdown (onshore, US, fully loaded): Senior engineer: $200K\u2013$350K/yr. DevOps/SRE: $150K\u2013$250K/yr. QA/Testing: $100K\u2013$150K/yr. Architecture/Tech Lead: additional $250K+ if separate. Total minimum viable team: $500K\u2013$850K/yr before tools, infra, or management overhead. Offshore cost breakdown: India: $18\u201340/hr ($40K\u2013$85K/yr per dev). Eastern Europe: $50\u201390/hr ($100K\u2013$190K/yr per dev). Latin America: $45\u201385/hr ($95K\u2013$180K/yr per dev). Key risk: Average offshore team reaches only 85% productivity at 4.6 months; full parity at 7\u20138 months (DistantJob, 2026). The wedge is deliberate. Small teams building novel products are underserved by every competitor. Y Combinator startups: 80%+ adoption of AI coding tools. These are our buyers.",
-  },
-
-  /* ── Slide 7 — Market ── */
-  {
-    title: "$7.4B Today. $24B by 2030.",
-    content: (
-      <div className="py-4">
-        <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-6">
-          AI Code Tools Market
-        </p>
-
-        <div className="overflow-x-auto mb-10">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b-2 border-gray-200">
-                <th className="text-left py-3 pr-4 font-semibold text-gray-800">Segment</th>
-                <th className="text-left py-3 px-4 font-semibold text-gray-800">2025</th>
-                <th className="text-left py-3 px-4 font-semibold text-gray-800">2030</th>
-                <th className="text-left py-3 px-4 font-semibold text-gray-800">CAGR</th>
-              </tr>
-            </thead>
-            <tbody className="text-gray-600">
-              <tr className="border-b border-gray-100">
-                <td className="py-3 pr-4 font-medium text-gray-700">AI Code Tools (broad)</td>
-                <td className="py-3 px-4">$7.4B</td>
-                <td className="py-3 px-4">$24.0B</td>
-                <td className="py-3 px-4">26.6%</td>
-              </tr>
-              <tr className="border-b border-gray-100">
-                <td className="py-3 pr-4 font-medium text-gray-700">Agentic Coding Platforms</td>
-                <td className="py-3 px-4">&lt;$1B</td>
-                <td className="py-3 px-4 italic text-gray-500">Fastest growth</td>
-                <td className="py-3 px-4">&mdash;</td>
-              </tr>
-              <tr>
-                <td className="py-3 pr-4 font-medium text-gray-700">AI-Assisted DevOps/SRE</td>
-                <td className="py-3 px-4">&mdash;</td>
-                <td className="py-3 px-4">$4&ndash;6B (2028)</td>
-                <td className="py-3 px-4">&mdash;</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-4">
+        <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-8">
           Lev&rsquo;s Addressable Market
         </p>
 
-        <div className="grid sm:grid-cols-3 gap-4">
-          <div className="bg-gray-50 rounded-xl p-5 border border-gray-200 text-center">
-            <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">TAM</p>
-            <p className="text-2xl font-bold text-gray-800">$7.4B</p>
-            <p className="text-xs text-gray-500 mt-1">AI code tools market (2025)</p>
+        <div className="space-y-5">
+          {/* TAM */}
+          <div>
+            <div className="flex items-baseline justify-between mb-1.5">
+              <span className="text-sm font-semibold text-gray-800">TAM</span>
+              <span className="text-sm font-bold text-gray-800">$7.4B</span>
+            </div>
+            <div className="w-full h-7 bg-gray-100 rounded-full overflow-hidden">
+              <div className="h-full rounded-full bg-gray-300" style={{ width: "100%" }} />
+            </div>
+            <p className="text-xs text-gray-500 mt-1">AI code tools market (2025) &mdash; 26.6% CAGR to $24B by 2030</p>
           </div>
-          <div className="bg-gray-50 rounded-xl p-5 border border-gray-200 text-center">
-            <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">SAM</p>
-            <p className="text-2xl font-bold text-gray-800">$1.1&ndash;1.5B</p>
-            <p className="text-xs text-gray-500 mt-1">Small-to-mid teams, lifecycle mgmt</p>
+
+          {/* SAM */}
+          <div>
+            <div className="flex items-baseline justify-between mb-1.5">
+              <span className="text-sm font-semibold text-gray-800">SAM</span>
+              <span className="text-sm font-bold text-gray-800">$1.3B</span>
+            </div>
+            <div className="w-full h-7 bg-gray-100 rounded-full overflow-hidden">
+              <div className="h-full rounded-full bg-primary-3/50" style={{ width: "17.5%" }} />
+            </div>
+            <p className="text-xs text-gray-500 mt-1">Small-to-mid teams needing lifecycle management</p>
           </div>
-          <div className="bg-gray-50 rounded-xl p-5 border border-gray-200 text-center">
-            <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">Beachhead</p>
-            <p className="text-2xl font-bold text-gray-800">Seed&ndash;B</p>
-            <p className="text-xs text-gray-500 mt-1">Funded startups, 2&ndash;10 person teams</p>
+
+          {/* SOM */}
+          <div>
+            <div className="flex items-baseline justify-between mb-1.5">
+              <span className="text-sm font-semibold text-gray-800">SOM</span>
+              <span className="text-sm font-bold text-lev-bold">$11&ndash;15M</span>
+            </div>
+            <div className="w-full h-7 bg-gray-100 rounded-full overflow-hidden">
+              <div className="h-full rounded-full bg-primary-3" style={{ width: "1.75%" }} />
+            </div>
+            <p className="text-xs text-gray-500 mt-1">~1% SAM penetration by Year 3</p>
           </div>
         </div>
+
       </div>
     ),
     notes:
-      "TAM sources: Mordor Intelligence ($7.4B/2025, 26.6% CAGR to $24B/2030); Grand View Research ($6.1B/2024, 27.1% CAGR); Market Research Future ($5.0B/2025, 32.3% CAGR to $81.1B/2035). The agentic subsegment (<$1B in 2025) is where the growth is. Copilot-style autocomplete is commoditizing. Lifecycle management is the next layer. 85% of developers use AI coding tools (end of 2025). Adoption isn\u2019t the question. The question is which tools move from \u201Ccode generation\u201D to \u201Csoftware delivery.\u201D SAM estimate: 15\u201320% of TAM is conservative based on enterprise vs. SMB splits in analyst reports.",
+      "AI Code Tools Market: AI Code Tools (broad) \u2014 $7.4B (2025) \u2192 $24B (2030), 26.6% CAGR. Agentic Coding Platforms \u2014 <$1B (2025), fastest-growing subsegment. AI-Assisted DevOps/SRE \u2014 $4\u20136B by 2028. Sources: Mordor Intelligence, Grand View Research, Market Research Future. 85% of developers already use AI coding tools. The question isn\u2019t adoption \u2014 it\u2019s which tools move from code generation to software delivery. Copilot-style autocomplete is commoditizing; lifecycle management is the next layer. SAM estimate (15\u201320% of TAM) is conservative based on enterprise vs. SMB analyst splits.\n\n3-Year Model: Year 1 (PMF hunt, $385K seed) \u2014 $200K\u2013$500K ARR, 15\u201340 customers, ~$12K ACV. Proving the product converts via PLG + one sales hire doing outbound to beachhead. Year 2 (Series A $3\u20135M, early scale) \u2014 $1.5\u2013$4M ARR, 80\u2013250 customers, ~$16K ACV, NRR >110%. Capital funds 3\u20135 more engineers + marketing. Founder-led enterprise deals land $30\u201350K contracts. Year 3 (growth on Series A runway) \u2014 $6\u2013$15M ARR, 300\u2013800 customers, ~$19K ACV, ~1% SAM penetration. Credible Series B territory. Conservative factors: no revenue today (Year 1 is partly build + iterate), thin seed ($385K), single sales hire means founder-dependent pipeline, PLG flywheel takes 6\u20139 months. The bridge: 1% of $1.3B SAM in 3 years. Market grows 26%/yr \u2014 by Year 5 SAM is $2.5B+ and 3\u20135% penetration = $75\u2013$125M ARR vision.",
   },
 
-  /* ── Slide 8 — Competitive Landscape ── */
+  /* ── Slide 6 — Competitive Landscape ── */
   {
     title: "$55B+ in Valuations. Nobody Owns the Lifecycle.",
     content: (
       <div className="py-4">
         <div className="overflow-x-auto mb-8">
-          <table className="w-full text-xs sm:text-sm">
+          <table className="w-full text-xs sm:text-sm min-w-[480px]">
             <thead>
               <tr className="border-b-2 border-gray-200">
                 <th className="text-left py-3 pr-3 font-semibold text-gray-800"></th>
@@ -358,8 +298,6 @@ const slides: Slide[] = [
                 ["Deployment", "Yes", "No", "Locked", "Partial", "No"],
                 ["SRE / Ops", "Yes", "No", "No", "No", "No"],
                 ["Code Ownership", "100%", "100%", "Partial", "Unclear", "100%"],
-                ["You Choose Infra", "Yes", "N/A", "No", "No", "N/A"],
-                ["Flat Pricing", "Yes", "No", "No", "No", "No"],
               ].map(([label, lev, cursor, replit, devin, copilot], idx) => (
                 <tr key={idx} className="border-b border-gray-100">
                   <td className="py-2.5 pr-3 font-medium text-gray-700">{label}</td>
@@ -383,97 +321,159 @@ const slides: Slide[] = [
       "Revenue multiples in this space: 18x\u201368x ARR. Cursor at ~29x, Replit at ~34x, Cognition/Devin at ~68x, Lovable at ~22x, Bolt at ~18x. Market rewards growth rate above all. Cursor: $0 \u2192 $1B ARR in ~18 months. Fastest-growing dev tool ever. But it\u2019s an editor \u2014 no lifecycle. Replit: 1,556% YoY growth. $265M ARR. But locked infra, usage-based billing creep ($100\u2013300/mo on top of base for heavy users), no SRE. Devin/Cognition: Most autonomous agent. $696M raised, <$20M burned (extremely capital efficient). But black box, no spec methodology, no SRE. Lovable: $300M ARR (Jan 2026), $6.6B valuation. Beautiful prototypes. Not production systems.",
   },
 
-  /* ── Slide 9 — Business Model ── */
+  /* ── Slide 7 — Business Model ── */
   {
-    title: "Flat, Predictable, Compounding",
+    title: "Flat, Predictable Pricing",
     content: (
       <div className="py-4">
-        <div className="grid sm:grid-cols-2 gap-8 mb-8">
+        <div className="grid gap-6 mb-8">
           {/* Lev pricing */}
-          <div>
+          <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
             <p className="text-sm font-semibold text-lev-bold uppercase tracking-widest mb-4">Lev</p>
             <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b-2 border-gray-200">
-                    <th className="text-left py-2 pr-4 font-semibold text-gray-800">Plan</th>
-                    <th className="text-left py-2 px-4 font-semibold text-gray-800">Price</th>
-                    <th className="text-left py-2 font-semibold text-gray-800">Model</th>
-                  </tr>
-                </thead>
-                <tbody className="text-gray-600">
-                  <tr className="border-b border-gray-100">
-                    <td className="py-2 pr-4">Startup</td>
-                    <td className="py-2 px-4 font-semibold text-gray-800">$1,499/mo</td>
-                    <td className="py-2">Flat per-project</td>
-                  </tr>
-                  <tr>
-                    <td className="py-2 pr-4">Enterprise</td>
-                    <td className="py-2 px-4 font-semibold text-gray-800">Custom</td>
-                    <td className="py-2">Single-tenant, SSO/SAML</td>
-                  </tr>
-                </tbody>
-              </table>
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b-2 border-gray-200">
+                  <th className="text-left py-2 pr-4 font-semibold text-gray-800">Plan</th>
+                  <th className="text-left py-2 px-4 font-semibold text-gray-800">Price</th>
+                  <th className="text-left py-2 font-semibold text-gray-800">Model</th>
+                </tr>
+              </thead>
+              <tbody className="text-gray-600">
+                <tr className="border-b border-gray-100">
+                  <td className="py-2 pr-4">Startup</td>
+                  <td className="py-2 px-4 font-semibold text-gray-800">$1,499/mo</td>
+                  <td className="py-2">Flat per-project</td>
+                </tr>
+                <tr>
+                  <td className="py-2 pr-4">Enterprise</td>
+                  <td className="py-2 px-4 font-semibold text-gray-800">Custom</td>
+                  <td className="py-2">Single-tenant, SSO/SAML</td>
+                </tr>
+              </tbody>
+            </table>
             </div>
           </div>
 
           {/* Radix pricing */}
-          <div>
+          <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
             <p className="text-sm font-semibold text-primary-3 uppercase tracking-widest mb-4">Radix Core</p>
             <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b-2 border-gray-200">
-                    <th className="text-left py-2 pr-4 font-semibold text-gray-800">Plan</th>
-                    <th className="text-left py-2 px-4 font-semibold text-gray-800">Price</th>
-                    <th className="text-left py-2 font-semibold text-gray-800">Model</th>
-                  </tr>
-                </thead>
-                <tbody className="text-gray-600">
-                  <tr className="border-b border-gray-100">
-                    <td className="py-2 pr-4">Core</td>
-                    <td className="py-2 px-4 font-semibold text-gray-800">$45/GPU/mo</td>
-                    <td className="py-2">Per-GPU</td>
-                  </tr>
-                  <tr>
-                    <td className="py-2 pr-4">Hyperscale</td>
-                    <td className="py-2 px-4 font-semibold text-gray-800">Custom</td>
-                    <td className="py-2">1,000+ GPUs</td>
-                  </tr>
-                </tbody>
-              </table>
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b-2 border-gray-200">
+                  <th className="text-left py-2 pr-4 font-semibold text-gray-800">Plan</th>
+                  <th className="text-left py-2 px-4 font-semibold text-gray-800">Price</th>
+                  <th className="text-left py-2 font-semibold text-gray-800">Model</th>
+                </tr>
+              </thead>
+              <tbody className="text-gray-600">
+                <tr className="border-b border-gray-100">
+                  <td className="py-2 pr-4">Core</td>
+                  <td className="py-2 px-4 font-semibold text-gray-800">$45/GPU/mo</td>
+                  <td className="py-2">Per-GPU</td>
+                </tr>
+                <tr>
+                  <td className="py-2 pr-4">Hyperscale</td>
+                  <td className="py-2 px-4 font-semibold text-gray-800">Custom</td>
+                  <td className="py-2">1,000+ GPUs</td>
+                </tr>
+              </tbody>
+            </table>
             </div>
           </div>
         </div>
 
-        <p className="text-primary-3 font-bold text-lg">
-          Revenue compounds with each project and each GPU cluster.
-        </p>
       </div>
     ),
     notes:
       "Why flat pricing wins: Replit: usage-based. Heavy users pay $100\u2013300/mo on top of base. Unpredictable. Cursor: $20\u201340/mo + usage credits. Runs out mid-sprint. Lev: One price. No surprises. Unit economics sketch (Lev): BYOK model means the customer pays their own LLM API costs directly. VaultScaler\u2019s marginal cost per project is primarily compute for the orchestration layer and SRE monitoring \u2014 not LLM inference. This should yield strong gross margins once scale is reached. Radix Core payback math: 1,000-GPU cluster at $45/GPU/mo = $540K/yr. At 21% throughput improvement on a cluster worth $10M+ in hardware, estimated savings ~$2.5M. Payback: ~2.5 months. Revenue multiples in this market: 18\u201368x ARR.",
   },
 
-  /* ── Slide 10 — Team ── */
+  /* ── Slide 8 — Customer ── */
+  {
+    title: "For Teams Building the Next Unicorns",
+    content: (
+      <div className="py-4">
+        <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-6">
+          Delivering novel products to small teams with minimal runway.
+        </p>
+
+        <div className="overflow-x-auto mb-8">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th className="text-left py-3 pr-4 font-semibold text-gray-800"></th>
+                <th className="text-left py-3 px-4 font-semibold text-gray-800">US Onshore</th>
+                <th className="text-left py-3 px-4 font-semibold text-gray-800">Offshore</th>
+                <th className="text-left py-3 px-4 font-semibold text-lev-bold">Lev</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-600">
+              <tr className="border-b border-gray-100">
+                <td className="py-3 pr-4 font-medium text-gray-700">Annual cost</td>
+                <td className="py-3 px-4">$500K&ndash;$850K/yr</td>
+                <td className="py-3 px-4">$120K&ndash;$300K/yr</td>
+                <td className="py-3 px-4 font-bold text-lev-bold">$18K/yr + engineer</td>
+              </tr>
+              <tr className="border-b border-gray-100">
+                <td className="py-3 pr-4 font-medium text-gray-700">Time to productivity</td>
+                <td className="py-3 px-4">1&ndash;2 months</td>
+                <td className="py-3 px-4">5&ndash;8 months</td>
+                <td className="py-3 px-4 font-bold text-lev-bold">Days</td>
+              </tr>
+              <tr className="border-b border-gray-100">
+                <td className="py-3 pr-4 font-medium text-gray-700">Deploy + Ops included</td>
+                <td className="py-3 px-4">No</td>
+                <td className="py-3 px-4">No</td>
+                <td className="py-3 px-4 font-bold text-lev-bold">Yes</td>
+              </tr>
+              <tr>
+                <td className="py-3 pr-4 font-medium text-gray-700">Ramp risk</td>
+                <td className="py-3 px-4">Low</td>
+                <td className="py-3 px-4">High</td>
+                <td className="py-3 px-4 font-bold text-lev-bold">None</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className="bg-primary-3/5 rounded-xl p-6 border border-primary-3/15 mb-6">
+          <p className="text-primary-3 font-bold text-lg mb-1">
+            Lev augments a single engineer to deliver what traditionally requires a full team &mdash; at 6&ndash;15% of the cost.
+          </p>
+        </div>
+      </div>
+    ),
+    notes:
+      "Full team cost breakdown (onshore, US, fully loaded): Senior engineer: $200K\u2013$350K/yr. DevOps/SRE: $150K\u2013$250K/yr. QA/Testing: $100K\u2013$150K/yr. Architecture/Tech Lead: additional $250K+ if separate. Total minimum viable team: $500K\u2013$850K/yr before tools, infra, or management overhead. Offshore cost breakdown: India: $18\u201340/hr ($40K\u2013$85K/yr per dev). Eastern Europe: $50\u201390/hr ($100K\u2013$190K/yr per dev). Latin America: $45\u201385/hr ($95K\u2013$180K/yr per dev). Key risk: Average offshore team reaches only 85% productivity at 4.6 months; full parity at 7\u20138 months (DistantJob, 2026). The wedge is deliberate. Small teams building novel products are underserved by every competitor. Y Combinator startups: 80%+ adoption of AI coding tools. These are our buyers.",
+  },
+
+  /* ── Slide 9 — Team ── */
   {
     title: "Built by Operators, Not Tourists",
     content: (
       <div className="py-4">
         <div className="grid sm:grid-cols-2 gap-8 mb-10">
-          <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <p className="font-bold text-gray-800 text-lg mb-1">Ian Green</p>
-            <p className="text-sm text-lev-bold font-semibold mb-3">CEO</p>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              AI platform engineer. Designed and built the systems that became both Lev and Radix Core. Deep technical background in agentic systems and GPU optimization.
-            </p>
+          <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 flex gap-5">
+            <img src="/founders/ian.jpg" alt="Ian Green" className="w-20 h-20 rounded-full object-cover shrink-0" />
+            <div>
+              <p className="font-bold text-gray-800 text-lg mb-1">Ian Green</p>
+              <p className="text-sm text-lev-bold font-semibold mb-3">CEO</p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                AI platform engineer. Designed and built the systems that became both Lev and Radix Core. Deep technical background in agentic systems and GPU optimization.
+              </p>
+            </div>
           </div>
-          <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <p className="font-bold text-gray-800 text-lg mb-1">Ben Pruess</p>
-            <p className="text-sm text-lev-bold font-semibold mb-3">President</p>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              20-year healthcare technology leader. Operational expertise in regulated, high-stakes environments. Knows how to scale products in industries where &ldquo;move fast and break things&rdquo; gets people hurt.
-            </p>
+          <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 flex gap-5">
+            <img src="/founders/ben.jpg" alt="Ben Pruess" className="w-20 h-20 rounded-full object-cover shrink-0" />
+            <div>
+              <p className="font-bold text-gray-800 text-lg mb-1">Ben Pruess</p>
+              <p className="text-sm text-lev-bold font-semibold mb-3">President</p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                20-year healthcare technology leader. Operational expertise in regulated, high-stakes environments. Knows how to scale products in industries where &ldquo;move fast and break things&rdquo; gets people hurt.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -500,12 +500,56 @@ const slides: Slide[] = [
       "The \u201Cnecessity\u201D narrative is the team story too. This isn\u2019t a team that surveyed the AI tools market and decided to build another one. They were building something genuinely hard (Radix Core), hit the wall with existing tools, and built the tool they needed. Ben\u2019s healthcare background matters: healthcare is a regulated industry where software failures have real consequences. That mindset \u2014 reliability, auditability, governance \u2014 is baked into Lev\u2019s design.",
   },
 
+  /* ── Slide 10 — Vision ── */
+  {
+    title: "The $100M+ Vision",
+    content: (
+      <div className="py-4">
+        <div className="space-y-6 mb-10">
+          <div className="flex items-start gap-6">
+            <span className="flex-shrink-0 bg-primary-3/15 text-primary-3 text-xs font-bold px-3 py-1 rounded-full mt-0.5">Year 1</span>
+            <div>
+              <p className="font-bold text-gray-800">Product-market fit with startups</p>
+              <p className="text-gray-500 text-sm">50+ paying projects &middot; $1M ARR &middot; PLG flywheel proving conversion</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-6">
+            <span className="flex-shrink-0 bg-primary-3/15 text-primary-3 text-xs font-bold px-3 py-1 rounded-full mt-0.5">Year 3</span>
+            <div>
+              <p className="font-bold text-gray-800">Enterprise expansion</p>
+              <p className="text-gray-500 text-sm">300&ndash;800 customers &middot; $11&ndash;15M ARR &middot; NRR &gt;110% &middot; Series B territory</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-6">
+            <span className="flex-shrink-0 bg-primary-3/15 text-primary-3 text-xs font-bold px-3 py-1 rounded-full mt-0.5">Year 5</span>
+            <div>
+              <p className="font-bold text-gray-800">Platform standard for AI-native teams</p>
+              <p className="text-gray-500 text-sm">3&ndash;5% SAM penetration &middot; $75&ndash;125M ARR &middot; Radix Core cross-sell at scale</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-primary-3/5 rounded-xl p-6 border border-primary-3/15">
+          <p className="text-primary-3 font-bold text-lg">
+            SAM grows to $2.5B+ by Year 5. We don&rsquo;t need to win the market &mdash; we need 3&ndash;5% of it.
+          </p>
+        </div>
+      </div>
+    ),
+    notes:
+      "This is the destination slide. Investors buy the destination, not the vehicle. Year 1 math: 56 projects at $1,499/mo = $1M ARR. Year 3: ~1% of $1.3B SAM. Year 5: SAM grows 26%/yr to ~$2.5B; 3\u20135% penetration = $75\u2013125M ARR. Revenue multiples in this space (18\u201368x) mean $75M ARR at even the low end = $1.35B implied valuation. The Radix Core cross-sell becomes material in Year 3+ as Lev customers scale into ML/AI training workloads. This is a platform bet, not a single-product bet \u2014 but Lev is the wedge.",
+  },
+
   /* ── Slide 11 — The Ask ── */
   {
     title: "Raising $385,000 to Capture the Lifecycle Layer",
     variant: "dark",
     content: (
       <div className="py-4">
+        <p className="text-gray-300 text-sm mb-8">
+          SAFE &mdash; $4M post-money cap &mdash; MFN provisions
+        </p>
+
         <p className="text-sm font-semibold text-lev-bold uppercase tracking-widest mb-6">
           Use of Funds
         </p>
@@ -539,7 +583,7 @@ const slides: Slide[] = [
           Milestones This Capital Unlocks
         </p>
 
-        <ul className="space-y-3 text-white">
+        <ul className="space-y-3 text-white text-sm">
           <li className="flex items-start gap-3">
             <span className="text-gray-500 mt-0.5">&#x25CB;</span>
             <span>First 50 paying Lev projects</span>
@@ -560,7 +604,7 @@ const slides: Slide[] = [
       </div>
     ),
     notes:
-      "The unit math to $1M ARR: $1M ARR \u00F7 $1,499/mo = ~56 paying Lev projects. Ramp assumption: Months 1\u20133 founder-led sales, 2\u20133 new projects/mo. Months 4\u20138 word-of-mouth + community, 5\u20137 new projects/mo. Months 9\u201312+ compounding, 7\u201310 new projects/mo. At ~10% monthly churn (high for early-stage), net adds of ~4\u20136/mo still reach 50\u201360 active projects by month 12\u201315. Why $285K is enough: Product already exists \u2014 we built it for ourselves and have been shipping with it. This isn\u2019t R&D capital. It\u2019s go-to-market capital. BYOK model means near-zero marginal cost per project. $285K at lean founder salaries = 12\u201318 months of runway. Comparable: Bolt.new reached $4M ARR in 4 weeks with a $20/mo product. Lev\u2019s price point means fewer customers needed \u2014 56 projects, not 22,000 subscribers. Revenue multiple context: Companies in this space trade at 18\u201368x ARR. At $1M ARR and even the low end (18x), implied valuation = $18M. Meaningful return on a $285K entry. Competitive timing: Cursor went $0 \u2192 $1B ARR in 18 months. The window for lifecycle-management positioning is open now.",
+      "The unit math to $1M ARR: $1M ARR \u00F7 $1,499/mo = ~56 paying Lev projects. Ramp assumption: Months 1\u20133 founder-led sales, 2\u20133 new projects/mo. Months 4\u20138 word-of-mouth + community, 5\u20137 new projects/mo. Months 9\u201312+ compounding, 7\u201310 new projects/mo. At ~10% monthly churn (high for early-stage), net adds of ~4\u20136/mo still reach 50\u201360 active projects by month 12\u201315. Why $385K is enough: Product already exists \u2014 we built it for ourselves and have been shipping with it. This isn\u2019t R&D capital. It\u2019s go-to-market capital. BYOK model means near-zero marginal cost per project. $385K at lean founder salaries = 12\u201318 months of runway. Comparable: Bolt.new reached $4M ARR in 4 weeks with a $20/mo product. Lev\u2019s price point means fewer customers needed \u2014 56 projects, not 22,000 subscribers. Revenue multiple context: Companies in this space trade at 18\u201368x ARR. At $1M ARR and even the low end (18x), implied valuation = $18M. Meaningful return on a $385K entry. Competitive timing: Cursor went $0 \u2192 $1B ARR in 18 months. The window for lifecycle-management positioning is open now.",
   },
 ];
 
@@ -571,13 +615,13 @@ const slides: Slide[] = [
 const appendix: Slide[] = [
   /* ── Addendum — Origin Story ── */
   {
-    title: "We Didn\u2019t Set Out to Build a Dev Tool.",
+    title: "Founder Story. Dogfooding Lev.",
     content: (
       <div className="py-4">
-        <p className="text-gray-600 text-lg leading-relaxed mb-8">
+        <p className="text-gray-600 text-sm leading-relaxed mb-8">
           We were building <span className="font-semibold text-primary-3">Radix Core</span> &mdash; a control-theoretic GPU training optimizer. Novel problem. Hard engineering.
         </p>
-        <p className="text-gray-600 text-lg leading-relaxed mb-8">
+        <p className="text-gray-600 text-sm leading-relaxed mb-8">
           We used every agentic coding tool on the market.
         </p>
 
@@ -603,10 +647,10 @@ const appendix: Slide[] = [
           </ul>
         </div>
 
-        <p className="text-gray-600 text-lg leading-relaxed mb-2">
+        <p className="text-gray-600 text-sm leading-relaxed mb-2">
           We hit the boundary where off-the-shelf LLMs couldn&rsquo;t handle the complexity. So we built the system we needed.
         </p>
-        <p className="text-primary-3 font-bold text-xl">
+        <p className="text-primary-3 font-bold text-base">
           That system became Lev.
         </p>
       </div>
@@ -620,10 +664,10 @@ const appendix: Slide[] = [
     title: "The Original Product: GPU Training Optimization",
     content: (
       <div className="py-4">
-        <p className="text-gray-600 text-lg leading-relaxed mb-8">
+        <p className="text-gray-600 text-sm leading-relaxed mb-8">
           <span className="font-semibold text-gray-800">Problem:</span> Tensor cores are idle 94.8&ndash;97% of training time. Even at &ldquo;95% GPU utilization,&rdquo; the units doing actual AI math are active &lt;5.2% of the time.
         </p>
-        <p className="text-gray-600 text-lg leading-relaxed mb-8">
+        <p className="text-gray-600 text-sm leading-relaxed mb-8">
           <span className="font-semibold text-gray-800">Solution:</span> Radix Core &mdash; closed-loop, control-theoretic scheduling that dynamically balances memory, compute, and power across GPU workloads.
         </p>
 
@@ -654,13 +698,13 @@ const appendix: Slide[] = [
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium text-gray-700">Pricing</td>
-                <td className="py-2.5">$30&ndash;45/GPU/month</td>
+                <td className="py-2.5">$45/GPU/month</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <p className="text-primary-3 font-bold text-lg italic">
+        <p className="text-primary-3 font-bold text-sm italic">
           If Lev can build a MIMO/FEP control-theoretic GPU scheduler, it can build your SaaS product.
         </p>
       </div>
@@ -669,62 +713,13 @@ const appendix: Slide[] = [
       "This is the second revenue line and the proof that VaultScaler is a platform company, not a single-product bet. Also serves as the dogfooding proof point: Lev built Radix Core. We eat our own cooking daily. GPU utilization data is well-sourced: Giordano et al. (IEEE DATE 2024) \u2014 tensor cores idle 94.8\u201397% of training time. Li et al. (NERSC/ISC 2023) \u2014 50% of GPU jobs use \u226425% of allocated GPU memory. NVIDIA validated the GPU orchestration category by acquiring Run:ai for $700M (Dec 2024) and SchedMD/Slurm (Dec 2025). NVIDIA now owns both dominant schedulers but does NOT do closed-loop runtime optimization. That\u2019s the gap Radix Core fills. Direct competitor: XPerf Inc. (ex-Intel Gaudi engineers, $2M raised, emerged Nov 2025, similar ~20% improvement claims). Very early. Worth monitoring.",
   },
 
-  /* ── Addendum B — Go-to-Market ── */
-  {
-    title: "Land with Lev. Expand with Radix Core.",
-    content: (
-      <div className="py-4">
-        <div className="space-y-8">
-          <div>
-            <div className="flex items-center gap-3 mb-3">
-              <span className="bg-primary-3 text-white text-xs font-bold px-3 py-1 rounded-full">Phase 1</span>
-              <span className="font-semibold text-gray-800">Lev for Startups (Now)</span>
-            </div>
-            <ul className="space-y-1.5 text-gray-600 text-sm ml-16">
-              <li>Target funded startups (Seed &rarr; Series B), 2&ndash;10 person teams</li>
-              <li>Channel: YC community, indie hacker networks, founder communities</li>
-              <li>Motion: Product-led with 14-day free trial</li>
-              <li>Win condition: Team ships production software in first month</li>
-            </ul>
-          </div>
-
-          <div>
-            <div className="flex items-center gap-3 mb-3">
-              <span className="bg-primary-3 text-white text-xs font-bold px-3 py-1 rounded-full">Phase 2</span>
-              <span className="font-semibold text-gray-800">Lev for Enterprise (6&ndash;12 months)</span>
-            </div>
-            <ul className="space-y-1.5 text-gray-600 text-sm ml-16">
-              <li>Single-tenant deployment, SSO/SAML, governance controls</li>
-              <li>Channel: Direct sales to engineering leaders</li>
-              <li>Win condition: Multi-project expansion within accounts</li>
-            </ul>
-          </div>
-
-          <div>
-            <div className="flex items-center gap-3 mb-3">
-              <span className="bg-primary-3 text-white text-xs font-bold px-3 py-1 rounded-full">Phase 3</span>
-              <span className="font-semibold text-gray-800">Radix Core (Parallel track)</span>
-            </div>
-            <ul className="space-y-1.5 text-gray-600 text-sm ml-16">
-              <li>Academic beachhead: ~400 US labs, ~32K GPUs</li>
-              <li>Government/national labs: security-first positioning (air-gapped, SLSA L3)</li>
-              <li>Expand to commercial GPU operators</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    ),
-    notes:
-      "Lev GTM is bottom-up, product-led. The buyer is a technical founder or engineering lead at a small team who\u2019s already frustrated with Replit/Cursor limitations. The 14-day trial is critical. The Golden Spec experience is the conversion moment \u2014 when a team sees their architecture captured and hardened before code is written, the value is immediately obvious. Radix Core GTM is top-down, enterprise sales. The buyer is an infrastructure director or HPC operations manager. Cross-sell: Lev customers who scale into ML/AI training become Radix Core prospects. Radix Core customers who need custom tooling become Lev prospects. The flywheel connects both products.",
-  },
-
   /* ── Addendum C — Financial Comparables ── */
   {
     title: "Financial Comparables",
     content: (
       <div className="py-4">
         <div className="overflow-x-auto">
-          <table className="w-full text-sm">
+          <table className="w-full text-sm min-w-[540px]">
             <thead>
               <tr className="border-b-2 border-gray-200">
                 <th className="text-left py-3 pr-3 font-semibold text-gray-800">Company</th>
@@ -799,7 +794,7 @@ const appendix: Slide[] = [
         </div>
 
         <div className="bg-primary-3/5 rounded-xl p-6 border border-primary-3/15">
-          <p className="text-primary-3 font-bold">
+          <p className="text-primary-3 font-bold text-sm">
             Compute demand doubles every 6 months. GPU lead times are 36&ndash;52 weeks. You cannot buy your way out of the compute gap. You must optimize what you have.
           </p>
         </div>
@@ -807,54 +802,6 @@ const appendix: Slide[] = [
     ),
   },
 
-  /* ── Addendum F — Competitive Matrix (Full) ── */
-  {
-    title: "Competitive Matrix (Full)",
-    content: (
-      <div className="py-4">
-        <div className="overflow-x-auto">
-          <table className="w-full text-xs">
-            <thead>
-              <tr className="border-b-2 border-gray-200">
-                <th className="text-left py-3 pr-2 font-semibold text-gray-800">Capability</th>
-                <th className="text-left py-3 px-1.5 font-semibold text-lev-bold">Lev</th>
-                <th className="text-left py-3 px-1.5 font-semibold text-gray-700">Cursor</th>
-                <th className="text-left py-3 px-1.5 font-semibold text-gray-700">Replit</th>
-                <th className="text-left py-3 px-1.5 font-semibold text-gray-700">Devin</th>
-                <th className="text-left py-3 px-1.5 font-semibold text-gray-700">Copilot</th>
-                <th className="text-left py-3 px-1.5 font-semibold text-gray-700">Lovable</th>
-                <th className="text-left py-3 px-1.5 font-semibold text-gray-700">Bolt</th>
-                <th className="text-left py-3 px-1.5 font-semibold text-gray-700">Blitzy</th>
-                <th className="text-left py-3 px-1.5 font-semibold text-gray-700">Codex</th>
-              </tr>
-            </thead>
-            <tbody className="text-gray-600">
-              {[
-                ["Code Generation", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes"],
-                ["Architecture/Spec", "Golden Spec", "No", "No", "Partial", "No", "No", "No", "Partial", "No"],
-                ["Deployment", "Yes", "No", "Locked", "Partial", "No", "Locked", "Locked", "No", "No"],
-                ["SRE / Ops", "Yes", "No", "No", "No", "No", "No", "No", "No", "No"],
-                ["Code Ownership", "100%", "100%", "Partial", "Unclear", "100%", "Partial", "Partial", "Yes", "100%"],
-                ["Infra Decisions", "User", "N/A", "Replit", "Agent", "N/A", "Lovable", "StackBlitz", "User", "N/A"],
-                ["BYOK / Model Choice", "Yes", "Partial", "No", "No", "No", "No", "No", "No", "No"],
-                ["Small Team Focus", "Primary", "Yes", "Yes", "No", "Yes", "Yes", "Yes", "No", "Yes"],
-                ["Enterprise Ready", "Yes", "Yes", "Growing", "Yes", "Yes", "No", "No", "Yes", "Yes"],
-                ["Flat Pricing", "Yes", "No", "No", "No", "No", "No", "No", "Yes", "No"],
-              ].map(([label, ...vals], idx) => (
-                <tr key={idx} className="border-b border-gray-100">
-                  <td className="py-2 pr-2 font-medium text-gray-700 whitespace-nowrap">{label}</td>
-                  <td className="py-2 px-1.5 font-semibold text-lev-bold">{vals[0]}</td>
-                  {vals.slice(1).map((v, vi) => (
-                    <td key={vi} className="py-2 px-1.5">{v}</td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    ),
-  },
 
   /* ── Addendum G — Sources ── */
   {
@@ -922,13 +869,14 @@ const appendix: Slide[] = [
 const NAV_LABELS = [
   "Title",
   "Problem",
-  "Gap",
+  "Why Now",
   "Product",
-  "Beachhead",
   "Market",
   "Competition",
   "Pricing",
+  "Customer",
   "Founders",
+  "Vision",
   "Ask",
   "Appendix",
 ] as const;
@@ -981,11 +929,11 @@ export default function DeckClient() {
   }
 
   // Check sessionStorage on mount
-  useState(() => {
+  useEffect(() => {
     if (typeof window !== "undefined" && sessionStorage.getItem("deck_unlocked") === "1") {
       setUnlocked(true);
     }
-  });
+  }, []);
 
   // Scroll-spy: detect which section is in view
   useEffect(() => {
@@ -1113,7 +1061,7 @@ export default function DeckClient() {
 
         {/* Slide body */}
         <div
-          className={`relative rounded-2xl p-8 sm:p-12 border ${
+          className={`relative rounded-2xl p-8 sm:p-12 border text-lg sm:text-xl ${
             s.variant === "dark"
               ? "bg-gray-800 border-gray-700"
               : "bg-white border-gray-200"
@@ -1169,7 +1117,7 @@ export default function DeckClient() {
               key={label}
               ref={(el) => { navItemRefs.current[i] = el; }}
               onClick={() => scrollToSection(i)}
-              className={`flex-shrink-0 text-xs px-3 py-1.5 rounded-full transition-all whitespace-nowrap ${
+              className={`flex-shrink-0 text-sm px-4 py-2 rounded-full transition-all whitespace-nowrap ${
                 activeIndex === i
                   ? "bg-white text-gray-900 font-semibold shadow-sm"
                   : "text-gray-300 hover:text-white"
@@ -1211,7 +1159,7 @@ export default function DeckClient() {
               }`}
             >
               <span className={`inline-block w-6 text-xs tabular-nums ${activeIndex === i ? "text-primary-1" : "text-gray-400"}`}>
-                {i < 10 ? i + 1 : ""}
+                {i < 11 ? i + 1 : ""}
               </span>
               {label}
             </button>
@@ -1229,7 +1177,7 @@ export default function DeckClient() {
       </div>
 
       {/* ── Appendix section ── */}
-      <div ref={(el) => { sectionRefs.current[10] = el; }}>
+      <div ref={(el) => { sectionRefs.current[11] = el; }}>
         <div className="bg-gray-700 border-y border-gray-600">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
             <p className="text-xs font-semibold text-gray-400 uppercase tracking-[0.3em] mb-2">
