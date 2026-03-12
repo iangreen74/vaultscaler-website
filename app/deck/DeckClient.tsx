@@ -65,8 +65,7 @@ const slides: Slide[] = [
       <div className="py-4">
         <h3 className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-8">
           10x Engineering Was Promised.
-          <br />
-          58% Success Rate Was Delivered.
+
         </h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-lg sm:max-w-xl mx-auto mb-8">
@@ -115,7 +114,7 @@ const slides: Slide[] = [
       </div>
     ),
     notes:
-      "$7.4B: Mordor Intelligence, AI Code Tools Market 2025. 58% success rate: SWE-bench Verified, mid-2025. 24% scaled to production: McKinsey, 2025. The gap: tools produce code, but nobody owns architecture, deployment, or ops. Teams spend weeks hardening \u201C80% done\u201D demos into shippable products. Engineering velocity declined at many orgs despite tool adoption. Cursor ($29.3B valuation): editor. No deploy, no ops. Replit ($9B valuation): builds and hosts. You don\u2019t own the infra. Devin ($10.2B valuation): autonomous agent. Black box. No SRE. Copilot (42% market share): autocomplete. Not agentic. $55B+ in combined valuations across tools that each stop at \u201Ccode generated.\u201D",
+      "$7.4B: Mordor Intelligence, AI Code Tools Market 2025. 58% success rate: SWE-bench Verified, mid-2025. 24% scaled to production: McKinsey, 2025. The gap: tools produce code, but nobody owns architecture, deployment, or ops. Teams spend weeks hardening \u201C80% done\u201D demos into shippable products. Engineering velocity declined at many orgs despite tool adoption. Factory (Sequoia-backed): agent Droids, 5,000+ EY engineers. Additive to existing orgs, no lifecycle. Replit ($9B valuation): builds and hosts. You don\u2019t own the infra. Devin ($10.2B valuation): autonomous agent. Black box. No SRE. $55B+ in combined valuations across tools that each stop at \u201Ccode generated.\u201D",
   },
 
   /* ── Slide 3 — Why Now ── */
@@ -129,7 +128,7 @@ const slides: Slide[] = [
             <ul className="space-y-3 text-gray-600 text-sm">
               <li className="flex items-start gap-3">
                 <span className="text-primary-3 font-bold mt-0.5">&rarr;</span>
-                <span>Cursor hit $1B ARR in 18 months &mdash; fastest dev tool adoption ever</span>
+                <span>Factory (Sequoia-backed) deploys agentic Droids to 5,000+ EY engineers &mdash; enterprise demand for full SDLC agents is proven</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary-3 font-bold mt-0.5">&rarr;</span>
@@ -146,7 +145,7 @@ const slides: Slide[] = [
             <ul className="space-y-3 text-gray-600 text-sm">
               <li className="flex items-start gap-3">
                 <span className="text-primary-3 font-bold mt-0.5">&rarr;</span>
-                <span>NVIDIA acquired Run:ai ($700M) and SchedMD/Slurm &mdash; validating GPU orchestration</span>
+                <span>Claude Code GitHub commits grew 1,200% in 6 months &mdash; agentic coding adoption is exploding</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary-3 font-bold mt-0.5">&rarr;</span>
@@ -166,7 +165,7 @@ const slides: Slide[] = [
       </div>
     ),
     notes:
-      "This is the timing slide. Cursor proved developers will pay for AI-native tooling at massive scale. But every incumbent stopped at code generation. The lifecycle gap (spec \u2192 build \u2192 deploy \u2192 operate) is wide open. NVIDIA\u2019s acquisitions validate GPU orchestration as a category. McKinsey data shows 76% of AI agents fail to reach production \u2014 that\u2019s the exact gap Lev fills. Window is time-limited: incumbents will eventually expand into lifecycle management. First-mover with a working product has 12\u201318 months of positioning advantage.",
+      "This is the timing slide. Factory proved enterprises will pay for agentic dev at massive scale \u2014 5,000+ engineers at EY. But every incumbent stopped at code generation or workflow augmentation. The lifecycle gap (spec \u2192 build \u2192 deploy \u2192 operate) is wide open. Claude Code GitHub commits grew 1,200% in six months, showing agentic coding adoption is exploding. McKinsey data shows 76% of AI agents fail to reach production \u2014 that\u2019s the exact gap Lev fills. Window is time-limited: incumbents will eventually expand into lifecycle management. First-mover with a working product has 12\u201318 months of positioning advantage.",
   },
 
   /* ── Slide 4 — Product: Lev ── */
@@ -217,7 +216,7 @@ const slides: Slide[] = [
       </div>
     ),
     notes:
-      "Golden Spec is the core IP. It solves \u201Ccontext amnesia\u201D \u2014 the #1 failure mode of agentic coding. The spec progressively hardens so working code is never rewritten by an overeager agent. SRE with context: When an incident fires, Lev knows WHY the architecture was designed that way, not just what the code does. This is the difference between \u201Crestart the pod\u201D and \u201Cthis service was separated from the monolith in Sprint 3 because of memory pressure under concurrent load \u2014 the fix is X.\u201D BYOK model: Users bring their own LLM API keys. Multi-LLM routing selects optimal models per task. No model lock-in. Supports greenfield and existing codebases.",
+      "Golden Spec is the core IP. It solves \u201Ccontext amnesia\u201D \u2014 the #1 failure mode of agentic coding. The spec progressively hardens so working code is never rewritten by an overeager agent. SRE with context: When an incident fires, Lev knows WHY the architecture was designed that way, not just what the code does. This is the difference between \u201Crestart the pod\u201D and \u201Cthis service was separated from the monolith in Sprint 3 because of memory pressure under concurrent load \u2014 the fix is X.\u201D Multi-LLM routing selects optimal models per task. No model lock-in. Supports greenfield and existing codebases.",
   },
 
   /* ── Slide 5 — Market ── */
@@ -258,24 +257,24 @@ const slides: Slide[] = [
           <div>
             <div className="flex items-baseline justify-between mb-1.5">
               <span className="text-sm font-semibold text-gray-800">SOM</span>
-              <span className="text-sm font-bold text-lev-bold">$11&ndash;15M</span>
+              <span className="text-sm font-bold text-lev-bold">$6&ndash;10M</span>
             </div>
             <div className="w-full h-7 bg-gray-100 rounded-full overflow-hidden">
-              <div className="h-full rounded-full bg-primary-3" style={{ width: "1.75%" }} />
+              <div className="h-full rounded-full bg-primary-3" style={{ width: "1%" }} />
             </div>
-            <p className="text-xs text-gray-500 mt-1">~1% SAM penetration by Year 3</p>
+            <p className="text-xs text-gray-500 mt-1">~0.5&ndash;0.8% SAM penetration by Year 3</p>
           </div>
         </div>
 
       </div>
     ),
     notes:
-      "AI Code Tools Market: AI Code Tools (broad) \u2014 $7.4B (2025) \u2192 $24B (2030), 26.6% CAGR. Agentic Coding Platforms \u2014 <$1B (2025), fastest-growing subsegment. AI-Assisted DevOps/SRE \u2014 $4\u20136B by 2028. Sources: Mordor Intelligence, Grand View Research, Market Research Future. 85% of developers already use AI coding tools. The question isn\u2019t adoption \u2014 it\u2019s which tools move from code generation to software delivery. Copilot-style autocomplete is commoditizing; lifecycle management is the next layer. SAM estimate (15\u201320% of TAM) is conservative based on enterprise vs. SMB analyst splits.\n\n3-Year Model: Year 1 (PMF hunt, $385K seed) \u2014 $200K\u2013$500K ARR, 15\u201340 customers, ~$12K ACV. Proving the product converts via PLG + one sales hire doing outbound to beachhead. Year 2 (Series A $3\u20135M, early scale) \u2014 $1.5\u2013$4M ARR, 80\u2013250 customers, ~$16K ACV, NRR >110%. Capital funds 3\u20135 more engineers + marketing. Founder-led enterprise deals land $30\u201350K contracts. Year 3 (growth on Series A runway) \u2014 $6\u2013$15M ARR, 300\u2013800 customers, ~$19K ACV, ~1% SAM penetration. Credible Series B territory. Conservative factors: no revenue today (Year 1 is partly build + iterate), thin seed ($385K), single sales hire means founder-dependent pipeline, PLG flywheel takes 6\u20139 months. The bridge: 1% of $1.3B SAM in 3 years. Market grows 26%/yr \u2014 by Year 5 SAM is $2.5B+ and 3\u20135% penetration = $75\u2013$125M ARR vision.",
+      "AI Code Tools Market: AI Code Tools (broad) \u2014 $7.4B (2025) \u2192 $24B (2030), 26.6% CAGR. Agentic Coding Platforms \u2014 <$1B (2025), fastest-growing subsegment. AI-Assisted DevOps/SRE \u2014 $4\u20136B by 2028. Sources: Mordor Intelligence, Grand View Research, Market Research Future. 85% of developers already use AI coding tools. The question isn\u2019t adoption \u2014 it\u2019s which tools move from code generation to software delivery. AI autocomplete is commoditizing; lifecycle management is the next layer. SAM estimate (15\u201320% of TAM) is conservative based on enterprise vs. SMB analyst splits \u2014 ~50,000\u2013100,000 teams globally with 2\u201350 developers at $18\u201324K ACV.\n\nBottoms-Up 3-Year Model (5% monthly churn, conservative SMB SaaS standard): Year 1 (PMF hunt, $385K seed) \u2014 ~$935K ARR, ~52 customers, ~$18K ACV. No revenue months 1\u20133. Ramp: 10 new customers Q2, 20 Q3, 30 Q4. Proving conversion via PLG + founder-led outbound. Year 2 (Series A $3\u20135M, early scale) \u2014 $2.5\u2013$3.5M ARR, ~165 customers, ~$19K blended ACV, NRR >110%. Capital funds 3\u20135 more engineers + marketing. Enterprise tier ($1,999/mo) lands multi-project deals. Year 3 (growth on Series A runway) \u2014 $6\u2013$10M ARR, 250\u2013350 customers, ~$20K blended ACV, ~0.5\u20130.8% SAM penetration. Credible Series B territory. Conservative factors: no revenue today, thin seed ($385K), founder-dependent pipeline until Series A, PLG flywheel takes 6\u20139 months. The bridge: 0.5\u20130.8% of $1.3B SAM in 3 years. Market grows 26%/yr \u2014 by Year 5 SAM is $2.5B+ and 1.5\u20133% penetration = $40\u2013$70M ARR vision.",
   },
 
   /* ── Slide 6 — Competitive Landscape ── */
   {
-    title: "$55B+ in Valuations. Nobody Owns the Lifecycle.",
+    title: "Nobody Owns the Lifecycle.",
     content: (
       <div className="py-4">
         <div className="overflow-x-auto mb-8">
@@ -284,28 +283,24 @@ const slides: Slide[] = [
               <tr className="border-b-2 border-gray-200">
                 <th className="text-left py-3 pr-3 font-semibold text-gray-800"></th>
                 <th className="text-left py-3 px-2 font-semibold text-lev-bold">Lev</th>
-                <th className="text-left py-3 px-2 font-semibold text-gray-800">Cursor</th>
+                <th className="text-left py-3 px-2 font-semibold text-gray-800">Factory</th>
                 <th className="text-left py-3 px-2 font-semibold text-gray-800">Replit</th>
                 <th className="text-left py-3 px-2 font-semibold text-gray-800">Devin</th>
-                <th className="text-left py-3 px-2 font-semibold text-gray-800">Copilot</th>
               </tr>
             </thead>
             <tbody className="text-gray-600">
               {[
-                ["Valuation", "Early", "$29.3B", "$9B", "$10.2B", "Microsoft"],
-                ["ARR", "Early", "$1B+", "$265M", "~$150M", "N/A"],
-                ["Architecture/Spec", "Golden Spec", "No", "No", "Partial", "No"],
-                ["Deployment", "Yes", "No", "Locked", "Partial", "No"],
-                ["SRE / Ops", "Yes", "No", "No", "No", "No"],
-                ["Code Ownership", "100%", "100%", "Partial", "Unclear", "100%"],
-              ].map(([label, lev, cursor, replit, devin, copilot], idx) => (
+                ["Architecture/Spec", "Golden Spec", "No", "No", "Partial"],
+                ["Deployment", "Yes", "Partial", "Locked", "Partial"],
+                ["SRE / Ops", "Yes", "No", "No", "No"],
+                ["Code Ownership", "100%", "100%", "Partial", "Unclear"],
+              ].map(([label, lev, factory, replit, devin], idx) => (
                 <tr key={idx} className="border-b border-gray-100">
                   <td className="py-2.5 pr-3 font-medium text-gray-700">{label}</td>
                   <td className="py-2.5 px-2 font-semibold text-lev-bold">{lev}</td>
-                  <td className="py-2.5 px-2">{cursor}</td>
+                  <td className="py-2.5 px-2">{factory}</td>
                   <td className="py-2.5 px-2">{replit}</td>
                   <td className="py-2.5 px-2">{devin}</td>
-                  <td className="py-2.5 px-2">{copilot}</td>
                 </tr>
               ))}
             </tbody>
@@ -318,7 +313,7 @@ const slides: Slide[] = [
       </div>
     ),
     notes:
-      "Revenue multiples in this space: 18x\u201368x ARR. Cursor at ~29x, Replit at ~34x, Cognition/Devin at ~68x, Lovable at ~22x, Bolt at ~18x. Market rewards growth rate above all. Cursor: $0 \u2192 $1B ARR in ~18 months. Fastest-growing dev tool ever. But it\u2019s an editor \u2014 no lifecycle. Replit: 1,556% YoY growth. $265M ARR. But locked infra, usage-based billing creep ($100\u2013300/mo on top of base for heavy users), no SRE. Devin/Cognition: Most autonomous agent. $696M raised, <$20M burned (extremely capital efficient). But black box, no spec methodology, no SRE. Lovable: $300M ARR (Jan 2026), $6.6B valuation. Beautiful prototypes. Not production systems.",
+      "Revenue multiples in this space: 18x\u201368x ARR. Replit at ~34x, Cognition/Devin at ~68x, Lovable at ~22x, Bolt at ~18x. Market rewards growth rate above all. Factory: Sequoia/Lux-backed, deployed to 5,000+ EY engineers. Workflow-integrated Droids \u2014 but additive to existing large eng orgs, no lifecycle. Replit: 1,556% YoY growth. $265M ARR. But locked infra, usage-based billing creep ($100\u2013300/mo on top of base for heavy users), no SRE. Devin/Cognition: Most autonomous agent. $696M raised, <$20M burned (extremely capital efficient). But black box, no spec methodology, no SRE. Lovable: $300M ARR (Jan 2026), $6.6B valuation. Beautiful prototypes. Not production systems.",
   },
 
   /* ── Slide 7 — Business Model ── */
@@ -347,47 +342,20 @@ const slides: Slide[] = [
                 </tr>
                 <tr>
                   <td className="py-2 pr-4">Enterprise</td>
-                  <td className="py-2 px-4 font-semibold text-gray-800">Custom</td>
-                  <td className="py-2">Single-tenant, SSO/SAML</td>
+                  <td className="py-2 px-4 font-semibold text-gray-800">$1,999/mo</td>
+                  <td className="py-2">Multi-project, SSO/SAML</td>
                 </tr>
               </tbody>
             </table>
             </div>
           </div>
 
-          {/* Radix pricing */}
-          <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <p className="text-sm font-semibold text-primary-3 uppercase tracking-widest mb-4">Radix Core</p>
-            <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b-2 border-gray-200">
-                  <th className="text-left py-2 pr-4 font-semibold text-gray-800">Plan</th>
-                  <th className="text-left py-2 px-4 font-semibold text-gray-800">Price</th>
-                  <th className="text-left py-2 font-semibold text-gray-800">Model</th>
-                </tr>
-              </thead>
-              <tbody className="text-gray-600">
-                <tr className="border-b border-gray-100">
-                  <td className="py-2 pr-4">Core</td>
-                  <td className="py-2 px-4 font-semibold text-gray-800">$45/GPU/mo</td>
-                  <td className="py-2">Per-GPU</td>
-                </tr>
-                <tr>
-                  <td className="py-2 pr-4">Hyperscale</td>
-                  <td className="py-2 px-4 font-semibold text-gray-800">Custom</td>
-                  <td className="py-2">1,000+ GPUs</td>
-                </tr>
-              </tbody>
-            </table>
-            </div>
-          </div>
         </div>
 
       </div>
     ),
     notes:
-      "Why flat pricing wins: Replit: usage-based. Heavy users pay $100\u2013300/mo on top of base. Unpredictable. Cursor: $20\u201340/mo + usage credits. Runs out mid-sprint. Lev: One price. No surprises. Unit economics sketch (Lev): BYOK model means the customer pays their own LLM API costs directly. VaultScaler\u2019s marginal cost per project is primarily compute for the orchestration layer and SRE monitoring \u2014 not LLM inference. This should yield strong gross margins once scale is reached. Radix Core payback math: 1,000-GPU cluster at $45/GPU/mo = $540K/yr. At 21% throughput improvement on a cluster worth $10M+ in hardware, estimated savings ~$2.5M. Payback: ~2.5 months. Revenue multiples in this market: 18\u201368x ARR.",
+      "Why flat pricing wins: Replit: usage-based. Heavy users pay $100\u2013300/mo on top of base. Unpredictable. Factory: $80/mo base + custom enterprise plans. Usage costs unpredictable at scale. Lev: Two tiers, both flat. Startup ($1,499/mo) for single-project teams. Enterprise ($1,999/mo) for multi-project teams with SSO/SAML. No usage surprises. Unit economics sketch (Lev): VaultScaler\u2019s marginal cost per project is primarily compute for the orchestration layer and SRE monitoring. This should yield strong gross margins once scale is reached. Radix Core payback math: 1,000-GPU cluster at $45/GPU/mo = $540K/yr. At 21% throughput improvement on a cluster worth $10M+ in hardware, estimated savings ~$2.5M. Payback: ~2.5 months. Revenue multiples in this market: 18\u201368x ARR.",
   },
 
   /* ── Slide 8 — Customer ── */
@@ -440,7 +408,7 @@ const slides: Slide[] = [
 
         <div className="bg-primary-3/5 rounded-xl p-6 border border-primary-3/15 mb-6">
           <p className="text-primary-3 font-bold text-lg mb-1">
-            Lev augments a single engineer to deliver what traditionally requires a full team &mdash; at 6&ndash;15% of the cost.
+            Full-team output. Single-engineer budget. Shipping in days, not months.
           </p>
         </div>
       </div>
@@ -502,7 +470,7 @@ const slides: Slide[] = [
 
   /* ── Slide 10 — Vision ── */
   {
-    title: "The $100M+ Vision",
+    title: "The Path to $40M+ ARR",
     content: (
       <div className="py-4">
         <div className="space-y-6 mb-10">
@@ -517,27 +485,27 @@ const slides: Slide[] = [
             <span className="flex-shrink-0 bg-primary-3/15 text-primary-3 text-xs font-bold px-3 py-1 rounded-full mt-0.5">Year 3</span>
             <div>
               <p className="font-bold text-gray-800">Enterprise expansion</p>
-              <p className="text-gray-500 text-sm">300&ndash;800 customers &middot; $11&ndash;15M ARR &middot; NRR &gt;110% &middot; Series B territory</p>
+              <p className="text-gray-500 text-sm">250&ndash;350 customers &middot; $6&ndash;10M ARR &middot; NRR &gt;110% &middot; Series B territory</p>
             </div>
           </div>
           <div className="flex items-start gap-6">
             <span className="flex-shrink-0 bg-primary-3/15 text-primary-3 text-xs font-bold px-3 py-1 rounded-full mt-0.5">Year 5</span>
             <div>
               <p className="font-bold text-gray-800">Platform standard for AI-native teams</p>
-              <p className="text-gray-500 text-sm">3&ndash;5% SAM penetration &middot; $75&ndash;125M ARR &middot; Radix Core cross-sell at scale</p>
+              <p className="text-gray-500 text-sm">1.5&ndash;3% SAM penetration &middot; $40&ndash;70M ARR &middot; Radix Core cross-sell at scale</p>
             </div>
           </div>
         </div>
 
         <div className="bg-primary-3/5 rounded-xl p-6 border border-primary-3/15">
           <p className="text-primary-3 font-bold text-lg">
-            SAM grows to $2.5B+ by Year 5. We don&rsquo;t need to win the market &mdash; we need 3&ndash;5% of it.
+            SAM grows to $2.5B+ by Year 5. We don&rsquo;t need to win the market &mdash; we need 1.5&ndash;3% of it.
           </p>
         </div>
       </div>
     ),
     notes:
-      "This is the destination slide. Investors buy the destination, not the vehicle. Year 1 math: 56 projects at $1,499/mo = $1M ARR. Year 3: ~1% of $1.3B SAM. Year 5: SAM grows 26%/yr to ~$2.5B; 3\u20135% penetration = $75\u2013125M ARR. Revenue multiples in this space (18\u201368x) mean $75M ARR at even the low end = $1.35B implied valuation. The Radix Core cross-sell becomes material in Year 3+ as Lev customers scale into ML/AI training workloads. This is a platform bet, not a single-product bet \u2014 but Lev is the wedge.",
+      "This is the destination slide. Investors buy the destination, not the vehicle. Year 1 math: 52 projects at $1,499/mo = ~$935K ARR (rounds to $1M). Year 3: 250\u2013350 customers at blended ~$20K ACV = $6\u201310M ARR. Year 5: SAM grows 26%/yr to ~$2.5B; 1.5\u20133% penetration = $40\u201370M ARR. Revenue multiples in this space (18\u201368x) mean $40M ARR at even the low end = $720M implied valuation. The Radix Core cross-sell becomes material in Year 3+ as Lev customers scale into ML/AI training workloads. This is a platform bet, not a single-product bet \u2014 but Lev is the wedge.",
   },
 
   /* ── Slide 11 — The Ask ── */
@@ -571,10 +539,6 @@ const slides: Slide[] = [
                 <td className="py-3 pr-4 font-medium text-white">Go-to-Market</td>
                 <td className="py-3">Startup community presence, trial infrastructure</td>
               </tr>
-              <tr>
-                <td className="py-3 pr-4 font-medium text-white">Radix Core</td>
-                <td className="py-3">Independent benchmark validation, academic pilots</td>
-              </tr>
             </tbody>
           </table>
         </div>
@@ -590,11 +554,7 @@ const slides: Slide[] = [
           </li>
           <li className="flex items-start gap-3">
             <span className="text-gray-500 mt-0.5">&#x25CB;</span>
-            <span>Independent Radix Core benchmark validation</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-gray-500 mt-0.5">&#x25CB;</span>
-            <span>Enterprise Lev deployment with first design partner</span>
+            <span>First enterprise Lev deployment</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-gray-500 mt-0.5">&#x25CB;</span>
@@ -604,7 +564,7 @@ const slides: Slide[] = [
       </div>
     ),
     notes:
-      "The unit math to $1M ARR: $1M ARR \u00F7 $1,499/mo = ~56 paying Lev projects. Ramp assumption: Months 1\u20133 founder-led sales, 2\u20133 new projects/mo. Months 4\u20138 word-of-mouth + community, 5\u20137 new projects/mo. Months 9\u201312+ compounding, 7\u201310 new projects/mo. At ~10% monthly churn (high for early-stage), net adds of ~4\u20136/mo still reach 50\u201360 active projects by month 12\u201315. Why $385K is enough: Product already exists \u2014 we built it for ourselves and have been shipping with it. This isn\u2019t R&D capital. It\u2019s go-to-market capital. BYOK model means near-zero marginal cost per project. $385K at lean founder salaries = 12\u201318 months of runway. Comparable: Bolt.new reached $4M ARR in 4 weeks with a $20/mo product. Lev\u2019s price point means fewer customers needed \u2014 56 projects, not 22,000 subscribers. Revenue multiple context: Companies in this space trade at 18\u201368x ARR. At $1M ARR and even the low end (18x), implied valuation = $18M. Meaningful return on a $385K entry. Competitive timing: Cursor went $0 \u2192 $1B ARR in 18 months. The window for lifecycle-management positioning is open now.",
+      "The unit math to $1M ARR: $1M ARR \u00F7 $1,499/mo = ~56 paying Lev projects. Bottoms-up ramp: Months 1\u20133 zero revenue (90-day sales cycle), months 4\u20136 add 10 customers, months 7\u20139 add 20, months 10\u201312 add 30. At 5% monthly churn (conservative SMB SaaS standard, ~46% annual retention), this yields ~52 active projects and ~$935K ARR by month 12. Why $385K is enough: Product already exists \u2014 we built it for ourselves and have been shipping with it. This isn\u2019t R&D capital. It\u2019s go-to-market capital. $385K at lean founder salaries = 12\u201318 months of runway. President 100% on sales/marketing; first GTM hire at $20K/mo. Revenue multiple context: Companies in this space trade at 18\u201368x ARR. At $1M ARR and even the low end (18x), implied valuation = $18M. Meaningful return on a $385K entry. Competitive timing: Factory landed EY (5,000+ engineers) on seed capital. The window for lifecycle-management positioning is open now.",
   },
 ];
 
@@ -710,7 +670,7 @@ const appendix: Slide[] = [
       </div>
     ),
     notes:
-      "This is the second revenue line and the proof that VaultScaler is a platform company, not a single-product bet. Also serves as the dogfooding proof point: Lev built Radix Core. We eat our own cooking daily. GPU utilization data is well-sourced: Giordano et al. (IEEE DATE 2024) \u2014 tensor cores idle 94.8\u201397% of training time. Li et al. (NERSC/ISC 2023) \u2014 50% of GPU jobs use \u226425% of allocated GPU memory. NVIDIA validated the GPU orchestration category by acquiring Run:ai for $700M (Dec 2024) and SchedMD/Slurm (Dec 2025). NVIDIA now owns both dominant schedulers but does NOT do closed-loop runtime optimization. That\u2019s the gap Radix Core fills. Direct competitor: XPerf Inc. (ex-Intel Gaudi engineers, $2M raised, emerged Nov 2025, similar ~20% improvement claims). Very early. Worth monitoring.",
+      "This is the second revenue line and the proof that VaultScaler is a platform company, not a single-product bet. Also serves as the dogfooding proof point: Lev built Radix Core. We eat our own cooking daily. GPU utilization data is well-sourced: Giordano et al. (IEEE DATE 2024) \u2014 tensor cores idle 94.8\u201397% of training time. Li et al. (NERSC/ISC 2023) \u2014 50% of GPU jobs use \u226425% of allocated GPU memory. Claude Code GitHub commits grew 1,200% in six months, showing agentic coding adoption is exploding \u2014 but nobody owns the lifecycle layer beyond code generation. That\u2019s the gap Radix Core and Lev fill. Direct competitor: XPerf Inc. (ex-Intel Gaudi engineers, $2M raised, emerged Nov 2025, similar ~20% improvement claims). Very early. Worth monitoring.",
   },
 
   /* ── Addendum C — Financial Comparables ── */
@@ -732,13 +692,12 @@ const appendix: Slide[] = [
             </thead>
             <tbody className="text-gray-600">
               {[
-                ["Cursor (Anysphere)", "$1B+", "$29.3B", "~29x", "$3.3B", "2022"],
+                ["Factory", "N/A", "Seed", "N/A", "$5M", "2023"],
                 ["Replit", "$265M", "$9B", "~34x", "$650M+", "2016"],
                 ["Cognition (Devin)", "~$150M", "$10.2B", "~68x", "$696M", "2023"],
                 ["Lovable", "$300M", "$6.6B", "~22x", "$530M", "2023"],
                 ["Bolt.new", "$40M", "$700M", "~18x", "$105M", "2024"],
                 ["Blitzy", "N/A", "N/A", "N/A", "$4.4M", "2024"],
-                ["GitHub Copilot", "N/A", "(Microsoft)", "N/A", "N/A", "2021"],
               ].map(([company, arr, val, mult, fund, year], idx) => (
                 <tr key={idx} className="border-b border-gray-100">
                   <td className="py-2.5 pr-3 font-medium text-gray-700">{company}</td>
@@ -780,8 +739,7 @@ const appendix: Slide[] = [
                 ["GPU lead times", "36\u201352 weeks", "BCD Video"],
                 ["Tensor core utilization during training", "<5.2%", "Giordano et al., IEEE DATE 2024"],
                 ["GPU jobs using \u226425% allocated memory", "50%", "Li et al., NERSC/ISC 2023"],
-                ["NVIDIA Run:ai acquisition", "$700M", "NVIDIA (Dec 2024)"],
-                ["NVIDIA SchedMD/Slurm acquisition", "Undisclosed", "NVIDIA (Dec 2025)"],
+                ["Claude Code GitHub commit growth", "1,200% in 6 months", "Anthropic / GitClear (2025)"],
               ].map(([metric, value, source], idx) => (
                 <tr key={idx} className="border-b border-gray-100">
                   <td className="py-2.5 pr-4 font-medium text-gray-700">{metric}</td>
@@ -824,8 +782,8 @@ const appendix: Slide[] = [
         <div>
           <p className="text-sm font-semibold text-gray-800 uppercase tracking-widest mb-3">Competitor Financials</p>
           <ul className="space-y-1.5 text-gray-600 text-sm">
-            <li>Cursor $29.3B valuation &mdash; CNBC, Nov 2025</li>
-            <li>Cursor $500M+ ARR &mdash; TechCrunch, Jun 2025</li>
+            <li>Factory $5M seed round &mdash; TechCrunch, Nov 2023</li>
+            <li>Factory EY deployment (5,000+ engineers) &mdash; Factory.ai</li>
             <li>Replit $9B valuation &mdash; Bloomberg, Jan 2026</li>
             <li>Replit revenue &mdash; Sacra</li>
             <li>Cognition $10.2B valuation &mdash; TechCrunch, Sep 2025</li>
@@ -834,7 +792,6 @@ const appendix: Slide[] = [
             <li>Lovable revenue &mdash; Sacra</li>
             <li>Bolt.new &mdash; Sacra</li>
             <li>Blitzy funding &mdash; PRNewswire</li>
-            <li>GitHub Copilot 20M users &mdash; TechCrunch, Jul 2025</li>
           </ul>
         </div>
 
@@ -843,8 +800,7 @@ const appendix: Slide[] = [
           <ul className="space-y-1.5 text-gray-600 text-sm">
             <li>Giordano et al., IEEE DATE 2024 &mdash; GPU utilization in ML training</li>
             <li>Li et al., arXiv:2301.05145, ISC 2023 &mdash; NERSC Perlmutter study</li>
-            <li>NVIDIA Run:ai acquisition &mdash; TechCrunch</li>
-            <li>NVIDIA SchedMD/Slurm acquisition &mdash; NVIDIA Blog</li>
+            <li>Claude Code GitHub commit growth &mdash; Anthropic / GitClear, 2025</li>
             <li>BCD Video &mdash; GPU supply chain analysis, 2025</li>
           </ul>
         </div>
