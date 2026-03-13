@@ -5,7 +5,7 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Exclude /team, /docs (noindex), /product, /pricing (redirects)
-  const pages = ["", "radix/core", "lev", "ortobahn", "contact", "waitlist", "privacy"];
+  const pages = ["", "radix/core", "lev", "contact", "waitlist", "privacy"];
   const solutionPages = [
     "solutions/hyperscale",
     "solutions/product-teams",
@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: p ? `${SITE.url}/${p}/` : `${SITE.url}/`,
     lastModified: now,
     changeFrequency: "weekly" as const,
-    priority: p === "" ? 1 : p === "radix/core" || p === "lev" || p === "ortobahn" ? 0.9 : 0.8,
+    priority: p === "" ? 1 : p === "lev" ? 0.9 : p === "radix/core" ? 0.7 : 0.8,
   }));
 
   const solutions = solutionPages.map((p) => ({

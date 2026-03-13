@@ -10,8 +10,8 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: "VaultScaler — Build More. Manage Less.",
-  description: "VaultScaler builds products that help you scale and accelerate. Lev for agentic engineering, Ortobahn for autonomous content, Radix for GPU orchestration.",
-  keywords: ["agentic engineering", "AI engineering team", "autonomous content", "content automation", "GPU orchestration", "GPU training optimization", "AI development tools", "social content automation", "MLOps", "AIOps"],
+  description: "Lev is an agentic engineering system by VaultScaler. AI engineering that actually delivers — build quicker, launch with confidence.",
+  keywords: ["agentic engineering", "AI engineering team", "AI development tools", "AI coding platform", "automated software delivery", "golden spec", "AI SRE", "full SDLC automation"],
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "VaultScaler — Build More. Manage Less.",
-    description: "Lev for agentic engineering. Ortobahn for autonomous content. Radix for GPU orchestration. Products that help you scale and accelerate.",
+    description: "Lev by VaultScaler. Agentic engineering that actually delivers.",
     url: "https://vaultscaler.com",
     siteName: "VaultScaler",
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "VaultScaler — Build More. Manage Less.",
-    description: "Lev for agentic engineering. Ortobahn for autonomous content. Radix for GPU orchestration. Products that help you scale and accelerate.",
+    description: "Lev by VaultScaler. Agentic engineering that actually delivers.",
     images: ["/og/vaultscaler.png"],
   },
 };
@@ -87,29 +87,6 @@ export default function RootLayout({
           "AI engineering",
           "Development acceleration",
           "24/7 support agent",
-        ],
-      },
-      {
-        "@type": "SoftwareApplication",
-        name: "Ortobahn",
-        applicationCategory: "Content Automation",
-        description: "Autonomous closed-loop social, articles, and image content across X, Bluesky, Reddit, LinkedIn, Medium, and Substack.",
-        featureList: [
-          "Multi-platform content automation",
-          "Voice learning",
-          "Fully autonomous or approval-based",
-        ],
-      },
-      {
-        "@type": "SoftwareApplication",
-        name: "Radix Core",
-        applicationCategory: "GPU Orchestration",
-        operatingSystem: "Kubernetes 1.26+",
-        description: "GPU orchestration for serious training workloads. Optimize GPU training throughput by up to 21%. No stack changes required.",
-        featureList: [
-          "Up to 21% GPU training throughput improvement",
-          "Closed-loop GPU scheduling optimization",
-          "No stack changes required - Helm chart deployment",
         ],
       },
     ],

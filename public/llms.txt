@@ -1,8 +1,8 @@
 # VaultScaler
 
-> VaultScaler builds products that help teams scale and accelerate. Founded in 2025, launching April 2026.
+> VaultScaler builds Lev, an agentic engineering system for full SDLC automation. Founded in 2025, launching April 2026.
 
-VaultScaler is a software company that builds three products: Lev (agentic engineering), Ortobahn (autonomous content), and Radix Core (GPU training optimization). The company's tagline is "Build More. Manage Less."
+VaultScaler builds Lev, an agentic engineering system for full SDLC automation. The company's tagline is "Build More. Manage Less."
 
 ## Products
 
@@ -13,15 +13,7 @@ Lev is an Agentic Engineering System that architects, builds, deploys, and suppo
 - Differentiators: End-to-end SDLC ownership (not just code generation), Golden Spec methodology, integrated SRE, flat per-project pricing
 - Target customers: Startup founders shipping their first products, enterprise engineering teams needing predictability and governance
 
-### Ortobahn
-Ortobahn is an autonomous content pipeline that creates, publishes, and refines social and long-form content across multiple platforms. It operates as a full team of AI specialists — strategists, writers, editors, and analysts — running a closed-loop 4-phase cycle: research, strategy, writing/editing, and analysis. Ortobahn learns brand voice from real engagement data and improves every cycle. Supports X/Twitter, LinkedIn, Bluesky, Medium, and Substack. Runs fully autonomous or with approval-based workflows. Pricing is $49 per client per month with a 14-day free trial. Agency pricing available for 10+ clients.
-
-- Product page: https://vaultscaler.com/ortobahn/
-- Standalone site: https://ortobahn.com/
-- Differentiators: Closed-loop learning from engagement data, multi-platform native content (not cross-posted), fully autonomous or approval-based, multi-tenant isolation for agencies
-- Target customers: Founders, agencies, and operators who need consistent content at scale
-
-### Radix Core
+### Radix Core (secondary product)
 Radix Core is a GPU training optimization platform that uses closed-loop control to balance memory, compute, and power across training runs. It delivers up to 21% throughput improvement over standard FIFO scheduling (based on VaultScaler internal benchmarks). Deploys via Helm chart on Kubernetes 1.26+ with zero changes to existing training code or stack. Originally built for air-gapped deployment with zero egress. SLSA Level 3 attestations. Pricing is $45 per GPU per month with a 14-day free trial (up to 400 GPUs). Hyperscale pricing available for 1,000+ GPU deployments.
 
 - Product page: https://vaultscaler.com/radix/core/
@@ -39,22 +31,16 @@ Radix Core is a GPU training optimization platform that uses closed-loop control
 ## Frequently Asked Questions
 
 ### What is VaultScaler?
-VaultScaler is a software company that builds three products: Lev (an agentic engineering system), Ortobahn (an autonomous content pipeline), and Radix Core (a GPU training optimizer). All three products launch April 6, 2026.
+VaultScaler is the company behind Lev, an agentic engineering system for full SDLC automation. VaultScaler also builds Radix Core, a GPU training optimizer. Both products launch April 6, 2026.
 
 ### What is Lev?
 Lev is an Agentic Engineering System that handles the full software development lifecycle — from architecture and spec creation through deployment and production support. It uses the Golden Spec methodology to prevent codebase churn and includes integrated SRE.
 
-### What is Ortobahn?
-Ortobahn is an autonomous content pipeline that creates, publishes, and refines content across X/Twitter, LinkedIn, Bluesky, Medium, and Substack. It operates as a team of AI specialists that learn your brand voice from real engagement data.
-
-### What is Radix Core?
-Radix Core is a GPU training optimization platform that uses closed-loop scheduling to improve training throughput by up to 21%. It deploys via Helm chart on Kubernetes with zero stack changes and supports air-gapped environments.
-
 ### How is Lev different from Cursor, Copilot, or Devin?
 Those tools generate code and stop. Lev owns the entire lifecycle from collaborative spec creation through deployment and production support, with integrated SRE that has full system context.
 
-### How is Ortobahn different from Buffer or Hootsuite?
-Buffer and Hootsuite manage your publishing schedule — you still create the content. Ortobahn handles the entire content lifecycle from trend research through publishing to performance learning, without requiring you to write, schedule, or review analytics manually.
+### What is Radix Core?
+Radix Core is a GPU training optimization platform that uses closed-loop scheduling to improve training throughput by up to 21%. It deploys via Helm chart on Kubernetes with zero stack changes and supports air-gapped environments.
 
 ### What does Radix Core cost?
 Radix Core costs $45 per GPU per month. A free 14-day trial is available for up to 400 GPUs. Custom pricing is available for deployments of 1,000+ GPUs.

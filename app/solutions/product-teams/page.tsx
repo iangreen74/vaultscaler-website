@@ -347,7 +347,7 @@ export default function ProductTeamsPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-lev-bold font-bold text-lg leading-tight">✓</span>
-                  <span className="text-gray-700 text-sm">$1,499/project/month flat pricing. No per-seat explosion as you grow</span>
+                  <span className="text-gray-700 text-sm">Flat pricing per project. No per-seat explosion as you grow</span>
                 </li>
               </ul>
             </div>
@@ -378,108 +378,6 @@ export default function ProductTeamsPage() {
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-primary-3">
-            Simple, Predictable Pricing
-          </h2>
-          <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            No per-seat surprises. No metered compute bills. Join the waitlist and start with 14 days free.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Startup */}
-            <div className="bg-gray-50 rounded-2xl p-8 border-2 border-gray-200">
-              <h3 className="font-bold text-xl mb-1 text-primary-3">Startup</h3>
-              <p className="text-gray-500 text-sm mb-6">For founders shipping their first products</p>
-
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-primary-3">$1,499</span>
-                <span className="text-gray-500 text-sm"> / project / month</span>
-              </div>
-
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">✓</span>
-                  <span className="text-gray-700 text-sm">Full SDLC, from architecture through production support</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">✓</span>
-                  <span className="text-gray-700 text-sm">Golden Spec with progressive hardening</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">✓</span>
-                  <span className="text-gray-700 text-sm">SRE with full system context</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">✓</span>
-                  <span className="text-gray-700 text-sm">Configurable escalation guardrails</span>
-                </li>
-              </ul>
-
-              <TrackedCTALink
-                href="/waitlist"
-                trackingName="Join Waitlist"
-                trackingLocation="Product Teams Pricing - Startup"
-                className="block text-center px-8 py-4 bg-primary-3 text-white rounded-full font-semibold hover:bg-primary-4 transition-colors"
-              >
-                Join Waitlist. 14 Days Free.
-              </TrackedCTALink>
-            </div>
-
-            {/* Enterprise */}
-            <div className="bg-primary-4 rounded-2xl p-8 border-2 border-lev-bold relative">
-              <div className="absolute top-4 right-4 bg-lev-bold text-primary-4 text-xs font-bold px-3 py-1 rounded-full">
-                Dedicated
-              </div>
-
-              <h3 className="font-bold text-xl mb-1 text-white">Enterprise</h3>
-              <p className="text-gray-400 text-sm mb-6">For teams that need isolation and governance</p>
-
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-white">Custom</span>
-                <span className="text-gray-400 text-sm"> / quoted pricing</span>
-              </div>
-
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">✓</span>
-                  <span className="text-gray-300 text-sm">Everything in Startup, plus:</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">✓</span>
-                  <span className="text-gray-300 text-sm">Single-tenant deployment</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">✓</span>
-                  <span className="text-gray-300 text-sm">SSO / SAML authentication</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">✓</span>
-                  <span className="text-gray-300 text-sm">Multi-project administration</span>
-                </li>
-              </ul>
-
-              <TrackedCTALink
-                href="/contact"
-                trackingName="Contact Sales"
-                trackingLocation="Product Teams Pricing - Enterprise"
-                className="block text-center px-8 py-4 bg-lev-bold text-primary-4 rounded-full font-semibold hover:bg-lev-light transition-colors"
-              >
-                Contact Sales
-              </TrackedCTALink>
-            </div>
-          </div>
-
-          <div className="mt-8 text-center">
-            <p className="text-gray-500 text-sm">
-              All plans include 100% code ownership. <Link href="/lev/" className="text-primary-3 font-semibold hover:underline">Learn more about Lev</Link>
-            </p>
           </div>
         </div>
       </section>

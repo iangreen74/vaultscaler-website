@@ -8,7 +8,7 @@ import { trackFormSubmit } from '@/lib/analytics';
 export default function WaitlistForm() {
   const router = useRouter();
   const [email, setEmail] = useState('');
-  const [interest, setInterest] = useState<string[]>([]);
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
 
@@ -25,13 +25,12 @@ export default function WaitlistForm() {
         },
         body: JSON.stringify({
           email,
-          interest: interest.join(', '),
-          _subject: `VaultScaler Waitlist: ${interest.join(', ')} - ${email}`,
+          _subject: `VaultScaler Waitlist: ${email}`,
         }),
       });
 
       if (response.ok) {
-        trackFormSubmit('Waitlist', interest.join(', '));
+        trackFormSubmit('Waitlist', email);
         router.push('/waitlist/thank-you');
       } else {
         setError('Something went wrong. Please try again.');
@@ -82,39 +81,6 @@ export default function WaitlistForm() {
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-3 focus:border-primary-3 transition-colors"
                 placeholder="you@company.com"
               />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-3">
-                I&apos;m interested in
-              </label>
-              <div className="space-y-3">
-                {[
-                  { value: 'lev', label: 'Lev', desc: 'Agentic Engineering System' },
-                  { value: 'ortobahn', label: 'Ortobahn', desc: 'Autonomous content engine' },
-                  { value: 'core', label: 'Radix Core', desc: 'GPU scheduling optimization' },
-                ].map((option) => (
-                  <label key={option.value} className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
-                    <input
-                      type="checkbox"
-                      value={option.value}
-                      checked={interest.includes(option.value)}
-                      onChange={(e) => {
-                        if (e.target.checked) {
-                          setInterest([...interest, option.value]);
-                        } else {
-                          setInterest(interest.filter((i) => i !== option.value));
-                        }
-                      }}
-                      className="w-4 h-4 rounded text-primary-3 focus:ring-primary-3"
-                    />
-                    <div className="ml-3">
-                      <span className="font-medium text-gray-900">{option.label}</span>
-                      <span className="text-gray-500 text-sm ml-2">{option.desc}</span>
-                    </div>
-                  </label>
-                ))}
-              </div>
             </div>
 
             {error && (

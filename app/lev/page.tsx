@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import FAQ from "@/components/FAQ";
 import { SITE } from "@/lib/site";
-import { TrackedCTALink } from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Lev - AI engineering. Actual delivery.",
@@ -46,22 +45,6 @@ export default function LevPage() {
     name: "Lev",
     applicationCategory: "DeveloperApplication",
     operatingSystem: "Cloud",
-    offers: [
-      {
-        "@type": "Offer",
-        name: "Startup",
-        price: "1499",
-        priceCurrency: "USD",
-        unitText: "per project per month",
-      },
-      {
-        "@type": "Offer",
-        name: "Enterprise",
-        price: "0",
-        priceCurrency: "USD",
-        description: "Custom quoted pricing",
-      },
-    ],
     author: { "@type": "Organization", name: "VaultScaler" },
     url: `${SITE.url}/lev/`,
     description: metadata.description,
@@ -233,10 +216,10 @@ export default function LevPage() {
 
           {/* CTA */}
           <a
-            href="#pricing"
+            href="/waitlist/"
             className="inline-block px-10 py-5 bg-lev-bold text-primary-4 rounded-full font-bold text-xl hover:bg-lev-light transition-all shadow-2xl hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-lev-bold/50"
           >
-            Get Lev
+            Join the Waitlist
           </a>
 
         </div>
@@ -500,116 +483,6 @@ export default function LevPage() {
                 When AI-generated code breaks at 2 AM, other tools have already moved on. Lev's SRE has full context into your specs, telemetry, and incident history. It resolves issues without regressing functionality because it understands what it's protecting.
               </p>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-lev-bold/30">
-              <h3 className="font-bold text-lg mb-3 text-lev-bold">Predictable, Flat Pricing</h3>
-              <p className="text-white/80 text-sm leading-relaxed">
-                Competing platforms charge usage-based fees that spiral during failed attempts, and most tasks do fail. Lev is a flat monthly rate per project. No per-seat explosion as your team grows. No surprise bills. Your CFO will approve it once and never worry again.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section id="pricing" className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-primary-3">
-            Simple, Predictable Pricing
-          </h2>
-          <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            No per-seat surprises. No metered compute bills. Join the waitlist and start with 14 days free.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Startup */}
-            <div className="bg-gray-50 rounded-2xl p-8 border-2 border-gray-200 flex flex-col">
-              <h3 className="font-bold text-xl mb-1 text-primary-3">Startup</h3>
-              <p className="text-gray-500 text-sm mb-6">For founders shipping their first products</p>
-
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-primary-3">$1,499</span>
-                <span className="text-gray-500 text-sm"> / project / month</span>
-              </div>
-
-              <ul className="space-y-3 mb-8 flex-1">
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">&#x2713;</span>
-                  <span className="text-gray-700 text-sm">Full SDLC, from architecture through production support</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">&#x2713;</span>
-                  <span className="text-gray-700 text-sm">Golden Spec with progressive hardening</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">&#x2713;</span>
-                  <span className="text-gray-700 text-sm">SRE with full system context</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">&#x2713;</span>
-                  <span className="text-gray-700 text-sm">Configurable escalation guardrails</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">&#x2713;</span>
-                  <span className="text-gray-700 text-sm">Multi-tenant infrastructure</span>
-                </li>
-              </ul>
-
-              <TrackedCTALink
-                href="/waitlist"
-                trackingName="Join Waitlist"
-                trackingLocation="Lev Pricing - Startup"
-                className="block text-center px-8 py-4 bg-primary-3 text-white rounded-full font-semibold hover:bg-primary-2 transition-colors"
-              >
-                Join Waitlist. 14 Days Free.
-              </TrackedCTALink>
-            </div>
-
-            {/* Enterprise */}
-            <div className="bg-primary-4 rounded-2xl p-8 border-2 border-lev-bold flex flex-col relative overflow-hidden">
-              <div className="absolute top-4 right-4 bg-lev-bold text-primary-4 text-xs font-bold px-3 py-1 rounded-full">
-                Dedicated
-              </div>
-
-              <h3 className="font-bold text-xl mb-1 text-white">Enterprise</h3>
-              <p className="text-gray-400 text-sm mb-6">For teams that need isolation and governance</p>
-
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-white">Custom</span>
-                <span className="text-gray-400 text-sm"> / quoted pricing</span>
-              </div>
-
-              <ul className="space-y-3 mb-8 flex-1">
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">&#x2713;</span>
-                  <span className="text-gray-300 text-sm">Everything in Startup, plus:</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">&#x2713;</span>
-                  <span className="text-gray-300 text-sm">Single-tenant deployment</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">&#x2713;</span>
-                  <span className="text-gray-300 text-sm">SSO / SAML authentication</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">&#x2713;</span>
-                  <span className="text-gray-300 text-sm">Multi-project administration</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">&#x2713;</span>
-                  <span className="text-gray-300 text-sm">Dedicated onboarding and support</span>
-                </li>
-              </ul>
-
-              <TrackedCTALink
-                href="/contact/"
-                trackingName="Contact Sales"
-                trackingLocation="Lev Pricing"
-                className="block text-center px-8 py-4 bg-lev-bold text-primary-4 rounded-full font-semibold hover:bg-lev-light transition-colors"
-              >
-                Contact Sales
-              </TrackedCTALink>
-            </div>
           </div>
         </div>
       </section>
@@ -654,11 +527,6 @@ export default function LevPage() {
                   "Yes. Lev uses a BYOK (Bring Your Own Key) model. You provide your own API keys for the LLM providers you prefer. This keeps you in control of your AI vendor relationships and costs, avoids lock-in, and means you can route to the models that work best for your use case. Lev\u2019s multi-LLM routing automatically selects the optimal model per task from the providers you\u2019ve configured.",
               },
               {
-                question: "What does \u201cper project\u201d pricing mean?",
-                answer:
-                  "One project is one application or service that Lev manages end-to-end. The price covers your entire team, not per seat. If your team grows from 3 to 10 engineers, the price stays the same. Need a second project? That\u2019s a second subscription. This model is intentionally simple: no usage-based surprises, no seat-count negotiations, and no runaway token costs.",
-              },
-              {
                 question: "What if I already use AI coding tools?",
                 answer:
                   "Lev isn\u2019t replacing your IDE or your copilot. Your developers can keep using Cursor, Copilot, or whatever tools they prefer for day-to-day coding. Lev operates at a different level: owning the spec, the architecture, the deployment, and production support. Think of it as the system that makes sure all that AI-generated code actually works together, ships reliably, and stays maintainable.",
@@ -671,7 +539,7 @@ export default function LevPage() {
               {
                 question: "Can I try Lev before committing?",
                 answer:
-                  "Yes. Join the waitlist and when your spot opens, every plan starts with a free 14-day trial with full access. No credit card required. Start with one feature or one service, experience the Golden Spec process, see how SRE works, and decide with confidence. If Lev isn\u2019t the right fit, you walk away having lost nothing.",
+                  "Yes. Join the waitlist and when your spot opens, you\u2019ll get a free 14-day trial with full access. No credit card required. Start with one feature or one service, experience the Golden Spec process, see how SRE works, and decide with confidence. If Lev isn\u2019t the right fit, you walk away having lost nothing.",
               },
             ]}
           />

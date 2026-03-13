@@ -6,14 +6,12 @@ import { trackNavClick } from '@/lib/analytics';
 
 const productLinks = [
   { href: '/lev/', label: 'Lev', description: 'Agentic Engineering System' },
-  { href: '/ortobahn/', label: 'Ortobahn', description: 'Autonomous Content Operations' },
   { href: '/radix/core/', label: 'Radix Core', description: 'GPU Training Optimization' },
 ];
 
 const solutionLinks = [
   { href: '/solutions/hyperscale/', label: 'Hyperscale & Frontier AI' },
   { href: '/solutions/product-teams/', label: 'Product & Engineering Teams' },
-  { href: '/ortobahn/', label: 'Content & Marketing Teams' },
 ];
 
 export default function Navigation() {
