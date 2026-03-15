@@ -8,6 +8,8 @@ import { trackFormSubmit } from '@/lib/analytics';
 export default function WaitlistForm() {
   const router = useRouter();
   const [email, setEmail] = useState('');
+  const [title, setTitle] = useState('');
+  const [name, setName] = useState('');
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
@@ -25,6 +27,8 @@ export default function WaitlistForm() {
         },
         body: JSON.stringify({
           email,
+          ...(title && { title }),
+          ...(name && { name }),
           _subject: `VaultScaler Waitlist: ${email}`,
         }),
       });
@@ -69,7 +73,7 @@ export default function WaitlistForm() {
             />
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                Email address
+                Email address <span className="text-red-500">*</span>
               </label>
               <input
                 type="email"
@@ -80,6 +84,34 @@ export default function WaitlistForm() {
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-3 focus:border-primary-3 transition-colors"
                 placeholder="you@company.com"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-3 focus:border-primary-3 transition-colors"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-2">
+                Title
+              </label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-3 focus:border-primary-3 transition-colors"
               />
             </div>
 
