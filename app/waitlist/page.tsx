@@ -5,23 +5,23 @@ import WaitlistForm from "@/components/WaitlistForm";
 export const metadata: Metadata = {
   title: "Join the Lev Waitlist | VaultScaler",
   description:
-    "Join the waitlist for early access to Lev — agentic engineering that actually delivers. Launching April 6, 2026. Get priority onboarding for full-lifecycle AI engineering.",
+    "Join the waitlist for early access to Lev, agentic engineering that actually delivers. Launching April 6, 2026. Get priority onboarding for full-lifecycle AI engineering.",
   alternates: { canonical: `${SITE.url}/waitlist/` },
   keywords: [...SITE.keywords, "waitlist", "early access", "beta"],
   openGraph: {
     title: "Join the Lev Waitlist | VaultScaler",
     description:
-      "Join the waitlist for early access to Lev — agentic engineering that actually delivers. Launching April 6, 2026. Get priority onboarding for full-lifecycle AI engineering.",
+      "Join the waitlist for early access to Lev, agentic engineering that actually delivers. Launching April 6, 2026. Get priority onboarding for full-lifecycle AI engineering.",
     url: `${SITE.url}/waitlist/`,
     type: "website",
-    images: [{ url: "/og/vaultscaler.png", width: 1200, height: 630, alt: "Lev Waitlist" }],
+    images: [{ url: "/og/lev.png", width: 1200, height: 630, alt: "Lev Waitlist" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Join the Lev Waitlist | VaultScaler",
     description:
-      "Join the waitlist for early access to Lev — agentic engineering that actually delivers. Launching April 6, 2026. Get priority onboarding for full-lifecycle AI engineering.",
-    images: ["/og/vaultscaler.png"],
+      "Join the waitlist for early access to Lev, agentic engineering that actually delivers. Launching April 6, 2026. Get priority onboarding for full-lifecycle AI engineering.",
+    images: ["/og/lev.png"],
   },
 };
 

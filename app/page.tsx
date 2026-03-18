@@ -1,4 +1,4 @@
-// Route: / (VaultScaler — Lev-first homepage)
+// Route: / (VaultScaler homepage, Lev-first)
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SITE } from '@/lib/site';
@@ -6,22 +6,22 @@ import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Lev | AI Engineering. Actual Delivery.',
-  description: 'Lev is an agentic engineering system that architects, builds, deploys, and supports your software across the full SDLC. Golden Spec methodology prevents churn. Integrated SRE keeps production stable.',
+  description: 'Lev is a full-stack engineering team on demand. Describe what to build and Lev designs, codes, deploys, and operates with earned autonomy and 24/7 ops intelligence.',
   alternates: {
     canonical: `${SITE.url}/`,
   },
   keywords: SITE.keywords,
   openGraph: {
     title: 'Lev | AI Engineering. Actual Delivery.',
-    description: 'Agentic engineering that actually delivers. Full lifecycle from architecture through production support.',
+    description: 'A full-stack engineering team on demand. Describe what to build and Lev handles the rest.',
     type: 'website',
     url: `${SITE.url}/`,
-    images: [{ url: '/og/vaultscaler.png', width: 1200, height: 630, alt: 'Lev by VaultScaler — AI Engineering. Actual Delivery.' }],
+    images: [{ url: '/og/vaultscaler.png', width: 1200, height: 630, alt: 'Lev by VaultScaler. AI Engineering. Actual Delivery.' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Lev | AI Engineering. Actual Delivery.',
-    description: 'Agentic engineering that actually delivers. Full lifecycle from architecture through production support.',
+    description: 'A full-stack engineering team on demand. Describe what to build and Lev handles the rest.',
     images: ['/og/vaultscaler.png'],
   },
 };
@@ -32,7 +32,7 @@ export default function Home() {
     "@type": "WebSite",
     "name": "VaultScaler",
     "url": `${SITE.url}/`,
-    "description": "Lev is an agentic engineering system by VaultScaler. Full lifecycle software delivery from architecture through production support. Launching April 2026.",
+    "description": "Lev is a full-stack engineering team on demand, by VaultScaler. Describe what to build and Lev designs, codes, deploys, and operates. Launching April 2026.",
   };
 
   return (
@@ -54,7 +54,7 @@ export default function Home() {
             </h1>
 
             <p className="text-lg md:text-xl text-primary-1 max-w-2xl leading-relaxed mb-10">
-              Meet Lev — agentic engineering that actually delivers. Full lifecycle from architecture through production support.
+              Meet Lev, a full-stack engineering team on demand. Describe what to build. Lev designs, codes, deploys, and operates it.
             </p>
 
             <Link
@@ -77,14 +77,14 @@ export default function Home() {
                 <div className="w-3 h-3 rounded-full bg-lev-bold" />
                 <h3 className="text-2xl font-bold text-gray-900">Lev</h3>
               </div>
-              <p className="text-primary-3 text-sm font-medium mb-4">Agentic Engineering System</p>
+              <p className="text-primary-3 text-sm font-medium mb-4">Full-Stack Engineering Team</p>
               <p className="text-gray-600 leading-relaxed mb-6">
-                AI engineering that actually delivers. Build quicker, launch with confidence, and let Lev handle upkeep. Lev learns your intent and hardens your system over time so you can focus on your core business.
+                The engineering team that never sleeps. Describe what to build and Lev designs, codes, deploys to production, and keeps it running 24/7. Not a code assistant. The engineer.
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
-                <span className="text-xs px-3 py-1 bg-gray-100 rounded-full text-gray-600">AI Engineering</span>
-                <span className="text-xs px-3 py-1 bg-gray-100 rounded-full text-gray-600">Development Jet Fuel</span>
-                <span className="text-xs px-3 py-1 bg-gray-100 rounded-full text-gray-600">24/7 Support Agent</span>
+                <span className="text-xs px-3 py-1 bg-gray-100 rounded-full text-gray-600">Mission Brief → Production</span>
+                <span className="text-xs px-3 py-1 bg-gray-100 rounded-full text-gray-600">24/7 Ops Intelligence</span>
+                <span className="text-xs px-3 py-1 bg-gray-100 rounded-full text-gray-600">Earned Autonomy</span>
               </div>
               <span className="text-primary-3 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
                 Learn more

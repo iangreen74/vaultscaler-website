@@ -9,8 +9,8 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: "VaultScaler — Build More. Manage Less.",
-  description: "Lev is an agentic engineering system by VaultScaler. AI engineering that actually delivers — build quicker, launch with confidence.",
+  title: "VaultScaler | Build More. Manage Less.",
+  description: "Lev is an agentic engineering system by VaultScaler. AI engineering that actually delivers. Build quicker and launch with confidence.",
   keywords: ["agentic engineering", "AI engineering team", "AI development tools", "AI coding platform", "automated software delivery", "golden spec", "AI SRE", "full SDLC automation"],
   icons: {
     icon: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "VaultScaler — Build More. Manage Less.",
+    title: "VaultScaler | Build More. Manage Less.",
     description: "Lev by VaultScaler. Agentic engineering that actually delivers.",
     url: "https://vaultscaler.com",
     siteName: "VaultScaler",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         url: "/og/vaultscaler.png",
         width: 1200,
         height: 630,
-        alt: "VaultScaler — Build More. Manage Less.",
+        alt: "VaultScaler | Build More. Manage Less.",
       },
     ],
     locale: "en_US",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "VaultScaler — Build More. Manage Less.",
+    title: "VaultScaler | Build More. Manage Less.",
     description: "Lev by VaultScaler. Agentic engineering that actually delivers.",
     images: ["/og/vaultscaler.png"],
   },
@@ -82,7 +82,7 @@ export default function RootLayout({
         "@type": "SoftwareApplication",
         name: "Lev",
         applicationCategory: "AI Engineering",
-        description: "Full lifecycle agentic engineering and support. AI engineering that actually delivers — build quicker, launch with confidence, and let Lev handle upkeep.",
+        description: "Full lifecycle agentic engineering and support. AI engineering that actually delivers. Build quicker, launch with confidence, and let Lev handle upkeep.",
         featureList: [
           "AI engineering",
           "Development acceleration",

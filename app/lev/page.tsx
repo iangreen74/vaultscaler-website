@@ -5,9 +5,9 @@ import FAQ from "@/components/FAQ";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Lev - AI engineering. Actual delivery.",
+  title: "Lev - Your Team, Unblocked",
   description:
-    "Lev is a complete Agentic Engineering System that architects, builds, deploys, and supports your software. Golden Spec methodology prevents churn. Integrated SRE keeps production stable.",
+    "Lev unblocks your engineering team. Describe what to build and Lev designs, codes, deploys, and operates with earned autonomy that keeps you in control.",
   alternates: { canonical: `${SITE.url}/lev/` },
   keywords: [
     "AI software engineering",
@@ -15,25 +15,26 @@ export const metadata: Metadata = {
     "AI development team",
     "automated software delivery",
     "AI SRE",
-    "golden spec",
+    "mission brief",
+    "earned autonomy",
     "agentic coding",
-    "Agentic Engineering System",
+    "full-stack engineering team",
     "full SDLC automation",
     "production AI coding",
   ],
   openGraph: {
-    title: "Lev - AI engineering. Actual delivery.",
+    title: "Lev - Your Team, Unblocked",
     description:
-      "The teammate that architects, builds, deploys, and supports your software with a memory that prevents your codebase from churning backward.",
+      "Lev unblocks your engineering team. Describe what to build and Lev designs, codes, deploys, and operates your product.",
     url: `${SITE.url}/lev/`,
     type: "website",
     images: [{ url: "/og/lev.png", width: 1200, height: 630, alt: "Lev by VaultScaler" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lev - AI engineering. Actual delivery.",
+    title: "Lev - Your Team, Unblocked",
     description:
-      "The teammate that architects, builds, deploys, and supports your software with a memory that prevents your codebase from churning backward.",
+      "Lev unblocks your engineering team. Describe what to build and Lev designs, codes, deploys, and operates your product.",
     images: ["/og/lev.png"],
   },
 };
@@ -68,7 +69,7 @@ export default function LevPage() {
         name: "Does Lev replace my engineering team?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. Lev works with your senior product and technical people to accelerate what they're already capable of delivering. Your people stay in the driver's seat.",
+          text: "For startups without a team, Lev is the team. For companies with engineers, Lev handles execution so your best people focus on the decisions only they can make.",
         },
       },
       {
@@ -76,15 +77,15 @@ export default function LevPage() {
         name: "How is Lev different from Cursor, Copilot, or Devin?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Those tools generate code and stop. Lev owns the entire lifecycle, from collaborative spec creation through deployment and production support.",
+          text: "Those tools help you write code faster. Lev is the engineer. It designs architecture, writes the code, deploys to production, monitors 24/7, and fixes problems without you managing any of it.",
         },
       },
       {
         "@type": "Question",
-        name: "What exactly is the Golden Spec?",
+        name: "What is a Mission Brief?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "The Golden Spec is a living blueprint that Lev builds collaboratively with you before writing any code. It captures every requirement, every architectural decision, and the reasoning behind each choice.",
+          text: "A mission brief is how you tell Lev what to build, in plain language. Lev designs the architecture from first principles, then builds and deploys it. No templates, no boilerplate. Just real systems designed for what you actually need.",
         },
       },
       {
@@ -92,7 +93,7 @@ export default function LevPage() {
         name: "Can Lev work with my existing codebase?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Lev handles both greenfield projects and existing codebases through a Golden Spec discovery process.",
+          text: "Yes. Lev handles both greenfield projects and existing codebases. For existing systems, Lev maps your architecture and establishes a baseline before making changes.",
         },
       },
     ],
@@ -105,54 +106,6 @@ export default function LevPage() {
 
       {/* Hero - Lev */}
       <section className="relative min-h-[clamp(600px,90vh,1200px)] flex items-center justify-center bg-gradient-to-br from-primary-4 via-primary-3 to-primary-3 overflow-hidden">
-        {/* Plaid pattern on undulating fabric, bottom-right corner */}
-        {/* <div className="absolute inset-0 overflow-hidden">
-          <div
-            className="absolute inset-0"
-            style={{
-              background: `
-                repeating-linear-gradient(93deg,
-                  transparent 0px, transparent 8px,
-                  rgba(226,214,167,0.06) 12px, rgba(226,214,167,0.06) 13px,
-                  transparent 15px, transparent 18px,
-                  rgba(230,185,7,0.1) 20px, rgba(230,185,7,0.1) 26px,
-                  transparent 30px, transparent 33px,
-                  rgba(226,214,167,0.06) 35px, rgba(226,214,167,0.06) 36px,
-                  transparent 38px, transparent 46px,
-                  rgba(255,255,255,0.04) 49px, rgba(255,255,255,0.04) 51px,
-                  transparent 53px, transparent 56px,
-                  rgba(5,33,82,0.12) 58px, rgba(5,33,82,0.12) 62px,
-                  transparent 66px, transparent 69px,
-                  rgba(255,255,255,0.04) 71px, rgba(255,255,255,0.04) 72px,
-                  transparent 74px, transparent 80px
-                ),
-                repeating-linear-gradient(3deg,
-                  transparent 0px, transparent 8px,
-                  rgba(226,214,167,0.06) 12px, rgba(226,214,167,0.06) 13px,
-                  transparent 15px, transparent 18px,
-                  rgba(230,185,7,0.1) 20px, rgba(230,185,7,0.1) 26px,
-                  transparent 30px, transparent 33px,
-                  rgba(226,214,167,0.06) 35px, rgba(226,214,167,0.06) 36px,
-                  transparent 38px, transparent 46px,
-                  rgba(255,255,255,0.04) 49px, rgba(255,255,255,0.04) 51px,
-                  transparent 53px, transparent 56px,
-                  rgba(5,33,82,0.12) 58px, rgba(5,33,82,0.12) 62px,
-                  transparent 66px, transparent 69px,
-                  rgba(255,255,255,0.04) 71px, rgba(255,255,255,0.04) 72px,
-                  transparent 74px, transparent 80px
-                ),
-                radial-gradient(ellipse at 80% 70%, rgba(230,185,7,0.06) 0%, transparent 30%),
-                radial-gradient(ellipse at 65% 85%, rgba(0,0,0,0.1) 0%, transparent 20%),
-                radial-gradient(ellipse at 90% 60%, rgba(255,255,255,0.04) 0%, transparent 25%),
-                radial-gradient(ellipse at 75% 95%, rgba(0,0,0,0.08) 0%, transparent 18%),
-                radial-gradient(ellipse at 95% 75%, rgba(230,185,7,0.04) 0%, transparent 30%)
-              `,
-              WebkitMaskImage: 'radial-gradient(200% 90% at 65% 110%, black 0%, black 30%, transparent 70%)',
-              maskImage: 'radial-gradient(200% 90% at 65% 110%, black 0%, black 30%, transparent 70%)',
-            }}
-          />
-        </div> */}
-
         {/* Horizontal graduated lines - bottom left, movement up and to the right, fade lev-light to lev-dark */}
         <div className="absolute inset-0 overflow-hidden">
           <div
@@ -206,12 +159,12 @@ export default function LevPage() {
 
           {/* Main Tagline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
-            AI engineering. Actual delivery.
+            Your Team, Unblocked.
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-lev-bold max-w-3xl mx-auto mb-10 leading-relaxed">
-            The teammate that architects, builds, deploys, and supports your software with a memory that prevents your codebase from churning backward.
+            Lev handles architecture, deployment, and operations so your engineers focus on what only they can do. Not a code assistant. The throughput multiplier.
           </p>
 
           {/* CTA */}
@@ -225,262 +178,234 @@ export default function LevPage() {
         </div>
       </section>
 
-      {/* The Problem - The Broken Promise of AI Development */}
+      {/* The Problem - Support Purgatory */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-primary-3">
-            AI Was Supposed to Change Everything
+            Your Best Engineers Are Stuck on the Last Thing They Shipped
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            Your board saw the headlines. Your team adopted the tools. But the software still ships late, the code still breaks, and nobody can explain why the promised 10x never showed up.
+            Your team is capable. The problem isn't talent. It's that every shipped feature becomes a maintenance commitment that pulls your engineers away from the next one.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* The Broken Promise */}
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
               <div className="w-12 h-12 bg-lev-bold/15 rounded-xl flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-primary-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 17h8m0 0v-8m0 8l-8-8-4 4-6-6" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
               </div>
-              <h3 className="font-bold text-xl mb-3 text-primary-3">The Productivity That Never Arrived</h3>
+              <h3 className="font-bold text-xl mb-3 text-primary-3">Support Purgatory</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                You invested in AI copilots. You retooled workflows. Your competitors claim 10x productivity and your board is asking where the ROI is. Here's what nobody says out loud: AI coding tools were built for commodity code, not the differentiated software that defines your business. The more unique your product, the less today's AI tools can help.
+                Your senior engineers shipped a great feature last quarter. Now they're spending half their sprint maintaining it — triaging incidents, patching edge cases, babysitting deploys. The roadmap stalls while the team keeps the lights on.
               </p>
               <p className="text-primary-3 font-semibold">
-                You're not behind. The tools just weren't built for what you're building.
+                Every feature you ship without ops coverage slows down the next one.
               </p>
             </div>
 
-            {/* The Last Mile */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
-              <div className="w-12 h-12 bg-lev-bold/15 rounded-xl flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-primary-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="font-bold text-xl mb-3 text-primary-3">The Last Mile Is Where You Live</h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                AI can scaffold a proof of concept in hours. But production isn't a demo. Your teams spend weeks wrestling AI-generated code into something stable enough to ship. The "80% done in a day" becomes 80% done for the next three months. The last 20% is where your competitive advantage lives. And it's exactly where today's AI tools abandon you.
-              </p>
-              <p className="text-primary-3 font-semibold">
-                Demos don't ship. Stable, tested production code does.
-              </p>
-            </div>
-
-            {/* The Orphaned Codebase */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
-              <div className="w-12 h-12 bg-lev-bold/15 rounded-xl flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-primary-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="font-bold text-xl mb-3 text-primary-3">Code Nobody Owns</h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Every line AI writes is a line nobody truly understands. Your senior engineers didn't architect it. Your junior engineers didn't learn from it. When something breaks at 2 AM, the team is debugging code they didn't write and can't reason about. The fix might work, or it might cascade into something worse. Nobody can say for certain, and that uncertainty compounds with every release.
-              </p>
-              <p className="text-primary-3 font-semibold">
-                You can't maintain what you don't understand. And you can't scale what you can't maintain.
-              </p>
-            </div>
-
-            {/* The Predictability Gap */}
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
               <div className="w-12 h-12 bg-lev-bold/15 rounded-xl flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-primary-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="font-bold text-xl mb-3 text-primary-3">The Predictability You've Lost</h3>
+              <h3 className="font-bold text-xl mb-3 text-primary-3">The Roadmap Keeps Slipping</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Your board wants timelines. Your CTO wants confidence. Your teams want to stop firefighting. But AI-assisted development has turned your release process into a coin flip. You can't estimate what you can't understand, and you can't support what wasn't built with intention. The result: missed deadlines, blown budgets, and eroding trust between engineering and the rest of the business.
+                You have the team. You have the plan. But production issues eat into sprint capacity, deployments need hand-holding, and your best people are debugging last month's release instead of building next month's. The backlog grows while throughput flatlines.
               </p>
               <p className="text-primary-3 font-semibold">
-                Every missed commitment chips away at the credibility your team worked years to build.
+                Your team isn't slow. They're just doing two jobs.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+              <div className="w-12 h-12 bg-lev-bold/15 rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-primary-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 17h8m0 0v-8m0 8l-8-8-4 4-6-6" />
+                </svg>
+              </div>
+              <h3 className="font-bold text-xl mb-3 text-primary-3">AI Tools Don't Close the Loop</h3>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Copilot and Cursor help your team write code faster. But faster code still needs deployment, monitoring, and incident response. The bottleneck was never writing code — it's everything that happens after. Your team still owns the full lifecycle of everything they ship.
+              </p>
+              <p className="text-primary-3 font-semibold">
+                Faster code doesn't help if your team is still stuck on ops.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+              <div className="w-12 h-12 bg-lev-bold/15 rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-primary-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 className="font-bold text-xl mb-3 text-primary-3">Hiring More Doesn't Scale</h3>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                You could hire more engineers to split the load. But new hires need months to onboard, they don't have context on what's already running, and the maintenance surface just keeps growing. Adding headcount doesn't fix a structural problem.
+              </p>
+              <p className="text-primary-3 font-semibold">
+                You don't need more engineers. You need your engineers back on the roadmap.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* How Lev Helps */}
+      {/* How Lev Works - Pipeline */}
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-primary-3">
-            Engineering That Only Moves Forward
+            How Lev Works
           </h2>
-          <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            Lev doesn't generate code and hope for the best. It builds collaboratively with you, hardens every decision, and owns the outcome from first commit to production incident.
+          <p className="text-lg text-gray-600 text-center mb-14 max-w-3xl mx-auto">
+            You describe what to build in plain language. Lev handles everything else.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* The Golden Spec */}
-            <div className="bg-gray-50 rounded-2xl p-8 border-l-4 border-lev-bold">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 mb-16">
+            {[
+              { step: "1", title: "Describe", desc: "Write a mission brief. What the product does, who it serves, what it needs to handle." },
+              { step: "2", title: "Design", desc: "Lev designs the architecture from first principles. No templates. Real systems for what you need." },
+              { step: "3", title: "Build", desc: "Coordinated agent teams handle code generation, dependency ordering, and testing." },
+              { step: "4", title: "Deploy", desc: "Real AWS infrastructure with Terraform, circuit breakers, encryption, and automatic rollback." },
+              { step: "5", title: "Operate", desc: "Continuous monitoring, incident response, and intelligence that improves while you sleep." },
+            ].map((item) => (
+              <div key={item.step} className="text-center">
+                <div className="w-12 h-12 bg-lev-bold text-primary-4 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">
+                  {item.step}
+                </div>
+                <h3 className="font-bold text-primary-3 mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Three Pillars */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-primary-3">
+            What Makes Lev Different
+          </h2>
+          <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+            Every competitor stops at code generation. Lev is the only platform that owns the outcome from your first description through production operations.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Mission Brief → Production */}
+            <div className="bg-white rounded-2xl p-8 border-l-4 border-lev-bold shadow-sm">
               <div className="w-12 h-12 bg-lev-bold/15 rounded-xl flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-lev-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="font-bold text-xl mb-3 text-primary-3">The Golden Spec</h3>
+              <h3 className="font-bold text-xl mb-3 text-primary-3">Mission Brief to Production</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Before Lev writes a line of code, it builds a Golden Spec with you. A living blueprint that captures every requirement, every decision, and every reason why. Each iteration progressively hardens your spec, so the AI never rewrites what already works. You get institutional knowledge that never walks out the door. You get compounding instead of churn.
+                Describe what to build in plain language. Lev designs from first principles, codes, and deploys to real AWS infrastructure with Terraform, circuit breakers, and automatic rollback. The kind of infrastructure a senior DevOps engineer would set up, except you didn't hire one.
               </p>
               <p className="text-lev-dark font-semibold">
-                Stop rebuilding. Start compounding.
+                From idea to production. No handoffs. No gaps.
               </p>
             </div>
 
-            {/* Complete Engineering Team */}
-            <div className="bg-gray-50 rounded-2xl p-8 border-l-4 border-lev-bold">
-              <div className="w-12 h-12 bg-lev-bold/15 rounded-xl flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-lev-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="font-bold text-xl mb-3 text-primary-3">A Complete Engineering Team</h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Lev shows up already fluent in your architecture, your decisions, and your reasons why. For startups, it's the senior hire you needed yesterday. For established teams, it's the colleague who's always current and always available.
-              </p>
-              <p className="text-lev-dark font-semibold">
-                One system. Every stage. No gaps between them.
-              </p>
-            </div>
-
-            {/* SRE */}
-            <div className="bg-gray-50 rounded-2xl p-8 border-l-4 border-lev-bold">
+            {/* 24/7 Ops Intelligence */}
+            <div className="bg-white rounded-2xl p-8 border-l-4 border-lev-bold shadow-sm">
               <div className="w-12 h-12 bg-lev-bold/15 rounded-xl flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-lev-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                 </svg>
               </div>
-              <h3 className="font-bold text-xl mb-3 text-primary-3">SRE That Already Knows Your System</h3>
+              <h3 className="font-bold text-xl mb-3 text-primary-3">24/7 Ops Intelligence</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Lev is the proactive on-call engineer who was there when it was built and remembers why. It has full context into every Golden Spec, your telemetry, analytics, and incident history. When something does break, tag <span className="bg-lev-bold/15 text-lev-dark font-mono text-sm px-1.5 py-0.5 rounded">@LEV</span> in any conversation to bring that production intelligence into the loop. The fix won't regress functionality because SRE understands what it's protecting.
+                When something breaks, a 4-agent incident team diagnoses, fixes, rolls back, and verifies. It continuously learns patterns so problems get solved before you wake up. No on-call rotation because there's no one to rotate.
               </p>
               <p className="text-lev-dark font-semibold">
-                Fixes that fix. Not fixes that create the next incident.
+                Problems solved before you wake up.
               </p>
             </div>
 
-            {/* Guardrails */}
-            <div className="bg-gray-50 rounded-2xl p-8 border-l-4 border-lev-bold">
+            {/* Earned Autonomy */}
+            <div className="bg-white rounded-2xl p-8 border-l-4 border-lev-bold shadow-sm">
               <div className="w-12 h-12 bg-lev-bold/15 rounded-xl flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-lev-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                 </svg>
               </div>
-              <h3 className="font-bold text-xl mb-3 text-primary-3">Automated, With Your Guardrails</h3>
+              <h3 className="font-bold text-xl mb-3 text-primary-3">Earned Autonomy</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Lev is automated engineering with human judgment at the controls. You decide what gets escalated and when. Want to review every bug fix? You can. Prefer to only hear about changes above a medium blast radius? Set it and trust it. Lev handles the velocity. You keep the oversight. The autonomy is real, but the final call is always yours.
+                Lev starts by proposing and you approve. As it proves reliability, it earns more autonomy. Destructive actions like deleting infrastructure always require you. Think of it like onboarding a new hire: trust is built through demonstrated competence, not assumed.
               </p>
               <p className="text-lev-dark font-semibold">
-                As hands-on or hands-off as your business needs you to be.
+                You stay in control. Lev earns your trust.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Solutions for Your Team */}
-      <section className="py-20 bg-gray-50">
+      {/* What Lev Can Build */}
+      <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-primary-3">
-            Built for How You Actually Work
+            What Lev Can Build
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            Whether you're shipping your first product or managing a portfolio of applications, Lev meets you where you are.
+            Full stack. Frontend and backend. If you can describe the system, Lev can build it.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Startup Founders */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
-              <div className="w-12 h-12 bg-lev-bold/15 rounded-xl flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-lev-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              "Web applications & APIs",
+              "Microservice architectures",
+              "ML training & inference pipelines",
+              "AI-powered applications",
+              "Real-time event processing",
+              "IoT data platforms",
+              "Workflow automation",
+              "Event-driven architectures",
+            ].map((item) => (
+              <div key={item} className="bg-gray-50 rounded-xl p-4 text-center border border-gray-200">
+                <p className="text-gray-700 text-sm font-medium">{item}</p>
               </div>
-              <h3 className="font-bold text-xl mb-3 text-primary-3">Startup</h3>
-              <p className="text-gray-600 leading-relaxed mb-5">
-                You're racing a runway and building something that doesn't exist yet. Every sprint that churns instead of ships is a sprint you can't afford. Lev gives you a complete engineering team without the six-month hiring cycle. You get to market with software you can actually support once customers show up.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">&#x2713;</span>
-                  <span className="text-gray-700 text-sm">Golden Spec prevents wasting precious cycles rebuilding what already worked</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">&#x2713;</span>
-                  <span className="text-gray-700 text-sm">A teammate from day one that takes you from architecture through production</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">&#x2713;</span>
-                  <span className="text-gray-700 text-sm">SRE means you can promise uptime to customers and actually keep that promise</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Corporate CIOs */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
-              <div className="w-12 h-12 bg-lev-bold/15 rounded-xl flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-lev-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-              </div>
-              <h3 className="font-bold text-xl mb-3 text-primary-3">Enterprise</h3>
-              <p className="text-gray-600 leading-relaxed mb-5">
-                Lev is the engineer who's been on every project, sat in every architecture review, and remembers every production incident. The institutional memory your organization needs but can't build fast enough. Lev gives you the predictability to make commitments you can keep, and the governance to prove it's working.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">&#x2713;</span>
-                  <span className="text-gray-700 text-sm">Guardrails give you visibility and control without micromanaging your teams</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">&#x2713;</span>
-                  <span className="text-gray-700 text-sm">Golden Spec creates an auditable trail of decisions. No more "why did we build it this way?"</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-lev-bold font-bold text-lg leading-tight">&#x2713;</span>
-                  <span className="text-gray-700 text-sm">SRE with full system context means production incidents don't cascade into crises</span>
-                </li>
-              </ul>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* The Lev Advantage */}
+      {/* What This Means For You */}
       <section className="py-20 bg-primary-4">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-white">
-            The Lev Advantage
+            What This Means for You
           </h2>
-          <p className="text-lg text-gray-400 text-center mb-6 max-w-3xl mx-auto">
-            The agentic coding market has raised $3+ billion in funding (CB Insights, 2025). The best publicly verified benchmark success rate? 58% (SWE-bench Verified, mid-2025). Only 24% of organizations have scaled AI agents to production (McKinsey, 2025). The tools are failing the people who bought them.
-          </p>
-          <p className="text-lg text-lev-bold text-center mb-14 max-w-3xl mx-auto font-semibold">
-            Lev was designed from the ground up to fix what's broken.
+          <p className="text-lg text-gray-400 text-center mb-14 max-w-3xl mx-auto">
+            Lev isn't a tool you learn. It's a team member you direct.
           </p>
 
-          {/* What Only Lev Delivers */}
-          <p className="text-sm text-lev-bold uppercase tracking-widest mb-6 text-center font-semibold">What only Lev delivers</p>
-          <div className="grid md:grid-cols-2 gap-6 mb-14">
+          <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-lev-bold/30">
-              <h3 className="font-bold text-lg mb-3 text-lev-bold">End-to-End Ownership</h3>
+              <h3 className="font-bold text-lg mb-3 text-lev-bold">Stop Being Blocked by Hiring</h3>
               <p className="text-white/80 text-sm leading-relaxed">
-                Every competitor stops at code generation. Lev is the only platform that owns the outcome from first commit through production incident. Dev, deploy, and SRE: unified in one system, not bolted together after the fact.
+                The senior engineer you can't find, can't afford, and can't wait for? Lev replaces that bottleneck. Your ideas become running software on a timeline measured in days, not quarters.
               </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-lev-bold/30">
-              <h3 className="font-bold text-lg mb-3 text-lev-bold">Golden Spec Methodology</h3>
+              <h3 className="font-bold text-lg mb-3 text-lev-bold">"Built Right" and "Built Now"</h3>
               <p className="text-white/80 text-sm leading-relaxed">
-                AI tools suffer from context amnesia. Every session starts from scratch, rewriting code that already worked. The Golden Spec captures every decision, every reason why, and progressively hardens your requirements. No competitor has anything like it.
+                Lev doesn't cut corners to ship fast. It deploys real infrastructure with real security, real monitoring, real rollback capability. Production-grade from day one.
               </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-lev-bold/30">
-              <h3 className="font-bold text-lg mb-3 text-lev-bold">Integrated SRE</h3>
+              <h3 className="font-bold text-lg mb-3 text-lev-bold">An Ops Team You Don't Manage</h3>
               <p className="text-white/80 text-sm leading-relaxed">
-                When AI-generated code breaks at 2 AM, other tools have already moved on. Lev's SRE has full context into your specs, telemetry, and incident history. It resolves issues without regressing functionality because it understands what it's protecting.
+                Lev handles operational intelligence, incident response, and proactive monitoring 24/7. When it finds something like a degradation trend or a predicted failure, it tells you in plain language.
+              </p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-lev-bold/30">
+              <h3 className="font-bold text-lg mb-3 text-lev-bold">Intelligence That Compounds</h3>
+              <p className="text-white/80 text-sm leading-relaxed">
+                Every product Lev operates makes it smarter about all products. A problem it solved on one system becomes a pattern it recognizes instantly on another. You're subscribing to engineering intelligence that improves every minute it runs.
               </p>
             </div>
           </div>
@@ -499,47 +424,47 @@ export default function LevPage() {
               {
                 question: "Does Lev replace my engineering team?",
                 answer:
-                  "No. Lev is the teammate who handles the execution so your best people can focus on the decisions only they can make. It doesn\u2019t replace judgment. It makes sure judgment is never wasted on code that gets rewritten next sprint.",
+                  "For startups without a team, Lev is the team. For companies with engineers, Lev handles execution so your best people focus on the decisions only they can make. It doesn\u2019t replace judgment. It makes sure judgment translates into shipped, running software.",
               },
               {
                 question: "How is Lev different from Cursor, Copilot, or Devin?",
                 answer:
-                  "Those tools generate code and stop. Lev owns the entire lifecycle, from collaborative spec creation through deployment and production support. When their code breaks at 2 AM, you\u2019re on your own. When Lev\u2019s code needs attention, SRE already has the context to fix it without breaking something else. We\u2019re not a coding assistant. We\u2019re a complete engineering system.",
+                  "Those tools help you write code faster. Lev is the engineer. It designs architecture from a mission brief, writes the code, deploys to real AWS infrastructure, monitors 24/7, and fixes problems when they happen. When Copilot\u2019s code breaks at 2 AM, you\u2019re on your own. When Lev\u2019s system needs attention, the ops team is already working the problem.",
               },
               {
-                question: "What exactly is the Golden Spec?",
+                question: "What is a Mission Brief?",
                 answer:
-                  "The Golden Spec is a living blueprint that Lev builds collaboratively with you before writing any code. It captures every requirement, every architectural decision, and the reasoning behind each choice. As your project evolves, the spec is progressively hardened, meaning Lev never rewrites what already works. Past versions and past decisions are preserved, so your product compounds forward instead of churning in circles.",
+                  "A mission brief is how you tell Lev what to build, in plain language. What the product does, who it serves, what it needs to handle. Lev designs the architecture from first principles, choosing from 30+ AWS services across compute, data, streaming, ML, networking, and more. No templates, no boilerplate. Real systems designed for what you actually need.",
+              },
+              {
+                question: "What does \u201cEarned Autonomy\u201d mean?",
+                answer:
+                  "Lev starts in proposal mode. It recommends and you approve. As it proves reliability, it earns greater autonomy. Some actions it can never take without you, like deleting infrastructure or modifying authentication. This isn\u2019t a system you have to watch nervously. It\u2019s a system that proves it deserves more responsibility over time, like onboarding a new hire.",
               },
               {
                 question: "How does Lev handle deployments?",
                 answer:
-                  "Lev manages its own deployments, provisioning and configuring your infrastructure as part of the SDLC, not as an afterthought. Deployment alerts are fully customizable: choose what you\u2019re notified about, from every deployment to only those that affect critical services.",
+                  "Lev deploys to real production AWS infrastructure managed by Terraform. Not a sandbox. Not a preview link. Real infrastructure with circuit breakers, automatic rollback on failed deployments, encryption in transit and at rest, and private networking. The kind of infrastructure a senior DevOps engineer would set up.",
               },
               {
                 question: "Can Lev work with my existing codebase?",
                 answer:
-                  "Yes. Lev handles both greenfield projects and existing codebases. For existing systems, Lev onboards your codebase through a Golden Spec discovery process, mapping your architecture, documenting decisions, and establishing the baseline before making any changes. This means Lev understands your system before it touches it, which is exactly why fixes don\u2019t cascade.",
-              },
-              {
-                question: "Do I need to bring my own LLM API keys?",
-                answer:
-                  "Yes. Lev uses a BYOK (Bring Your Own Key) model. You provide your own API keys for the LLM providers you prefer. This keeps you in control of your AI vendor relationships and costs, avoids lock-in, and means you can route to the models that work best for your use case. Lev\u2019s multi-LLM routing automatically selects the optimal model per task from the providers you\u2019ve configured.",
+                  "Yes. Lev handles both greenfield projects and existing codebases. For existing systems, Lev maps your architecture and establishes a baseline before making any changes. It understands your system before it touches it.",
               },
               {
                 question: "What if I already use AI coding tools?",
                 answer:
-                  "Lev isn\u2019t replacing your IDE or your copilot. Your developers can keep using Cursor, Copilot, or whatever tools they prefer for day-to-day coding. Lev operates at a different level: owning the spec, the architecture, the deployment, and production support. Think of it as the system that makes sure all that AI-generated code actually works together, ships reliably, and stays maintainable.",
+                  "Keep them. Your developers can use Cursor, Copilot, or whatever they prefer for day-to-day coding. Lev operates at a different level: owning the architecture, deployment, operations, and incident response. Think of it as the system that makes sure all that code actually ships reliably and stays running.",
               },
               {
                 question: "Who owns the code Lev creates?",
                 answer:
-                  "You do. 100% of the IP, 100% of the rights. Lev is completely separate from the code it produces. There\u2019s no proprietary runtime baked in, no vendor SDK woven into your output, and no phone-home dependencies. The code Lev writes is standard, clean, production-grade code that any engineer can read, maintain, and extend without Lev in the picture. Think of it like hiring a contractor to build your house. When the job is done, you own the house. Lev is a tool you use, not a co-owner of what you build.",
+                  "You do. 100% of the IP, 100% of the rights. No proprietary runtime, no vendor SDK woven into your output, no phone-home dependencies. The code Lev writes is standard, clean, production-grade code that any engineer can read, maintain, and extend without Lev.",
               },
               {
                 question: "Can I try Lev before committing?",
                 answer:
-                  "Yes. Join the waitlist and when your spot opens, you\u2019ll get a free 14-day trial with full access. No credit card required. Start with one feature or one service, experience the Golden Spec process, see how SRE works, and decide with confidence. If Lev isn\u2019t the right fit, you walk away having lost nothing.",
+                  "Yes. Join the waitlist and when your spot opens, you\u2019ll get a free 14-day trial with full access. No credit card required to start. Experience the full pipeline from mission brief to build, deploy, and operate, then decide with confidence.",
               },
             ]}
           />

@@ -91,7 +91,8 @@ export default function HyperscalePage() {
 
           {/* Main headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
-            More GPU training throughput. Zero capex
+            More GPU Training Throughput. <br className="hidden sm:inline" />
+            Powered by Radix Core.
           </h1>
 
           {/* Subheadline */}
@@ -106,7 +107,7 @@ export default function HyperscalePage() {
               trackingLocation="Hyperscale Hero"
               className="px-10 py-5 bg-pop-light text-primary-4 rounded-full font-bold text-xl hover:bg-white transition-all shadow-2xl hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-pop-light/50"
             >
-              Contact Sales
+              Contact Radix Core Sales
             </TrackedCTALink>
             <TrackedCTALink
               href="/waitlist"
@@ -114,7 +115,7 @@ export default function HyperscalePage() {
               trackingLocation="Hyperscale Hero"
               className="px-8 py-4 border-2 border-white/30 text-white rounded-full font-semibold hover:bg-white/10 hover:border-white/50 transition-all text-lg"
             >
-              Join Waitlist
+              Join the Radix Core Waitlist
             </TrackedCTALink>
           </div>
         </div>
