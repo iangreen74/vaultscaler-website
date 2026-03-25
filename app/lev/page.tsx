@@ -5,9 +5,9 @@ import FAQ from "@/components/FAQ";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Lev - Your On-Demand Engineering Team",
+  title: "Lev by VaultScaler | On-Demand Engineering Team",
   description:
-    "Lev is your on-demand engineering team. Describe what to build and Lev designs, codes, deploys, and operates with earned autonomy that keeps you in control.",
+    "Lev is your on-demand engineering team. Describe what to build and Lev designs, codes, deploys, and operates it.",
   alternates: { canonical: `${SITE.url}/lev/` },
   keywords: [
     "AI software engineering",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "production AI coding",
   ],
   openGraph: {
-    title: "Lev - Your On-Demand Engineering Team",
+    title: "Lev by VaultScaler | On-Demand Engineering Team",
     description:
       "Lev is your on-demand engineering team. Describe what to build and Lev designs, codes, deploys, and operates your product.",
     url: `${SITE.url}/lev/`,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lev - Your On-Demand Engineering Team",
+    title: "Lev by VaultScaler | On-Demand Engineering Team",
     description:
       "Lev is your on-demand engineering team. Describe what to build and Lev designs, codes, deploys, and operates your product.",
     images: ["/og/lev.png"],
@@ -74,7 +74,7 @@ export default function LevPage() {
       },
       {
         "@type": "Question",
-        name: "How is Lev different from Cursor, Copilot, or Devin?",
+        name: "How is Lev different from Cursor, Copilot, Kiro, or Devin?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Those tools help you write code faster. Lev is the engineer. It designs architecture, writes the code, deploys to production, monitors 24/7, and fixes problems without you managing any of it.",
@@ -227,7 +227,7 @@ export default function LevPage() {
               </div>
               <h3 className="font-bold text-xl mb-3 text-primary-3">AI Tools Only Get You Halfway</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Copilot and Cursor help write code faster. But code isn't a product. You still need architecture, infrastructure, deployment pipelines, monitoring, and someone on call when things break. Faster code doesn't close the gap between your vision and production.
+                Copilot, Cursor, and Kiro help write code faster. But code isn't a product. You still need architecture, infrastructure, deployment pipelines, monitoring, and someone on call when things break. Faster code doesn't close the gap between your vision and production.
               </p>
               <p className="text-primary-3 font-semibold">
                 Writing code faster doesn't matter if you can't ship it.
@@ -457,7 +457,7 @@ export default function LevPage() {
                   "For startups without a team, Lev is the team. For companies with engineers, Lev handles execution so your best people focus on the decisions only they can make. It doesn\u2019t replace judgment. It makes sure judgment translates into shipped, running software.",
               },
               {
-                question: "How is Lev different from Cursor, Copilot, or Devin?",
+                question: "How is Lev different from Cursor, Copilot, Kiro, or Devin?",
                 answer:
                   "Those tools help you write code faster. Lev is the engineer. It designs architecture from a mission brief, writes the code, deploys to real AWS infrastructure, monitors 24/7, and fixes problems when they happen. When Copilot\u2019s code breaks at 2 AM, you\u2019re on your own. When Lev\u2019s system needs attention, the ops team is already working the problem.",
               },
@@ -484,7 +484,7 @@ export default function LevPage() {
               {
                 question: "What if I already use AI coding tools?",
                 answer:
-                  "Keep them. Your developers can use Cursor, Copilot, or whatever they prefer for day-to-day coding. Lev operates at a different level: owning the architecture, deployment, operations, and incident response. Think of it as the system that makes sure all that code actually ships reliably and stays running.",
+                  "Keep them. Your developers can use Cursor, Copilot, Kiro, or whatever they prefer for day-to-day coding. Lev operates at a different level: owning the architecture, deployment, operations, and incident response. Think of it as the system that makes sure all that code actually ships reliably and stays running.",
               },
               {
                 question: "Who owns the code Lev creates?",

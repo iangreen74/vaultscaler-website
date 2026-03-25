@@ -36,7 +36,7 @@ VaultScaler is the company behind Lev, an agentic engineering system for full SD
 ### What is Lev?
 Lev is an Agentic Engineering System that handles the full software development lifecycle — from architecture and spec creation through deployment and production support. It uses the Golden Spec methodology to prevent codebase churn and includes integrated SRE.
 
-### How is Lev different from Cursor, Copilot, or Devin?
+### How is Lev different from Cursor, Copilot, Kiro, or Devin?
 Those tools generate code and stop. Lev owns the entire lifecycle from collaborative spec creation through deployment and production support, with integrated SRE that has full system context.
 
 ### What is Radix Core?

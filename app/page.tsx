@@ -5,14 +5,14 @@ import { SITE } from '@/lib/site';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Lev | AI Engineering. Actual Delivery.',
-  description: 'Lev is a full-stack engineering team on demand. Describe what to build and Lev designs, codes, deploys, and operates with earned autonomy and 24/7 ops intelligence.',
+  title: 'Lev by VaultScaler | AI Engineering. Actual Delivery.',
+  description: 'Lev is a full-stack engineering team on demand. Describe what to build and Lev designs, codes, deploys, and operates it.',
   alternates: {
     canonical: `${SITE.url}/`,
   },
   keywords: SITE.keywords,
   openGraph: {
-    title: 'Lev | AI Engineering. Actual Delivery.',
+    title: 'Lev by VaultScaler | AI Engineering. Actual Delivery.',
     description: 'A full-stack engineering team on demand. Describe what to build and Lev handles the rest.',
     type: 'website',
     url: `${SITE.url}/`,
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lev | AI Engineering. Actual Delivery.',
+    title: 'Lev by VaultScaler | AI Engineering. Actual Delivery.',
     description: 'A full-stack engineering team on demand. Describe what to build and Lev handles the rest.',
     images: ['/og/vaultscaler.png'],
   },

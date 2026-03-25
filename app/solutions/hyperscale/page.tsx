@@ -6,7 +6,7 @@ import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Hyperscale & Frontier AI: GPU Fleet Optimization | VaultScaler',
-  description: 'Maximize GPU utilization across your fleet. Up to 21% training throughput gains (internal benchmarks), estimated $2.5M saved per 1K GPUs annually. Deploy via Helm chart with zero stack changes.',
+  description: 'Maximize GPU utilization across your fleet. Up to 21% training throughput gains and $2.5M estimated savings per 1K GPUs annually.',
   alternates: {
     canonical: `${SITE.url}/solutions/hyperscale/`,
   },

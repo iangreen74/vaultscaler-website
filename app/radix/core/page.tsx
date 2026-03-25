@@ -7,7 +7,7 @@ import FAQ from '@/components/FAQ';
 
 export const metadata: Metadata = {
   title: 'Radix Core: Up to 21% Faster GPU Training | VaultScaler',
-  description: 'Radix Core uses closed-loop control to balance memory, compute, and power across training runs. Up to 21% throughput improvement over FIFO scheduling. Deploy via Helm chart with zero stack changes.',
+  description: 'Radix Core balances memory, compute, and power across GPU training runs. Up to 21% throughput improvement. Deploy via Helm chart.',
   alternates: {
     canonical: `${SITE.url}/radix/core/`,
   },

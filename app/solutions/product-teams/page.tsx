@@ -7,7 +7,7 @@ import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Product & Engineering Teams: Ship Without the Hiring Bottleneck | VaultScaler',
-  description: 'Lev is a full-stack engineering team on demand. Describe what to build and Lev designs, codes, deploys, and operates. Mission brief methodology. Earned autonomy. 24/7 ops intelligence.',
+  description: 'Lev is a full-stack engineering team on demand. Describe what to build and Lev designs, codes, deploys, and operates it.',
   alternates: {
     canonical: `${SITE.url}/solutions/product-teams/`,
   },
@@ -212,7 +212,7 @@ export default function ProductTeamsPage() {
               </div>
               <h3 className="font-bold text-xl mb-3 text-primary-3">AI Tools Don't Close the Loop</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Copilot and Cursor help your team write code faster. But faster code still needs deployment, monitoring, and incident response. The bottleneck was never writing code — it's everything after. Your team still owns the full lifecycle of everything they ship.
+                Copilot, Cursor, and Kiro help your team write code faster. But faster code still needs deployment, monitoring, and incident response. The bottleneck was never writing code — it's everything after. Your team still owns the full lifecycle of everything they ship.
               </p>
               <p className="text-lev-dark font-semibold text-sm">
                 Faster code doesn't help if your team is still stuck on ops.

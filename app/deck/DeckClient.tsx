@@ -190,7 +190,7 @@ const slides: Slide[] = [
           You write a mission brief. Lev designs the architecture from 30 AWS services, builds with coordinated agent teams, deploys to production, and keeps it running. You own everything.
         </p>
 
-        <div className="grid sm:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 gap-6">
           <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
             <div className="w-8 h-8 bg-lev-bold/15 rounded-lg flex items-center justify-center mb-3">
               <span className="text-lev-bold font-bold text-sm">1</span>
@@ -211,6 +211,13 @@ const slides: Slide[] = [
             </div>
             <h4 className="font-bold text-gray-800 mb-2">Earned Autonomy</h4>
             <p className="text-gray-500 text-sm">Lev starts by proposing and you approve. As it proves reliability, it earns more autonomy. Destructive actions like deleting infrastructure always require you.</p>
+          </div>
+          <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <div className="w-8 h-8 bg-lev-bold/15 rounded-lg flex items-center justify-center mb-3">
+              <span className="text-lev-bold font-bold text-sm">4</span>
+            </div>
+            <h4 className="font-bold text-gray-800 mb-2">Smarter Every Day</h4>
+            <p className="text-gray-500 text-sm">Lev continuously captures lessons and audits its own decisions. Patterns from one problem become instincts for the next. Your engineering intelligence compounds over time.</p>
           </div>
         </div>
       </div>
@@ -441,7 +448,7 @@ const slides: Slide[] = [
               <p className="font-bold text-gray-800 text-lg mb-1">Ian Green</p>
               <p className="text-sm text-lev-bold font-semibold mb-3">CEO</p>
               <p className="text-gray-600 text-sm leading-relaxed">
-                AI platform engineer. Designed and built the systems that became both Lev and Radix Core. Deep technical background in agentic systems and GPU optimization.
+                Former New Zealand Defense Force, focused on defensive cyber operations. AI platform engineer. Deep technical background in systems engineering and Dev/Ops.
               </p>
             </div>
           </div>
