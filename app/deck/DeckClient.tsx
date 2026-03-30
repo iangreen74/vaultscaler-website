@@ -35,14 +35,13 @@ const slides: Slide[] = [
           </span>
         </div>
 
-        <p className="text-lg sm:text-xl font-semibold text-lev-bold mb-2">
+        <p className="text-5xl sm:text-6xl font-bold text-lev-bold mt-8 mb-2">
           Lev
         </p>
         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary-2 mb-4">
-          Agentic Engineering System
-        </p>
-        <p className="text-gray-500 text-sm mb-10">
-          The engineering team that never sleeps, never forgets, and never stops improving.
+          The engineering team that never sleeps,<br />
+          never forgets,<br />
+          and never stops improving.
         </p>
 
         <div className="border-t border-gray-200 pt-6 mt-6">
@@ -173,12 +172,12 @@ const slides: Slide[] = [
     title: "Lev: Your Engineering Team On Demand",
     content: (
       <div className="py-4">
-        <p className="text-gray-500 font-semibold text-sm uppercase tracking-widest mb-6">
-          Not a code assistant. Not an app builder. The engineer.
+        <p className="text-gray-600 mb-8">
+          Your vision. Launced and supported in production.
         </p>
 
-        <div className="flex flex-wrap items-center gap-3 mb-10">
-          {["Describe", "Design", "Build", "Deploy", "Operate"].map((step, idx) => (
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
+          {["Mission Brief", "Architecture", "Build", "Deploy", "Operate"].map((step, idx) => (
             <div key={step} className="flex items-center gap-3">
               <span className="bg-primary-3 text-white text-sm font-bold px-4 py-2 rounded-lg">{step}</span>
               {idx < 4 && <span className="text-gray-300 text-xl">&rarr;</span>}
@@ -187,43 +186,27 @@ const slides: Slide[] = [
         </div>
 
         <p className="text-gray-600 mb-8">
-          You write a mission brief. Lev designs the architecture from 30 AWS services, builds with coordinated agent teams, deploys to production, and keeps it running. You own everything.
+          Describe what to build. Get production software.
         </p>
 
-        <div className="grid sm:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-3 gap-6">
           <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <div className="w-8 h-8 bg-lev-bold/15 rounded-lg flex items-center justify-center mb-3">
-              <span className="text-lev-bold font-bold text-sm">1</span>
-            </div>
-            <h4 className="font-bold text-gray-800 mb-2">Mission Brief &rarr; Production</h4>
-            <p className="text-gray-500 text-sm">Describe what to build in plain language. Lev designs from first principles, codes, and deploys to real AWS infrastructure with Terraform, circuit breakers, and automatic rollback.</p>
+            <h4 className="font-bold text-gray-800 mb-2">Define the Mission</h4>
+            <p className="text-gray-500 text-sm">Lev co-creates a mission brief with you. It deeply understands your intent and ideal end state, then builds it end to end.</p>
           </div>
           <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <div className="w-8 h-8 bg-lev-bold/15 rounded-lg flex items-center justify-center mb-3">
-              <span className="text-lev-bold font-bold text-sm">2</span>
-            </div>
-            <h4 className="font-bold text-gray-800 mb-2">24/7 Ops Intelligence</h4>
-            <p className="text-gray-500 text-sm">When something breaks, a 4-agent incident team diagnoses, fixes, rolls back, and verifies. It continuously learns patterns so problems get solved before you wake up.</p>
+            <h4 className="font-bold text-gray-800 mb-2">Ship Your Roadmap</h4>
+            <p className="text-gray-500 text-sm">Go from 3 features a quarter to 10 without adding headcount. Your roadmap doesn&rsquo;t need to be rationed.</p>
           </div>
           <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <div className="w-8 h-8 bg-lev-bold/15 rounded-lg flex items-center justify-center mb-3">
-              <span className="text-lev-bold font-bold text-sm">3</span>
-            </div>
-            <h4 className="font-bold text-gray-800 mb-2">Earned Autonomy</h4>
-            <p className="text-gray-500 text-sm">Lev starts by proposing and you approve. As it proves reliability, it earns more autonomy. Destructive actions like deleting infrastructure always require you.</p>
-          </div>
-          <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <div className="w-8 h-8 bg-lev-bold/15 rounded-lg flex items-center justify-center mb-3">
-              <span className="text-lev-bold font-bold text-sm">4</span>
-            </div>
-            <h4 className="font-bold text-gray-800 mb-2">Smarter Every Day</h4>
-            <p className="text-gray-500 text-sm">Lev continuously captures lessons and audits its own decisions. Patterns from one problem become instincts for the next. Your engineering intelligence compounds over time.</p>
+            <h4 className="font-bold text-gray-800 mb-2">24/7 Operations</h4>
+            <p className="text-gray-500 text-sm">Autonomous incident diagnosis, response, verification. Rollback if necessary. No on-call rotation needed.</p>
           </div>
         </div>
       </div>
     ),
     notes:
-      "Mission Brief is the core architecture. You describe what to build and Lev designs from a catalog of 30 AWS services across compute, data, streaming, ML, networking, orchestration, storage, and monitoring. Not templates. First-principles design. Coordinated agent teams handle dependency ordering, code generation, and deployment automatically. Real AWS infrastructure: Terraform, circuit breakers, automatic rollback, encryption in transit and at rest, private networking. The kind of infra a senior DevOps engineer sets up, except you didn\u2019t hire one. Ops intelligence runs a continuous 7-layer cycle: codebase mapping, operational rhythms, incident clustering, causal chains, compression, prediction, accuracy auditing. This is demonstrated behavior, not roadmap. 4-agent incident team: diagnostician, fixer, rollback specialist, health monitor. Earned autonomy has 4 authorization tiers. Lev starts in proposal mode and earns greater autonomy as it proves reliability. Some actions it can never take without you, like deleting infrastructure or modifying authentication. Plain language throughout. Lev asks approval in English, not Terraform plans.",
+      "Product slide reframed for buyer (product leaders, not devs). Card 1: Mission Brief to Production \u2014 maps to speed/velocity pain across all personas. Full lifecycle, no handoffs. Card 2: 24/7 Ops Intelligence \u2014 addresses #1 evaluation skepticism: 'what happens when it breaks?' Autonomous incident response with full architectural context. Card 3: Your Code, Your Infra \u2014 trust signals for both ICP CEOs and enterprise IT 'resistors.' Deploys to customer AWS, auditable, no lock-in. Arms the product champion with the story they\u2019d tell their CTO.",
   },
 
   /* ── Slide 5 — Market ── */
@@ -300,7 +283,7 @@ const slides: Slide[] = [
                 ["Architecture/Spec", "Mission Brief", "No", "No", "Partial"],
                 ["Deployment", "Yes", "Partial", "Locked", "Partial"],
                 ["SRE / Ops", "Yes", "No", "No", "No"],
-                ["Code Ownership", "100%", "100%", "Partial", "Unclear"],
+                ["Code Ownership", "Yes", "Yes", "Partial", "Yes"],
               ].map(([label, lev, factory, replit, devin], idx) => (
                 <tr key={idx} className="border-b border-gray-100">
                   <td className="py-2.5 pr-3 font-medium text-gray-700">{label}</td>
@@ -399,9 +382,9 @@ const slides: Slide[] = [
             <tbody className="text-gray-600">
               <tr className="border-b border-gray-100">
                 <td className="py-3 pr-4 font-medium text-gray-700">Annual cost</td>
-                <td className="py-3 px-4">$500K&ndash;$850K/yr</td>
-                <td className="py-3 px-4">$120K&ndash;$300K/yr</td>
-                <td className="py-3 px-4 font-bold text-lev-bold">$6K/yr (Pro)</td>
+                <td className="py-3 px-4">$500K&ndash;$850K</td>
+                <td className="py-3 px-4">$120K&ndash;$300K</td>
+                <td className="py-3 px-4 font-bold text-lev-bold">$6K (Pro)</td>
               </tr>
               <tr className="border-b border-gray-100">
                 <td className="py-3 pr-4 font-medium text-gray-700">Time to productivity</td>
@@ -427,7 +410,7 @@ const slides: Slide[] = [
 
         <div className="bg-primary-3/5 rounded-xl p-6 border border-primary-3/15 mb-6">
           <p className="text-primary-3 font-bold text-lg mb-1">
-            Full-team output. Single-engineer budget. Shipping in days, not months.
+            Full-team output for the cost of a fractional engineer. Shipping in days, not months.
           </p>
         </div>
       </div>
@@ -533,9 +516,6 @@ const slides: Slide[] = [
     variant: "dark",
     content: (
       <div className="py-4">
-        <p className="text-gray-300 text-sm mb-8">
-          SAFE &mdash; $4M post-money cap &mdash; MFN provisions
-        </p>
 
         <p className="text-sm font-semibold text-lev-bold uppercase tracking-widest mb-6">
           Use of Funds
@@ -552,15 +532,19 @@ const slides: Slide[] = [
             <tbody className="text-gray-300">
               <tr className="border-b border-white/10">
                 <td className="py-3 pr-4 font-medium text-white">Engineering</td>
-                <td className="py-3">Mission brief architecture, intelligence cycle, earned autonomy</td>
+                <td className="py-3">Production hardening with design partners. Autonomous 24/7 ops agent.</td>
               </tr>
               <tr className="border-b border-white/10">
                 <td className="py-3 pr-4 font-medium text-white">Go-to-Market</td>
-                <td className="py-3">PLG funnel, startup community presence, Starter&rarr;Pro conversion</td>
+                <td className="py-3">Product-led free tier and founder-led sales to first 10 customer conversions</td>
               </tr>
             </tbody>
           </table>
         </div>
+
+        <p className="text-gray-300 text-sm mb-8">
+          SAFE &mdash; $4M post-money cap
+        </p>
 
         <p className="text-sm font-semibold text-lev-bold uppercase tracking-widest mb-4">
           Milestones This Capital Unlocks
