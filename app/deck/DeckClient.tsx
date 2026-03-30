@@ -39,9 +39,8 @@ const slides: Slide[] = [
           Lev
         </p>
         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary-2 mb-4">
-          The engineering team that never sleeps,<br />
-          never forgets,<br />
-          and never stops improving.
+          The first engineering platform<br />
+          built for product people.
         </p>
 
         <div className="border-t border-gray-200 pt-6 mt-6">
@@ -53,7 +52,7 @@ const slides: Slide[] = [
       </div>
     ),
     notes:
-      "Clean open. Lead with Lev as the company story. Radix Core is the origin, the hard problem that proved we needed Lev. Don\u2019t split focus. One product, one thesis: the lifecycle layer that every other tool skips.",
+      "Clean open. Lead with Lev as the product-visionary\u2019s platform. The thesis: AI is solving the science of engineering. The unsolved problem is getting product vision into production. Lev is the first platform built for that buyer \u2014 product people with domain expertise, not IT. One product, one thesis: the lifecycle layer that every other tool skips, built for the person with the vision.",
   },
 
   /* ── Slide 2 — The Problem ── */
@@ -63,21 +62,21 @@ const slides: Slide[] = [
     content: (
       <div className="py-4">
         <h3 className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-8">
-          10x Engineering Was Promised.
-
+          $7.4B Making Developers Faster.<br />
+          Nothing Built for the Person with the Vision.
         </h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-lg sm:max-w-xl mx-auto mb-8">
           <div className="bg-white/10 rounded-xl p-6 text-center">
             <p className="text-3xl sm:text-4xl font-extrabold text-lev-bold">$7.4B</p>
             <p className="text-gray-300 text-sm mt-2">
-              spent on AI code tools in 2025
+              spent on AI code tools in 2025 &mdash; all built for developers
             </p>
           </div>
           <div className="bg-white/10 rounded-xl p-6 text-center">
-            <p className="text-3xl sm:text-4xl font-extrabold text-lev-bold">58%</p>
+            <p className="text-3xl sm:text-4xl font-extrabold text-lev-bold">0</p>
             <p className="text-gray-300 text-sm mt-2">
-              best agentic success rate on SWE-bench
+              built for product leaders who own the vision
             </p>
           </div>
         </div>
@@ -86,34 +85,34 @@ const slides: Slide[] = [
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-white/20">
-                <th className="text-left py-2.5 pr-6 font-semibold text-gray-400">What AI Tools Do</th>
-                <th className="text-left py-2.5 font-semibold text-gray-400">What Shipping Requires</th>
+                <th className="text-left py-2.5 pr-6 font-semibold text-gray-400">What Product Leaders Need</th>
+                <th className="text-left py-2.5 font-semibold text-gray-400">What the Market Built</th>
               </tr>
             </thead>
             <tbody className="text-gray-300">
               <tr className="border-b border-white/10">
-                <td className="py-2.5 pr-6">Generate code from prompts</td>
-                <td className="py-2.5">Architectural decisions with reasoning</td>
+                <td className="py-2.5 pr-6">Describe a product vision, get production grade software</td>
+                <td className="py-2.5">Code generation from technical prompts</td>
               </tr>
               <tr className="border-b border-white/10">
-                <td className="py-2.5 pr-6">Forget context between sessions</td>
-                <td className="py-2.5">Maintain institutional memory</td>
+                <td className="py-2.5 pr-6">A platform that remembers every decision</td>
+                <td className="py-2.5">Context that evaporates between sessions</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-6">Produce output, hope it works</td>
-                <td className="py-2.5">Own production reliability</td>
+                <td className="py-2.5 pr-6">Deployed, operated, and reliable in production</td>
+                <td className="py-2.5">Output you hope works, then hand off to someone else</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <p className="text-lev-bold font-bold text-lg">
-          Every tool on the market solves one slice. Nobody owns the outcome.
+          Every tool on the market was built for developers. Nobody built for the product visionary.
         </p>
       </div>
     ),
     notes:
-      "$7.4B: Mordor Intelligence, AI Code Tools Market 2025. 58% success rate: SWE-bench Verified, mid-2025. 24% scaled to production: McKinsey, 2025. The gap: tools produce code, but nobody owns architecture, deployment, or ops. Teams spend weeks hardening \u201C80% done\u201D demos into shippable products. Engineering velocity declined at many orgs despite tool adoption. Factory (Sequoia-backed): agent Droids, 5,000+ EY engineers. Additive to existing orgs, no lifecycle. Replit ($9B valuation): builds and hosts. You don\u2019t own the infra. Devin ($10.2B valuation): autonomous agent. Black box. No SRE. $55B+ in combined valuations across tools that each stop at \u201Ccode generated.\u201D",
+      "$7.4B: Mordor Intelligence, AI Code Tools Market 2025. The key insight: every dollar was spent making developers faster. Nobody built for the product leader \u2014 the person with the domain expertise and the vision who can\u2019t get it into production. 58% success rate: SWE-bench Verified, mid-2025. 24% scaled to production: McKinsey, 2025. The gap isn\u2019t engineering quality \u2014 it\u2019s that the buyer was always assumed to be a developer. Factory, Replit, Devin, Lovable \u2014 $55B+ in combined valuations, all built for technical users. The product visionary is the underserved buyer in a $7.4B market.",
   },
 
   /* ── Slide 3 — Why Now ── */
@@ -121,59 +120,66 @@ const slides: Slide[] = [
     title: "The Window Is Open Right Now",
     content: (
       <div className="py-4">
+        <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 mb-6">
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-3">The Shift</p>
+          <p className="text-gray-700 text-base leading-relaxed">
+            AI is solving the science of engineering. Code generation, deployment, infrastructure &mdash; all being abstracted. For the first time, <span className="font-bold text-gray-900">product vision can be the bottleneck, not engineering capacity.</span> But the market hasn&rsquo;t built for that buyer yet.
+          </p>
+        </div>
+
         <div className="grid sm:grid-cols-2 gap-6 mb-8">
           <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-3">Market Shift</p>
+            <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-3">Market Proof</p>
             <ul className="space-y-3 text-gray-600 text-sm">
               <li className="flex items-start gap-3">
                 <span className="text-primary-3 font-bold mt-0.5">&rarr;</span>
-                <span>Factory (Sequoia-backed) deploys agentic Droids to 5,000+ EY engineers &mdash; enterprise demand for full SDLC agents is proven</span>
+                <span>$55B+ in combined valuations across tools that stop at &ldquo;code generated&rdquo; &mdash; all built for developers</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary-3 font-bold mt-0.5">&rarr;</span>
-                <span>85% of developers now use AI coding tools (GitHub, 2025)</span>
+                <span>85% of developers now use AI coding tools (GitHub, 2025) &mdash; code generation is commoditizing</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary-3 font-bold mt-0.5">&rarr;</span>
-                <span>Autocomplete is commoditizing &mdash; lifecycle management is the next layer</span>
+                <span>Only 24% of AI agents reach production (McKinsey, 2025) &mdash; the last mile is wide open</span>
               </li>
             </ul>
           </div>
           <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-3">Validation Signals</p>
+            <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-3">Where It&rsquo;s Heading</p>
             <ul className="space-y-3 text-gray-600 text-sm">
               <li className="flex items-start gap-3">
                 <span className="text-primary-3 font-bold mt-0.5">&rarr;</span>
-                <span>Claude Code GitHub commits grew 1,200% in 6 months &mdash; agentic coding adoption is exploding</span>
+                <span>The last decade built tools for developers. The next decade builds tools for product visionaries.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary-3 font-bold mt-0.5">&rarr;</span>
-                <span>$55B+ in combined valuations across tools that stop at &ldquo;code generated&rdquo;</span>
+                <span>Factory (Sequoia-backed) at EY proves enterprise demand for full-lifecycle platforms</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary-3 font-bold mt-0.5">&rarr;</span>
-                <span>Only 24% of AI agents reach production (McKinsey, 2025)</span>
+                <span>Claude Code commits grew 1,200% in 6 months &mdash; engineering abstraction is accelerating</span>
               </li>
             </ul>
           </div>
         </div>
 
         <p className="text-primary-3 font-bold text-lg">
-          The market proved the demand. Nobody has claimed the lifecycle layer. That&rsquo;s our opening.
+          Engineering is being solved. The product visionary is the next buyer. Lev is first to market.
         </p>
       </div>
     ),
     notes:
-      "This is the timing slide. Factory proved enterprises will pay for agentic dev at massive scale, with 5,000+ engineers at EY. But every incumbent stopped at code generation or workflow augmentation. The lifecycle gap (spec \u2192 build \u2192 deploy \u2192 operate) is wide open. Claude Code GitHub commits grew 1,200% in six months, showing agentic coding adoption is exploding. McKinsey data shows 76% of AI agents fail to reach production, and that\u2019s the exact gap Lev fills. Window is time-limited: incumbents will eventually expand into lifecycle management. First-mover with a working product has 12 to 18 months of positioning advantage.",
+      "This is the timing slide AND the category thesis. The core argument: AI is solving the science of engineering \u2014 code generation, deployment, infrastructure are all being abstracted. This inevitably shifts power to the person with the product vision. The market hasn\u2019t built for that buyer yet. Every incumbent (Factory, Replit, Devin, Lovable \u2014 $55B+ combined) built for developers. The window: first-mover building for product visionaries has 12\u201318 months before incumbents pivot. Factory proved enterprise demand. McKinsey data shows 76% of agents fail to reach production \u2014 the lifecycle gap is the exact problem Lev solves, and it\u2019s the reason product people can\u2019t use existing tools.",
   },
 
   /* ── Slide 4 — Product: Lev ── */
   {
-    title: "Lev: Your Engineering Team On Demand",
+    title: "Lev: From Vision to Production",
     content: (
       <div className="py-4">
         <p className="text-gray-600 mb-8">
-          Your vision. Launced and supported in production.
+          You bring the product expertise. Lev handles the engineering.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
@@ -185,14 +191,10 @@ const slides: Slide[] = [
           ))}
         </div>
 
-        <p className="text-gray-600 mb-8">
-          Describe what to build. Get production software.
-        </p>
-
         <div className="grid sm:grid-cols-3 gap-6">
           <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
             <h4 className="font-bold text-gray-800 mb-2">Define the Mission</h4>
-            <p className="text-gray-500 text-sm">Lev co-creates a mission brief with you. It deeply understands your intent and ideal end state, then builds it end to end.</p>
+            <p className="text-gray-500 text-sm">Describe what you want in plain language. Lev co-creates a mission brief, understands your intent, then builds it end to end. No architecture degree required.</p>
           </div>
           <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
             <h4 className="font-bold text-gray-800 mb-2">Ship Your Roadmap</h4>
@@ -209,7 +211,54 @@ const slides: Slide[] = [
       "Product slide reframed for buyer (product leaders, not devs). Card 1: Mission Brief to Production \u2014 maps to speed/velocity pain across all personas. Full lifecycle, no handoffs. Card 2: 24/7 Ops Intelligence \u2014 addresses #1 evaluation skepticism: 'what happens when it breaks?' Autonomous incident response with full architectural context. Card 3: Your Code, Your Infra \u2014 trust signals for both ICP CEOs and enterprise IT 'resistors.' Deploys to customer AWS, auditable, no lock-in. Arms the product champion with the story they\u2019d tell their CTO.",
   },
 
-  /* ── Slide 5 — Market ── */
+  /* ── Slide 5 — Early Traction ── */
+  {
+    title: "Already in Motion",
+    content: (
+      <div className="py-4">
+        <p className="text-gray-600 mb-8">
+          Launching April 2026. Product built. Pipeline forming.
+        </p>
+
+        <div className="grid sm:grid-cols-3 gap-6 mb-10">
+          <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
+            <p className="text-4xl font-extrabold text-primary-3">2</p>
+            <p className="text-gray-600 text-sm mt-2 font-medium">Design partners</p>
+            <p className="text-gray-400 text-xs mt-1">Production Co-development</p>
+          </div>
+          <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
+            <p className="text-4xl font-extrabold text-primary-3">28</p>
+            <p className="text-gray-600 text-sm mt-2 font-medium">Waitlist signups</p>
+            <p className="text-gray-400 text-xs mt-1">Organic, pre-launch</p>
+          </div>
+          <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
+            <p className="text-4xl font-extrabold text-primary-3">1</p>
+            <p className="text-gray-600 text-sm mt-2 font-medium">Dev firm expressing interest</p>
+            <p className="text-gray-400 text-xs mt-1">Potential channel partner</p>
+          </div>
+        </div>
+
+        <div className="bg-primary-3/5 rounded-xl p-6 border border-primary-3/15">
+          <p className="font-semibold text-gray-800 mb-3">What we&rsquo;ve already built:</p>
+          <ul className="space-y-2 text-gray-600 text-sm">
+            <li className="flex items-start gap-3">
+              <span className="text-primary-3 font-bold mt-0.5">&#x2713;</span>
+              <span>Full lifecycle platform: spec &rarr; build &rarr; deploy &rarr; operate</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-primary-3 font-bold mt-0.5">&#x2713;</span>
+              <span>Dogfooded building our own products</span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    ),
+    notes:
+      "This is the proof slide. We\u2019re pre-revenue but not pre-product. Lev exists, works, and has been used to build real software. 2 design partners are signed and will be co-developing in production at launch. 28 waitlist signups are organic and pre-marketing. 1 development firm has expressed interest as a potential channel partner \u2014 they see Lev as a way to scale their own delivery capacity. The dogfooding story is critical: we didn\u2019t just build Lev, we built WITH Lev. That\u2019s the strongest possible product validation for a pre-revenue company.",
+  },
+
+  /* ── Slide 6 — Market ── */
   {
     title: "Market Opportunity",
     content: (
@@ -259,38 +308,43 @@ const slides: Slide[] = [
       </div>
     ),
     notes:
-      "AI Code Tools Market: AI Code Tools (broad) at $7.4B (2025) growing to $24B (2030), 26.6% CAGR. Agentic Coding Platforms under $1B (2025), fastest-growing subsegment. AI-Assisted DevOps/SRE at $4 to $6B by 2028. Sources: Mordor Intelligence, Grand View Research, Market Research Future. 85% of developers already use AI coding tools. The question isn\u2019t adoption, it\u2019s which tools move from code generation to software delivery. AI autocomplete is commoditizing; lifecycle management is the next layer. SAM estimate (15 to 20% of TAM) is conservative based on enterprise vs. SMB analyst splits, roughly 50,000 to 100,000 teams globally with 2 to 50 developers at $18 to $24K ACV.\n\nBottoms-Up 3-Year Model (5% monthly churn, conservative SMB SaaS standard): Year 1 (PMF hunt, $385K seed) at roughly $935K ARR, around 52 customers, roughly $18K ACV. No revenue months 1 through 3. Ramp: 10 new customers Q2, 20 Q3, 30 Q4. Proving conversion via PLG + founder-led outbound. Year 2 (Series A $3 to $5M, early scale) at $2.5 to $3.5M ARR, around 165 customers, roughly $19K blended ACV, NRR >110%. Capital funds 3 to 5 more engineers + marketing. Enterprise tier ($1,999/mo) lands multi-project deals. Year 3 (growth on Series A runway) at $6 to $10M ARR, 250 to 350 customers, roughly $20K blended ACV, roughly 0.5 to 0.8% SAM penetration. Credible Series B territory. Conservative factors: no revenue today, thin seed ($385K), founder-dependent pipeline until Series A, PLG flywheel takes 6 to 9 months. The bridge: 0.5 to 0.8% of $1.3B SAM in 3 years. Market grows 26%/yr, and by Year 5 SAM is $2.5B+ and 1.5 to 3% penetration = $40 to $70M ARR vision.",
+      "AI Code Tools Market: AI Code Tools (broad) at $7.4B (2025) growing to $24B (2030), 26.6% CAGR. Agentic Coding Platforms under $1B (2025), fastest-growing subsegment. AI-Assisted DevOps/SRE at $4 to $6B by 2028. Sources: Mordor Intelligence, Grand View Research, Market Research Future. 85% of developers already use AI coding tools. The question isn\u2019t adoption, it\u2019s which tools move from code generation to software delivery. AI autocomplete is commoditizing; lifecycle management is the next layer. SAM estimate (~17.5% of TAM) is conservative based on enterprise vs. SMB analyst splits, roughly 50,000 to 100,000 teams globally with 2 to 50 developers at $18 to $24K ACV.\n\nBottoms-Up 3-Year Model (5% monthly churn, conservative SMB SaaS standard): Year 1 (PMF hunt, $385K seed) at $200 to $300K ARR. 2 design partners already lined up, 28 on waitlist, launching April 2026. 50 to 100 Starter ($149/mo), 10 to 20 Pro conversions ($499/mo). Convert waitlist months 1 through 3, PLG organic growth months 4 through 9, first Pro upsells months 10 through 12. Proves PMF, positions seed extension or early Series A. Year 2 (Series A $1.5 to $3M, early scale) at $1 to $2M ARR, 500+ accounts, NRR >110%. Capital funds 2 to 3 engineers + marketing. Enterprise tier ($1,999/mo) lands first multi-project deals. Year 3 (growth on Series A runway) at $3 to $5M ARR, 150+ Pro, 20+ Enterprise, roughly 0.3 to 0.4% SAM penetration, NRR >115%. Credible Series B territory. Conservative factors: launching April 2026, thin seed ($385K), founder-dependent pipeline until Series A, PLG flywheel takes 6 to 9 months. The bridge: 0.3 to 0.4% of $1.3B SAM in 3 years. Market grows 26%/yr, and by Year 5 SAM is $2.5B+ and 1.5 to 3% penetration = $40 to $70M ARR vision.",
   },
 
   /* ── Slide 6 — Competitive Landscape ── */
   {
-    title: "Nobody Owns the Lifecycle.",
+    title: "The Competition is Targeting Developers or Prototypers",
     content: (
       <div className="py-4">
         <div className="overflow-x-auto mb-8">
-          <table className="w-full text-xs sm:text-sm min-w-[480px]">
+          <table className="w-full text-xs sm:text-sm min-w-[600px]">
             <thead>
               <tr className="border-b-2 border-gray-200">
                 <th className="text-left py-3 pr-3 font-semibold text-gray-800"></th>
                 <th className="text-left py-3 px-2 font-semibold text-lev-bold">Lev</th>
-                <th className="text-left py-3 px-2 font-semibold text-gray-800">Factory</th>
-                <th className="text-left py-3 px-2 font-semibold text-gray-800">Replit</th>
+                <th className="text-left py-3 px-2 font-semibold text-gray-800">Cursor</th>
+                <th className="text-left py-3 px-2 font-semibold text-gray-800">Lovable</th>
                 <th className="text-left py-3 px-2 font-semibold text-gray-800">Devin</th>
+                <th className="text-left py-3 px-2 font-semibold text-gray-800">Factory</th>
+                <th className="text-left py-3 px-2 font-semibold text-gray-800">Kiro</th>
               </tr>
             </thead>
             <tbody className="text-gray-600">
               {[
-                ["Architecture/Spec", "Mission Brief", "No", "No", "Partial"],
-                ["Deployment", "Yes", "Partial", "Locked", "Partial"],
-                ["SRE / Ops", "Yes", "No", "No", "No"],
-                ["Code Ownership", "Yes", "Yes", "Partial", "Yes"],
-              ].map(([label, lev, factory, replit, devin], idx) => (
+                ["User", "Product teams", "Developers", "Anyone (prototypes)", "Developers", "Enterprise eng", "Developers"],
+                ["Spec \u2192 Architecture", "Mission Brief", "No", "No", "No", "No", "Partial"],
+                ["Production deploy", "Managed", "No", "No", "Partial", "Partial", "No"],
+                ["Ops / SRE", "Built-in", "No", "No", "No", "No", "No"],
+                ["Pricing", "Flat", "Usage creep", "Usage creep", "Per ACU", "Enterprise", "Usage tiers"],
+              ].map(([label, lev, cursor, lovable, devin, factory, kiro], idx) => (
                 <tr key={idx} className="border-b border-gray-100">
                   <td className="py-2.5 pr-3 font-medium text-gray-700">{label}</td>
                   <td className="py-2.5 px-2 font-semibold text-lev-bold">{lev}</td>
-                  <td className="py-2.5 px-2">{factory}</td>
-                  <td className="py-2.5 px-2">{replit}</td>
+                  <td className="py-2.5 px-2">{cursor}</td>
+                  <td className="py-2.5 px-2">{lovable}</td>
                   <td className="py-2.5 px-2">{devin}</td>
+                  <td className="py-2.5 px-2">{factory}</td>
+                  <td className="py-2.5 px-2">{kiro}</td>
                 </tr>
               ))}
             </tbody>
@@ -298,12 +352,12 @@ const slides: Slide[] = [
         </div>
 
         <p className="text-primary-3 font-bold text-lg">
-          Lev is the only platform that spans spec &rarr; build &rarr; deploy &rarr; operate with full code ownership.
+          $4B+ in ARR across these five players. Lev is the only platform where product visionaries own the full lifecycle: spec &rarr; build &rarr; deploy &rarr; operate.
         </p>
       </div>
     ),
     notes:
-      "Revenue multiples in this space: 18x to 68x ARR. Replit at roughly 34x, Cognition/Devin at roughly 68x, Lovable at roughly 22x, Bolt at roughly 18x. Market rewards growth rate above all. Factory: Sequoia/Lux-backed, deployed to 5,000+ EY engineers. Workflow-integrated Droids, but additive to existing large eng orgs, no lifecycle. Replit: 1,556% YoY growth. $265M ARR. But locked infra, usage-based billing creep ($100 to $300/mo on top of base for heavy users), no SRE. Devin/Cognition: Most autonomous agent. $696M raised, <$20M burned (extremely capital efficient). But black box, no spec methodology, no SRE. Lovable: $300M ARR (Jan 2026), $6.6B valuation. Beautiful prototypes. Not production systems.",
+      "Cursor: $2B+ ARR (Mar 2026), $29B+ valuation, fastest-scaling SaaS ever — but it's a code editor. No spec, no deploy, no ops. Lovable: $400M ARR, $6.6B valuation, 146 employees. Beautiful prototypes, but independent reviews consistently say 'not production-ready.' Enterprise use (Zendesk, McKinsey) is demos and internal tools. Devin: $155M ARR, $10.2B valuation, acquired Windsurf (Jul 2025). Most autonomous agent, but 67% PR merge rate, struggles with ambiguous requirements, no spec methodology. Factory: $70M raised, $300M valuation, Sequoia/NEA/NVIDIA. Enterprise Droids deployed at EY, Wipro, MongoDB. Additive to existing large eng orgs — no lifecycle ownership. Kiro: AWS-backed, spec-driven like Mission Brief, but still a developer IDE — no managed deploy, no ops, no non-technical user support. Revenue multiples in this space: 15x to 66x ARR. Market rewards lifecycle breadth and growth rate.",
   },
 
   /* ── Slide 7 — Business Model ── */
@@ -320,24 +374,24 @@ const slides: Slide[] = [
                 <tr className="border-b-2 border-gray-200">
                   <th className="text-left py-2 pr-4 font-semibold text-gray-800">Plan</th>
                   <th className="text-left py-2 px-4 font-semibold text-gray-800">Price</th>
-                  <th className="text-left py-2 font-semibold text-gray-800">What You Get</th>
+                  <th className="text-left py-2 font-semibold text-gray-800">Details</th>
                 </tr>
               </thead>
               <tbody className="text-gray-600">
                 <tr className="border-b border-gray-100">
                   <td className="py-2 pr-4">Starter</td>
-                  <td className="py-2 px-4 font-semibold text-gray-800">$99/mo</td>
-                  <td className="py-2">1 product, 5 builds/mo, 50 agent-hours, core intelligence</td>
+                  <td className="py-2 px-4 font-semibold text-gray-800">$149/mo</td>
+                  <td className="py-2">50 agent-hours</td>
                 </tr>
                 <tr className="border-b border-gray-100">
                   <td className="py-2 pr-4 font-semibold text-lev-bold">Pro</td>
                   <td className="py-2 px-4 font-semibold text-lev-bold">$499/mo</td>
-                  <td className="py-2">5 products, 25 builds/mo, 200 agent-hours, full intelligence</td>
+                  <td className="py-2">200 agent-hours</td>
                 </tr>
                 <tr>
                   <td className="py-2 pr-4">Enterprise</td>
                   <td className="py-2 px-4 font-semibold text-gray-800">$1,999/mo</td>
-                  <td className="py-2">Unlimited products &amp; builds, priority agent swarms, SSO, SLA</td>
+                  <td className="py-2">1,000 agent-hours, SSO, SLA</td>
                 </tr>
               </tbody>
             </table>
@@ -346,27 +400,24 @@ const slides: Slide[] = [
         </div>
 
         <div className="bg-primary-3/5 rounded-xl p-6 border border-primary-3/15">
-          <p className="text-primary-3 font-bold text-lg mb-1">
-            A senior engineer costs $12K&ndash;20K/mo. Lev Pro is 3% of that.
-          </p>
           <p className="text-gray-500 text-sm">
-            No onboarding. No health insurance. No manager. Sign up, enter your card, start building.
+            Top-up credits available at <span className="font-semibold text-lev-bold">20%</span> discount from plan rate.
           </p>
         </div>
 
       </div>
     ),
     notes:
-      "Three tiers, all flat. Starter ($99/mo) is the PLG entry point with low friction, credit card signup, single product. Pro ($499/mo) is the core revenue tier with 5 products, full intelligence cycle, 200 agent-hours. This is the tier that drives ACV. Enterprise ($1,999/mo) is for multi-project teams needing SSO/SAML and SLAs. Why this pricing wins: Replit is usage-based, heavy users pay $100 to $300/mo on top of base. Unpredictable. Factory: $80/mo base + custom enterprise. Lev: transparent tiers, no usage surprises. Comparison: a single senior engineer costs $12,000 to $20,000/month fully loaded. A junior hire who still needs management costs $6,000 to $8,000. Lev Pro at $499/mo is 3% of a senior engineer and doesn\u2019t need onboarding, health insurance, or a manager. Blended ACV model: Starter $1,188/yr, Pro $5,988/yr, Enterprise $23,988/yr. At steady state, Pro is the center of gravity. Revenue multiples in this market: 18 to 68x ARR.",
+      "Cost per agent-hour by tier: Starter $2.98/hr ($149 \u00f7 50 hrs), Pro $2.50/hr ($499 \u00f7 200 hrs), Enterprise $2.00/hr ($1,999 \u00f7 1,000 hrs). Top-up credits at 20% discount from plan rate: Starter top-ups $2.38/hr, Pro top-ups $2.00/hr, Enterprise top-ups $1.60/hr. Why this pricing wins: Replit is usage-based with unpredictable bills. Factory: $80/mo base + custom enterprise. Lev: transparent tiers, one metric (agent-hours), no surprises. Comparison: a single senior engineer costs $12,000 to $20,000/month fully loaded. A junior hire who still needs management costs $6,000 to $8,000. Lev Pro at $499/mo is 3% of a senior engineer and doesn\u2019t need onboarding, health insurance, or a manager. Blended ACV model: Starter $1,788/yr, Pro $5,988/yr, Enterprise $23,988/yr. At steady state, Pro is the center of gravity. Revenue multiples in this market: 18 to 68x ARR.",
   },
 
   /* ── Slide 8 — Customer ── */
   {
-    title: "For Teams Building the Next Unicorns",
+    title: "For Product Visionaries Who Can\u2019t Wait",
     content: (
       <div className="py-4">
         <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-6">
-          Delivering novel products to small teams with minimal runway.
+          The founder with the $80K quote. The product VP with 5 approved roadmap items out of 20. They couldn&rsquo;t build before. Now they can.
         </p>
 
         <div className="overflow-x-auto mb-8">
@@ -408,11 +459,6 @@ const slides: Slide[] = [
           </table>
         </div>
 
-        <div className="bg-primary-3/5 rounded-xl p-6 border border-primary-3/15 mb-6">
-          <p className="text-primary-3 font-bold text-lg mb-1">
-            Full-team output for the cost of a fractional engineer. Shipping in days, not months.
-          </p>
-        </div>
       </div>
     ),
     notes:
@@ -441,7 +487,7 @@ const slides: Slide[] = [
               <p className="font-bold text-gray-800 text-lg mb-1">Ben Pruess</p>
               <p className="text-sm text-lev-bold font-semibold mb-3">President</p>
               <p className="text-gray-600 text-sm leading-relaxed">
-                20-year healthcare technology leader. Operational expertise in regulated, high-stakes environments. Knows how to scale products in industries where &ldquo;move fast and break things&rdquo; gets people hurt.
+                20-year healthcare technology leader. Operational expertise in regulated environments. Knows how to drive organizational adoption for new technology and business practices.
               </p>
             </div>
           </div>
@@ -456,10 +502,6 @@ const slides: Slide[] = [
             </li>
             <li className="flex items-start gap-3">
               <span className="text-primary-3 font-bold mt-0.5">&#x2713;</span>
-              <span>We&rsquo;ve been shipping production software with Lev since day one.</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-primary-3 font-bold mt-0.5">&#x2713;</span>
               <span>Technical depth (Ian) + operational scale (Ben) = build it right AND sell it.</span>
             </li>
           </ul>
@@ -467,7 +509,7 @@ const slides: Slide[] = [
       </div>
     ),
     notes:
-      "The \u201Cnecessity\u201D narrative is the team story too. This isn\u2019t a team that surveyed the AI tools market and decided to build another one. They were building something genuinely hard (Radix Core), hit the wall with existing tools, and built the tool they needed. Ben\u2019s healthcare background matters: healthcare is a regulated industry where software failures have real consequences. That mindset of reliability, auditability, and governance is baked into Lev\u2019s design.",
+      "The \u201Cnecessity\u201D narrative is the team story too. This isn\u2019t a team that surveyed the AI tools market and decided to build another one. They were building something genuinely hard, hit the wall with existing tools, and built the tool they needed. Ben\u2019s healthcare background matters: healthcare is a regulated industry where software failures have real consequences. That mindset of reliability, auditability, and governance is baked into Lev\u2019s design.",
   },
 
   /* ── Slide 10 — Vision ── */
@@ -479,22 +521,22 @@ const slides: Slide[] = [
           <div className="flex items-start gap-6">
             <span className="flex-shrink-0 bg-primary-3/15 text-primary-3 text-xs font-bold px-3 py-1 rounded-full mt-0.5">Year 1</span>
             <div>
-              <p className="font-bold text-gray-800">Product-market fit with startups</p>
-              <p className="text-gray-500 text-sm">500+ Starter accounts &middot; 100+ Pro conversions &middot; ~$1M ARR &middot; PLG flywheel proven</p>
+              <p className="font-bold text-gray-800">Prove PMF with design partners &amp; early adopters</p>
+              <p className="text-gray-500 text-sm">50&ndash;100 Starter accounts &middot; 10&ndash;20 Pro conversions &middot; $200&ndash;300K ARR &middot; PLG flywheel seeded</p>
             </div>
           </div>
           <div className="flex items-start gap-6">
             <span className="flex-shrink-0 bg-primary-3/15 text-primary-3 text-xs font-bold px-3 py-1 rounded-full mt-0.5">Year 3</span>
             <div>
-              <p className="font-bold text-gray-800">Enterprise expansion</p>
-              <p className="text-gray-500 text-sm">2,000+ accounts &middot; 300+ Pro &middot; 50+ Enterprise &middot; $6&ndash;10M ARR &middot; NRR &gt;120%</p>
+              <p className="font-bold text-gray-800">Scale with Series A capital</p>
+              <p className="text-gray-500 text-sm">1,000+ accounts &middot; 150+ Pro &middot; 20+ Enterprise &middot; $3&ndash;5M ARR &middot; NRR &gt;115%</p>
             </div>
           </div>
           <div className="flex items-start gap-6">
             <span className="flex-shrink-0 bg-primary-3/15 text-primary-3 text-xs font-bold px-3 py-1 rounded-full mt-0.5">Year 5</span>
             <div>
               <p className="font-bold text-gray-800">Platform standard for AI-native teams</p>
-              <p className="text-gray-500 text-sm">1.5&ndash;3% SAM penetration &middot; $40&ndash;70M ARR &middot; Radix Core cross-sell at scale</p>
+              <p className="text-gray-500 text-sm">1.5&ndash;3% SAM penetration &middot; $40&ndash;70M ARR</p>
             </div>
           </div>
         </div>
@@ -507,12 +549,12 @@ const slides: Slide[] = [
       </div>
     ),
     notes:
-      "This is the destination slide. Investors buy the destination, not the vehicle. Year 1 math: PLG funnel with 500+ Starter accounts ($99/mo), 100+ convert to Pro ($499/mo). Blended roughly $1M ARR. Months 1 through 3 zero revenue (build pipeline), ramp Q2 through Q4. Year 3: 2,000+ total accounts, 300+ Pro, 50+ Enterprise. Blended ACV rises as Pro/Enterprise mix grows. $6 to $10M ARR. NRR >120% driven by Starter to Pro to Enterprise upsell. Year 5: SAM grows 26%/yr to roughly $2.5B; 1.5 to 3% penetration = $40 to $70M ARR. The intelligence compounding story is critical: Lev runs a continuous 7-layer intelligence cycle. Every product it operates makes it smarter about all products. Lower price point means more products on-platform means faster compounding. This is a network effect, not just a pricing strategy. Revenue multiples in this space (18 to 68x) mean $40M ARR at even the low end = $720M implied valuation. Radix Core cross-sell becomes material in Year 3+ as customers scale into ML/AI workloads.",
+      "This is the destination slide. Investors buy the destination, not the vehicle. Year 1 math: 2 design partners already lined up, 28 on the waitlist, launching in April 2026. Conservative PLG ramp: months 1 through 3 convert waitlist and design partners, months 4 through 9 organic growth via PLG, months 10 through 12 first Pro upsells. 50 to 100 Starter ($149/mo) + 10 to 20 Pro ($499/mo) = $200 to $300K blended ARR. That proves PMF and positions a $1.5 to 2M seed extension or early Series A. Year 3: With Series A capital ($3 to 5M), scale to 1,000+ accounts, $3 to 5M ARR. Year 5: SAM grows 26%/yr to roughly $2.5B; 1.5 to 3% penetration = $40 to $70M ARR. The intelligence compounding story is critical: every product Lev operates makes it smarter about all products. Lower price point means more products on-platform means faster compounding. Revenue multiples in this space (18 to 68x) mean even $5M ARR at the low end (18x) = $90M implied valuation.",
   },
 
   /* ── Slide 11 — The Ask ── */
   {
-    title: "Raising $385,000 to Capture the Lifecycle Layer",
+    title: "Raising $385,000 to Own the Product Visionary\u2019s Platform",
     variant: "dark",
     content: (
       <div className="py-4">
@@ -553,21 +595,21 @@ const slides: Slide[] = [
         <ul className="space-y-3 text-white text-sm">
           <li className="flex items-start gap-3">
             <span className="text-gray-500 mt-0.5">&#x25CB;</span>
-            <span>500+ Starter accounts, 100+ Pro conversions</span>
+            <span>2 design partners live &rarr; 50&ndash;100 paying accounts</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-gray-500 mt-0.5">&#x25CB;</span>
-            <span>First enterprise Lev deployment</span>
+            <span>PLG flywheel proven with self-serve conversions</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-gray-500 mt-0.5">&#x25CB;</span>
-            <span className="font-bold">$1M ARR</span>
+            <span className="font-bold">$200&ndash;300K ARR &mdash; Series A ready</span>
           </li>
         </ul>
       </div>
     ),
     notes:
-      "The unit math to $1M ARR with new pricing: PLG funnel with 500+ Starter ($99/mo = $59K ARR), 100+ Pro ($499/mo = $599K ARR), handful of Enterprise ($1,999/mo). Blended roughly $1M ARR. Bottoms-up ramp: Months 1 through 3 zero revenue (build PLG pipeline), months 4 through 6 first Starter signups, months 7 through 9 Pro conversions accelerate, months 10 through 12 Enterprise lands. Lower price point = faster top-of-funnel, self-serve onboarding, credit card signup. Why $385K is enough: Product already exists. We built it for ourselves and have been shipping with it. This isn\u2019t R&D capital. It\u2019s go-to-market capital. $385K at lean founder salaries = 12 to 18 months of runway. The PLG motion means lower CAC than the previous founder-led outbound model. Revenue multiple context: Companies in this space trade at 18 to 68x ARR. At $1M ARR and even the low end (18x), implied valuation = $18M. Meaningful return on a $385K entry.",
+      "The category bet: You\u2019re not betting on a better tool \u2014 you\u2019re betting on the buyer shifting from engineering to product. AI is solving the science of engineering. The person with the product vision is the next buyer. Lev is first to market for that buyer. The unit math to $200 to $300K ARR: 2 design partners already signed, 28 on waitlist, launching April 2026. Convert waitlist months 1 through 3, PLG organic growth months 4 through 9, first Pro upsells months 10 through 12. 50 to 100 Starter ($149/mo) + 10 to 20 Pro ($499/mo) = $200 to $300K blended ARR. Why $385K is enough: Product already exists. We built it for ourselves and have been shipping with it. This isn\u2019t R&D capital. It\u2019s go-to-market capital. $385K at lean founder salaries = 12 to 18 months of runway. $200 to $300K ARR on a $385K raise proves PMF and positions a $1.5 to $2M seed extension or early Series A. Revenue multiple context: Companies in this space trade at 18 to 68x ARR. At $300K ARR with strong growth, implied next-round valuation = $10 to $15M. Meaningful return on a $385K entry at a $4M cap.",
   },
 ];
 
@@ -639,10 +681,10 @@ const appendix: Slide[] = [
             </thead>
             <tbody className="text-gray-600">
               {[
-                ["Factory", "N/A", "Seed", "N/A", "$5M", "2023"],
-                ["Replit", "$265M", "$9B", "~34x", "$650M+", "2016"],
-                ["Cognition (Devin)", "~$150M", "$10.2B", "~68x", "$696M", "2023"],
-                ["Lovable", "$300M", "$6.6B", "~22x", "$530M", "2023"],
+                ["Cursor", "$2B+", "$29B+", "~15x", "$2.3B", "2022"],
+                ["Cognition (Devin)", "~$155M", "$10.2B", "~66x", "$696M", "2023"],
+                ["Lovable", "$400M", "$6.6B", "~17x", "$530M", "2023"],
+                ["Factory", "N/A", "$300M", "N/A", "$70M", "2023"],
                 ["Bolt.new", "$40M", "$700M", "~18x", "$105M", "2024"],
                 ["Blitzy", "N/A", "N/A", "N/A", "$4.4M", "2024"],
               ].map(([company, arr, val, mult, fund, year], idx) => (
@@ -687,16 +729,18 @@ const appendix: Slide[] = [
         <div>
           <p className="text-sm font-semibold text-gray-800 uppercase tracking-widest mb-3">Competitor Financials</p>
           <ul className="space-y-1.5 text-gray-600 text-sm">
-            <li>Factory $5M seed round &mdash; TechCrunch, Nov 2023</li>
-            <li>Factory EY deployment (5,000+ engineers) &mdash; Factory.ai</li>
-            <li>Replit $9B valuation &mdash; Bloomberg, Jan 2026</li>
-            <li>Replit revenue &mdash; Sacra</li>
+            <li>Cursor $2B+ ARR, $29B+ valuation &mdash; Bloomberg &amp; TechCrunch, Mar 2026</li>
+            <li>Cursor $2.3B Series D &mdash; CNBC, Nov 2025</li>
             <li>Cognition $10.2B valuation &mdash; TechCrunch, Sep 2025</li>
-            <li>Cognition revenue &mdash; Sacra</li>
+            <li>Cognition Windsurf acquisition &mdash; TechCrunch, Jul 2025</li>
+            <li>Cognition revenue &mdash; Sacra, Contrary Research</li>
+            <li>Lovable $400M ARR &mdash; TechCrunch, Mar 2026</li>
             <li>Lovable $6.6B valuation &mdash; TechCrunch, Dec 2025</li>
-            <li>Lovable revenue &mdash; Sacra</li>
+            <li>Factory $50M Series B at $300M &mdash; BusinessWire, Sep 2025</li>
+            <li>Factory Wipro partnership &mdash; Wipro, Jan 2026</li>
+            <li>Kiro launch &mdash; TechCrunch, Dec 2025</li>
             <li>Bolt.new &mdash; Sacra</li>
-            <li>Blitzy funding &mdash; PRNewswire</li>
+            <li>Blitzy funding &mdash; PRNewswire, Sep 2024</li>
           </ul>
         </div>
 
@@ -722,6 +766,7 @@ const NAV_LABELS = [
   "Problem",
   "Why Now",
   "Product",
+  "Traction",
   "Market",
   "Competition",
   "Pricing",
@@ -896,7 +941,7 @@ export default function DeckClient() {
         {showDivider && (
           <div className="flex items-center gap-4 mb-10">
             <div className={`flex-1 h-px bg-gradient-to-r from-transparent ${isAppendix ? "via-gray-500" : "via-gray-300"} to-transparent`} />
-            <span className={`text-xs font-medium tracking-widest uppercase ${isAppendix ? "text-gray-400" : "text-gray-400"}`}>
+            <span className="text-xs font-medium tracking-widest uppercase text-gray-400">
               {label}
             </span>
             <div className={`flex-1 h-px bg-gradient-to-r from-transparent ${isAppendix ? "via-gray-500" : "via-gray-300"} to-transparent`} />
@@ -1010,7 +1055,7 @@ export default function DeckClient() {
               }`}
             >
               <span className={`inline-block w-6 text-xs tabular-nums ${activeIndex === i ? "text-primary-1" : "text-gray-400"}`}>
-                {i < 11 ? i + 1 : ""}
+                {i < slides.length ? i + 1 : ""}
               </span>
               {label}
             </button>
@@ -1028,7 +1073,7 @@ export default function DeckClient() {
       </div>
 
       {/* ── Appendix section ── */}
-      <div ref={(el) => { sectionRefs.current[11] = el; }}>
+      <div ref={(el) => { sectionRefs.current[slides.length] = el; }}>
         <div className="bg-gray-700 border-y border-gray-600">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
             <p className="text-xs font-semibold text-gray-400 uppercase tracking-[0.3em] mb-2">
@@ -1047,7 +1092,7 @@ export default function DeckClient() {
                 s,
                 i,
                 i > 0,
-                `A${String.fromCharCode(65 + i)}`,
+                String.fromCharCode(65 + i),
                 true
               )
             )}
