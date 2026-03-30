@@ -76,7 +76,7 @@ const slides: Slide[] = [
           <div className="bg-white/10 rounded-xl p-6 text-center">
             <p className="text-3xl sm:text-4xl font-extrabold text-lev-bold">0</p>
             <p className="text-gray-300 text-sm mt-2">
-              built for product leaders who own the vision
+              platforms for product leaders who own the vision and outcome
             </p>
           </div>
         </div>
@@ -107,7 +107,7 @@ const slides: Slide[] = [
         </div>
 
         <p className="text-lev-bold font-bold text-lg">
-          Every tool on the market was built for developers. Nobody built for the product visionary.
+          Tools were built for developers or prototypers. Nobody built for the product visionary that needs to deliver.
         </p>
       </div>
     ),
@@ -123,7 +123,7 @@ const slides: Slide[] = [
         <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 mb-6">
           <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-3">The Shift</p>
           <p className="text-gray-700 text-base leading-relaxed">
-            AI is solving the science of engineering. Code generation, deployment, infrastructure &mdash; all being abstracted. For the first time, <span className="font-bold text-gray-900">product vision can be the bottleneck, not engineering capacity.</span> But the market hasn&rsquo;t built for that buyer yet.
+            AI is solving the science of engineering. Code generation, deployment, infrastructure are all being abstracted, but <span className="font-bold text-gray-900">engineering capacity is still the bottleneck.</span> The tools haven't move up stream to put power in the hands of product visionaries. Until now.
           </p>
         </div>
 
@@ -165,7 +165,7 @@ const slides: Slide[] = [
         </div>
 
         <p className="text-primary-3 font-bold text-lg">
-          Engineering is being solved. The product visionary is the next buyer. Lev is first to market.
+          Engineering is being solved. The product visionary is the next buyer. <span className="text-lev-bold">Enter Lev.</span>
         </p>
       </div>
     ),
@@ -223,7 +223,7 @@ const slides: Slide[] = [
         <div className="grid sm:grid-cols-3 gap-6 mb-10">
           <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
             <p className="text-4xl font-extrabold text-primary-3">2</p>
-            <p className="text-gray-600 text-sm mt-2 font-medium">Design partners</p>
+            <p className="text-gray-600 text-sm mt-2 font-medium">Potential design partners</p>
             <p className="text-gray-400 text-xs mt-1">Production Co-development</p>
           </div>
           <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
@@ -247,7 +247,11 @@ const slides: Slide[] = [
             </li>
             <li className="flex items-start gap-3">
               <span className="text-primary-3 font-bold mt-0.5">&#x2713;</span>
-              <span>Dogfooded building our own products</span>
+              <span>Comprehensive memory that never forgets and learns from every interaction</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-primary-3 font-bold mt-0.5">&#x2713;</span>
+              <span>Dogfooded building and supporting our own products</span>
             </li>
 
           </ul>
@@ -578,7 +582,7 @@ const slides: Slide[] = [
       </div>
     ),
     notes:
-      "WHY $385K IS SUFFICIENT: The product already exists. This is go-to-market capital, not R&D. At lean founder salaries, $385K provides 12–18 months of runway. YEAR 1 MATH: 2 design partners already signed, 28 on waitlist, launching April 2026. Months 1–3: convert waitlist and design partners. Months 4–9: organic PLG growth. Months 10–12: first Pro upsells. Proves market fit and positions a $1.5–2M seed round. YEAR 3 ASSUMPTIONS: Series A capital ($3–5M) funds 2–3 engineers + marketing to scale past founder-led sales. Enterprise tier lands first multi-project deals. YEAR 5 SAM MATH: Market grows at 26% CAGR. Current $1.3B SAM reaches ~$2.5B by Year 5. 1.5–3% penetration at that point = $40–70M ARR. RETURN CONTEXT: Companies in this space trade at 18–68x ARR (see Financial Comparables appendix). At $300K ARR with strong growth, implied next-round valuation is $10–15M, a meaningful return on a $385K entry at a $4M cap.",
+      "WHY $385K IS SUFFICIENT: The product already exists. This is go-to-market capital, not R&D. At lean founder salaries, $385K provides 12–18 months of runway. YEAR 1 MATH: 2 design partners already signed, 28 on waitlist, launching April 2026. Months 1–3: convert waitlist and design partners. Months 4–9: organic PLG growth. Months 10–12: first Pro upsells. Proves market fit and positions a $1.5–2M seed round. YEAR 3 ASSUMPTIONS: Series A capital ($3–5M) funds 2–3 engineers + marketing to scale past founder-led sales. Enterprise tier lands first multi-project deals. YEAR 5 SAM MATH: Market grows at 26% CAGR. Current $1.3B SAM reaches ~$2.5B by Year 5. 1.5–3% penetration at that point = $40–70M ARR. RETURN CONTEXT: Companies in this space trade at 18–68x ARR (see Financial Comparables appendix). At $300K ARR with strong growth, implied next-round valuation is $10–15M, a meaningful return on a $385K entry at a $4M cap. WHY A SAFE AT $4M POST-MONEY CAP: A SAFE (Simple Agreement for Future Equity). At $4M post-money, a $385K investment buys ~9.6% ownership on a fully-diluted basis. If the seed round prices at $10–15M (implied by $300K ARR + strong growth), SAFE holders convert at the $4M cap — 2.5–3.75x markup on paper at conversion.",
   },
 ];
 
