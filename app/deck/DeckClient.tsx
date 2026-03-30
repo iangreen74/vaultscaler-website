@@ -584,6 +584,50 @@ const slides: Slide[] = [
     notes:
       "WHY $385K IS SUFFICIENT: The product already exists. This is go-to-market capital, not R&D. At lean founder salaries, $385K provides 12–18 months of runway. YEAR 1 MATH: 2 design partners already signed, 28 on waitlist, launching April 2026. Months 1–3: convert waitlist and design partners. Months 4–9: organic PLG growth. Months 10–12: first Pro upsells. Proves market fit and positions a $1.5–2M seed round. YEAR 3 ASSUMPTIONS: Series A capital ($3–5M) funds 2–3 engineers + marketing to scale past founder-led sales. Enterprise tier lands first multi-project deals. YEAR 5 SAM MATH: Market grows at 26% CAGR. Current $1.3B SAM reaches ~$2.5B by Year 5. 1.5–3% penetration at that point = $40–70M ARR. RETURN CONTEXT: Companies in this space trade at 18–68x ARR (see Financial Comparables appendix). At $300K ARR with strong growth, implied next-round valuation is $10–15M, a meaningful return on a $385K entry at a $4M cap. WHY A SAFE AT $4M POST-MONEY CAP: A SAFE (Simple Agreement for Future Equity). At $4M post-money, a $385K investment buys ~9.6% ownership on a fully-diluted basis. If the seed round prices at $10–15M (implied by $300K ARR + strong growth), SAFE holders convert at the $4M cap — 2.5–3.75x markup on paper at conversion.",
   },
+
+  /* ── Slide 12 — Thank You / Q&A ── */
+  {
+    title: "Thank You",
+    variant: "dark",
+    content: (
+      <div className="py-8 text-center">
+        <p className="text-5xl sm:text-6xl font-bold text-lev-bold mb-2">
+          Lev
+        </p>
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-gray-400 mb-12">
+          The product leader&apos;s engineering team
+        </p>
+
+        <div className="flex flex-col sm:flex-row justify-center gap-10 mb-14">
+          <div>
+            <p className="text-white font-bold text-lg">Ian Green</p>
+            <p className="text-gray-400 text-sm">CEO</p>
+            <a href="mailto:igreen@vaultscaler.com" className="text-lev-bold text-sm hover:underline">igreen@vaultscaler.com</a>
+          </div>
+          <div>
+            <p className="text-white font-bold text-lg">Ben Pruess</p>
+            <p className="text-gray-400 text-sm">President</p>
+            <a href="mailto:bpruess@vaultscaler.com" className="text-lev-bold text-sm hover:underline">bpruess@vaultscaler.com</a>
+          </div>
+        </div>
+
+        <div className="flex justify-center mb-4">
+          <div className="bg-white rounded-xl p-3">
+            <QRCodeSVG
+              value="https://vaultscaler.com/deck/"
+              size={120}
+              bgColor="#ffffff"
+              fgColor="#000000"
+              level="M"
+            />
+          </div>
+        </div>
+        <p className="text-gray-500 text-xs">vaultscaler.com/deck</p>
+      </div>
+    ),
+    notes:
+      "This slide stays up during Q&A. The QR code lets investors pull up the deck on their own device immediately. Keep answers concise — if a question requires a deep dive, offer to follow up via email after the session.",
+  },
 ];
 
 /* ════════════════════════════════════════════════════════
@@ -746,6 +790,7 @@ const NAV_LABELS = [
   "Customer",
   "Founders",
   "Ask",
+  "Thank You",
   "Appendix",
 ] as const;
 
