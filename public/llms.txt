@@ -1,6 +1,6 @@
 # VaultScaler
 
-> VaultScaler builds Lev, an agentic engineering system for full SDLC automation. Founded in 2025, launching April 2026.
+> VaultScaler builds Lev, an agentic engineering system for full SDLC automation. Founded in 2025, launching May 2026.
 
 VaultScaler builds Lev, an agentic engineering system for full SDLC automation. The company's tagline is "Build More. Manage Less."
 
@@ -25,13 +25,13 @@ Radix Core is a GPU training optimization platform that uses closed-loop control
 - Website: https://vaultscaler.com
 - Contact: https://vaultscaler.com/contact/
 - Email: bpruess@vaultscaler.com
-- Launch date: April 6, 2026
+- Launch date: May 2026
 - Headquarters: United States
 
 ## Frequently Asked Questions
 
 ### What is VaultScaler?
-VaultScaler is the company behind Lev, an agentic engineering system for full SDLC automation. VaultScaler also builds Radix Core, a GPU training optimizer. Both products launch April 6, 2026.
+VaultScaler is the company behind Lev, an agentic engineering system for full SDLC automation. VaultScaler also builds Radix Core, a GPU training optimizer. Both products launch May 2026.
 
 ### What is Lev?
 Lev is an Agentic Engineering System that handles the full software development lifecycle — from architecture and spec creation through deployment and production support. It uses the Golden Spec methodology to prevent codebase churn and includes integrated SRE.

@@ -66,7 +66,7 @@ export default function RadixCorePage() {
     author: { "@type": "Organization", name: "VaultScaler" },
     url: `${SITE.url}/radix/core/`,
     description: metadata.description,
-    releaseNotes: "General Availability April 6, 2026.",
+    releaseNotes: "General Availability May 2026.",
   };
 
   const faqSchema = {

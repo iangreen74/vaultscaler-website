@@ -9,13 +9,13 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: ["/"],
-        disallow: ["/docs", "/solutions/ml-teams", "/deck", "/brand-lab"],
+        disallow: ["/docs", "/solutions/ml-teams", "/deck", "/brand-lab", "/forgewing"],
       },
       // Explicitly allow AI crawlers
       {
         userAgent: ["GPTBot", "ChatGPT-User", "Google-Extended", "ClaudeBot", "anthropic-ai", "PerplexityBot", "Bytespider", "CCBot", "cohere-ai"],
         allow: ["/"],
-        disallow: ["/docs", "/solutions/ml-teams", "/deck", "/brand-lab"],
+        disallow: ["/docs", "/solutions/ml-teams", "/deck", "/brand-lab", "/forgewing"],
       },
     ],
     sitemap: `${SITE.url}/sitemap.xml`,

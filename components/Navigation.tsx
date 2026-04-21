@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { trackNavClick } from '@/lib/analytics';
 
 const productLinks = [
@@ -15,11 +16,14 @@ const solutionLinks = [
 ];
 
 export default function Navigation() {
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
+
+  if (pathname?.startsWith('/forgewing')) return null;
 
   const handleMobileNavClick = (label: string) => {
     trackNavClick(label);

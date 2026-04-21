@@ -305,7 +305,7 @@ const slides: Slide[] = [
             <div className="w-full h-7 bg-gray-100 rounded-full overflow-hidden">
               <div className="h-full rounded-full bg-primary-3" style={{ width: "1%" }} />
             </div>
-            <p className="text-xs text-gray-500 mt-1">~0.5&ndash;0.8% SAM penetration by Year 3</p>
+            <p className="text-xs text-gray-500 mt-1">~0.5&ndash;0.8% SAM penetration by Year 5</p>
           </div>
         </div>
 

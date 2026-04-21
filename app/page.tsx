@@ -32,7 +32,7 @@ export default function Home() {
     "@type": "WebSite",
     "name": "VaultScaler",
     "url": `${SITE.url}/`,
-    "description": "Lev is a full-stack engineering team on demand, by VaultScaler. Describe what to build and Lev designs, codes, deploys, and operates. Launching April 2026.",
+    "description": "Lev is a full-stack engineering team on demand, by VaultScaler. Describe what to build and Lev designs, codes, deploys, and operates. Launching May 2026.",
   };
 
   return (
