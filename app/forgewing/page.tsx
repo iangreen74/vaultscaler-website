@@ -1,8 +1,9 @@
 import Image from "next/image";
 import FAQ from "@/components/FAQ";
-import aniLanding from "./ani-landing-transparent-cropped-for-hero.png";
+import ParallaxAni from "./ParallaxAni";
 import aniLandingFull from "./ani-landing-transparent.png";
-import aniStraighton from "./ani_straighton_transparent.png";
+import aniStraighton from "./ani_incomming.png";
+import aniLookingRough from "./ani_looking_rough.png";
 import forgePour from "./Forge_pour.png";
 
 export default function ForgewingHome() {
@@ -17,58 +18,32 @@ export default function ForgewingHome() {
         }}
       />
 
-      <div className="pointer-events-none hidden lg:block absolute top-0 right-0 w-[60%] xl:w-[55%] -translate-y-[5%]">
-        <div className="translate-x-[10%]">
-          <Image
-            src={aniLanding}
-            alt="Ani — Forgewing's winged anvil mascot"
-            priority
-            className="w-full h-auto"
-            sizes="55vw"
-          />
-        </div>
-        <p className="pointer-events-auto mt-4 ml-auto max-w-sm pr-4 xl:pr-8 text-right text-base text-[#5A7A8A] leading-relaxed">
-          <span
-            className="text-[#1E3340]"
-            style={{ fontFamily: "var(--font-dm-serif), serif" }}
-          >
-            Meet Ani.
-          </span>{" "}
-          Your very own winged anvil sidekick. Solid and quick. Seriousness with levity.
-        </p>
-      </div>
+      <ParallaxAni src={aniLandingFull} />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
-        <div className="flex flex-col justify-center items-start text-left min-h-[85vh] lg:min-h-[70vh] max-w-xl">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-16 pb-16 sm:pb-24 lg:pb-32">
+        <div className="flex flex-col justify-start items-center text-center min-[800px]:items-start min-[800px]:text-left min-h-[30vh] min-[800px]:min-h-[45vh] min-[800px]:max-w-xl">
           <h1
-            className="text-6xl sm:text-7xl lg:text-8xl leading-[1.02] text-[#E8732A]"
+            className="mt-6 lg:mt-10 text-6xl sm:text-7xl lg:text-8xl leading-[1.02] text-[#E8732A]"
             style={{ fontFamily: "var(--font-dm-serif), serif" }}
           >
             Forgewing
           </h1>
-          <p className="mt-6 text-xl sm:text-2xl text-[#1E3340] leading-snug max-w-md">
-            Full-lifecycle agentic engineering system. Built for people with the vision to build something real.
+          <p className="hidden min-[800px]:block mt-6 text-xl sm:text-2xl text-[#1E3340] leading-snug max-w-md [text-wrap:balance]">
+            Full-lifecycle agentic engineering with compounding operational intelligence. Built for people who deliver the vision.
           </p>
 
-          <div className="lg:hidden mt-8 w-full max-w-xs self-end">
+          <div className="relative min-[800px]:hidden -mt-6 w-[120vw] max-w-none">
             <Image
               src={aniLandingFull}
               alt="Ani — Forgewing's winged anvil mascot"
               priority
               className="w-full h-auto"
-              sizes="(max-width: 640px) 80vw, 20rem"
+              sizes="120vw"
             />
+            <p className="absolute top-[8%] left-1/2 -translate-x-1/2 w-[42%] text-center text-[#1E3340] text-lg sm:text-xl leading-snug [text-wrap:balance]">
+              Full-lifecycle agentic engineering with compounding operational intelligence. Built for people who deliver the vision.
+            </p>
           </div>
-
-          <p className="lg:hidden mt-2 text-base text-[#5A7A8A] leading-relaxed max-w-md">
-            <span
-              className="text-[#1E3340]"
-              style={{ fontFamily: "var(--font-dm-serif), serif" }}
-            >
-              Meet Ani.
-            </span>{" "}
-            Your very own winged anvil sidekick. Solid and quick. Seriousness with levity.
-          </p>
 
           <div className="mt-10">
             <button
@@ -83,72 +58,79 @@ export default function ForgewingHome() {
     </section>
 
     <section className="relative bg-[#D8E2EA] overflow-hidden">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10 lg:pt-12 pb-20 sm:pb-28 lg:pb-32">
+      <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32">
         <h2
           className="text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-[#1E3340]"
           style={{ fontFamily: "var(--font-dm-serif), serif" }}
         >
           Let your vision take flight
         </h2>
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 lg:min-h-[60vh]">
-          <p className="text-xl sm:text-2xl text-[#5A7A8A] leading-snug">
-            What&rsquo;s between you and your novel software in production? Time, money, other priorities, scalability, the list goes on.
-          </p>
-          <div className="hidden lg:flex items-center justify-center">
-            <Image
-              src={aniStraighton}
-              alt=""
-              aria-hidden
-              className="max-h-[500px] w-auto"
-              sizes="500px"
-            />
-          </div>
-          <p className="text-xl sm:text-2xl text-[#5A7A8A] leading-snug lg:text-right lg:self-end">
-            Forgewing brings the technical acumen to turn your vision into reality.
-          </p>
-        </div>
+        <p className="mt-10 text-xl sm:text-2xl text-[#5A7A8A] leading-snug">
+          What&rsquo;s between you and your novel software in production? Time, money, other priorities, scalability, the list goes on.
+        </p>
+        <figure className="my-14 sm:my-16 flex flex-col items-center">
+          <Image
+            src={aniStraighton}
+            alt="Ani, ready for the mission"
+            className="max-h-[420px] w-auto"
+            sizes="420px"
+          />
+          <figcaption className="mt-6 text-center text-base sm:text-lg text-[#5A7A8A] leading-tight">
+            <span
+              className="block text-[#1E3340] text-3xl sm:text-4xl leading-tight mb-2"
+              style={{ fontFamily: "var(--font-dm-serif), serif" }}
+            >
+              Meet Ani
+            </span>
+            <span className="block">Your very own winged anvil</span>
+            <span className="block">Solid and quick</span>
+            <span className="block">Seriousness with levity</span>
+          </figcaption>
+        </figure>
+        <p className="text-xl sm:text-2xl text-[#5A7A8A] leading-snug">
+          Forgewing brings the technical acumen to turn your vision into reality.
+        </p>
       </div>
     </section>
 
     <section className="relative bg-black overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32">
-        <div className="grid lg:grid-cols-[3fr_7fr] gap-6 lg:gap-6 items-center">
-          <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
-            <Image
-              src={forgePour}
-              alt="Molten metal pour — Forgewing forging imagery"
-              className="w-[150px] lg:w-full max-w-[200px] h-auto scale-x-[-1]"
-              sizes="(min-width: 1024px) 200px, 100px"
-            />
-          </div>
-          <div className="order-1 lg:order-2">
-            <h2
-              className="text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-[#E8732A]"
-              style={{ fontFamily: "var(--font-dm-serif), serif" }}
+        <div className="flex flex-col sm:flex-row sm:items-end gap-5 sm:gap-8">
+          <Image
+            src={forgePour}
+            alt="Molten metal pour"
+            className="w-[110px] sm:w-[130px] lg:w-[150px] h-auto scale-x-[-1] flex-shrink-0"
+            sizes="150px"
+          />
+          <h2
+            className="text-5xl sm:text-6xl lg:text-8xl leading-[0.95] text-[#E8732A]"
+            style={{ fontFamily: "var(--font-dm-serif), serif" }}
+          >
+            Hard core<br />engineering
+          </h2>
+        </div>
+        <p className="mt-10 sm:mt-12 text-lg sm:text-xl text-white/85 leading-relaxed max-w-2xl">
+          Every system designed from first principles. No templates, no boilerplate &mdash; real AWS infrastructure across 30+ services, your code in your GitHub, production-grade from the first deploy.
+        </p>
+        <p className="mt-4 text-sm italic text-white/45 leading-relaxed max-w-2xl">
+          Struck hot, cooled right.
+        </p>
+        <div className="mt-10 flex flex-wrap gap-3 sm:gap-4">
+          {[
+            "First principles design",
+            "30+ AWS services",
+            "Your GitHub, your code",
+            "Bedrock inference",
+            "Recursive learning",
+            "CI/CD built in",
+          ].map((item) => (
+            <div
+              key={item}
+              className="rounded-full border border-[#E8D5B5]/25 bg-white/5 px-5 py-2.5 text-sm sm:text-base text-[#E8D5B5]"
             >
-              Hard core engineering
-            </h2>
-            <p className="mt-6 sm:mt-8 text-lg sm:text-xl text-white/85 leading-relaxed max-w-2xl">
-              Every system designed from first principles. No templates, no boilerplate &mdash; real AWS infrastructure across 30+ services, your code in your GitHub, production-grade from the first deploy.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
-              {[
-                "First principles design",
-                "30+ AWS services",
-                "Your GitHub, your code",
-                "Bedrock inference",
-                "Recursive learning",
-                "CI/CD built in",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-full border border-[#E8D5B5]/25 bg-white/5 px-5 py-2.5 text-sm sm:text-base text-[#E8D5B5]"
-                >
-                  {item}
-                </div>
-              ))}
+              {item}
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
@@ -238,24 +220,39 @@ export default function ForgewingHome() {
     </section>
 
     <section className="relative bg-[#1E3340] overflow-hidden">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          <div className="text-left">
-            <h2
-              className="text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-[#E8D5B5]"
-              style={{ fontFamily: "var(--font-dm-serif), serif" }}
-            >
-              Night Owl
-            </h2>
-            <p className="mt-6 text-lg sm:text-xl text-white/70 leading-relaxed max-w-md">
-              The ops shift that never sleeps.
-            </p>
-          </div>
-          <ul className="lg:text-right space-y-5 text-lg sm:text-xl text-white/85 leading-relaxed">
+      <div className="relative flex flex-col lg:flex-row lg:items-stretch">
+        <div className="lg:w-[40%] flex items-end justify-center lg:justify-end pt-20 sm:pt-24 lg:pt-32 lg:pr-12 lg:pb-0">
+          <Image
+            src={aniLookingRough}
+            alt="Ani keeping watch"
+            className="w-[220px] sm:w-[300px] lg:w-full max-w-[420px] h-auto"
+            sizes="(min-width: 1024px) 420px, 300px"
+          />
+        </div>
+        <div className="lg:w-[60%] px-4 sm:px-6 lg:pl-12 lg:pr-8 xl:pr-16 py-12 sm:py-16 lg:py-32 max-w-3xl">
+          <h2
+            className="text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-[#E8D5B5]"
+            style={{ fontFamily: "var(--font-dm-serif), serif" }}
+          >
+            Night Owl
+          </h2>
+          <p className="mt-6 text-lg sm:text-xl text-white/70 leading-relaxed max-w-md">
+            The ops shift that never sleeps.
+          </p>
+          <ul className="mt-10 space-y-5 text-lg sm:text-xl text-white/85 leading-relaxed">
             <li>24/7 production monitoring. Problems solved before you wake up.</li>
             <li>Around-the-clock anomaly detection, pattern identification, and degradation trend analysis.</li>
             <li>Earned autonomy decides what Forgewing resolves on the spot versus what it flags for your approval — trust built through demonstrated competence, not assumed.</li>
           </ul>
+          <p className="mt-10 text-sm italic text-white/55 leading-relaxed">
+            <span
+              className="not-italic text-[#E8D5B5]"
+              style={{ fontFamily: "var(--font-dm-serif), serif" }}
+            >
+              Eyes open.
+            </span>{" "}
+            Ani doesn&rsquo;t sleep. Neither does production.
+          </p>
         </div>
       </div>
     </section>
