@@ -9,6 +9,37 @@ import forgePour from "./Forge_pour.png";
 export default function ForgewingHome() {
   return (
     <>
+    {/* ============================================================
+        HERO SECTION — positioning knobs cheat sheet
+        ============================================================
+        Breakpoints: <500px phone | 500-799px tablet | ≥800px desktop
+        Desktop (≥800px) layout: H1 + subtitle + button stacked left,
+          parallax Ani sits absolute behind on the right.
+        Mobile/Tablet (<800px) layout: H1 centered, then oversized
+          mascot image with subtitle OVERLAID on top of the image.
+
+        KNOBS ↓
+        --------------------------------------------------------------
+        [A] Section vertical padding ........... pt-8/12/16  pb-16/24/32
+        [B] Hero block min-height .............. min-h-[30vh] / [45vh]
+        [C] H1 top margin ...................... mt-6 lg:mt-10
+        [D] H1 font size ....................... text-6xl/7xl/8xl
+        [E] Desktop subtitle (≥800px) — separate <p>, hidden below 800px
+              top margin ....................... mt-6
+              font size ........................ text-xl sm:text-2xl
+              max width ........................ max-w-md
+        [F] Mobile/tablet image wrapper (<800px)
+              top offset ....................... -mt-6   (negative = overlap H1)
+              image width ...................... w-[105vw] phone / w-[120vw] tablet+
+              ↑ bigger = more wing-spread, less negative space
+        [G] Mobile/tablet overlay subtitle (inside image wrapper)
+              vertical position ................ top-[5%] phone / top-[8%] tablet+
+              ↑ smaller = higher (closer to H1)
+              horizontal width ................. w-[56%] phone / w-[42%] tablet+
+              ↑ bigger = fewer line wraps, but text spreads into wings
+              font size ........................ text-base phone / text-lg tablet / text-xl sm+
+        [H] Button top margin .................. mt-10
+        ============================================================ */}
     <section className="relative overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none"
@@ -20,31 +51,39 @@ export default function ForgewingHome() {
 
       <ParallaxAni src={aniLandingFull} />
 
+      {/* [A] section padding */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-16 pb-16 sm:pb-24 lg:pb-32">
+        {/* [B] hero block min-height */}
         <div className="flex flex-col justify-start items-center text-center min-[800px]:items-start min-[800px]:text-left min-h-[30vh] min-[800px]:min-h-[45vh] min-[800px]:max-w-xl">
+          {/* [C][D] H1 margin + size */}
           <h1
             className="mt-6 lg:mt-10 text-6xl sm:text-7xl lg:text-8xl leading-[1.02] text-[#E8732A]"
             style={{ fontFamily: "var(--font-dm-serif), serif" }}
           >
             Forgewing
           </h1>
+
+          {/* [E] DESKTOP-ONLY subtitle (≥800px) */}
           <p className="hidden min-[800px]:block mt-6 text-xl sm:text-2xl text-[#1E3340] leading-snug max-w-md [text-wrap:balance]">
             Full-lifecycle agentic engineering with compounding operational intelligence. Built for people who deliver the vision.
           </p>
 
-          <div className="relative min-[800px]:hidden -mt-6 w-[120vw] max-w-none">
+          {/* [F] MOBILE/TABLET image wrapper (<800px) — overlay container */}
+          <div className="relative min-[800px]:hidden -mt-0 w-[140vw] min-[500px]:w-[120vw] max-w-none">
             <Image
               src={aniLandingFull}
               alt="Ani — Forgewing's winged anvil mascot"
               priority
               className="w-full h-auto"
-              sizes="120vw"
+              sizes="(min-width: 500px) 120vw, 105vw"
             />
-            <p className="absolute top-[8%] left-1/2 -translate-x-1/2 w-[42%] text-center text-[#1E3340] text-lg sm:text-xl leading-snug [text-wrap:balance]">
+            {/* [G] overlay subtitle: top-% / width-% / font-size all step at 500px */}
+            <p className="absolute top-[5%] min-[500px]:top-[8%] left-1/2 -translate-x-1/2 w-[56%] min-[500px]:w-[42%] text-center text-[#1E3340] text-base min-[500px]:text-lg sm:text-xl leading-snug [text-wrap:balance]">
               Full-lifecycle agentic engineering with compounding operational intelligence. Built for people who deliver the vision.
             </p>
           </div>
 
+          {/* [H] button margin */}
           <div className="mt-10">
             <button
               type="button"
