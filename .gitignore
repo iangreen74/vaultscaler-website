@@ -16,6 +16,7 @@
 # Docs for context
 /docs
 /document_supplements
+app/forgewing/supporting/
 
 # Misc
 .DS_Store
