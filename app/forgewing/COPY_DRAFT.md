@@ -384,3 +384,78 @@ That single line of attribution does more for the trust objection than three mor
 ## What's next
 
 Tell me which of these to push back on. When the language is settled I'll bring it into `app/forgewing/page.tsx` as a single coherent edit — including the screenshot wiring, the Earned Trust + Forge Remembers sections, the chip-cloud replacements, the new step-0 in On a Mission, and the four-agent watch crew in Night Owl.
+
+---
+
+## §13. Build notes — 2026-04-25 implementation pass
+
+Decisions captured so this draft is self-sufficient on the next rebuild.
+
+### Hero (§1)
+- Layout, parallax, and responsive breakpoints are LOCKED — do not modify.
+- Apply new copy only: eyebrow, subhead, button label, italic subline.
+- Hero CTA links to `/waitlist` (same destination as the final CTA).
+
+### Assets
+- App screenshot lives at `app/forgewing/app_screenshot.png` (copied out of the gitignored `supporting/newer/` folder for the tracked build).
+- Section §7 "war board" figure is SKIPPED for now — text-only treatment until the asset is produced.
+
+### Palette assignments (per `supporting/newer/brand-guide-v20260418.html`)
+
+Brand-guide tokens used on the page:
+
+| Token | Hex | Role |
+| --- | --- | --- |
+| Forge Dark | `#1E3340` | Highest-contrast dark sections |
+| VS Navy | `#234D70` | Mid-key dark sections |
+| Parchment | `#F4F1EC` | Light sections |
+| Forge Orange | `#E8732A` | Primary headings on dark, CTAs |
+| Feather Cream | `#E8D5B5` | Secondary headings on dark, accent only |
+| Anvil Steel | `#5A7A8A` | Muted body / captions on light |
+| White (`#fff`/`/85`) | — | Body on dark |
+
+Pure black (currently in §4) is NOT in the brand guide — replaced with Forge Dark `#1E3340`.
+
+Section sequence:
+
+| § | Section | Background |
+| --- | --- | --- |
+| 1 | Hero | Existing radial-orange gradient on white |
+| 2 | The vision is the easy part | Parchment `#F4F1EC` |
+| 3 | The Mission Brief | VS Navy `#234D70` |
+| 4 | Forged, not assembled | Forge Dark `#1E3340` |
+| 5 | Mission in Flight | Parchment `#F4F1EC` |
+| 6 | Night Owl | Forge Dark `#1E3340` |
+| 7 | Ahead of the line | VS Navy `#234D70` |
+| 8 | Trust, tempered | Parchment `#F4F1EC` |
+| 9 | Sharper Every Strike | Forge Dark `#1E3340` (essay treatment) |
+| 10 | What Forgewing Can Build | VS Navy `#234D70` |
+| 11 | FAQ | Parchment `#F4F1EC` |
+| 12 | Begin your first mission | Forge Dark `#1E3340` |
+
+### Mythic asides — uniform treatment
+
+Pattern matches the existing Night Owl aside: the body is `text-sm italic` in a low-contrast tint of the section's text color. The leading clause is rendered in DM Serif Display (not italic) ONE size step larger than the italic body — so when the body is `text-sm`, the serif lead is `text-base`. Per-section serif lead splits:
+
+- §3 caption: `The brief is the contract.` / *Everything Forgewing builds is held to it.*
+- §4: `Struck hot,` / *tempered right.*
+- §6: `Eyes open.` / *Ani doesn't sleep. Neither does production.*
+- §8: `Trust is earned,` / *not assumed.*
+- §9: `What the hammer teaches,` / *the steel keeps.*
+- §12 sign-off: `Built in Las Vegas` / *by Ian Green and Ben Pruess.*
+
+### Mission in Flight (§5) — Discover step
+
+Step 0 renders as a labeled step in the same orange-numeral pattern as steps 1–5. The "(if you have a codebase)" qualifier sits as a small italic line beneath the step title in Anvil Steel — quiet but visible.
+
+### What Forgewing Can Build (§10)
+
+Chip cloud is replaced with four named missions in a 2×2 card grid (single column on mobile). Each card uses Feather Cream serif title + white/80 body on the VS Navy field, hairline Feather Cream border at 20% opacity.
+
+### Forged (§4) — ownership strike
+
+Chip cloud is replaced with three big DM Serif Display lines on the same Forge Dark field: "Your architecture." / "Your code." / "Your AWS." — stacked on mobile, inline with `gap-12` on `sm:` and up.
+
+### Responsive targets
+
+Verified at desktop (≥1280px) and iPhone 12 Pro (390×844). All grids collapse to a single column ≤640px. The hero block's existing breakpoints at 500px / 800px are not touched.

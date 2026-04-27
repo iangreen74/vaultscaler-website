@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forgewing — Typography Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --forge-dark: #1E3340;
+  --forge-orange: #E8732A;
+  --vs-navy: #234D70;
+  --anvil-steel: #5A7A8A;
+  --feather-cream: #E8D5B5;
+  --parchment: #F4F1EC;
+  --white: #FFFFFF;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  font-family: 'DM Sans', sans-serif;
+  background: #ECEAE5;
+  color: #111;
+  line-height: 1.5;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--forge-dark);
+  color: white;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+.app-header h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.4rem;
+  color: var(--feather-cream);
+  font-weight: 400;
+}
+.viewport-toggle {
+  display: inline-flex;
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+  padding: 0.25rem;
+}
+.viewport-toggle button {
+  background: transparent;
+  color: rgba(255,255,255,0.7);
+  border: none;
+  padding: 0.4rem 0.95rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+.viewport-toggle button:hover { color: white; }
+.viewport-toggle button.active {
+  background: var(--forge-orange);
+  color: white;
+}
+.app-header .hint {
+  font-size: 0.74rem;
+  color: rgba(255,255,255,0.5);
+  margin-left: auto;
+  max-width: 360px;
+  line-height: 1.4;
+}
+
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.group-label {
+  padding: 2rem 1.5rem 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--anvil-steel);
+}
+
+.role-card {
+  margin: 0.6rem 1.5rem 0;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #DDD8CF;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.role-meta {
+  padding: 0.7rem 1.1rem;
+  background: #FAF8F4;
+  border-bottom: 1px solid #E0DCD3;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.role-name {
+  font-weight: 600;
+  font-size: 0.86rem;
+  color: var(--forge-dark);
+}
+.role-where {
+  font-size: 0.7rem;
+  color: var(--anvil-steel);
+  font-family: ui-monospace, 'SF Mono', monospace;
+}
+.copy-btn {
+  margin-left: auto;
+  background: var(--forge-dark);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.7rem;
+  cursor: pointer;
+  font-family: ui-monospace, 'SF Mono', monospace;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: background 0.15s;
+}
+.copy-btn:hover { background: var(--forge-orange); }
+.copy-btn.copied { background: #2a7a3e; }
+
+.preview {
+  padding: 2.25rem 1.5rem;
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  overflow-x: auto;
+}
+.preview-text {
+  white-space: pre-line;
+  max-width: 100%;
+}
+
+.controls {
+  background: #F5F2EC;
+  border-top: 1px solid #E0DCD3;
+  padding: 0.7rem 1.1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  gap: 0.5rem 0.7rem;
+}
+.ctrl {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.ctrl label {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--anvil-steel);
+}
+.ctrl select, .ctrl input[type=text] {
+  font-size: 0.78rem;
+  font-family: inherit;
+  padding: 0.32rem 0.4rem;
+  border: 1px solid #C9C4B9;
+  border-radius: 4px;
+  background: white;
+  color: var(--forge-dark);
+}
+.ctrl select:focus, .ctrl input:focus { outline: 1px solid var(--forge-orange); outline-offset: -1px; }
+.ctrl-checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+  padding-top: 0.9rem;
+}
+.ctrl-checkbox label {
+  margin: 0;
+  font-size: 0.74rem;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--forge-dark);
+  font-weight: 500;
+}
+
+.class-output {
+  background: #FAF7F1;
+  padding: 0.65rem 1.1rem;
+  border-top: 1px solid #E0DCD3;
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 0.72rem;
+  color: var(--forge-dark);
+  word-break: break-word;
+  line-height: 1.5;
+}
+.class-output .note {
+  color: var(--anvil-steel);
+  font-style: italic;
+}
+
+.legend {
+  margin: 1rem 1.5rem 0;
+  padding: 0.85rem 1.1rem;
+  background: white;
+  border: 1px dashed #DDD8CF;
+  border-radius: 8px;
+  font-size: 0.74rem;
+  color: var(--anvil-steel);
+  line-height: 1.6;
+}
+.legend strong { color: var(--forge-dark); }
+
+footer {
+  text-align: center;
+  padding: 3rem 1.5rem 4rem;
+  font-size: 0.72rem;
+  color: var(--anvil-steel);
+}
+</style>
+</head>
+<body>
+<header class="app-header">
+  <h1>Forgewing — Typography Lab</h1>
+  <div class="viewport-toggle" id="viewport">
+    <button data-vp="base">Mobile (&lt;640)</button>
+    <button data-vp="sm" class="active">Tablet (≥640)</button>
+    <button data-vp="lg">Desktop (≥1024)</button>
+  </div>
+  <span class="hint">Preview renders at the active viewport. Class string at the bottom of each card always shows the full responsive output.</span>
+</header>
+
+<div class="layout">
+  <div class="legend">
+    <strong>How to read the class strings:</strong> sizes appear as <code>text-base sm:text-lg lg:text-xl</code>; the <code>sm:</code> and <code>lg:</code> prefixes are added only when those size buckets differ from the previous bucket. DM Serif Display is applied via inline style on the page (Tailwind doesn't have a built-in serif token here), so serif roles show a comment in the output. Color tokens map to Tailwind arbitrary values like <code>text-[#1E3340]</code> or named opacity utilities like <code>text-white/85</code>.
+  </div>
+  <div id="roles"></div>
+</div>
+
+<footer>Brand tokens — Forge Dark · Forge Orange · VS Navy · Anvil Steel · Feather Cream · Parchment</footer>
+
+<script>
+const COLORS = {
+  forgeDark:      { hex: '#1E3340',                 token: '#1E3340' },
+  forgeOrange:    { hex: '#E8732A',                 token: '#E8732A' },
+  vsNavy:         { hex: '#234D70',                 token: '#234D70' },
+  anvilSteel:     { hex: '#5A7A8A',                 token: '#5A7A8A' },
+  featherCream:   { hex: '#E8D5B5',                 token: '#E8D5B5' },
+  parchment:      { hex: '#F4F1EC',                 token: '#F4F1EC' },
+  white:          { hex: '#FFFFFF',                 token: 'white' },
+  whiteOp85:      { hex: 'rgba(255,255,255,0.85)',  token: 'white/85' },
+  whiteOp80:      { hex: 'rgba(255,255,255,0.80)',  token: 'white/80' },
+  whiteOp70:      { hex: 'rgba(255,255,255,0.70)',  token: 'white/70' },
+  whiteOp55:      { hex: 'rgba(255,255,255,0.55)',  token: 'white/55' },
+  forgeDarkOp80:  { hex: 'rgba(30,51,64,0.80)',     token: '[#1E3340]/80' },
+};
+
+const SIZES = {
+  xs:    { rem: 0.75,   name: 'text-xs' },
+  sm:    { rem: 0.875,  name: 'text-sm' },
+  base:  { rem: 1,      name: 'text-base' },
+  lg:    { rem: 1.125,  name: 'text-lg' },
+  xl:    { rem: 1.25,   name: 'text-xl' },
+  '2xl': { rem: 1.5,    name: 'text-2xl' },
+  '3xl': { rem: 1.875,  name: 'text-3xl' },
+  '4xl': { rem: 2.25,   name: 'text-4xl' },
+  '5xl': { rem: 3,      name: 'text-5xl' },
+  '6xl': { rem: 3.75,   name: 'text-6xl' },
+  '7xl': { rem: 4.5,    name: 'text-7xl' },
+  '8xl': { rem: 6,      name: 'text-8xl' },
+};
+
+const LEADINGS = {
+  '0.95':  { class: 'leading-[0.95]' },
+  '1':     { class: 'leading-none' },
+  '1.02':  { class: 'leading-[1.02]' },
+  '1.05':  { class: 'leading-[1.05]' },
+  '1.25':  { class: 'leading-tight' },
+  '1.375': { class: 'leading-snug' },
+  '1.5':   { class: 'leading-normal' },
+  '1.625': { class: 'leading-relaxed' },
+  '1.75':  { class: 'leading-[1.75]' },
+  '2':     { class: 'leading-loose' },
+};
+
+const WEIGHTS = {
+  '400': { class: '' },
+  '500': { class: 'font-medium' },
+  '600': { class: 'font-semibold' },
+  '700': { class: 'font-bold' },
+};
+
+const ROLES = [
+  // ─── Headings ──────────────────────────────────────────────────
+  { group: 'Headings', name: 'Section headline (h2)', where: '§2 §3 §5 §6 §7 §8 §9 §10 §11 §12',
+    text: 'The Mission Brief', font: 'serif',
+    size: { base: '4xl', sm: '5xl', lg: '6xl' },
+    leading: '1.05', color: 'forgeDark', bg: 'parchment' },
+  { group: 'Headings', name: 'Forged headline (oversized)', where: '§4',
+    text: 'Forged,\nnot assembled', font: 'serif',
+    size: { base: '5xl', sm: '6xl', lg: '7xl' },
+    leading: '0.95', color: 'forgeOrange', bg: 'forgeDark' },
+  { group: 'Headings', name: 'Step title (h3)', where: '§5 each step',
+    text: 'Discover', font: 'serif',
+    size: { base: '2xl', sm: '2xl', lg: '3xl' },
+    leading: '1.25', color: 'forgeDark', bg: 'parchment' },
+  { group: 'Headings', name: 'Mission card title (h3)', where: '§10 each card',
+    text: 'The First Product', font: 'serif',
+    size: { base: '2xl', sm: '3xl', lg: '3xl' },
+    leading: '1.25', color: 'featherCream', bg: 'vsNavy' },
+  { group: 'Headings', name: 'Big "Meet Ani" caption phrase', where: '§2 figure',
+    text: 'Meet Ani', font: 'serif',
+    size: { base: '2xl', sm: '3xl', lg: '3xl' },
+    leading: '1.25', color: 'forgeDark', bg: 'parchment' },
+
+  // ─── Sub-headlines / ledes ─────────────────────────────────────
+  { group: 'Sub-headlines / ledes', name: 'Lede on parchment (anvil)', where: '§5 §8 §11',
+    text: 'Wings up. The mission moves.', font: 'sans',
+    size: { base: 'base', sm: 'lg', lg: 'lg' },
+    leading: '1.625', color: 'anvilSteel', bg: 'parchment' },
+  { group: 'Sub-headlines / ledes', name: 'Lede on VS Navy (white/80)', where: '§3 §7 §10',
+    text: 'One scroll. Plain language. The whole machine starts here.', font: 'sans',
+    size: { base: 'base', sm: 'lg', lg: 'lg' },
+    leading: '1.625', color: 'whiteOp80', bg: 'vsNavy' },
+  { group: 'Sub-headlines / ledes', name: 'Lede on Forge Dark (cream)', where: '§4 §9 §12',
+    text: 'Engineering: stable, secure, scalable.', font: 'sans',
+    size: { base: 'base', sm: 'lg', lg: 'lg' },
+    leading: '1.625', color: 'featherCream', bg: 'forgeDark' },
+  { group: 'Sub-headlines / ledes', name: 'Night Owl sub (white/70)', where: '§6',
+    text: "The watch that doesn\u2019t sleep.", font: 'sans',
+    size: { base: 'base', sm: 'lg', lg: 'lg' },
+    leading: '1.625', color: 'whiteOp70', bg: 'forgeDark' },
+
+  // ─── Body prose ────────────────────────────────────────────────
+  { group: 'Body prose', name: 'Body on parchment (anvil)', where: '§2',
+    text: "You see the product. You can describe it down to the seam. You may have already shipped a pilot \u2014 a prototype that demos well but won\u2019t stand up to product stress.",
+    font: 'sans',
+    size: { base: 'base', sm: 'lg', lg: 'lg' },
+    leading: '1.625', color: 'anvilSteel', bg: 'parchment' },
+  { group: 'Body prose', name: 'Body on parchment (forge dark/80)', where: '§8',
+    text: "As it shows reliable judgment on small things, it earns the room to handle larger things on its own. Four tiers. Always revocable. Always your call.",
+    font: 'sans',
+    size: { base: 'base', sm: 'lg', lg: 'lg' },
+    leading: '1.625', color: 'forgeDarkOp80', bg: 'parchment' },
+  { group: 'Body prose', name: 'Body on dark (white/85)', where: '§3 §4 §6 §7 §9',
+    text: "Bring a vision. Bring a repo. Bring a pilot you\u2019ve already shipped and need to make real. Forgewing reads what you have and meets you where you are.",
+    font: 'sans',
+    size: { base: 'base', sm: 'lg', lg: 'lg' },
+    leading: '1.625', color: 'whiteOp85', bg: 'forgeDark' },
+  { group: 'Body prose', name: 'Mission card body (white/80)', where: '§10 cards',
+    text: "A SaaS MVP for the first paying customer. Auth, billing, the core feature, a dashboard that won\u2019t embarrass you.",
+    font: 'sans',
+    size: { base: 'base', sm: 'lg', lg: 'lg' },
+    leading: '1.625', color: 'whiteOp80', bg: 'vsNavy' },
+  { group: 'Body prose', name: 'Pre-CTA body line', where: '§12',
+    text: "Bring the brief. We\u2019ll bring the rest.",
+    font: 'sans',
+    size: { base: 'base', sm: 'lg', lg: 'lg' },
+    leading: '1.625', color: 'whiteOp80', bg: 'forgeDark' },
+
+  // ─── Compact prose ─────────────────────────────────────────────
+  { group: 'Compact prose', name: 'Step description', where: '§5',
+    text: "Point Forgewing at your repo. No rewrite. No migration. Ani reads what you have and drafts a mission brief.",
+    font: 'sans',
+    size: { base: 'base', sm: 'base', lg: 'base' },
+    leading: '1.625', color: 'anvilSteel', bg: 'parchment' },
+  { group: 'Compact prose', name: 'Step note (italic qualifier)', where: '§5 step 0',
+    text: "(if you have a codebase)", font: 'sans', italic: true,
+    size: { base: 'xs', sm: 'xs', lg: 'xs' },
+    leading: '1.25', color: 'anvilSteel', bg: 'parchment' },
+  { group: 'Compact prose', name: 'Meet Ani three-line caption', where: '§2 figure',
+    text: "Your very own winged anvil", font: 'sans',
+    size: { base: 'base', sm: 'lg', lg: 'lg' },
+    leading: '1.25', color: 'anvilSteel', bg: 'parchment' },
+
+  // ─── Keystone / declarative ────────────────────────────────────
+  { group: 'Keystone / declarative', name: 'Ownership strike line', where: '§4 (3 lines)',
+    text: "Your architecture.", font: 'serif',
+    size: { base: '3xl', sm: '4xl', lg: '5xl' },
+    leading: '1.25', color: 'featherCream', bg: 'forgeDark' },
+  { group: 'Keystone / declarative', name: 'Step numeral', where: '§5 (0–5)',
+    text: "0", font: 'serif',
+    size: { base: '6xl', sm: '6xl', lg: '7xl' },
+    leading: '1', color: 'forgeOrange', bg: 'parchment' },
+  { group: 'Keystone / declarative', name: '§10 closer (serif statement)', where: '§10',
+    text: "If you can describe the system, Forgewing can take it to production.",
+    font: 'serif',
+    size: { base: 'xl', sm: '2xl', lg: '2xl' },
+    leading: '1.375', color: 'featherCream', bg: 'vsNavy' },
+
+  // ─── Italic asides + figure captions ───────────────────────────
+  { group: 'Italic asides + figure captions', name: 'Aside lead phrase (DM Serif)', where: '§3 §4 §6 §8 §9 §12',
+    text: "Eyes open.", font: 'serif',
+    size: { base: 'base', sm: 'base', lg: 'base' },
+    leading: '1.625', color: 'featherCream', bg: 'forgeDark' },
+  { group: 'Italic asides + figure captions', name: 'Aside continuation (italic body)', where: '§3 §4 §6 §8 §9 §12',
+    text: "Ani doesn\u2019t sleep. Neither does production.", font: 'sans', italic: true,
+    size: { base: 'sm', sm: 'sm', lg: 'sm' },
+    leading: '1.625', color: 'whiteOp55', bg: 'forgeDark' },
+
+  // ─── Hero (locked, for reference) ──────────────────────────────
+  { group: 'Hero (locked — reference only)', name: 'Hero eyebrow', where: 'Hero',
+    text: 'From pilot to production', font: 'sans', weight: '600', uppercase: true, tracking: '0.22em',
+    size: { base: 'xs', sm: 'sm', lg: 'sm' },
+    leading: '1.5', color: 'anvilSteel', bg: 'white' },
+  { group: 'Hero (locked — reference only)', name: 'Hero subtitle (desktop ≥800)', where: 'Hero',
+    text: 'Bring the vision. We bring the rest.', font: 'sans',
+    size: { base: 'xl', sm: '2xl', lg: '2xl' },
+    leading: '1.375', color: 'forgeDark', bg: 'white' },
+  { group: 'Hero (locked — reference only)', name: 'Hero italic subline', where: 'Hero',
+    text: '21 days. No card. The iron is hot.', font: 'sans', italic: true,
+    size: { base: 'sm', sm: 'sm', lg: 'sm' },
+    leading: '1.5', color: 'anvilSteel', bg: 'white' },
+];
+
+let activeViewport = 'sm';
+
+function colorClass(c) {
+  const t = COLORS[c].token;
+  if (t.startsWith('#') || t.startsWith('[')) return `text-[${t.replace(/[\[\]]/g,'')}]`;
+  return `text-${t}`;
+}
+
+function buildClass(role) {
+  const parts = [];
+  parts.push(SIZES[role.size.base].name);
+  if (role.size.sm !== role.size.base) parts.push('sm:' + SIZES[role.size.sm].name);
+  if (role.size.lg !== role.size.sm) parts.push('lg:' + SIZES[role.size.lg].name);
+  if (role.leading) parts.push(LEADINGS[role.leading].class);
+  if (role.weight && role.weight !== '400') parts.push(WEIGHTS[role.weight].class);
+  if (role.italic) parts.push('italic');
+  if (role.uppercase) parts.push('uppercase');
+  if (role.tracking) parts.push('tracking-[' + role.tracking + ']');
+  parts.push(colorClass(role.color));
+  return parts.filter(Boolean).join(' ');
+}
+
+function buildStyle(role, vp) {
+  const sizeKey = role.size[vp];
+  return {
+    fontSize: SIZES[sizeKey].rem + 'rem',
+    fontFamily: role.font === 'serif' ? "'DM Serif Display', serif" : "'DM Sans', sans-serif",
+    fontWeight: role.weight || '400',
+    fontStyle: role.italic ? 'italic' : 'normal',
+    lineHeight: role.leading || '1.5',
+    color: COLORS[role.color].hex,
+    letterSpacing: role.tracking || 'normal',
+    textTransform: role.uppercase ? 'uppercase' : 'none',
+  };
+}
+
+function getColorEntries() {
+  return Object.entries(COLORS).map(([k, v]) => [k, v.token]);
+}
+
+function render() {
+  const root = document.getElementById('roles');
+  root.innerHTML = '';
+  let lastGroup = null;
+  ROLES.forEach((role, i) => {
+    role._id = role._id || 'r' + i;
+    if (role.group !== lastGroup) {
+      const gl = document.createElement('div');
+      gl.className = 'group-label';
+      gl.textContent = role.group;
+      root.appendChild(gl);
+      lastGroup = role.group;
+    }
+    root.appendChild(buildCard(role));
+  });
+}
+
+function buildCard(role) {
+  const card = document.createElement('div');
+  card.className = 'role-card';
+
+  const meta = document.createElement('div');
+  meta.className = 'role-meta';
+  const nameEl = document.createElement('span');
+  nameEl.className = 'role-name';
+  nameEl.textContent = role.name;
+  const whereEl = document.createElement('span');
+  whereEl.className = 'role-where';
+  whereEl.textContent = role.where;
+  meta.appendChild(nameEl);
+  meta.appendChild(whereEl);
+  const copyBtn = document.createElement('button');
+  copyBtn.className = 'copy-btn';
+  copyBtn.textContent = 'Copy class';
+  copyBtn.onclick = () => {
+    navigator.clipboard.writeText(buildClass(role));
+    copyBtn.textContent = 'Copied';
+    copyBtn.classList.add('copied');
+    setTimeout(() => { copyBtn.textContent = 'Copy class'; copyBtn.classList.remove('copied'); }, 1200);
+  };
+  meta.appendChild(copyBtn);
+  card.appendChild(meta);
+
+  const preview = document.createElement('div');
+  preview.className = 'preview';
+  preview.style.background = COLORS[role.bg].hex;
+  const span = document.createElement('span');
+  span.className = 'preview-text';
+  span.textContent = role.text;
+  Object.assign(span.style, buildStyle(role, activeViewport));
+  preview.appendChild(span);
+  card.appendChild(preview);
+
+  const controls = document.createElement('div');
+  controls.className = 'controls';
+
+  const sizeOpts = Object.keys(SIZES).map(k => [k, SIZES[k].name]);
+  const ldOpts   = Object.keys(LEADINGS).map(k => [k, LEADINGS[k].class + ' (' + k + ')']);
+  const wgOpts   = Object.keys(WEIGHTS).map(k => [k, k + (WEIGHTS[k].class ? ' / ' + WEIGHTS[k].class : '')]);
+  const colorOpts = getColorEntries();
+  const bgOpts   = ['parchment', 'forgeDark', 'vsNavy', 'white', 'forgeOrange'].map(b => [b, COLORS[b].token]);
+
+  controls.appendChild(makeSelect('Size mobile', sizeOpts, role.size.base, v => { role.size.base = v; refresh(); }));
+  controls.appendChild(makeSelect('Size sm:', sizeOpts, role.size.sm, v => { role.size.sm = v; refresh(); }));
+  controls.appendChild(makeSelect('Size lg:', sizeOpts, role.size.lg, v => { role.size.lg = v; refresh(); }));
+  controls.appendChild(makeSelect('Family', [['sans', 'DM Sans'], ['serif', 'DM Serif Display']], role.font, v => { role.font = v; refresh(); }));
+  controls.appendChild(makeSelect('Weight', wgOpts, role.weight || '400', v => { role.weight = v; refresh(); }));
+  controls.appendChild(makeSelect('Leading', ldOpts, role.leading || '1.5', v => { role.leading = v; refresh(); }));
+  controls.appendChild(makeSelect('Color', colorOpts, role.color, v => { role.color = v; refresh(); }));
+  controls.appendChild(makeSelect('Background', bgOpts, role.bg, v => { role.bg = v; refresh(); }));
+  controls.appendChild(makeCheckbox('Italic', !!role.italic, v => { role.italic = v; refresh(); }));
+  controls.appendChild(makeCheckbox('Uppercase', !!role.uppercase, v => { role.uppercase = v; refresh(); }));
+
+  card.appendChild(controls);
+
+  const out = document.createElement('div');
+  out.className = 'class-output';
+  card.appendChild(out);
+
+  function refresh() {
+    Object.assign(span.style, buildStyle(role, activeViewport));
+    preview.style.background = COLORS[role.bg].hex;
+    const cls = buildClass(role);
+    out.innerHTML = cls + (role.font === 'serif'
+      ? '<span class="note">  /* + DM Serif Display via inline style */</span>'
+      : '');
+  }
+  refresh();
+
+  return card;
+}
+
+function makeSelect(label, opts, current, onChange) {
+  const wrap = document.createElement('div');
+  wrap.className = 'ctrl';
+  const lbl = document.createElement('label');
+  lbl.textContent = label;
+  wrap.appendChild(lbl);
+  const sel = document.createElement('select');
+  opts.forEach(([v, l]) => {
+    const o = document.createElement('option');
+    o.value = v;
+    o.textContent = l;
+    if (v === current) o.selected = true;
+    sel.appendChild(o);
+  });
+  sel.onchange = e => onChange(e.target.value);
+  wrap.appendChild(sel);
+  return wrap;
+}
+
+function makeCheckbox(label, checked, onChange) {
+  const wrap = document.createElement('div');
+  wrap.className = 'ctrl ctrl-checkbox';
+  const cb = document.createElement('input');
+  cb.type = 'checkbox';
+  cb.checked = checked;
+  cb.onchange = e => onChange(e.target.checked);
+  const lbl = document.createElement('label');
+  lbl.textContent = label;
+  wrap.appendChild(cb);
+  wrap.appendChild(lbl);
+  return wrap;
+}
+
+document.querySelectorAll('#viewport button').forEach(b => {
+  b.onclick = () => {
+    document.querySelectorAll('#viewport button').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    activeViewport = b.dataset.vp;
+    render();
+  };
+});
+
+render();
+</script>
+</body>
+</html>

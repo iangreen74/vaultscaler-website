@@ -4,7 +4,18 @@ import Image, { type StaticImageData } from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-export default function ParallaxAni({ src }: { src: StaticImageData }) {
+export default function ParallaxAni({
+  src,
+  startY = "-26%",
+  endY = "20%",
+}: {
+  src: StaticImageData;
+  // Vertical position knobs — controlled from page.tsx so mobile/desktop can be tuned independently.
+  // startY: where Ani begins (negative = up, clipped by section overflow-hidden). Default "-26%".
+  // endY: where Ani drifts to as you scroll. Default "20%".
+  startY?: string;
+  endY?: string;
+}) {
   const ref = useRef<HTMLDivElement>(null);
 
   // Tracks scroll progress of this element: 0 = top of element at top of viewport, 1 = bottom of element at top of viewport.
@@ -13,8 +24,7 @@ export default function ParallaxAni({ src }: { src: StaticImageData }) {
     offset: ["start start", "end start"],
   });
 
-  // Y drift: negative start = image begins shifted up (top clipped by section's overflow-hidden). End value = how far it drifts down as you scroll.
-  const y = useTransform(scrollYProgress, [0, 1], ["-26%", "20%"]);
+  const y = useTransform(scrollYProgress, [0, 1], [startY, endY]);
   // X drift: start = baseline horizontal offset (positive = right, clips off right edge). End = where it drifts to (smaller = left drift on scroll).
   const x = useTransform(scrollYProgress, [0, 1], ["30%", "10%"]);
 
