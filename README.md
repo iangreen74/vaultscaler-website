@@ -28,7 +28,7 @@ npm run lint         # Run ESLint
 | `/radix` | Radix Platform overview | Yes |
 | `/radix/core` | Radix Core — GPU scheduling optimization | Yes |
 | `/radix/studio` | Radix Studio — LLM orchestration & governance | Yes |
-| `/lev` | Lev — Agentic Engineering System | Yes |
+| `/forgewing` | Forgewing — Product Delivery Engine | Yes |
 | `/solutions/hyperscale` | Hyperscale GPU fleets | Yes |
 | `/solutions/ml-teams` | ML & Research teams | Yes |
 | `/solutions/product-teams` | Product & Engineering teams | Yes |
@@ -78,7 +78,7 @@ app/
 │   ├── page.tsx                     # Platform overview
 │   ├── core/page.tsx                # Radix Core
 │   └── studio/page.tsx              # Radix Studio
-├── lev/page.tsx                     # Lev
+├── forgewing/page.tsx               # Forgewing
 ├── solutions/
 │   ├── hyperscale/page.tsx          # Hyperscale segment
 │   ├── ml-teams/page.tsx            # ML teams segment
@@ -105,4 +105,4 @@ lib/
 
 ---
 
-**Target Launch: May 2026**
+**Target Launch: June 2026**

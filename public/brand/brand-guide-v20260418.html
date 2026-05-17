@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VaultScaler & Forgewing Brand Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --vs-navy: #234D70;
+    --forge-orange: #E8732A;
+    --anvil-steel: #5A7A8A;
+    --feather-cream: #E8D5B5;
+    --parchment: #F4F1EC;
+    --forge-dark: #1E3340;
+    --white: #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--forge-dark);
+    background: var(--white);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .cover {
+    min-height: 100vh;
+    background: var(--vs-navy);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 2rem;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -30%; right: -20%;
+    width: 80vw; height: 80vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(232,115,42,0.08) 0%, transparent 70%);
+  }
+  .cover-badge {
+    font-weight: 500; font-size: 0.85rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--feather-cream); margin-bottom: 2rem;
+  }
+  .cover-title-vs {
+    font-family: 'Segoe UI', sans-serif; font-weight: 700;
+    font-size: clamp(3rem, 8vw, 6rem); letter-spacing: -0.03em;
+    color: var(--white); text-align: center; line-height: 1.05; margin-bottom: 0.25em;
+  }
+  .cover-title-fw {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.6rem, 7vw, 5.25rem);
+    color: var(--forge-orange); text-align: center;
+  }
+  .cover-sub {
+    font-size: 1.1rem; color: var(--feather-cream);
+    text-align: center; max-width: 500px; line-height: 1.6; margin-top: 2.5rem;
+  }
+  .cover-divider {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--feather-cream);
+    margin: 1.5rem 0;
+  }
+  .cover-version { font-size: 0.8rem; color: var(--feather-cream); letter-spacing: 0.1em; }
+
+  section {
+    padding: 5rem 2rem; max-width: 1100px; margin: 0 auto;
+  }
+  .section-label {
+    font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--forge-orange); margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--forge-dark); margin-bottom: 1rem; line-height: 1.15;
+  }
+  .vs-heading {
+    font-family: 'Segoe UI', sans-serif; font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.03em;
+    color: var(--vs-navy); margin-bottom: 1rem; line-height: 1.15;
+  }
+  .section-intro {
+    font-size: 1.05rem; color: var(--anvil-steel);
+    max-width: 640px; line-height: 1.7; margin-bottom: 3rem;
+  }
+
+  .arch-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+  .arch-card {
+    border: 1px solid #E0DCD6; border-radius: 12px;
+    padding: 2.5rem; position: relative; overflow: hidden;
+  }
+  .arch-card::after {
+    content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+  }
+  .arch-card.parent::after { background: var(--vs-navy); }
+  .arch-card.product::after { background: var(--forge-orange); }
+  .arch-card.parent h3 { font-family: 'Segoe UI'; font-weight: 700; font-size: 1.6rem; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: var(--forge-dark); }
+  .arch-card.product h3 { font-family: 'DM Serif Display', serif; font-size: 1.6rem; margin-bottom: 0.5rem; color: var(--forge-dark); }
+  .arch-card .role { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--anvil-steel); margin-bottom: 1rem; }
+  .arch-card p { font-size: 0.95rem; color: var(--anvil-steel); line-height: 1.65; }
+  .arch-card .type-rule { margin-top: 1rem; font-size: 0.78rem; font-weight: 600; color: var(--forge-dark); padding-top: 1rem; border-top: 1px solid #E0DCD6; }
+
+  .palette-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
+  .swatch { border-radius: 12px; overflow: hidden; border: 1px solid #E0DCD6; }
+  .swatch-color { height: 120px; }
+  .swatch.large .swatch-color { height: 160px; }
+  .swatch-info { padding: 1rem 1.25rem; }
+  .swatch-name { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.25rem; }
+  .swatch-hex { font-size: 0.85rem; color: var(--anvil-steel); }
+  .swatch-usage { font-size: 0.78rem; color: var(--anvil-steel); margin-top: 0.5rem; line-height: 1.5; }
+
+  .type-demo { margin-top: 2rem; }
+  .type-row { display: flex; align-items: baseline; border-bottom: 1px solid #E0DCD6; padding: 2rem 0; gap: 3rem; }
+  .type-row:last-child { border-bottom: none; }
+  .type-meta { min-width: 200px; flex-shrink: 0; }
+  .type-meta .name { font-weight: 600; font-size: 0.85rem; color: var(--forge-dark); }
+  .type-meta .spec { font-size: 0.78rem; color: var(--anvil-steel); margin-top: 0.25rem; }
+  .scope {
+    display: inline-block; font-size: 0.65rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.15em 0.5em; border-radius: 3px; margin-top: 0.4rem;
+  }
+  .scope.fw { background: rgba(232,115,42,0.12); color: var(--forge-orange); }
+  .scope.both { background: rgba(59,97,137,0.12); color: var(--vs-navy); }
+  .scope.vs { background: rgba(59,97,137,0.2); color: var(--vs-navy); }
+
+  .logo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
+  .logo-card {
+    border-radius: 12px; padding: 3rem 2rem;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 200px; border: 1px solid #E0DCD6; position: relative;
+  }
+  .logo-card.dark { background: var(--forge-dark); border-color: transparent; }
+  .logo-card.navy { background: var(--vs-navy); border-color: transparent; }
+  .logo-card.parchment { background: var(--parchment); border-color: transparent; }
+  .logo-card .context-label {
+    position: absolute; bottom: 0.75rem; right: 1rem;
+    font-size: 0.65rem; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; opacity: 0.5;
+  }
+  .logo-card .context-label.light { color: var(--white); }
+  .logo-card .context-label.dark-text { color: var(--forge-dark); }
+  .vs-mark { font-family: 'DM Sans'; font-size: 3.5rem; font-weight: 700; line-height: 1; }
+
+  .tone-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem; }
+  .tone-card { padding: 2rem; border-radius: 12px; background: var(--parchment); }
+  .tone-card h4 { font-family: 'DM Serif Display', serif; font-size: 1.2rem; margin-bottom: 0.75rem; color: var(--forge-dark); }
+  .tone-card p { font-size: 0.9rem; color: var(--anvil-steel); line-height: 1.6; }
+  .tone-do { color: var(--vs-navy); font-weight: 600; font-size: 0.8rem; margin-top: 1rem; display: block; }
+  .tone-dont { color: var(--forge-orange); font-weight: 600; font-size: 0.8rem; margin-top: 0.5rem; display: block; }
+
+  .combo-strip {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+    margin-top: 2rem; border-radius: 12px; overflow: hidden; border: 1px solid #E0DCD6;
+  }
+  .combo-cell { padding: 3rem 2rem; text-align: center; }
+  .combo-cell h4 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+  .combo-cell p { font-size: 0.85rem; opacity: 0.7; line-height: 1.5; }
+
+  .guide-footer { background: var(--forge-dark); padding: 4rem 2rem; text-align: center; }
+  .guide-footer p { font-size: 0.85rem; color: var(--anvil-steel); line-height: 1.8; }
+  .guide-footer .brand-lockup { font-size: 1.5rem; color: var(--white); margin-bottom: 1rem; }
+  .guide-footer .brand-lockup .fw { font-family: 'DM Serif Display', serif; font-size: 1.8rem; color: var(--forge-orange); }
+  .guide-footer .brand-lockup .vs { font-family: 'DM Sans'; font-size: 0.95rem; font-weight: 400; opacity: 0.75; vertical-align: baseline; }
+
+  @media (max-width: 768px) {
+    .arch-grid, .palette-grid, .logo-grid, .tone-grid, .combo-strip { grid-template-columns: 1fr; }
+    .type-row { flex-direction: column; gap: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-badge">Brand Guidelines</div>
+  <div class="cover-title-vs">VaultScaler</div>
+  <div class="cover-divider">&amp;</div>
+  <div class="cover-title-fw">Forgewing</div>
+  <p class="cover-sub">Visual identity, tone, and usage guidelines for the VaultScaler corporate brand and the Forgewing product brand.</p>
+  <span class="cover-version">v1.0 — April 2026</span>
+</div>
+
+<section>
+  <div class="section-label">01 — Brand Architecture</div>
+  <h2 class="vs-heading">Two brands, one family.</h2>
+  <p class="section-intro">VaultScaler is the parent company. Forgewing is the product. They share a foundation but each has its own personality. VaultScaler is the steady hand; Forgewing is the sharp edge.</p>
+  <div class="arch-grid">
+    <div class="arch-card parent">
+      <div class="role">Parent Company</div>
+      <h3>VaultScaler</h3>
+      <p>A SaaS company building automated software solutions for deep tech and consumers. VaultScaler's brand is restrained and confident — corporate credibility without corporate stuffiness.</p>
+      <div class="type-rule">Typography: DM Sans only · Colors: Navy + White</div>
+    </div>
+    <div class="arch-card product">
+      <div class="role">Product</div>
+      <h3>Forgewing</h3>
+      <p>A full-lifecycle agentic engineering system. Users describe what to build in plain language. Forgewing designs, codes, deploys, monitors, and resolves — autonomously. Built solid, moves fast.</p>
+      <div class="type-rule">Typography: DM Serif Display (display/headings) + DM Sans (body) · Full palette</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">02 — Color Palette</div>
+  <h2 class="vs-heading">Shared roots, distinct energy.</h2>
+  <p class="section-intro">VaultScaler Navy is the shared foundation across both brands. Forgewing layers on orange for product-specific energy. Parchment provides a warm, breathable surface. Feather Cream is reserved for decorative accents only.</p>
+  <div class="palette-grid">
+    <div class="swatch large">
+      <div class="swatch-color" style="background: var(--vs-navy);"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">VaultScaler Navy</div>
+        <div class="swatch-hex">#234D70</div>
+        <div class="swatch-usage">Shared primary. Headers, backgrounds, corporate text. The connective thread across both brands.</div>
+      </div>
+    </div>
+    <div class="swatch large">
+      <div class="swatch-color" style="background: var(--forge-orange);"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Forge Orange</div>
+        <div class="swatch-hex">#E8732A</div>
+        <div class="swatch-usage">Forgewing accent. CTAs, highlights, active states. Energy and action.</div>
+      </div>
+    </div>
+    <div class="swatch large">
+      <div class="swatch-color" style="background: var(--forge-dark);"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Forge Dark</div>
+        <div class="swatch-hex">#1E3340</div>
+        <div class="swatch-usage">Highest contrast. Hero text, dark mode backgrounds, primary body text.</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--anvil-steel);"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Anvil Steel</div>
+        <div class="swatch-hex">#5A7A8A</div>
+        <div class="swatch-usage">Neutral mid-tone. Secondary text, borders, icons, captions.</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--parchment);"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Parchment</div>
+        <div class="swatch-hex">#F4F1EC</div>
+        <div class="swatch-usage">Light backgrounds, page surfaces, card fills. The default warm neutral.</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--feather-cream);"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Feather Cream</div>
+        <div class="swatch-hex">#E8D5B5</div>
+        <div class="swatch-usage">Decorative accent only. Badges, hover states, small fills. Not for full backgrounds.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">03 — Typography</div>
+  <h2 class="vs-heading">Heavy serifs, clean sans.</h2>
+  <p class="section-intro">Each brand has its own type hierarchy from display through subheading. They share body and caption, the connective tissue that says "same family." VaultScaler uses Segoe UI for a platform feel. Forgewing uses DM Serif Display for craft and character.</p>
+  <div class="type-demo">
+    <div class="type-row">
+      <div class="type-meta">
+        <div class="name">Display</div>
+        <div class="spec">Segoe UI · Bold · -0.03em<br>48–72pt · Brand lockups</div>
+        <span class="scope vs">VaultScaler</span>
+      </div>
+      <div style="font-family:'Segoe UI',sans-serif;font-size:3.2rem;font-weight:700;letter-spacing:-0.03em;color:var(--vs-navy);line-height:1.1;flex:1;">VaultScaler</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta">
+        <div class="name">Display</div>
+        <div class="spec">DM Serif Display · Regular<br>48–72pt · Brand lockups</div>
+        <span class="scope fw">Forgewing</span>
+      </div>
+      <div style="font-family:'DM Serif Display',serif;font-size:3.2rem;color:var(--forge-dark);line-height:1.1;flex:1;">Forgewing</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta">
+        <div class="name">Heading</div>
+        <div class="spec">Segoe UI · Bold · -0.03em<br>24–36pt · Section titles</div>
+        <span class="scope vs">VaultScaler</span>
+      </div>
+      <div style="font-family:'Segoe UI',sans-serif;font-size:1.8rem;font-weight:700;letter-spacing:-0.03em;color:var(--vs-navy);line-height:1.2;flex:1;">Infrastructure that scales.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta">
+        <div class="name">Heading</div>
+        <div class="spec">DM Serif Display · Regular<br>24–36pt · Section titles</div>
+        <span class="scope fw">Forgewing</span>
+      </div>
+      <div style="font-family:'DM Serif Display',serif;font-size:1.8rem;color:var(--forge-dark);line-height:1.2;flex:1;">Built solid. Moves fast.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta">
+        <div class="name">Subheading</div>
+        <div class="spec">Segoe UI · SemiBold<br>16–20pt · Card titles, labels</div>
+        <span class="scope vs">VaultScaler</span>
+      </div>
+      <div style="font-family:'Segoe UI',sans-serif;font-size:1.15rem;font-weight:600;color:var(--vs-navy);line-height:1.4;flex:1;">Automated SaaS infrastructure</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta">
+        <div class="name">Subheading</div>
+        <div class="spec">DM Sans · SemiBold<br>16–20pt · Card titles, labels</div>
+        <span class="scope fw">Forgewing</span>
+      </div>
+      <div style="font-family:'DM Sans',sans-serif;font-size:1.15rem;font-weight:600;color:var(--forge-dark);line-height:1.4;flex:1;">Full-lifecycle agentic engineering</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta">
+        <div class="name">Body</div>
+        <div class="spec">DM Sans · Regular<br>14–16pt · Paragraphs</div>
+        <span class="scope both">Both brands</span>
+      </div>
+      <div style="font-family:'DM Sans',sans-serif;font-size:1rem;color:var(--anvil-steel);line-height:1.7;max-width:520px;flex:1;">Users describe what to build in plain language. Forgewing designs architecture, writes code, deploys to production, monitors continuously, and resolves incidents autonomously.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta">
+        <div class="name">Caption / Label</div>
+        <div class="spec">DM Sans · Medium<br>11–12pt · Uppercase tracking</div>
+        <span class="scope both">Both brands</span>
+      </div>
+      <div style="font-family:'DM Sans',sans-serif;font-size:0.8rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--anvil-steel);flex:1;">Autonomous Deployment Pipeline</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">04 — Logo & Mark Usage</div>
+  <h2 class="vs-heading">Every context, covered.</h2>
+  <p class="section-intro">Forgewing's primary mark is "Ani," the winged anvil. The primary lockup stacks Ani over the Forgewing wordmark for most contexts. VaultScaler uses the VS monogram. The mixed lockup uses DM Serif Display for Forgewing and DM Sans for "by VaultScaler."</p>
+  <div class="logo-grid">
+    <div class="logo-card">
+      <span style="font-weight:600;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--anvil-steel);display:block;margin-bottom:0.75rem;">Primary Mark</span>
+      <img src="Forgewing-Ani-Mascot-Transparent.png" alt="Ani — Winged Anvil" style="width:160px;height:auto;">
+      <div style="margin-top:0.75rem;font-size:0.85rem;color:var(--anvil-steel);text-align:center;">Ani — Winged Anvil<br>Hero areas, splash screens,<br>first mention</div>
+      <span class="context-label dark-text">FORGEWING</span>
+    </div>
+    <div class="logo-card">
+      <span style="font-weight:600;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--anvil-steel);display:block;margin-bottom:0.75rem;">Corporate Mark</span>
+      <img src="vaultscaler-icon-inverse.png" alt="VaultScaler VS Monogram" style="width:80px;height:auto;">
+      <div style="margin-top:0.75rem;font-size:0.85rem;color:var(--anvil-steel);text-align:center;">VS Monogram<br>Corporate materials,<br>investor docs, legal</div>
+      <span class="context-label dark-text">VAULTSCALER</span>
+    </div>
+    <div class="logo-card">
+      <span style="font-weight:600;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--anvil-steel);display:block;margin-bottom:0.75rem;">Corporate Mark — Light</span>
+      <img src="vaultscaler-icon-primary.svg" alt="VaultScaler VS Monogram — Primary" style="width:80px;height:auto;">
+      <div style="margin-top:0.75rem;font-size:0.85rem;color:var(--anvil-steel);text-align:center;">VS Monogram<br>Light backgrounds,<br>print, stationery</div>
+      <span class="context-label dark-text">VAULTSCALER</span>
+    </div>
+  </div>
+
+  <div style="margin-top:2rem; display:grid; grid-template-columns: repeat(3, 1fr); gap:1.5rem;">
+    <div class="logo-card" style="min-height:280px;">
+      <span style="font-weight:600;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--anvil-steel);display:block;margin-bottom:0.75rem;">Primary Lockup</span>
+      <div style="text-align:center;">
+        <img src="Forgewing-Ani-Mascot-Transparent.png" alt="Ani — Winged Anvil" style="width:120px;height:auto;">
+        <div style="margin-top:0.25em;font-family:'DM Serif Display';font-size:1.6rem;color:var(--forge-dark);">Forgewing</div>
+      </div>
+      <div style="margin-top:0.75rem;font-size:0.85rem;color:var(--anvil-steel);text-align:center;">Ani + Wordmark<br>Website headers, pitch decks,<br>swag, event signage</div>
+      <span class="context-label dark-text">LIGHT BG</span>
+    </div>
+    <div class="logo-card dark" style="min-height:280px;">
+      <span style="font-weight:600;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--anvil-steel);display:block;margin-bottom:0.75rem;">Primary Lockup — Dark</span>
+      <div style="text-align:center;">
+        <img src="Forgewing-Ani-Mascot-Transparent.png" alt="Ani — Winged Anvil" style="width:120px;height:auto;">
+        <div style="margin-top:0.25em;font-family:'DM Serif Display';font-size:1.6rem;color:var(--white);">Forgewing</div>
+      </div>
+      <div style="margin-top:0.75rem;font-size:0.85rem;color:var(--anvil-steel);text-align:center;">Ani + Wordmark<br>Dark backgrounds,<br>dark mode, video overlays</div>
+      <span class="context-label light">DARK BG</span>
+    </div>
+    <div class="logo-card parchment" style="min-height:280px;">
+      <span style="font-weight:600;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--anvil-steel);display:block;margin-bottom:0.75rem;">Primary Lockup — Warm</span>
+      <div style="text-align:center;">
+        <img src="Forgewing-Ani-Mascot-Transparent.png" alt="Ani — Winged Anvil" style="width:120px;height:auto;">
+        <div style="margin-top:0.25em;font-family:'DM Serif Display';font-size:1.6rem;color:var(--forge-dark);">Forgewing</div>
+      </div>
+      <div style="margin-top:0.75rem;font-size:0.85rem;color:var(--anvil-steel);text-align:center;">Ani + Wordmark<br>Print, stationery,<br>partnership collateral</div>
+      <span class="context-label dark-text">PARCHMENT BG</span>
+    </div>
+  </div>
+
+  <div style="margin-top:1.5rem; background:var(--parchment); border-radius:12px; padding:1.5rem 2rem;">
+    <div style="font-weight:600; font-size:0.85rem; margin-bottom:0.75rem; color:var(--forge-dark);">Primary Lockup Rules</div>
+    <div style="font-size:0.88rem; color:var(--anvil-steel); line-height:2;">
+      ✓ Minimum width: 120px<br>
+      ✓ Spacing between Ani and wordmark: snug but not touching, roughly half the cap-height of "F"<br>
+      ✓ Wordmark set in DM Serif Display Regular, not bold<br>
+      ✗ Don't rearrange to horizontal layout without approval<br>
+      ✗ Don't separate Ani from the wordmark in hero placements
+    </div>
+  </div>
+
+  <div style="margin-top:2rem; display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem;">
+    <div class="logo-card dark" style="min-height:140px;">
+      <div style="text-align:center;">
+        <span style="font-family:'DM Serif Display';font-size:2.2rem;color:var(--white);">Forgewing</span>
+        <span style="display:block;font-family:'DM Sans';font-weight:400;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--anvil-steel);margin-top:0.25rem;">by VaultScaler</span>
+      </div>
+      <span class="context-label light">MIXED LOCKUP — DARK BG</span>
+    </div>
+    <div class="logo-card parchment" style="min-height:140px;">
+      <div style="text-align:center;">
+        <span style="font-family:'DM Serif Display';font-size:2.2rem;color:var(--forge-dark);">Forgewing</span>
+        <span style="display:block;font-family:'DM Sans';font-weight:400;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--anvil-steel);margin-top:0.25rem;">by VaultScaler</span>
+      </div>
+      <span class="context-label dark-text">MIXED LOCKUP — LIGHT BG</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">05 — Tone of Voice</div>
+  <h2 class="vs-heading">Confident, not corporate.</h2>
+  <p class="section-intro">Both brands share a modern, approachable voice. We respect our audience's intelligence without drowning them in jargon. The anvil is our metaphor: we build things that last and ship them fast.</p>
+  <div class="tone-grid">
+    <div class="tone-card">
+      <h4>Clear over clever</h4>
+      <p>Say what the product does in plain terms. Technical credibility comes from clarity, not complexity.</p>
+      <span class="tone-do">✓ "Describe what to build. Forgewing handles the rest."</span>
+      <span class="tone-dont">✗ "Leverage our AI-powered paradigm for synergistic development workflows."</span>
+    </div>
+    <div class="tone-card">
+      <h4>Confident, not arrogant</h4>
+      <p>We know what we've built is good. We don't need to shout about it or tear others down.</p>
+      <span class="tone-do">✓ "Forgewing deploys to production AWS infrastructure autonomously."</span>
+      <span class="tone-dont">✗ "Unlike other tools, we're actually capable of real deployment."</span>
+    </div>
+    <div class="tone-card">
+      <h4>Human-scale</h4>
+      <p>We're building powerful automation, but we talk to people like people. Short sentences. Active voice. Real words.</p>
+      <span class="tone-do">✓ "Your SaaS is live. Forgewing is monitoring it."</span>
+      <span class="tone-dont">✗ "Deployment completion status has been achieved and continuous observability has been initiated."</span>
+    </div>
+    <div class="tone-card">
+      <h4>Built solid, moves fast</h4>
+      <p>This is the brand's core tension. Emphasize reliability and speed in equal measure — the anvil has wings.</p>
+      <span class="tone-do">✓ "Production-grade from the first deploy."</span>
+      <span class="tone-dont">✗ "Move fast and break things."</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">06 — Brand in Context</div>
+  <h2 class="vs-heading">Where each brand lives.</h2>
+  <p class="section-intro">VaultScaler appears in corporate contexts. Forgewing owns the product surface. They meet in the mixed lockup "Forgewing by VaultScaler."</p>
+  <div class="combo-strip">
+    <div class="combo-cell" style="background:var(--vs-navy); color:var(--white);">
+      <h4 style="font-family:'Segoe UI';font-weight:700;letter-spacing:-0.03em;">VaultScaler</h4>
+      <p>Investor decks, legal docs, contracts, corporate site, job postings, press releases.</p>
+    </div>
+    <div class="combo-cell" style="background:var(--forge-dark); color:var(--white);">
+      <h4 style="font-family:'DM Serif Display';color:var(--forge-orange);">Forgewing</h4>
+      <p>Product UI, marketing site, docs, tutorials, social media, developer relations.</p>
+    </div>
+    <div class="combo-cell" style="background:var(--parchment); color:var(--forge-dark);">
+      <h4 style="font-family:'DM Sans';font-weight:600;">Combined</h4>
+      <p>Letterhead, email signatures, event materials, partnership collateral.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">07 — Spacing & Clear Space</div>
+  <h2 class="vs-heading">Give it room to breathe.</h2>
+  <p class="section-intro">Maintain a minimum clear space around all logos equal to the height of the "F" in Forgewing or the "V" in the VS mark. Never crowd the mark with text, borders, or other visual elements.</p>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-top:2rem;">
+    <div style="background:var(--parchment); border-radius:12px; padding:3rem; text-align:center;">
+      <div style="border:2px dashed var(--anvil-steel); border-radius:8px; padding:2.5rem; display:inline-block; position:relative;">
+        <span style="font-family:'DM Serif Display';font-size:2.5rem;color:var(--forge-dark);">Forgewing</span>
+        <span style="position:absolute;top:0.5rem;left:50%;transform:translateX(-50%);font-size:0.6rem;color:var(--forge-orange);font-weight:600;">MINIMUM CLEAR SPACE</span>
+      </div>
+    </div>
+    <div style="background:var(--parchment); border-radius:12px; padding:2rem;">
+      <div style="font-weight:600; font-size:0.85rem; margin-bottom:1rem; color:var(--forge-dark);">Logo Don'ts</div>
+      <div style="font-size:0.88rem; color:var(--anvil-steel); line-height:2;">
+        ✗ Don't rotate or skew the marks<br>
+        ✗ Don't change the brand colors<br>
+        ✗ Don't add drop shadows or effects<br>
+        ✗ Don't place on busy photo backgrounds<br>
+        ✗ Don't recreate — always use source files<br>
+        ✗ Don't use Ani at sizes below 32px (use favicon)
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="guide-footer">
+  <div class="brand-lockup"><span class="fw">Forgewing</span> <span class="vs">by VaultScaler</span></div>
+</div>
+
+</body>
+</html>

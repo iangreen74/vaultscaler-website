@@ -1,17 +1,17 @@
 # VaultScaler
 
-> VaultScaler builds Lev, an agentic engineering system for full SDLC automation. Founded in 2025, launching May 2026.
+> VaultScaler builds Forgewing, the Product Delivery Engine. Founded in 2025, launching June 2026.
 
-VaultScaler builds Lev, an agentic engineering system for full SDLC automation. The company's tagline is "Build More. Manage Less."
+VaultScaler builds Forgewing, the Product Delivery Engine that lets product-and-engineering teams ship together. The company's tagline is "Build More. Manage Less."
 
 ## Products
 
-### Lev
-Lev is an Agentic Engineering System that architects, builds, deploys, and supports software across the full SDLC. It uses a proprietary methodology called the Golden Spec — a living blueprint that captures every requirement, architectural decision, and reasoning before code is written. The Golden Spec progressively hardens over iterations, preventing the codebase from churning backward. Lev includes integrated SRE that has full context into specs, telemetry, and incident history. Pricing starts at $1,499 per project per month with a 14-day free trial. Lev uses a BYOK (Bring Your Own Key) model where customers provide their own LLM API keys.
+### Forgewing
+Forgewing is the Product Delivery Engine. Point it at your repo or hand it a brief — it designs the architecture, returns real pull requests, deploys to your AWS account, and operates the system after launch. Engineering keeps review and merge authority. The product uses a persistent artifact called the mission brief — a living spec that captures every requirement, decision, and reasoning before code is written. Forgewing also runs an operational-memory graph that captures every decision and incident, compounding institutional knowledge across each customer's product surfaces.
 
-- Product page: https://vaultscaler.com/lev/
-- Differentiators: End-to-end SDLC ownership (not just code generation), Golden Spec methodology, integrated SRE, flat per-project pricing
-- Target customers: Startup founders shipping their first products, enterprise engineering teams needing predictability and governance
+- Product page: https://vaultscaler.com/forgewing/
+- Differentiators: Product-and-engineering pod buyer (not engineer-only), real pull requests against customer repos, customer-owned AWS deployments, operations included after launch, operational-memory graph
+- Target customers: Startup pods (solo founders through Series A), and forward-deployed product+engineering pods inside larger orgs
 
 ### Radix Core (secondary product)
 Radix Core is a GPU training optimization platform that uses closed-loop control to balance memory, compute, and power across training runs. It delivers up to 21% throughput improvement over standard FIFO scheduling (based on VaultScaler internal benchmarks). Deploys via Helm chart on Kubernetes 1.26+ with zero changes to existing training code or stack. Originally built for air-gapped deployment with zero egress. SLSA Level 3 attestations. Pricing is $45 per GPU per month with a 14-day free trial (up to 400 GPUs). Hyperscale pricing available for 1,000+ GPU deployments.
@@ -25,19 +25,19 @@ Radix Core is a GPU training optimization platform that uses closed-loop control
 - Website: https://vaultscaler.com
 - Contact: https://vaultscaler.com/contact/
 - Email: bpruess@vaultscaler.com
-- Launch date: May 2026
+- Launch date: June 2026 (Forgewing)
 - Headquarters: United States
 
 ## Frequently Asked Questions
 
 ### What is VaultScaler?
-VaultScaler is the company behind Lev, an agentic engineering system for full SDLC automation. VaultScaler also builds Radix Core, a GPU training optimizer. Both products launch May 2026.
+VaultScaler is the company behind Forgewing, the Product Delivery Engine. VaultScaler also builds Radix Core, a GPU training optimizer. Forgewing launches June 2026.
 
-### What is Lev?
-Lev is an Agentic Engineering System that handles the full software development lifecycle — from architecture and spec creation through deployment and production support. It uses the Golden Spec methodology to prevent codebase churn and includes integrated SRE.
+### What is Forgewing?
+Forgewing is the Product Delivery Engine — point it at your repo or hand it a brief, and it designs, builds, deploys to your AWS, and operates the system after launch. Engineering keeps review and merge authority over every pull request.
 
-### How is Lev different from Cursor, Copilot, Kiro, or Devin?
-Those tools generate code and stop. Lev owns the entire lifecycle from collaborative spec creation through deployment and production support, with integrated SRE that has full system context.
+### How is Forgewing different from Cursor, Copilot, Kiro, or Devin?
+Those tools generate code and stop. Forgewing owns delivery — collaborative brief through deployment and production operations. The buyer is the product-and-engineering pod, not engineering alone.
 
 ### What is Radix Core?
 Radix Core is a GPU training optimization platform that uses closed-loop scheduling to improve training throughput by up to 21%. It deploys via Helm chart on Kubernetes with zero stack changes and supports air-gapped environments.

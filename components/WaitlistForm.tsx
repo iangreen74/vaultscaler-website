@@ -55,7 +55,7 @@ export default function WaitlistForm() {
               Join the Waitlist
             </h1>
             <p className="text-sm text-primary-3 font-semibold mb-3 uppercase tracking-wide">
-              May 2026
+              June 2026
             </p>
             <p className="text-gray-600">
               Secure your spot before launch day. Early adopters get priority onboarding.

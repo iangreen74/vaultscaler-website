@@ -1,11 +1,11 @@
 export const SITE = {
   name: "VaultScaler",
-  products: ["Lev"],
+  products: ["Forgewing"],
   url: "https://vaultscaler.com",
   email: "bpruess@vaultscaler.com",
-  launchISO: "2026-05-21",
+  launchISO: "2026-06-15",
   description:
-    "Lev is an agentic engineering system by VaultScaler that architects, builds, deploys, and supports software across the full SDLC.",
+    "Forgewing is the Product Delivery Engine by VaultScaler. Point it at your repo or hand it a brief — it designs, builds, deploys to your AWS, and operates the system after launch.",
   keywords: [
     // Pain point keywords
     "slow AI development",

@@ -5,7 +5,7 @@ import { trackFormSubmit } from '@/lib/analytics';
 
 const productOptions = [
   { value: 'core', label: 'Radix Core', desc: 'GPU scheduling optimization' },
-  { value: 'lev', label: 'Lev', desc: 'Agentic Engineering System' },
+  { value: 'forgewing', label: 'Forgewing', desc: 'Product Delivery Engine' },
 ];
 
 export default function ContactForm() {

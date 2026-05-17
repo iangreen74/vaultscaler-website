@@ -66,7 +66,6 @@ export default function RadixCorePage() {
     author: { "@type": "Organization", name: "VaultScaler" },
     url: `${SITE.url}/radix/core/`,
     description: metadata.description,
-    releaseNotes: "General Availability May 2026.",
   };
 
   const faqSchema = {
@@ -145,12 +144,12 @@ export default function RadixCorePage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <TrackedCTALink
-              href="/waitlist"
-              trackingName="Join Waitlist"
+              href="/contact/"
+              trackingName="Contact Sales"
               trackingLocation="Radix Core Hero"
               className="px-10 py-5 bg-pop-light text-primary-4 rounded-full font-bold text-xl hover:bg-white transition-all shadow-2xl hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-pop-light/50"
             >
-              Join Waitlist
+              Contact Sales
             </TrackedCTALink>
             <TrackedCTALink
               href="/solutions/hyperscale/"
@@ -389,12 +388,12 @@ radix-observer-6d4b2a9c8-q7w3  1/1    Running   0          46s`}</code>
                 </ul>
               </div>
               <TrackedCTALink
-                href="/waitlist"
-                trackingName="Join Waitlist"
+                href="/contact/"
+                trackingName="Contact Sales"
                 trackingLocation="Radix Core Pricing - Trial"
                 className="w-full text-center px-4 py-3 bg-primary-3 text-white text-sm rounded-full font-bold hover:bg-primary-4 transition-all shadow-lg hover:scale-105 transform inline-block"
               >
-                Join Waitlist
+                Contact Sales
               </TrackedCTALink>
             </div>
 
@@ -420,12 +419,12 @@ radix-observer-6d4b2a9c8-q7w3  1/1    Running   0          46s`}</code>
                 </ul>
               </div>
               <TrackedCTALink
-                href="/waitlist"
-                trackingName="Join Waitlist"
+                href="/contact/"
+                trackingName="Contact Sales"
                 trackingLocation="Radix Core Pricing - Core"
                 className="inline-block w-full text-center px-4 py-3 bg-white text-primary-3 text-sm rounded-full font-bold hover:bg-gray-100 transition-all"
               >
-                Join Waitlist
+                Contact Sales
               </TrackedCTALink>
             </div>
 
@@ -510,24 +509,16 @@ radix-observer-6d4b2a9c8-q7w3  1/1    Running   0          46s`}</code>
             Ready to Maximize Your GPU Fleet?
           </h2>
           <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-            Join the waitlist for early access, or book an architecture call to discuss your fleet.
+            Book an architecture call to discuss your fleet.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <TrackedCTALink
-              href="/waitlist"
-              trackingName="Join Waitlist"
+              href="/contact/"
+              trackingName="Contact Sales"
               trackingLocation="Radix Core CTA"
               className="px-10 py-5 bg-pop-light text-primary-4 rounded-full font-bold hover:bg-white transition-all text-xl shadow-lg hover:shadow-xl hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-pop-light/50"
             >
-              Join Waitlist
-            </TrackedCTALink>
-            <TrackedCTALink
-              href="/contact/"
-              trackingName="Get in Touch"
-              trackingLocation="Radix Core CTA"
-              className="px-8 py-4 border-2 border-white/30 text-white rounded-full font-semibold hover:bg-white/10 hover:border-white/50 transition-all text-lg"
-            >
-              Get in Touch
+              Contact Sales
             </TrackedCTALink>
           </div>
         </div>

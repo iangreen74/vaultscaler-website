@@ -9,13 +9,16 @@ interface FAQItem {
 
 interface FAQProps {
   items: FAQItem[];
+  onToggle?: (question: string, isOpen: boolean) => void;
 }
 
-export default function FAQ({ items }: FAQProps) {
+export default function FAQ({ items, onToggle }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+    const willOpen = openIndex !== index;
+    setOpenIndex(willOpen ? index : null);
+    if (onToggle) onToggle(items[index].question, willOpen);
   };
 
   return (

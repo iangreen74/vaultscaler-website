@@ -1,30 +1,59 @@
 import { MetadataRoute } from "next";
+import { execSync } from "node:child_process";
 import { SITE } from "@/lib/site";
 
 export const dynamic = "force-static";
 
+// Map each route to the source files that, if touched, mean the page changed.
+// We take the most recent commit date across these files as the page's lastModified.
+const ROUTE_SOURCES: Record<string, string[]> = {
+  "": ["app/page.tsx", "app/layout.tsx"],
+  "radix/core": ["app/radix/core/page.tsx"],
+  "forgewing": [
+    "app/forgewing/page.tsx",
+    "app/forgewing/layout.tsx",
+    "app/forgewing/ForgewingFAQ.tsx",
+    "app/forgewing/ForgewingEngagementTracking.tsx",
+  ],
+  "contact": ["app/contact/page.tsx"],
+  "waitlist": ["app/waitlist/page.tsx"],
+  "privacy": ["app/privacy/page.tsx"],
+};
+
+function lastModifiedFor(files: string[]): string {
+  try {
+    const dates = files
+      .map((file) => {
+        try {
+          const out = execSync(`git log -1 --format=%cI -- "${file}"`, {
+            encoding: "utf8",
+          }).trim();
+          return out || null;
+        } catch {
+          return null;
+        }
+      })
+      .filter((d): d is string => !!d);
+    if (dates.length === 0) return new Date().toISOString();
+    return dates.sort().reverse()[0];
+  } catch {
+    return new Date().toISOString();
+  }
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Exclude /team, /docs (noindex), /product, /pricing (redirects)
-  const pages = ["", "radix/core", "lev", "contact", "waitlist", "privacy"];
-  const solutionPages = [
-    "solutions/hyperscale",
-    "solutions/product-teams",
-  ];
-  const now = new Date().toISOString();
+  const mainRoutes = ["", "radix/core", "forgewing", "contact", "waitlist", "privacy"];
 
-  const mainPages = pages.map((p) => ({
+  const priorityFor = (p: string): number => {
+    if (p === "" || p === "forgewing") return 1.0;
+    if (p === "radix/core") return 0.8;
+    return 0.3;
+  };
+
+  return mainRoutes.map((p) => ({
     url: p ? `${SITE.url}/${p}/` : `${SITE.url}/`,
-    lastModified: now,
+    lastModified: lastModifiedFor(ROUTE_SOURCES[p] ?? []),
     changeFrequency: "weekly" as const,
-    priority: p === "" ? 1 : p === "lev" ? 0.9 : p === "radix/core" ? 0.7 : 0.8,
+    priority: priorityFor(p),
   }));
-
-  const solutions = solutionPages.map((p) => ({
-    url: `${SITE.url}/${p}/`,
-    lastModified: now,
-    changeFrequency: "weekly" as const,
-    priority: 0.9,
-  }));
-
-  return [...mainPages, ...solutions];
 }

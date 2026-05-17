@@ -20,13 +20,6 @@ const config: Config = {
         'primary-3': '#234D70',
         'primary-4': '#122E46',
 
-        // Lev colors (Yellow monochrome)
-        'lev-bold': '#E6B907',
-        'lev-light': '#E2D6A7',
-        'lev-lighter': '#E2DDC9',
-        'lev-dark': '#514D3C',
-        'lev-darkest': '#1B1910',
-
         // Secondary colors (Greys - 6 shades, 1=lightest, 6=darkest)
         'secondary-1': '#F9FAFB',
         'secondary-2': '#F3F4F6',

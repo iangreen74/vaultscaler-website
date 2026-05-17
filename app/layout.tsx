@@ -10,8 +10,8 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: "VaultScaler | Build More. Manage Less.",
-  description: "Lev is an agentic engineering system by VaultScaler. AI engineering that actually delivers. Build quicker and launch with confidence.",
-  keywords: ["agentic engineering", "AI engineering team", "AI development tools", "AI coding platform", "automated software delivery", "golden spec", "AI SRE", "full SDLC automation"],
+  description: "Forgewing by VaultScaler — the Product Delivery Engine. Ship the product you've been promising. Designed, built, deployed, and run — end to end.",
+  keywords: ["product delivery engine", "agentic engineering", "AI engineering team", "AI development tools", "AI coding platform", "automated software delivery", "AI SRE", "full SDLC automation", "FDE", "forward deployed engineering", "forward deployed engineer", "AI DevOps", "AI software development", "AI code generation", "AI deployment automation", "AI incident response", "AI-driven engineering", "AI software operations"],
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -21,15 +21,15 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "VaultScaler | Build More. Manage Less.",
-    description: "Lev by VaultScaler. Agentic engineering that actually delivers.",
+    description: "Forgewing by VaultScaler — the Product Delivery Engine. Ship the product you've been promising. Designed, built, deployed, and run — end to end.",
     url: "https://vaultscaler.com",
     siteName: "VaultScaler",
     images: [
       {
-        url: "/og/vaultscaler.png",
+        url: "/forgewing/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "VaultScaler | Build More. Manage Less.",
+        alt: "Forgewing — Product Delivery Engine by VaultScaler",
       },
     ],
     locale: "en_US",
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "VaultScaler | Build More. Manage Less.",
-    description: "Lev by VaultScaler. Agentic engineering that actually delivers.",
-    images: ["/og/vaultscaler.png"],
+    description: "Forgewing by VaultScaler — the Product Delivery Engine. Ship the product you've been promising. Designed, built, deployed, and run — end to end.",
+    images: ["/forgewing/opengraph-image"],
   },
 };
 
@@ -59,10 +59,10 @@ export default function RootLayout({
     "@type": "Organization",
     name: SITE.name,
     url: `${SITE.url}/`,
-    logo: `${SITE.url}/og/vaultscaler.png`,
+    logo: `${SITE.url}/brand/vaultscaler-icon-v1.0/svg/vaultscaler-icon-primary.svg`,
     description: SITE.description,
     email: SITE.email,
-    foundingDate: "2024",
+    foundingDate: "2025",
     founder: [
       {
         "@type": "Person",
@@ -73,20 +73,26 @@ export default function RootLayout({
       {
         "@type": "Person",
         name: "Ben Pruess",
-        jobTitle: "Co-Founder, COO & President",
+        jobTitle: "Co-Founder & President",
         description: "Enterprise solutions leader with 20 years in healthcare tech",
       },
     ],
     owns: [
       {
         "@type": "SoftwareApplication",
-        name: "Lev",
-        applicationCategory: "AI Engineering",
-        description: "Full lifecycle agentic engineering and support. AI engineering that actually delivers. Build quicker, launch with confidence, and let Lev handle upkeep.",
+        name: "Forgewing",
+        applicationCategory: "DeveloperApplication",
+        applicationSubCategory: "AI Software Engineering Platform",
+        operatingSystem: "Cloud",
+        description: "Forgewing is an autonomous product delivery engine that takes a written brief or existing repository and produces production-ready software. It handles architecture, code generation, testing, deployment to the customer's AWS account, monitoring, and post-launch operations including incident response. Deploy it with product and engineering teams of 1-3 to accelerate their delivery and reduce their non-value add work.",
         featureList: [
-          "AI engineering",
-          "Development acceleration",
-          "24/7 support agent",
+          "Brief-to-production code generation",
+          "Repository-aware autonomous engineering",
+          "Automated deployment to customer-owned AWS infrastructure",
+          "Continuous integration and delivery pipelines",
+          "24/7 production monitoring and incident response",
+          "AI-driven site reliability engineering (SRE)",
+          "Full software development lifecycle automation",
         ],
       },
     ],
@@ -123,7 +129,7 @@ export default function RootLayout({
         ) : null}
         <Navigation />
         <AnalyticsProvider />
-        <main id="main-content" className="pt-16">
+        <main id="main-content">
           {children}
         </main>
         <SiteFooter />
