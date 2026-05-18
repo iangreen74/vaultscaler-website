@@ -63,20 +63,6 @@ export default function RootLayout({
     description: SITE.description,
     email: SITE.email,
     foundingDate: "2025",
-    founder: [
-      {
-        "@type": "Person",
-        name: "Ian Green",
-        jobTitle: "Co-Founder & CEO",
-        description: "AI platform engineer specializing in Kubernetes and Terraform-driven GPU workload management",
-      },
-      {
-        "@type": "Person",
-        name: "Ben Pruess",
-        jobTitle: "Co-Founder & President",
-        description: "Enterprise solutions leader with 20 years in healthcare tech",
-      },
-    ],
     owns: [
       {
         "@type": "SoftwareApplication",
@@ -95,10 +81,6 @@ export default function RootLayout({
           "Full software development lifecycle automation",
         ],
       },
-    ],
-    keywords: SITE.keywords.join(", "),
-    sameAs: [
-      "https://github.com/iangreen74",
     ],
   };
 

@@ -5,16 +5,15 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { trackNavClick } from '@/lib/analytics';
 
-const productLinks = [
-  { href: '/forgewing/', label: 'Forgewing', description: 'Product Delivery Engine' },
-  { href: '/radix/core/', label: 'Radix Core', description: 'GPU Training Optimization' },
+const topLinks = [
+  { href: '/forgewing/', label: 'Forgewing' },
+  { href: '/radix/core/', label: 'Radix Core' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export default function Navigation() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [productsOpen, setProductsOpen] = useState(false);
-  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
 
   if (pathname?.startsWith('/forgewing')) return null;
 
@@ -44,42 +43,16 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {/* Products Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setProductsOpen(true)}
-              onMouseLeave={() => setProductsOpen(false)}
-            >
-              <button
-                className="text-sm text-gray-700 hover:text-gray-900 transition-colors flex items-center gap-1 py-2"
-                onClick={() => setProductsOpen(!productsOpen)}
+            {topLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => trackNavClick(link.label)}
+                className="text-sm text-gray-700 hover:text-gray-900 transition-colors"
               >
-                Products
-                <svg className={`w-4 h-4 transition-transform ${productsOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {productsOpen && (
-                <div className="absolute top-full left-0 pt-1 w-56">
-                  <div className="bg-white rounded-lg shadow-lg border border-gray-200 py-2">
-                    {productLinks.map((link) => (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        onClick={() => trackNavClick(`Products - ${link.label}`)}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900"
-                      >
-                        <span className="font-medium">{link.label}</span>
-                        <span className="block text-gray-500 text-xs mt-0.5">{link.description}</span>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-            <Link href="/contact" onClick={() => trackNavClick('Contact')} className="text-sm text-gray-700 hover:text-gray-900 transition-colors">
-              Contact
-            </Link>
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           {/* Mobile Menu Button */}
@@ -111,40 +84,16 @@ export default function Navigation() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-3 space-y-1">
-            {/* Mobile Products Accordion */}
-            <div>
-              <button
-                onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
-                className="flex items-center justify-between w-full px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+            {topLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => handleMobileNavClick(link.label)}
+                className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
               >
-                Products
-                <svg className={`w-4 h-4 transition-transform ${mobileProductsOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {mobileProductsOpen && (
-                <div className="pl-4 space-y-1">
-                  {productLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={() => handleMobileNavClick(`Products - ${link.label}`)}
-                      className="block px-3 py-2 rounded-md text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                    >
-                      <span className="font-medium">{link.label}</span>
-                      <span className="block text-gray-400 text-xs mt-0.5">{link.description}</span>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-            <Link
-              href="/contact"
-              onClick={() => handleMobileNavClick('Contact')}
-              className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-            >
-              Contact
-            </Link>
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       )}
