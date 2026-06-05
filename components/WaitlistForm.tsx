@@ -1,15 +1,31 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { trackFormSubmit } from '@/lib/analytics';
+import { productNameFromSlug } from '@/lib/site';
 
 export default function WaitlistForm() {
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [title, setTitle] = useState('');
   const [name, setName] = useState('');
+
+  // Per-product attribution. Read ?product=<slug> from the URL on mount
+  // (window-based, so static export doesn't need a Suspense boundary).
+  // Unknown/absent slugs fall back to a neutral value.
+  const [productSlug, setProductSlug] = useState('general');
+  const [productName, setProductName] = useState<string | null>(null);
+
+  useEffect(() => {
+    const slug = new URLSearchParams(window.location.search).get('product');
+    const resolved = productNameFromSlug(slug);
+    if (slug && resolved) {
+      setProductSlug(slug);
+      setProductName(resolved);
+    }
+  }, []);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
@@ -29,12 +45,15 @@ export default function WaitlistForm() {
           email,
           ...(title && { title }),
           ...(name && { name }),
-          _subject: `VaultScaler Waitlist: ${email}`,
+          form_type: 'waitlist',
+          product: productSlug,
+          product_name: productName ?? 'General interest',
+          _subject: `VaultScaler Waitlist: ${productName ?? 'General'} — ${email}`,
         }),
       });
 
       if (response.ok) {
-        trackFormSubmit('Waitlist', email);
+        trackFormSubmit('Waitlist', productSlug);
         router.push('/waitlist/thank-you');
       } else {
         setError('Something went wrong. Please try again.');
@@ -60,6 +79,11 @@ export default function WaitlistForm() {
             <p className="text-gray-600">
               Secure your spot before launch day. Early adopters get priority onboarding.
             </p>
+            {productName && (
+              <p className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary-1/40 px-4 py-1.5 text-sm font-medium text-primary-3">
+                Joining the waitlist for {productName}
+              </p>
+            )}
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -71,6 +95,10 @@ export default function WaitlistForm() {
               tabIndex={-1}
               autoComplete="off"
             />
+            {/* Per-product attribution (mirrors the JSON submission for no-JS / form-data paths) */}
+            <input type="hidden" name="form_type" value="waitlist" />
+            <input type="hidden" name="product" value={productSlug} />
+            <input type="hidden" name="product_name" value={productName ?? 'General interest'} />
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                 Email address <span className="text-red-500">*</span>

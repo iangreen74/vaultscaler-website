@@ -35,7 +35,8 @@ type Product = {
   body: string;
   badge: 'Available now' | 'Coming soon';
   cta: string;
-  href: string;
+  ctaHref: string;
+  learnHref: string;
 };
 
 const products: Product[] = [
@@ -45,7 +46,8 @@ const products: Product[] = [
     body: 'Ask questions of your own documents and get grounded, cited answers — then turn them into reports. Runs entirely in your cloud; your data never leaves.',
     badge: 'Available now',
     cta: 'Request a demo',
-    href: '/forgewing/',
+    ctaHref: '/forgewing/',
+    learnHref: '/forgewing/',
   },
   {
     name: 'Radix Core',
@@ -53,7 +55,8 @@ const products: Product[] = [
     body: 'Get more from the GPU fleet you already own — schedule, scale, and govern AI workloads, no stack changes required.',
     badge: 'Coming soon',
     cta: 'Join the waitlist',
-    href: '/radix-core/',
+    ctaHref: '/waitlist/?product=radix-core',
+    learnHref: '/radix-core/',
   },
   {
     name: 'Redoubt',
@@ -61,7 +64,8 @@ const products: Product[] = [
     body: 'A governed agent that contains a breach inside your own environment — isolating a compromised instance the moment something’s wrong, every action audited.',
     badge: 'Coming soon',
     cta: 'Join the waitlist',
-    href: '/redoubt/',
+    ctaHref: '/waitlist/?product=redoubt',
+    learnHref: '/redoubt/',
   },
   {
     name: 'Warden',
@@ -69,7 +73,8 @@ const products: Product[] = [
     body: 'A governed agent in your CI/CD that enforces your security policy as code ships — before it reaches production.',
     badge: 'Coming soon',
     cta: 'Join the waitlist',
-    href: '/warden/',
+    ctaHref: '/waitlist/?product=warden',
+    learnHref: '/warden/',
   },
 ];
 
@@ -150,20 +155,35 @@ export default function Home() {
                 className="flex flex-col bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-primary-3 hover:shadow-lg transition-all"
               >
                 <div className="flex items-center justify-between gap-3 mb-4">
-                  <h2 className="text-2xl font-bold text-gray-900">{p.name}</h2>
+                  <Link
+                    href={p.learnHref}
+                    className="text-2xl font-bold text-gray-900 hover:text-primary-3 transition-colors"
+                  >
+                    {p.name}
+                  </Link>
                   <Badge kind={p.badge} />
                 </div>
                 <p className="text-primary-3 text-sm font-medium mb-4">{p.tagline}</p>
                 <p className="text-gray-600 leading-relaxed mb-6 flex-grow">{p.body}</p>
-                <Link
-                  href={p.href}
-                  className="text-primary-3 font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all"
-                >
-                  {p.cta}
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
+                <div className="flex items-center gap-5">
+                  <Link
+                    href={p.ctaHref}
+                    className="text-primary-3 font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all"
+                  >
+                    {p.cta}
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                  {p.learnHref !== p.ctaHref && (
+                    <Link
+                      href={p.learnHref}
+                      className="text-gray-500 text-sm font-medium hover:text-gray-700 transition-colors"
+                    >
+                      Learn more
+                    </Link>
+                  )}
+                </div>
               </div>
             ))}
           </div>

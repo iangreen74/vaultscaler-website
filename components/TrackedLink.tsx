@@ -2,12 +2,13 @@
 
 import Link from 'next/link';
 import { trackCTAClick, trackEmailClick, trackDownload, trackNavClick } from '@/lib/analytics';
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 
 interface TrackedLinkProps {
   href: string;
   children: ReactNode;
   className?: string;
+  style?: CSSProperties;
   trackingName: string;
   trackingLocation?: string;
 }
@@ -16,6 +17,7 @@ export function TrackedCTALink({
   href,
   children,
   className,
+  style,
   trackingName,
   trackingLocation,
 }: TrackedLinkProps) {
@@ -24,6 +26,7 @@ export function TrackedCTALink({
       href={href}
       onClick={() => trackCTAClick(trackingName, trackingLocation)}
       className={className}
+      style={style}
     >
       {children}
     </Link>
