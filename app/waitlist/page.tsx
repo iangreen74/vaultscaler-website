@@ -14,14 +14,14 @@ export const metadata: Metadata = {
       "Join the waitlist for early access to VaultScaler products — AI agents that run entirely inside your own cloud.",
     url: `${SITE.url}/waitlist/`,
     type: "website",
-    images: [{ url: "/og/forgewing.png", width: 1200, height: 630, alt: "Forgewing Waitlist" }],
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "VaultScaler Waitlist" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Join the Forgewing Waitlist | VaultScaler",
     description:
       "Join the waitlist for early access to VaultScaler products — AI agents that run entirely inside your own cloud.",
-    images: ["/og/forgewing.png"],
+    images: ["/og.jpg"],
   },
 };
 

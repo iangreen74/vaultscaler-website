@@ -18,14 +18,14 @@ export const metadata: Metadata = {
       'AI agents that run entirely inside your own cloud. Your most sensitive data never leaves your control. Every agent ships with an Agent Passport.',
     type: 'website',
     url: `${SITE.url}/`,
-    images: [{ url: '/forgewing/opengraph-image', width: 1200, height: 630, alt: 'VaultScaler — AI agents that run inside your own cloud' }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'VaultScaler — AI agents that run inside your own cloud' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "VaultScaler | Put AI to work on data you can't let leave.",
     description:
       'AI agents that run entirely inside your own cloud. Your most sensitive data never leaves your control. Every agent ships with an Agent Passport.',
-    images: ['/forgewing/opengraph-image'],
+    images: ['/og.jpg'],
   },
 };
 
@@ -37,6 +37,7 @@ type Product = {
   cta: string;
   ctaHref: string;
   learnHref: string;
+  external?: boolean;
 };
 
 const products: Product[] = [
@@ -46,8 +47,9 @@ const products: Product[] = [
     body: 'Ask questions of your own documents and get grounded, cited answers — then turn them into reports. Runs entirely in your cloud; your data never leaves.',
     badge: 'Available now',
     cta: 'Request a demo',
-    ctaHref: '/forgewing/',
-    learnHref: '/forgewing/',
+    ctaHref: 'https://forgewing.ai',
+    learnHref: 'https://forgewing.ai',
+    external: true,
   },
   {
     name: 'Radix Core',
@@ -155,26 +157,47 @@ export default function Home() {
                 className="flex flex-col bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-primary-3 hover:shadow-lg transition-all"
               >
                 <div className="flex items-center justify-between gap-3 mb-4">
-                  <Link
-                    href={p.learnHref}
-                    className="text-2xl font-bold text-gray-900 hover:text-primary-3 transition-colors"
-                  >
-                    {p.name}
-                  </Link>
+                  {p.external ? (
+                    <a
+                      href={p.learnHref}
+                      className="text-2xl font-bold text-gray-900 hover:text-primary-3 transition-colors"
+                    >
+                      {p.name}
+                    </a>
+                  ) : (
+                    <Link
+                      href={p.learnHref}
+                      className="text-2xl font-bold text-gray-900 hover:text-primary-3 transition-colors"
+                    >
+                      {p.name}
+                    </Link>
+                  )}
                   <Badge kind={p.badge} />
                 </div>
                 <p className="text-primary-3 text-sm font-medium mb-4">{p.tagline}</p>
                 <p className="text-gray-600 leading-relaxed mb-6 flex-grow">{p.body}</p>
                 <div className="flex items-center gap-5">
-                  <Link
-                    href={p.ctaHref}
-                    className="text-primary-3 font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all"
-                  >
-                    {p.cta}
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
+                  {p.external ? (
+                    <a
+                      href={p.ctaHref}
+                      className="text-primary-3 font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all"
+                    >
+                      {p.cta}
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  ) : (
+                    <Link
+                      href={p.ctaHref}
+                      className="text-primary-3 font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all"
+                    >
+                      {p.cta}
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  )}
                   {p.learnHref !== p.ctaHref && (
                     <Link
                       href={p.learnHref}
