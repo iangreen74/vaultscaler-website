@@ -1,9 +1,9 @@
-// Redirect: /solutions/hyperscale → / (solutions IA retired in the VaultScaler realign)
+// Redirect: /solutions/product-teams → / (solutions IA retired in the VaultScaler realign)
 'use client';
 
 import { useEffect } from 'react';
 
-export default function HyperscaleRedirect() {
+export default function ProductTeamsRedirect() {
   useEffect(() => {
     window.location.replace('/');
   }, []);

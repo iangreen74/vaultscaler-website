@@ -27,10 +27,10 @@ export default function ThankYouPage() {
 
           <div className="space-y-4">
             <Link
-              href="/radix"
+              href="/forgewing/"
               className="inline-block px-8 py-3 bg-primary-3 text-white rounded-full font-semibold hover:bg-primary-4 transition-colors"
             >
-              Explore the Platform
+              Explore Forgewing
             </Link>
 
             <p className="text-gray-500 text-sm">

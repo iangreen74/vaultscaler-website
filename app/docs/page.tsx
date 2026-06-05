@@ -1,7 +1,7 @@
 // Route: /docs
 export const metadata = {
   title: "VaultScaler Documentation",
-  description: "VaultScaler Radix Platform documentation coming soon.",
+  description: "VaultScaler product documentation coming soon.",
   robots: { index: false, follow: false },
 };
 
@@ -11,7 +11,7 @@ export default function DocsPlaceholder() {
       <div className="max-w-xl mx-auto px-4 text-center">
         <h1 className="text-3xl font-bold mb-4">Documentation Not Public Yet</h1>
         <p className="text-lg text-gray-700 mb-4">
-          Public documentation launches with the platform in June 2026.
+          Public documentation launches with our products in June 2026.
         </p>
         <p className="text-gray-600">
           If you&apos;re an existing or prospective design partner and need technical details,

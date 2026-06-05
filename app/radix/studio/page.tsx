@@ -1,9 +1,9 @@
-// Redirect: /solutions/hyperscale → / (solutions IA retired in the VaultScaler realign)
+// Redirect: /radix/studio → / (Radix Studio retired in the VaultScaler realign)
 'use client';
 
 import { useEffect } from 'react';
 
-export default function HyperscaleRedirect() {
+export default function RadixStudioRedirect() {
   useEffect(() => {
     window.location.replace('/');
   }, []);
