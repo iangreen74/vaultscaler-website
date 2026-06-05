@@ -5,7 +5,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 export const dynamic = "force-static";
-export const alt = "Forgewing — Product Delivery Engine by VaultScaler";
+export const alt = "Forgewing — Sovereign Research Assistant by VaultScaler";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -103,7 +103,7 @@ export default async function OpengraphImage() {
               lineHeight: 1.1,
             }}
           >
-            Product Delivery Engine
+            Sovereign Research Assistant
           </div>
           <div
             style={{

@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { DM_Sans, DM_Serif_Display } from "next/font/google";
-import aniMascot from "./Forgewing-Ani-Mascot-Transparent.png";
+import ForgewingHeader from "./ForgewingHeader";
 import { SITE } from "@/lib/site";
 
 const dmSans = DM_Sans({
@@ -18,22 +17,19 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Forgewing | Product Delivery Engine by VaultScaler",
+  title: "Forgewing | Sovereign Research Assistant by VaultScaler",
   description:
-    "Forgewing is the Product Delivery Engine. Point it at your repo or hand it a brief — production-ready code, deploys to your AWS, and operations come back. Launching June 2026.",
+    "Forgewing answers questions over your own documents with grounded, cited answers and generates reports to your own storage — all inside your own AWS account. Your data never leaves your control.",
   keywords: [
-    "product delivery engine",
-    "agentic engineering",
-    "AI engineering team",
-    "AI software delivery",
-    "brief to production",
-    "AWS-deployed AI agent",
-    "agentic SDLC",
-    "product and engineering pod",
-    "AI pull requests",
-    "AI SRE",
-    "full SDLC automation",
-    "automated code review",
+    "sovereign research assistant",
+    "AI over private documents",
+    "grounded cited answers",
+    "retrieval augmented generation",
+    "AI in your own cloud",
+    "report generation",
+    "Agent Passport",
+    "governed AI agent",
+    "data never leaves your control",
   ],
   alternates: {
     canonical: `${SITE.url}/forgewing/`,
@@ -50,9 +46,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Forgewing | Product Delivery Engine by VaultScaler",
+    title: "Forgewing | Sovereign Research Assistant by VaultScaler",
     description:
-      "Point Forgewing at your repo or hand it a brief. Real pull requests come back. Production deploys to your AWS. Operations included.",
+      "Ask and act on your own documents — inside your own cloud. Grounded, cited answers and reports written to your own storage.",
     type: "website",
     url: `${SITE.url}/forgewing/`,
     siteName: "VaultScaler",
@@ -62,15 +58,15 @@ export const metadata: Metadata = {
         url: "/og/forgewing.png",
         width: 1200,
         height: 630,
-        alt: "Forgewing — Product Delivery Engine by VaultScaler",
+        alt: "Forgewing — Sovereign Research Assistant by VaultScaler",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Forgewing | Product Delivery Engine by VaultScaler",
+    title: "Forgewing | Sovereign Research Assistant by VaultScaler",
     description:
-      "Point Forgewing at your repo or hand it a brief. Real pull requests come back. Production deploys to your AWS. Operations included.",
+      "Ask and act on your own documents — inside your own cloud. Grounded, cited answers and reports written to your own storage.",
     images: ["/og/forgewing.png"],
   },
 };
@@ -83,45 +79,7 @@ export default function ForgewingLayout({
       className={`${dmSans.variable} ${dmSerif.variable} min-h-screen flex flex-col bg-white text-[#1E3340]`}
       style={{ fontFamily: "var(--font-dm-sans), system-ui, sans-serif" }}
     >
-      <header className="sticky top-0 z-40 border-b border-[#E0DCD6] bg-white/85 backdrop-blur-md">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center justify-between gap-4">
-          <div className="flex items-baseline gap-2.5 min-w-0">
-            <Link
-              href="/forgewing/"
-              aria-label="Forgewing home"
-              className="flex items-baseline gap-2.5"
-            >
-              <Image
-                src={aniMascot}
-                alt=""
-                width={36}
-                height={36}
-                priority
-                className="h-7 sm:h-8 w-auto self-center"
-              />
-              <span
-                className="text-xl sm:text-2xl leading-none text-[#E8732A]"
-                style={{ fontFamily: "var(--font-dm-serif), serif" }}
-              >
-                Forgewing
-              </span>
-            </Link>
-            <Link
-              href="/"
-              aria-label="VaultScaler home"
-              className="hidden sm:inline text-xs text-[#5A7A8A] leading-none no-underline hover:no-underline"
-            >
-              by VaultScaler
-            </Link>
-          </div>
-          <Link
-            href="/waitlist/"
-            className="inline-flex items-center rounded-full bg-[#E8732A] px-4 py-2 text-xs sm:text-sm font-semibold text-white transition-colors hover:bg-[#d0651e] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E8732A] focus-visible:ring-offset-2 whitespace-nowrap"
-          >
-            Reserve a spot
-          </Link>
-        </div>
-      </header>
+      <ForgewingHeader />
 
       <main className="flex-1">{children}</main>
 

@@ -8,13 +8,15 @@ export const dynamic = "force-static";
 // We take the most recent commit date across these files as the page's lastModified.
 const ROUTE_SOURCES: Record<string, string[]> = {
   "": ["app/page.tsx", "app/layout.tsx"],
-  "radix/core": ["app/radix/core/page.tsx"],
   "forgewing": [
     "app/forgewing/page.tsx",
     "app/forgewing/layout.tsx",
     "app/forgewing/ForgewingFAQ.tsx",
     "app/forgewing/ForgewingEngagementTracking.tsx",
   ],
+  "radix-core": ["app/radix-core/page.tsx"],
+  "redoubt": ["app/redoubt/page.tsx"],
+  "warden": ["app/warden/page.tsx"],
   "contact": ["app/contact/page.tsx"],
   "waitlist": ["app/waitlist/page.tsx"],
   "privacy": ["app/privacy/page.tsx"],
@@ -42,11 +44,11 @@ function lastModifiedFor(files: string[]): string {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const mainRoutes = ["", "radix/core", "forgewing", "contact", "waitlist", "privacy"];
+  const mainRoutes = ["", "forgewing", "radix-core", "redoubt", "warden", "contact", "waitlist", "privacy"];
 
   const priorityFor = (p: string): number => {
     if (p === "" || p === "forgewing") return 1.0;
-    if (p === "radix/core") return 0.8;
+    if (p === "radix-core" || p === "redoubt" || p === "warden") return 0.7;
     return 0.3;
   };
 

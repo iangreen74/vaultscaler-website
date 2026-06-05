@@ -1,46 +1,109 @@
-// Route: / (VaultScaler homepage, Forgewing-first)
+// Route: / (VaultScaler company homepage — Passport + four products)
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SITE } from '@/lib/site';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
-  title: 'Forgewing by VaultScaler | Product Delivery Engine',
-  description: 'Forgewing is the Product Delivery Engine. Point it at your repo or hand it a brief — it designs, builds, deploys to your AWS, and operates the system after launch.',
+  title: "VaultScaler | Put AI to work on data you can't let leave.",
+  description:
+    'VaultScaler builds AI agents that run entirely inside your own cloud — ask questions of, and act on, your most sensitive data without it ever leaving your control. Every agent ships with an Agent Passport.',
   alternates: {
     canonical: `${SITE.url}/`,
   },
   keywords: SITE.keywords,
   openGraph: {
-    title: 'Forgewing by VaultScaler | Product Delivery Engine',
-    description: 'Point Forgewing at your repo or hand it a brief. Real pull requests come back. Production deploys to your AWS. Operations included.',
+    title: "VaultScaler | Put AI to work on data you can't let leave.",
+    description:
+      'AI agents that run entirely inside your own cloud. Your most sensitive data never leaves your control. Every agent ships with an Agent Passport.',
     type: 'website',
     url: `${SITE.url}/`,
-    images: [{ url: '/og/forgewing.png', width: 1200, height: 630, alt: 'Forgewing by VaultScaler. Product Delivery Engine.' }],
+    images: [{ url: '/forgewing/opengraph-image', width: 1200, height: 630, alt: 'VaultScaler — AI agents that run inside your own cloud' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Forgewing by VaultScaler | Product Delivery Engine',
-    description: 'Point Forgewing at your repo or hand it a brief. Real pull requests come back. Production deploys to your AWS. Operations included.',
-    images: ['/og/forgewing.png'],
+    title: "VaultScaler | Put AI to work on data you can't let leave.",
+    description:
+      'AI agents that run entirely inside your own cloud. Your most sensitive data never leaves your control. Every agent ships with an Agent Passport.',
+    images: ['/forgewing/opengraph-image'],
   },
 };
 
+type Product = {
+  name: string;
+  tagline: string;
+  body: string;
+  badge: 'Available now' | 'Coming soon';
+  cta: string;
+  href: string;
+};
+
+const products: Product[] = [
+  {
+    name: 'Forgewing',
+    tagline: 'Sovereign Research Assistant',
+    body: 'Ask questions of your own documents and get grounded, cited answers — then turn them into reports. Runs entirely in your cloud; your data never leaves.',
+    badge: 'Available now',
+    cta: 'Request a demo',
+    href: '/forgewing/',
+  },
+  {
+    name: 'Radix Core',
+    tagline: 'GPU Orchestration',
+    body: 'Get more from the GPU fleet you already own — schedule, scale, and govern AI workloads, no stack changes required.',
+    badge: 'Coming soon',
+    cta: 'Join the waitlist',
+    href: '/radix-core/',
+  },
+  {
+    name: 'Redoubt',
+    tagline: 'Intrusion Containment',
+    body: 'A governed agent that contains a breach inside your own environment — isolating a compromised instance the moment something’s wrong, every action audited.',
+    badge: 'Coming soon',
+    cta: 'Join the waitlist',
+    href: '/redoubt/',
+  },
+  {
+    name: 'Warden',
+    tagline: 'DevSecOps',
+    body: 'A governed agent in your CI/CD that enforces your security policy as code ships — before it reaches production.',
+    badge: 'Coming soon',
+    cta: 'Join the waitlist',
+    href: '/warden/',
+  },
+];
+
+function Badge({ kind }: { kind: Product['badge'] }) {
+  const available = kind === 'Available now';
+  return (
+    <span
+      className={`inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full ${
+        available
+          ? 'bg-pop-light/20 text-primary-4'
+          : 'bg-gray-100 text-gray-500'
+      }`}
+    >
+      <span className={`w-1.5 h-1.5 rounded-full ${available ? 'bg-pop-dark' : 'bg-gray-400'}`} />
+      {kind}
+    </span>
+  );
+}
+
 export default function Home() {
   const webSiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "VaultScaler",
-    "url": `${SITE.url}/`,
-    "description": "Forgewing is the Product Delivery Engine by VaultScaler. Point it at your repo or hand it a brief — it designs, builds, deploys to your AWS, and operates the system after launch. Launching June 2026.",
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'VaultScaler',
+    url: `${SITE.url}/`,
+    description: SITE.description,
   };
 
   return (
     <>
       <JsonLd data={webSiteSchema} />
 
-      {/* Hero - Forgewing focused */}
-      <section className="relative min-h-[clamp(500px,60vh,800px)] flex items-center justify-center bg-gradient-to-br from-primary-4 via-primary-3 to-primary-3 overflow-hidden pt-12 pb-16">
+      {/* Hero */}
+      <section className="relative min-h-[clamp(520px,62vh,820px)] flex items-center bg-gradient-to-br from-primary-4 via-primary-3 to-primary-3 overflow-hidden pt-12 pb-16">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-1/4 -right-1/4 w-[60%] h-[60%] rounded-full bg-primary-2/20 blur-3xl" />
           <div className="absolute -bottom-1/4 -left-1/4 w-[50%] h-[50%] rounded-full bg-primary-1/10 blur-3xl" />
@@ -48,115 +111,93 @@ export default function Home() {
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
-              Build More. <br className="hidden sm:inline" />
-              Manage Less.
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
+              Put AI to work on data you can&rsquo;t let leave.
             </h1>
 
             <p className="text-lg md:text-xl text-primary-1 max-w-2xl leading-relaxed mb-10">
-              Meet Forgewing, the Product Delivery Engine. Point it at your repo or hand it a brief. Real pull requests come back. Production deploys to your AWS. Operations included.
+              VaultScaler builds AI agents that run entirely inside your own cloud — so you can ask
+              questions of, and act on, your most sensitive data without it ever leaving your control.
+              Every agent ships with an Agent Passport that declares and enforces exactly what it&rsquo;s
+              allowed to do.
             </p>
 
-            <Link
-              href="/forgewing/"
-              className="inline-block px-10 py-5 bg-white text-primary-3 rounded-full font-bold text-xl hover:bg-gray-100 transition-all shadow-2xl hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-white/50"
-            >
-              Learn about Forgewing
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/contact/"
+                className="inline-block px-8 py-4 bg-white text-primary-3 rounded-full font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-white/50 text-center"
+              >
+                Request a demo
+              </Link>
+              <Link
+                href="/waitlist/"
+                className="inline-block px-8 py-4 border-2 border-white/40 text-white rounded-full font-semibold text-lg hover:bg-white/10 hover:border-white/60 transition-all focus:outline-none focus:ring-4 focus:ring-white/30 text-center"
+              >
+                Join the waitlist
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Products Overview */}
+      {/* Product cards */}
       <section className="pt-16 pb-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Forgewing Card */}
-            <Link href="/forgewing" className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-[#E8732A] hover:shadow-lg transition-all">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-3 h-3 rounded-full bg-[#E8732A]" />
-                <h3 className="text-2xl font-bold text-gray-900">Forgewing</h3>
+            {products.map((p) => (
+              <div
+                key={p.name}
+                className="flex flex-col bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-primary-3 hover:shadow-lg transition-all"
+              >
+                <div className="flex items-center justify-between gap-3 mb-4">
+                  <h2 className="text-2xl font-bold text-gray-900">{p.name}</h2>
+                  <Badge kind={p.badge} />
+                </div>
+                <p className="text-primary-3 text-sm font-medium mb-4">{p.tagline}</p>
+                <p className="text-gray-600 leading-relaxed mb-6 flex-grow">{p.body}</p>
+                <Link
+                  href={p.href}
+                  className="text-primary-3 font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all"
+                >
+                  {p.cta}
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
-              <p className="text-primary-3 text-sm font-medium mb-4">Product Delivery Engine</p>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                Product and engineering, shipping together. Drop Forgewing into a team of 1–3 and watch the backlog actually move. Designs, code, deploys to your AWS, and operations included.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-6">
-                <span className="text-xs px-3 py-1 bg-gray-100 rounded-full text-gray-600">Brief → Production</span>
-                <span className="text-xs px-3 py-1 bg-gray-100 rounded-full text-gray-600">Operations Included</span>
-                <span className="text-xs px-3 py-1 bg-gray-100 rounded-full text-gray-600">Earned Autonomy</span>
-              </div>
-              <span className="text-primary-3 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                Learn more
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </span>
-            </Link>
-
-            {/* Radix Card */}
-            <Link href="/radix/core" className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-pop-light hover:shadow-lg transition-all">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-3 h-3 rounded-full bg-pop-light" />
-                <h3 className="text-2xl font-bold text-gray-900">Radix Core</h3>
-              </div>
-              <p className="text-primary-3 text-sm font-medium mb-4">GPU Orchestration</p>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                Optimize GPU training throughput by up to 21% based on internal benchmarking. Fully utilize your infrastructure to train more models. No stack changes required. Get more out of your infra spend.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-6">
-                <span className="text-xs px-3 py-1 bg-gray-100 rounded-full text-gray-600">GPU Training</span>
-                <span className="text-xs px-3 py-1 bg-gray-100 rounded-full text-gray-600">Optimization</span>
-                <span className="text-xs px-3 py-1 bg-gray-100 rounded-full text-gray-600">No Stack Changes</span>
-              </div>
-              <span className="text-primary-3 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                Learn more
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </span>
-            </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Founder's Note */}
+      {/* Agent Passport */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold mb-8 text-gray-900">
-            Why we build
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-primary-3">
+            Every agent ships with an Agent Passport
           </h2>
-
-          <div className="prose prose-lg text-gray-700 leading-relaxed space-y-6">
-            <p>
-              We've been on projects where new tools underdelivered. Where the tools we actually needed weren't allowed. Where we inherited systems that were nightmares to support. We were moving slowly while the world was moving fast.
-            </p>
-
-            <p>
-               We wanted to be part of the solution. To build tools that work, that you can actually use, that address the problems we were tired of living with.
-            </p>
-
-            <p>
-              AI engineering is great until it's not. We built Forgewing so we could ship and support our products and keep bringing new products to market. We built the tools we needed to supplement and accelerate a lean crew and help us continue to take inspired action.
-            </p>
-          </div>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Five declarations — its identity, who may use it, what data it may touch, what it may do,
+            and how it ends — enforced against the permissions actually deployed. Inspectable, diffable,
+            verifiable against the live deployment. Standard cryptography; the novelty is in the
+            governance.
+          </p>
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-16 bg-primary-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Have questions?
-          </h2>
+          <h2 className="text-3xl font-bold text-white mb-4">Have a use case in mind?</h2>
           <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-            Talk to our team about how Forgewing can work for you.
+            Tell us about the data you can&rsquo;t let leave. We&rsquo;ll show you what an agent in your
+            own cloud can do with it.
           </p>
           <Link
             href="/contact/"
             className="inline-block px-8 py-4 bg-white text-primary-3 rounded-full font-bold hover:bg-gray-100 transition-all text-lg shadow-lg hover:scale-105 transform"
           >
-            Get in Touch
+            Get in touch
           </Link>
         </div>
       </section>

@@ -4,8 +4,10 @@ import { useState } from 'react';
 import { trackFormSubmit } from '@/lib/analytics';
 
 const productOptions = [
-  { value: 'core', label: 'Radix Core', desc: 'GPU scheduling optimization' },
-  { value: 'forgewing', label: 'Forgewing', desc: 'Product Delivery Engine' },
+  { value: 'forgewing', label: 'Forgewing', desc: 'Sovereign Research Assistant — available now' },
+  { value: 'radix-core', label: 'Radix Core', desc: 'GPU Orchestration — coming soon' },
+  { value: 'redoubt', label: 'Redoubt', desc: 'Intrusion Containment — coming soon' },
+  { value: 'warden', label: 'Warden', desc: 'DevSecOps — coming soon' },
 ];
 
 export default function ContactForm() {
