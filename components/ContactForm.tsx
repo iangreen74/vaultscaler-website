@@ -35,6 +35,7 @@ export default function ContactForm() {
           name,
           email,
           company,
+          form_type: 'demo',
           interest: interest.join(', '),
           message,
           _subject: `VaultScaler Contact: ${name} - ${interest.join(', ') || 'General'}`,
@@ -90,6 +91,8 @@ export default function ContactForm() {
           tabIndex={-1}
           autoComplete="off"
         />
+        {/* Submission type (mirrors the JSON submission for no-JS / form-data paths) */}
+        <input type="hidden" name="form_type" value="demo" />
 
         <div className="grid md:grid-cols-2 gap-6">
           <div>

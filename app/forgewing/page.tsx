@@ -140,7 +140,7 @@ export default function ForgewingHome() {
                 Request a live demo
               </TrackedCTALink>
               <TrackedCTALink
-                href="/waitlist/"
+                href="/waitlist/?product=forgewing"
                 trackingName="Join the waitlist"
                 trackingLocation="Forgewing Hero"
                 className="inline-flex items-center justify-center rounded-full border border-[#234D70]/30 px-8 py-3.5 text-base font-semibold text-[#234D70] transition-colors hover:bg-[#234D70]/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#234D70] focus-visible:ring-offset-2"

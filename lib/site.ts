@@ -2,13 +2,22 @@
 // Navigation dropdown AND Forgewing's bespoke header. Don't hardcode a second
 // list anywhere; both navs must agree on routes and availability badges.
 export const PRODUCTS = [
-  { name: "Forgewing", href: "/forgewing/", tag: "Available now" },
-  { name: "Radix Core", href: "/radix-core/", tag: "Coming soon" },
-  { name: "Redoubt", href: "/redoubt/", tag: "Coming soon" },
-  { name: "Warden", href: "/warden/", tag: "Coming soon" },
+  { name: "Forgewing", slug: "forgewing", href: "/forgewing/", tag: "Available now" },
+  { name: "Radix Core", slug: "radix-core", href: "/radix-core/", tag: "Coming soon" },
+  { name: "Redoubt", slug: "redoubt", href: "/redoubt/", tag: "Coming soon" },
+  { name: "Warden", slug: "warden", href: "/warden/", tag: "Coming soon" },
 ] as const;
 
 export type ProductTag = (typeof PRODUCTS)[number]["tag"];
+export type ProductSlug = (typeof PRODUCTS)[number]["slug"];
+
+// Resolve a ?product= query slug to its display name (single source of truth).
+// Returns null for unknown/absent slugs so callers can fall back to neutral.
+export function productNameFromSlug(slug: string | null | undefined): string | null {
+  if (!slug) return null;
+  const match = PRODUCTS.find((p) => p.slug === slug);
+  return match ? match.name : null;
+}
 
 export const SITE = {
   name: "VaultScaler",
