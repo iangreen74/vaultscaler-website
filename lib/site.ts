@@ -2,10 +2,12 @@
 // Navigation dropdown AND Forgewing's bespoke header. Don't hardcode a second
 // list anywhere; both navs must agree on routes and availability badges.
 export const PRODUCTS = [
-  { name: "Forgewing", slug: "forgewing", href: "/forgewing/", tag: "Available now" },
-  { name: "Radix Core", slug: "radix-core", href: "/radix-core/", tag: "Coming soon" },
-  { name: "Redoubt", slug: "redoubt", href: "/redoubt/", tag: "Coming soon" },
-  { name: "Warden", slug: "warden", href: "/warden/", tag: "Coming soon" },
+  // Forgewing's official landing page is the standalone https://forgewing.ai —
+  // external. The other three are internal roadmap routes on this site.
+  { name: "Forgewing", slug: "forgewing", href: "https://forgewing.ai", tag: "Available now", external: true },
+  { name: "Radix Core", slug: "radix-core", href: "/radix-core/", tag: "Coming soon", external: false },
+  { name: "Redoubt", slug: "redoubt", href: "/redoubt/", tag: "Coming soon", external: false },
+  { name: "Warden", slug: "warden", href: "/warden/", tag: "Coming soon", external: false },
 ] as const;
 
 export type ProductTag = (typeof PRODUCTS)[number]["tag"];

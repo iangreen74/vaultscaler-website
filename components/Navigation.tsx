@@ -72,28 +72,37 @@ export default function Navigation() {
                 {productsOpen && (
                   <div className="absolute left-0 top-full pt-2 w-64">
                     <div className="bg-white rounded-xl shadow-lg border border-gray-200 py-2">
-                      {PRODUCTS.map((p) => (
-                        <Link
-                          key={p.href}
-                          href={p.href}
-                          onClick={() => {
-                            trackNavClick(p.name);
-                            setProductsOpen(false);
-                          }}
-                          className="flex items-center justify-between gap-3 px-4 py-2.5 hover:bg-gray-50 transition-colors"
-                        >
-                          <span className="text-sm font-medium text-gray-900">{p.name}</span>
-                          <span
-                            className={`text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full ${
-                              p.tag === 'Available now'
-                                ? 'bg-pop-light/20 text-primary-4'
-                                : 'bg-gray-100 text-gray-500'
-                            }`}
-                          >
-                            {p.tag}
-                          </span>
-                        </Link>
-                      ))}
+                      {PRODUCTS.map((p) => {
+                        const onClick = () => {
+                          trackNavClick(p.name);
+                          setProductsOpen(false);
+                        };
+                        const cls =
+                          'flex items-center justify-between gap-3 px-4 py-2.5 hover:bg-gray-50 transition-colors';
+                        const content = (
+                          <>
+                            <span className="text-sm font-medium text-gray-900">{p.name}</span>
+                            <span
+                              className={`text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full ${
+                                p.tag === 'Available now'
+                                  ? 'bg-pop-light/20 text-primary-4'
+                                  : 'bg-gray-100 text-gray-500'
+                              }`}
+                            >
+                              {p.tag}
+                            </span>
+                          </>
+                        );
+                        return p.external ? (
+                          <a key={p.href} href={p.href} onClick={onClick} className={cls}>
+                            {content}
+                          </a>
+                        ) : (
+                          <Link key={p.href} href={p.href} onClick={onClick} className={cls}>
+                            {content}
+                          </Link>
+                        );
+                      })}
                     </div>
                   </div>
                 )}
@@ -134,25 +143,33 @@ export default function Navigation() {
               <p className="px-3 pt-2 pb-1 text-xs font-semibold uppercase tracking-wide text-gray-400">
                 Products
               </p>
-              {PRODUCTS.map((p) => (
-                <Link
-                  key={p.href}
-                  href={p.href}
-                  onClick={() => handleMobileNavClick(p.name)}
-                  className="flex items-center justify-between gap-3 px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                >
-                  <span>{p.name}</span>
-                  <span
-                    className={`text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full ${
-                      p.tag === 'Available now'
-                        ? 'bg-pop-light/20 text-primary-4'
-                        : 'bg-gray-100 text-gray-500'
-                    }`}
-                  >
-                    {p.tag}
-                  </span>
-                </Link>
-              ))}
+              {PRODUCTS.map((p) => {
+                const cls =
+                  'flex items-center justify-between gap-3 px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50';
+                const content = (
+                  <>
+                    <span>{p.name}</span>
+                    <span
+                      className={`text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full ${
+                        p.tag === 'Available now'
+                          ? 'bg-pop-light/20 text-primary-4'
+                          : 'bg-gray-100 text-gray-500'
+                      }`}
+                    >
+                      {p.tag}
+                    </span>
+                  </>
+                );
+                return p.external ? (
+                  <a key={p.href} href={p.href} onClick={() => handleMobileNavClick(p.name)} className={cls}>
+                    {content}
+                  </a>
+                ) : (
+                  <Link key={p.href} href={p.href} onClick={() => handleMobileNavClick(p.name)} className={cls}>
+                    {content}
+                  </Link>
+                );
+              })}
               <Link
                 href="/contact/"
                 onClick={() => handleMobileNavClick('Contact')}

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "VaultScaler",
     images: [
       {
-        url: "/forgewing/opengraph-image",
+        url: "/og.jpg",
         width: 1200,
         height: 630,
         alt: "VaultScaler — AI agents that run inside your own cloud",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "VaultScaler | Put AI to work on data you can't let leave.",
     description: "AI agents that run entirely inside your own cloud. Your most sensitive data never leaves your control. Every agent ships with an Agent Passport.",
-    images: ["/forgewing/opengraph-image"],
+    images: ["/og.jpg"],
   },
 };
 

@@ -26,12 +26,12 @@ export default function ThankYouPage() {
           </p>
 
           <div className="space-y-4">
-            <Link
-              href="/forgewing/"
+            <a
+              href="https://forgewing.ai"
               className="inline-block px-8 py-3 bg-primary-3 text-white rounded-full font-semibold hover:bg-primary-4 transition-colors"
             >
               Explore Forgewing
-            </Link>
+            </a>
 
             <p className="text-gray-500 text-sm">
               or{' '}
