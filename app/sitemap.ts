@@ -6,11 +6,10 @@ export const dynamic = "force-static";
 
 // Map each route to the source files that, if touched, mean the page changed.
 // We take the most recent commit date across these files as the page's lastModified.
+// Radix Core / Redoubt / Warden pages remain on disk but were removed from
+// active positioning, so they are intentionally omitted from the sitemap.
 const ROUTE_SOURCES: Record<string, string[]> = {
   "": ["app/page.tsx", "app/layout.tsx"],
-  "radix-core": ["app/(products)/radix-core/page.tsx"],
-  "redoubt": ["app/(products)/redoubt/page.tsx"],
-  "warden": ["app/(products)/warden/page.tsx"],
   "contact": ["app/contact/page.tsx"],
   "waitlist": ["app/waitlist/page.tsx"],
   "privacy": ["app/privacy/page.tsx"],
@@ -38,11 +37,10 @@ function lastModifiedFor(files: string[]): string {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const mainRoutes = ["", "radix-core", "redoubt", "warden", "contact", "waitlist", "privacy"];
+  const mainRoutes = ["", "contact", "waitlist", "privacy"];
 
   const priorityFor = (p: string): number => {
     if (p === "") return 1.0;
-    if (p === "radix-core" || p === "redoubt" || p === "warden") return 0.7;
     return 0.3;
   };
 

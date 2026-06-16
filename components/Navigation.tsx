@@ -84,7 +84,7 @@ export default function Navigation() {
                             <span className="text-sm font-medium text-gray-900">{p.name}</span>
                             <span
                               className={`text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full ${
-                                p.tag === 'Available now'
+                                p.tag !== 'Coming soon'
                                   ? 'bg-pop-light/20 text-primary-4'
                                   : 'bg-gray-100 text-gray-500'
                               }`}
@@ -151,7 +151,7 @@ export default function Navigation() {
                     <span>{p.name}</span>
                     <span
                       className={`text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full ${
-                        p.tag === 'Available now'
+                        p.tag !== 'Coming soon'
                           ? 'bg-pop-light/20 text-primary-4'
                           : 'bg-gray-100 text-gray-500'
                       }`}

@@ -4,10 +4,9 @@ import { useState } from 'react';
 import { trackFormSubmit } from '@/lib/analytics';
 
 const productOptions = [
-  { value: 'forgewing', label: 'Forgewing', desc: 'Sovereign Research Assistant — available now' },
-  { value: 'radix-core', label: 'Radix Core', desc: 'GPU Orchestration — coming soon' },
-  { value: 'redoubt', label: 'Redoubt', desc: 'Intrusion Containment — coming soon' },
-  { value: 'warden', label: 'Warden', desc: 'DevSecOps — coming soon' },
+  { value: 'labs', label: 'Studio Habitat Labs', desc: 'Live AI-assisted phenotyping lab — available now' },
+  { value: 'console', label: 'Studio Habitat Phenotyping Console', desc: 'Evidence-grade phenotyping software — coming soon' },
+  { value: 'radio', label: 'Studio Habitat Radio', desc: 'Creative stream layer — available now' },
 ];
 
 export default function ContactForm() {
