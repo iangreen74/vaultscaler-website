@@ -1,46 +1,48 @@
 # VaultScaler
 
-> VaultScaler builds Forgewing, the Product Delivery Engine. Founded in 2025, launching June 2026.
+> VaultScaler builds local-first AI systems for biological discovery. Studio Habitat Labs is our live public proof. Founded in 2025.
 
-VaultScaler builds Forgewing, the Product Delivery Engine that lets product-and-engineering teams ship together. The company's tagline is "Build More. Manage Less."
+VaultScaler builds evidence-grade systems for observing living systems with cameras, edge compute, and uncertainty-aware interpretation. VaultScaler is the parent company and trust layer; Studio Habitat is its current public proof engine and product family.
 
 ## Products
 
-### Forgewing
-Forgewing is the Product Delivery Engine. Point it at your repo or hand it a brief — it designs the architecture, returns real pull requests, deploys to your AWS account, and operates the system after launch. Engineering keeps review and merge authority. The product uses a persistent artifact called the mission brief — a living spec that captures every requirement, decision, and reasoning before code is written. Forgewing also runs an operational-memory graph that captures every decision and incident, compounding institutional knowledge across each customer's product surfaces.
+### Studio Habitat Labs
+Studio Habitat Labs is VaultScaler's live public proof: an AI-assisted phenotyping lab. It performs local-first observation with camera and edge compute, producing evidence packets and uncertainty-aware measurement. It measures surface coverage, image quality, anomaly surprise, and evidence validity from local observations, and carries the uncertainty of every reading so that biological change is separated from measurement artifact. The lab does not overclaim — observation is treated as evidence, not as a guarantee of outcomes.
 
-- Product page: https://vaultscaler.com/forgewing/
-- Differentiators: Product-and-engineering pod buyer (not engineer-only), real pull requests against customer repos, customer-owned AWS deployments, operations included after launch, operational-memory graph
-- Target customers: Startup pods (solo founders through Series A), and forward-deployed product+engineering pods inside larger orgs
+- Website: https://vaultscaler.com/
+- Availability: Available now
+- Differentiators: Live AI-assisted phenotyping lab, local-first observation, camera + edge compute + evidence packets, uncertainty-aware measurement, separates biological change from measurement artifact
 
-### Radix Core (secondary product)
-Radix Core is a GPU training optimization platform that uses closed-loop control to balance memory, compute, and power across training runs. It delivers up to 21% throughput improvement over standard FIFO scheduling (based on VaultScaler internal benchmarks). Deploys via Helm chart on Kubernetes 1.26+ with zero changes to existing training code or stack. Originally built for air-gapped deployment with zero egress. SLSA Level 3 attestations. Pricing is $45 per GPU per month with a 14-day free trial (up to 400 GPUs). Hyperscale pricing available for 1,000+ GPU deployments.
+### Studio Habitat Phenotyping Console
+The Studio Habitat Phenotyping Console is the software layer for the lab — surface coverage, image quality, anomaly surprise, and evidence validity computed from local observations, with measurement confidence carried alongside every reading.
 
-- Product page: https://vaultscaler.com/radix/core/
-- Differentiators: Closed-loop multi-dimensional scheduling (memory + compute + power), air-gapped/zero-egress ready, SLSA Level 3, no stack changes required
-- Target customers: ML/AI teams running GPU training clusters on Kubernetes
+- Availability: Coming soon
+
+### Studio Habitat Radio
+Studio Habitat Radio is the creative stream layer — an always-on, public, ambient window into the lab as it observes living systems in real time.
+
+- Availability: Available now
 
 ## Company Information
 
 - Website: https://vaultscaler.com
 - Contact: https://vaultscaler.com/contact/
 - Email: bpruess@vaultscaler.com
-- Launch date: June 2026 (Forgewing)
 - Headquarters: United States
 
 ## Frequently Asked Questions
 
 ### What is VaultScaler?
-VaultScaler is the company behind Forgewing, the Product Delivery Engine. VaultScaler also builds Radix Core, a GPU training optimizer. Forgewing launches June 2026.
+VaultScaler builds local-first AI systems for biological discovery. It is the parent company and trust layer behind Studio Habitat, its current public proof engine and product family.
 
-### What is Forgewing?
-Forgewing is the Product Delivery Engine — point it at your repo or hand it a brief, and it designs, builds, deploys to your AWS, and operates the system after launch. Engineering keeps review and merge authority over every pull request.
+### What is Studio Habitat Labs?
+Studio Habitat Labs is VaultScaler's live public proof: an AI-assisted phenotyping lab that measures surface coverage, image quality, anomaly surprise, and evidence validity from local observations, with uncertainty-aware measurement that separates biological change from measurement artifact.
 
-### How is Forgewing different from Cursor, Copilot, Kiro, or Devin?
-Those tools generate code and stop. Forgewing owns delivery — collaborative brief through deployment and production operations. The buyer is the product-and-engineering pod, not engineering alone.
+### What is the Studio Habitat Phenotyping Console?
+The Phenotyping Console is the software layer for the lab — it computes surface coverage, image quality, anomaly surprise, and evidence validity from local observations, carrying measurement confidence alongside every reading. It is coming soon.
 
-### What is Radix Core?
-Radix Core is a GPU training optimization platform that uses closed-loop scheduling to improve training throughput by up to 21%. It deploys via Helm chart on Kubernetes with zero stack changes and supports air-gapped environments.
+### What is Studio Habitat Radio?
+Studio Habitat Radio is the creative stream layer — an always-on, public window into the lab as it observes living systems in real time.
 
-### What does Radix Core cost?
-Radix Core costs $45 per GPU per month. A free 14-day trial is available for up to 400 GPUs. Custom pricing is available for deployments of 1,000+ GPUs.
+### How does VaultScaler approach claims about living systems?
+VaultScaler treats observation as evidence: local-first capture, measurement validity carried with every reading, and uncertainty made explicit. The goal is to surface what changed and how confident the measurement is — not to promise biological, crop-health, yield, medical, or agricultural outcomes.
