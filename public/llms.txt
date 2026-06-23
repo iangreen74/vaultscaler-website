@@ -1,27 +1,27 @@
 # VaultScaler
 
-> VaultScaler builds local-first AI systems for biological discovery. Studio Habitat Labs is our live public proof. Founded in 2025.
+> VaultScaler is the company behind Vivaliux, a private, local-first AI measurement desktop app for living and controlled systems. Vivaliux measures with a camera and edge compute, remembers every reading in an immutable local record, and tells you what changed — and how sure it is. Studio Habitat is our live public proof. Founded in 2025.
 
-VaultScaler builds evidence-grade systems for observing living systems with cameras, edge compute, and uncertainty-aware interpretation. VaultScaler is the parent company and trust layer; Studio Habitat is its current public proof engine and product family.
+Vivaliux turns a camera and a small edge computer into an instrument. It measures what is in front of it locally, appends every reading to an immutable local record, and separates real change in the measurement from imaging or framing artifacts — reporting what changed and how confident it is, in measurement language. Prediction is earned from the local record over time; it is never claimed before the evidence supports it. Vivaliux is private by design: capture, measurement, and memory run on hardware the user controls, and nothing is sent anywhere unless the user chooses to.
 
-## Products
+## Capabilities
 
-### Studio Habitat Labs
-Studio Habitat Labs is VaultScaler's live public proof: an AI-assisted phenotyping lab. It performs local-first observation with camera and edge compute, producing evidence packets and uncertainty-aware measurement. It measures surface coverage, image quality, anomaly surprise, and evidence validity from local observations, and carries the uncertainty of every reading so that biological change is separated from measurement artifact. The lab does not overclaim — observation is treated as evidence, not as a guarantee of outcomes.
+### Measure
+Local-first, engineering-grade measurement from a fixed camera and on-device vision (e.g. surface coverage, image quality, scene stability), computed on the edge with no required cloud round-trip.
 
-- Website: https://vaultscaler.com/
-- Availability: Available now
-- Differentiators: Live AI-assisted phenotyping lab, local-first observation, camera + edge compute + evidence packets, uncertainty-aware measurement, separates biological change from measurement artifact
+### Remember
+An append-only, tamper-evident local record. Every measurement is stored with its timestamp, confidence, and quality flags. Nothing is overwritten; the history itself is the asset and it belongs to the user.
 
-### Studio Habitat Phenotyping Console
-The Studio Habitat Phenotyping Console is the software layer for the lab — surface coverage, image quality, anomaly surprise, and evidence validity computed from local observations, with measurement confidence carried alongside every reading.
+### Catch real change
+Vivaliux distinguishes a real movement in the measurement from a lighting or framing artifact and states which it is, with its uncertainty. It does not present a change in the measurement as a change in the organism.
 
-- Availability: Coming soon
+## Markets
 
-### Studio Habitat Radio
-Studio Habitat Radio is the creative stream layer — an always-on, public, ambient window into the lab as it observes living systems in real time.
+Research labs; vineyards; indoor and vertical farms; and other controlled and living systems that can be observed by a fixed camera and benefit from an honest, private, local record.
 
-- Availability: Available now
+## Studio Habitat (live public proof)
+
+Studio Habitat is VaultScaler's live, public proof — an AI-assisted phenotyping lab that measures a real living system around the clock and shows its work: surface coverage, image quality, anomaly surprise, and evidence validity, each with its own uncertainty. It is not a separate product; it is Vivaliux's claims, held to account in public.
 
 ## Company Information
 
@@ -33,16 +33,19 @@ Studio Habitat Radio is the creative stream layer — an always-on, public, ambi
 ## Frequently Asked Questions
 
 ### What is VaultScaler?
-VaultScaler builds local-first AI systems for biological discovery. It is the parent company and trust layer behind Studio Habitat, its current public proof engine and product family.
+VaultScaler is the company behind Vivaliux. It builds private, local-first AI measurement tools for living and controlled systems, and runs Studio Habitat as its live public proof.
 
-### What is Studio Habitat Labs?
-Studio Habitat Labs is VaultScaler's live public proof: an AI-assisted phenotyping lab that measures surface coverage, image quality, anomaly surprise, and evidence validity from local observations, with uncertainty-aware measurement that separates biological change from measurement artifact.
+### What is Vivaliux?
+Vivaliux is VaultScaler's private, local-first AI measurement desktop app for living and controlled systems. It measures with a camera and edge compute, remembers every reading in an immutable local record, and reports what changed and how sure it is.
 
-### What is the Studio Habitat Phenotyping Console?
-The Phenotyping Console is the software layer for the lab — it computes surface coverage, image quality, anomaly surprise, and evidence validity from local observations, carrying measurement confidence alongside every reading. It is coming soon.
+### How does Vivaliux approach claims about living systems?
+It treats observation as evidence: local-first capture, measurement validity carried with every reading, and uncertainty made explicit. The goal is to surface what changed and how confident the measurement is — not to promise biological, crop-health, yield, medical, or agricultural outcomes.
 
-### What is Studio Habitat Radio?
-Studio Habitat Radio is the creative stream layer — an always-on, public window into the lab as it observes living systems in real time.
+### Does Vivaliux predict the future?
+Prediction is on the roadmap, not a present-tense claim. A forecast is only offered once the local record is long and clean enough to support it; foresight is earned from the user's own history.
 
-### How does VaultScaler approach claims about living systems?
-VaultScaler treats observation as evidence: local-first capture, measurement validity carried with every reading, and uncertainty made explicit. The goal is to surface what changed and how confident the measurement is — not to promise biological, crop-health, yield, medical, or agricultural outcomes.
+### Is my data private?
+Yes. Capture, measurement, and memory run on hardware the user controls. No images or readings are sent anywhere unless the user explicitly chooses to. Privacy is the architecture, not a setting.
+
+### What is Studio Habitat?
+Studio Habitat is VaultScaler's live public proof: an AI-assisted phenotyping lab that measures a real living system and shows its work — surface coverage, image quality, anomaly surprise, and evidence validity — with uncertainty-aware measurement that separates real change from measurement artifact.

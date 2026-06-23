@@ -1,15 +1,12 @@
-// Single source of truth for the product family — consumed by the global
-// Navigation dropdown and the homepage product cards. Don't hardcode a second
-// list anywhere; every surface must agree on routes and availability badges.
+// Single source of truth for what VaultScaler actually offers — consumed by the
+// contact form's interest options and the waitlist's ?product= attribution.
+// Don't hardcode a second list anywhere; every surface must agree.
 export const PRODUCTS = [
-  // The Studio Habitat surfaces are the current public positioning. They link
-  // to homepage sections rather than dedicated routes for now. Forgewing has
-  // been retired from active positioning (the /forgewing route still redirects
-  // to forgewing.ai); Radix Core / Redoubt / Warden pages remain on disk but
-  // are no longer surfaced here.
-  { name: "Studio Habitat Labs", slug: "labs", href: "/#labs", tag: "Available now", external: false },
-  { name: "Studio Habitat Phenotyping Console", slug: "console", href: "/#console", tag: "Coming soon", external: false },
-  { name: "Studio Habitat Radio", slug: "radio", href: "/#radio", tag: "Prototype live", external: false },
+  // Vivaliux is the product (the local-first desktop app); VaultScaler is the
+  // company. Studio Habitat is Vivaliux's live public proof, not a separate
+  // product line. These are the only two real things — no phantom products.
+  { name: "Vivaliux", slug: "platform", href: "/#platform", tag: "Available now", external: false },
+  { name: "Studio Habitat (live proof)", slug: "studio-habitat", href: "/#studio-habitat", tag: "Live now", external: false },
 ] as const;
 
 export type ProductTag = (typeof PRODUCTS)[number]["tag"];
@@ -30,20 +27,27 @@ export const SITE = {
   email: "bpruess@vaultscaler.com",
   launchISO: "2026-06-15",
   description:
-    "VaultScaler builds local-first AI systems for biological discovery — evidence-grade systems for observing living systems with cameras, edge compute, and uncertainty-aware interpretation. Studio Habitat Labs is our live public proof.",
+    "Vivaliux is VaultScaler's private, local-first AI measurement app for living and controlled systems. It measures with a camera and edge compute, remembers every reading in an immutable local record, and tells you what changed — and how sure it is. Studio Habitat is our live public proof.",
   keywords: [
+    // Product / company
+    "Vivaliux",
+    "Vivaliux app",
     // Positioning
     "local-first AI",
-    "AI for biological discovery",
-    "evidence-grade AI",
+    "measurement platform",
+    "private AI",
+    "edge AI",
     // Capability / category
-    "AI-assisted phenotyping",
-    "edge compute observation",
-    "evidence packets",
+    "measure living systems",
+    "edge compute measurement",
     "uncertainty-aware measurement",
-    "surface coverage measurement",
-    "anomaly detection",
+    "change detection",
     "measurement validity",
+    "evidence-grade measurement",
+    // Markets
+    "research lab measurement",
+    "vineyard monitoring",
+    "indoor and vertical farm monitoring",
     "Studio Habitat",
   ],
 };

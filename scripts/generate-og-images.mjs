@@ -85,12 +85,12 @@ function escapeXml(s) {
 
 const images = [
   {
-    filename: 'radix-core.png',
+    filename: 'vaultscaler-og.png',
     bg: ['#122E46', '#234D70', '#2a5f87'],
     accentColor: '#00e3ae',
-    productName: 'Radix Core',
-    headline: 'Up to 21% Faster GPU Training',
-    subline: 'Closed-loop GPU scheduling. Zero stack changes. Results in minutes.',
+    productName: 'Vivaliux',
+    headline: 'Measure. Remember. Catch real change.',
+    subline: 'Private, local-first AI for living and controlled systems. By VaultScaler.',
   },
 ];
 
