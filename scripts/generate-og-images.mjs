@@ -1,5 +1,6 @@
 /**
- * Generate product-specific OG images (1200x630 PNG).
+ * Generate the OG/social share image (1200x630) written to public/og.jpg,
+ * matching the live site: "Vivaliux by VaultScaler" + the product tagline.
  * Run: node scripts/generate-og-images.mjs
  */
 import sharp from 'sharp';
@@ -8,7 +9,7 @@ import { dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const publicDir = resolve(__dirname, '..', 'public', 'og');
+const publicDir = resolve(__dirname, '..', 'public');
 mkdirSync(publicDir, { recursive: true });
 
 const WIDTH = 1200;
@@ -38,7 +39,7 @@ function buildSvg({ bg, accentColor, productName, headline, subline }) {
   ${wrapText(subline, 60, 80, 290 + countLines(headline, 40) * 56 + 24, 'rgba(255,255,255,0.7)', 24, 400)}
 
   <!-- Footer -->
-  <text x="80" y="${HEIGHT - 50}" fill="rgba(255,255,255,0.5)" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="22" font-weight="700" letter-spacing="1">VaultScaler</text>
+  <text x="80" y="${HEIGHT - 50}" fill="rgba(255,255,255,0.5)" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="22" font-weight="700" letter-spacing="1">vaultscaler.com</text>
 </svg>`;
 }
 
@@ -85,19 +86,20 @@ function escapeXml(s) {
 
 const images = [
   {
-    filename: 'vaultscaler-og.png',
+    filename: 'og.jpg',
     bg: ['#122E46', '#234D70', '#2a5f87'],
     accentColor: '#00e3ae',
-    productName: 'Vivaliux',
-    headline: 'Measure. Remember. Catch real change.',
-    subline: 'Private, local-first AI for living and controlled systems. By VaultScaler.',
+    productName: 'Vivaliux by VaultScaler',
+    headline: 'Private, local AI that measures, remembers, and predicts living systems.',
+    subline: '',
   },
 ];
 
 for (const img of images) {
   const svg = buildSvg(img);
   const outPath = resolve(publicDir, img.filename);
-  await sharp(Buffer.from(svg)).png().toFile(outPath);
+  const isJpg = /\.jpe?g$/i.test(img.filename);
+  await (isJpg ? sharp(Buffer.from(svg)).jpeg({ quality: 92 }) : sharp(Buffer.from(svg)).png()).toFile(outPath);
   console.log(`✓ ${outPath}`);
 }
 
