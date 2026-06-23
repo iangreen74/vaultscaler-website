@@ -88,9 +88,9 @@ const images = [
     filename: 'vaultscaler-og.png',
     bg: ['#122E46', '#234D70', '#2a5f87'],
     accentColor: '#00e3ae',
-    productName: 'VaultScaler',
+    productName: 'Vivaliux',
     headline: 'Measure. Remember. Catch real change.',
-    subline: 'Private, local-first AI for living and controlled systems.',
+    subline: 'Private, local-first AI for living and controlled systems. By VaultScaler.',
   },
 ];
 

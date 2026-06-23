@@ -4,9 +4,9 @@ import Link from 'next/link';
 import { SITE } from '@/lib/site';
 import JsonLd from '@/components/JsonLd';
 
-const TITLE = 'VaultScaler | Private, local AI that measures, remembers, and predicts living systems.';
+const TITLE = 'Vivaliux by VaultScaler | Private, local AI that measures, remembers, and predicts living systems.';
 const DESC =
-  'VaultScaler turns a camera and a small edge computer into an instrument: it measures what is in front of it, remembers every reading in an immutable local record, and tells you what changed — and how sure it is. Studio Habitat is our live public proof.';
+  'Vivaliux is VaultScaler’s private, local-first AI measurement app: it measures what is in front of it with a camera and edge compute, remembers every reading in an immutable local record, and tells you what changed — and how sure it is. Studio Habitat is our live public proof.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: DESC,
     type: 'website',
     url: `${SITE.url}/`,
-    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'VaultScaler — private, local AI for measuring living systems' }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Vivaliux by VaultScaler — private, local AI for measuring living systems' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -102,14 +102,14 @@ export default function Home() {
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-3xl">
             <p className="text-pop-light text-sm font-semibold uppercase tracking-wide mb-4">
-              Local-first measurement platform
+              Vivaliux · the local-first desktop app from VaultScaler
             </p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
               Private, local AI that measures, remembers, and predicts living systems.
             </h1>
 
             <p className="text-lg md:text-xl text-primary-1 max-w-2xl leading-relaxed mb-10">
-              VaultScaler turns a camera and a small edge computer into an instrument: it measures
+              Vivaliux turns a camera and a small edge computer into an instrument: it measures
               what&rsquo;s in front of it, remembers every reading, and tells you what changed — and how
               sure it is. Foresight comes later, and only once the record has earned it.
             </p>
@@ -147,14 +147,14 @@ export default function Home() {
       <section id="platform" className="scroll-mt-20 py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-primary-3 text-sm font-semibold uppercase tracking-wide mb-3">
-            The platform
+            The Vivaliux app
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900 leading-tight max-w-3xl">
             Measure. Remember. Catch real change.
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mb-12">
-            One local-first instrument that does three honest things well — and refuses to pretend it
-            does more.
+            Vivaliux is one local-first app that does three honest things well — and refuses to
+            pretend it does more.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             {capabilities.map((c) => (
@@ -251,7 +251,7 @@ export default function Home() {
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
             Prediction is on the roadmap, not the headline. A forecast is only trustworthy once the
-            local record is long and clean enough to support it — so VaultScaler measures and remembers
+            local record is long and clean enough to support it — so Vivaliux measures and remembers
             first, and earns foresight from <span className="font-semibold text-gray-900">your own history</span> rather than
             borrowing it from someone else&rsquo;s. We will not put a present-tense prediction on the page
             before the evidence is there to back it.
@@ -285,8 +285,8 @@ export default function Home() {
           <p className="text-lg text-primary-1 leading-relaxed max-w-3xl mb-8">
             Studio Habitat is our live, public proof — an AI-assisted phenotyping lab that measures a
             real living system around the clock and shows its work: surface coverage, image quality,
-            anomaly surprise, and evidence validity, each with its own uncertainty. It isn&rsquo;t the
-            company; it&rsquo;s the company&rsquo;s claims, held to account in public.
+            anomaly surprise, and evidence validity, each with its own uncertainty. It isn&rsquo;t a
+            separate product; it&rsquo;s Vivaliux&rsquo;s claims, held to account in public.
           </p>
           <ul className="grid sm:grid-cols-2 gap-x-10 gap-y-3 max-w-3xl">
             {[

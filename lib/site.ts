@@ -2,10 +2,10 @@
 // contact form's interest options and the waitlist's ?product= attribution.
 // Don't hardcode a second list anywhere; every surface must agree.
 export const PRODUCTS = [
-  // VaultScaler is the measurement platform; Studio Habitat is its live public
-  // proof, not a separate company or product line. These are the only two real
-  // things — no phantom products.
-  { name: "VaultScaler Platform", slug: "platform", href: "/#platform", tag: "Available now", external: false },
+  // Vivaliux is the product (the local-first desktop app); VaultScaler is the
+  // company. Studio Habitat is Vivaliux's live public proof, not a separate
+  // product line. These are the only two real things — no phantom products.
+  { name: "Vivaliux", slug: "platform", href: "/#platform", tag: "Available now", external: false },
   { name: "Studio Habitat (live proof)", slug: "studio-habitat", href: "/#studio-habitat", tag: "Live now", external: false },
 ] as const;
 
@@ -27,8 +27,11 @@ export const SITE = {
   email: "bpruess@vaultscaler.com",
   launchISO: "2026-06-15",
   description:
-    "VaultScaler is a private, local-first AI measurement platform for living and controlled systems. It measures with a camera and edge compute, remembers every reading in an immutable local record, and tells you what changed — and how sure it is. Studio Habitat is our live public proof.",
+    "Vivaliux is VaultScaler's private, local-first AI measurement app for living and controlled systems. It measures with a camera and edge compute, remembers every reading in an immutable local record, and tells you what changed — and how sure it is. Studio Habitat is our live public proof.",
   keywords: [
+    // Product / company
+    "Vivaliux",
+    "Vivaliux app",
     // Positioning
     "local-first AI",
     "measurement platform",

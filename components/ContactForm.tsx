@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { trackFormSubmit } from '@/lib/analytics';
 
 const productOptions = [
-  { value: 'platform', label: 'VaultScaler Platform', desc: 'Local-first measurement for living & controlled systems' },
+  { value: 'platform', label: 'Vivaliux', desc: 'The local-first desktop app — measurement for living & controlled systems' },
   { value: 'pilot', label: 'A pilot for my own system', desc: 'Research lab, vineyard, indoor/vertical farm, or other' },
   { value: 'studio-habitat', label: 'Studio Habitat', desc: 'Our live public proof — the AI-assisted phenotyping lab' },
 ];

@@ -9,8 +9,8 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: "VaultScaler | Private, local AI that measures, remembers, and predicts living systems.",
-  description: "VaultScaler is a private, local-first AI measurement platform for living and controlled systems — it measures with a camera and edge compute, remembers every reading, and tells you what changed and how sure it is. Studio Habitat is our live public proof.",
+  title: "Vivaliux by VaultScaler | Private, local AI that measures, remembers, and predicts living systems.",
+  description: "Vivaliux is a private, local-first AI measurement app from VaultScaler for living and controlled systems — it measures with a camera and edge compute, remembers every reading, and tells you what changed and how sure it is. Studio Habitat is our live public proof.",
   keywords: SITE.keywords,
   icons: {
     icon: [
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "VaultScaler | Private, local AI that measures, remembers, and predicts living systems.",
-    description: "A private, local-first AI measurement platform for living and controlled systems. Measure with a camera and edge compute, remember every reading, and see what changed — and how sure it is. Studio Habitat is our live public proof.",
+    title: "Vivaliux by VaultScaler | Private, local AI that measures, remembers, and predicts living systems.",
+    description: "Vivaliux is a private, local-first AI measurement app from VaultScaler for living and controlled systems. Measure with a camera and edge compute, remember every reading, and see what changed — and how sure it is. Studio Habitat is our live public proof.",
     url: "https://vaultscaler.com",
     siteName: "VaultScaler",
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: "VaultScaler — private, local AI for measuring living systems",
+        alt: "Vivaliux by VaultScaler — private, local AI for measuring living systems",
       },
     ],
     locale: "en_US",
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "VaultScaler | Private, local AI that measures, remembers, and predicts living systems.",
-    description: "A private, local-first AI measurement platform for living and controlled systems. Measure, remember, and see what changed — and how sure it is. Studio Habitat is our live public proof.",
+    title: "Vivaliux by VaultScaler | Private, local AI that measures, remembers, and predicts living systems.",
+    description: "Vivaliux is a private, local-first AI measurement app from VaultScaler. Measure, remember, and see what changed — and how sure it is. Studio Habitat is our live public proof.",
     images: ["/og.jpg"],
   },
 };
@@ -67,11 +67,11 @@ export default function RootLayout({
       "@type": "Offer",
       itemOffered: {
         "@type": "SoftwareApplication",
-        name: "VaultScaler Platform",
+        name: "Vivaliux",
         applicationCategory: "BusinessApplication",
-        applicationSubCategory: "Local-first measurement platform",
-        operatingSystem: "Local-first (camera + edge compute)",
-        description: "VaultScaler is a private, local-first AI measurement platform for living and controlled systems. It measures with a camera and on-device vision, remembers every reading in an immutable local record, and reports what changed and how sure it is — separating real change from imaging artifact. Prediction is earned from the local record over time, never claimed before the evidence supports it.",
+        applicationSubCategory: "Local-first measurement desktop app",
+        operatingSystem: "Local-first desktop (camera + edge compute)",
+        description: "Vivaliux is VaultScaler's private, local-first AI measurement desktop app for living and controlled systems. It measures with a camera and on-device vision, remembers every reading in an immutable local record, and reports what changed and how sure it is — separating real change from imaging artifact. Prediction is earned from the local record over time, never claimed before the evidence supports it.",
         featureList: [
           "Local-first measurement with camera and edge compute",
           "Immutable, append-only local record of every reading",
@@ -89,7 +89,7 @@ export default function RootLayout({
         applicationCategory: "BusinessApplication",
         applicationSubCategory: "AI-assisted phenotyping lab (live public proof)",
         operatingSystem: "Local-first (camera + edge compute)",
-        description: "Studio Habitat is VaultScaler's live public proof: an AI-assisted phenotyping lab that measures a real living system around the clock — surface coverage, image quality, anomaly surprise, and evidence validity from local observations — with every reading carrying its own uncertainty, separating real change from measurement artifact. It is the platform's claims, held to account in public.",
+        description: "Studio Habitat is VaultScaler's live public proof: an AI-assisted phenotyping lab that measures a real living system around the clock — surface coverage, image quality, anomaly surprise, and evidence validity from local observations — with every reading carrying its own uncertainty, separating real change from measurement artifact. It is Vivaliux's claims, held to account in public.",
       },
     ],
   };
