@@ -63,8 +63,11 @@ All agents follow these principles:
 - Optimize for long-term trust over short-term wins
 
 ## Messaging
-> Use content in **app\forgewing\supporting\newer** to assist with copy, messaging, problem positioning, etc
-> Do not use contetn in *app\forgewing\supporting\older*. These are older assets only for human reference.
+> Positioning: VaultScaler is a private, local-first AI **measurement platform** for living and
+> controlled systems (measure → remember → catch real change; prediction is earned, not promised).
+> Studio Habitat is our live public proof, not the company. Markets: research labs, vineyards,
+> indoor & vertical farms, and other controlled & living systems. Claim discipline: measurement
+> language only — a change in the measurement is never sold as a change in the organism.
 
 ## Build & Development Commands
 
@@ -112,8 +115,8 @@ Root layout (`app/layout.tsx`) provides:
 - Team and Docs pages are set to noindex
 
 ### Styling
-**Use public\brand\brand-guide-v20260418.html**
-Tailwind CSS with minimal, clean aesthetic:
+Brand tokens live in `tailwind.config.ts` (primary blues `primary-1..4`, mint pop `pop-light`/
+`pop-dark`, grey scale). Light, clean aesthetic:
 - Custom accent color via `tailwind.config.ts`
 - Mobile-first responsive (sm/md/lg breakpoints)
 - Rounded cards (`rounded-2xl`), generous whitespace

@@ -6,8 +6,6 @@ export const dynamic = "force-static";
 
 // Map each route to the source files that, if touched, mean the page changed.
 // We take the most recent commit date across these files as the page's lastModified.
-// Radix Core / Redoubt / Warden pages remain on disk but were removed from
-// active positioning, so they are intentionally omitted from the sitemap.
 const ROUTE_SOURCES: Record<string, string[]> = {
   "": ["app/page.tsx", "app/layout.tsx"],
   "contact": ["app/contact/page.tsx"],

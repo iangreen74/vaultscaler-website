@@ -2,20 +2,18 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { trackNavClick } from '@/lib/analytics';
-import { PRODUCTS } from '@/lib/site';
+
+// The nav reflects what actually exists: the platform, how it works, the live
+// public proof (Studio Habitat), and contact. No phantom products, no dropdown.
+const NAV_LINKS = [
+  { label: 'Platform', href: '/#platform' },
+  { label: 'How it works', href: '/#how' },
+  { label: 'Studio Habitat', href: '/#studio-habitat' },
+] as const;
 
 export default function Navigation() {
-  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [productsOpen, setProductsOpen] = useState(false);
-
-  if (pathname?.startsWith('/forgewing')) return null;
-
-  // Spacer below renders alongside the fixed nav so page content clears it.
-  // Lives here (not in the root layout) so /forgewing — which hides the nav —
-  // doesn't pay for phantom top padding.
 
   const handleMobileNavClick = (label: string) => {
     trackNavClick(label);
@@ -43,77 +41,22 @@ export default function Navigation() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              {/* Products dropdown (hover + focus) */}
-              <div
-                className="relative"
-                onMouseEnter={() => setProductsOpen(true)}
-                onMouseLeave={() => setProductsOpen(false)}
-              >
-                <button
-                  type="button"
-                  className="flex items-center gap-1 text-sm text-gray-700 hover:text-gray-900 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-3 rounded"
-                  aria-expanded={productsOpen}
-                  aria-haspopup="true"
-                  onClick={() => setProductsOpen((v) => !v)}
-                  onFocus={() => setProductsOpen(true)}
+              {NAV_LINKS.map((l) => (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => trackNavClick(l.label)}
+                  className="text-sm text-gray-700 hover:text-gray-900 transition-colors"
                 >
-                  Products
-                  <svg
-                    className={`w-4 h-4 transition-transform ${productsOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-
-                {productsOpen && (
-                  <div className="absolute left-0 top-full pt-2 w-64">
-                    <div className="bg-white rounded-xl shadow-lg border border-gray-200 py-2">
-                      {PRODUCTS.map((p) => {
-                        const onClick = () => {
-                          trackNavClick(p.name);
-                          setProductsOpen(false);
-                        };
-                        const cls =
-                          'flex items-center justify-between gap-3 px-4 py-2.5 hover:bg-gray-50 transition-colors';
-                        const content = (
-                          <>
-                            <span className="text-sm font-medium text-gray-900">{p.name}</span>
-                            <span
-                              className={`text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full ${
-                                p.tag !== 'Coming soon'
-                                  ? 'bg-pop-light/20 text-primary-4'
-                                  : 'bg-gray-100 text-gray-500'
-                              }`}
-                            >
-                              {p.tag}
-                            </span>
-                          </>
-                        );
-                        return p.external ? (
-                          <a key={p.href} href={p.href} onClick={onClick} className={cls}>
-                            {content}
-                          </a>
-                        ) : (
-                          <Link key={p.href} href={p.href} onClick={onClick} className={cls}>
-                            {content}
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
-              </div>
-
+                  {l.label}
+                </Link>
+              ))}
               <Link
                 href="/contact/"
                 onClick={() => trackNavClick('Contact')}
-                className="text-sm text-gray-700 hover:text-gray-900 transition-colors"
+                className="text-sm font-semibold text-white bg-primary-3 hover:bg-primary-4 px-4 py-2 rounded-full transition-colors"
               >
-                Contact
+                Request a pilot
               </Link>
             </div>
 
@@ -140,42 +83,22 @@ export default function Navigation() {
         {mobileMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-200">
             <div className="px-4 py-3 space-y-1">
-              <p className="px-3 pt-2 pb-1 text-xs font-semibold uppercase tracking-wide text-gray-400">
-                Products
-              </p>
-              {PRODUCTS.map((p) => {
-                const cls =
-                  'flex items-center justify-between gap-3 px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50';
-                const content = (
-                  <>
-                    <span>{p.name}</span>
-                    <span
-                      className={`text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full ${
-                        p.tag !== 'Coming soon'
-                          ? 'bg-pop-light/20 text-primary-4'
-                          : 'bg-gray-100 text-gray-500'
-                      }`}
-                    >
-                      {p.tag}
-                    </span>
-                  </>
-                );
-                return p.external ? (
-                  <a key={p.href} href={p.href} onClick={() => handleMobileNavClick(p.name)} className={cls}>
-                    {content}
-                  </a>
-                ) : (
-                  <Link key={p.href} href={p.href} onClick={() => handleMobileNavClick(p.name)} className={cls}>
-                    {content}
-                  </Link>
-                );
-              })}
+              {NAV_LINKS.map((l) => (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => handleMobileNavClick(l.label)}
+                  className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                >
+                  {l.label}
+                </Link>
+              ))}
               <Link
                 href="/contact/"
                 onClick={() => handleMobileNavClick('Contact')}
-                className="block px-3 py-3 mt-1 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 border-t border-gray-100"
+                className="block px-3 py-3 mt-1 rounded-md text-base font-semibold text-white bg-primary-3 hover:bg-primary-4"
               >
-                Contact
+                Request a pilot
               </Link>
             </div>
           </div>

@@ -4,9 +4,9 @@ import { useState } from 'react';
 import { trackFormSubmit } from '@/lib/analytics';
 
 const productOptions = [
-  { value: 'labs', label: 'Studio Habitat Labs', desc: 'Live AI-assisted phenotyping lab — available now' },
-  { value: 'console', label: 'Studio Habitat Phenotyping Console', desc: 'Evidence-grade phenotyping software — coming soon' },
-  { value: 'radio', label: 'Studio Habitat Radio', desc: 'Creative stream layer — available now' },
+  { value: 'platform', label: 'VaultScaler Platform', desc: 'Local-first measurement for living & controlled systems' },
+  { value: 'pilot', label: 'A pilot for my own system', desc: 'Research lab, vineyard, indoor/vertical farm, or other' },
+  { value: 'studio-habitat', label: 'Studio Habitat', desc: 'Our live public proof — the AI-assisted phenotyping lab' },
 ];
 
 export default function ContactForm() {
