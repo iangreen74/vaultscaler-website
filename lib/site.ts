@@ -2,11 +2,13 @@
 // contact form's interest options and the waitlist's ?product= attribution.
 // Don't hardcode a second list anywhere; every surface must agree.
 export const PRODUCTS = [
-  // Vivaliux is the product (the local-first desktop app); VaultScaler is the
-  // company. Studio Habitat is Vivaliux's live public proof, not a separate
-  // product line. These are the only two real things — no phantom products.
-  { name: "Vivaliux", slug: "platform", href: "/#platform", tag: "Available now", external: false },
-  { name: "Studio Habitat (live proof)", slug: "studio-habitat", href: "/#studio-habitat", tag: "Live now", external: false },
+  // Vivaliux is the product (the local-first measurement app); VaultScaler is the
+  // company. It ships as three tiers — Free (the honest instrument), Plus (a model
+  // trained on your own record), and Edge + Consultancy (an on-site unit installed
+  // by us). These are the only real things — no phantom products.
+  { name: "Vivaliux Free", slug: "free", href: "/#platform", tag: "Free", external: false },
+  { name: "Vivaliux Plus", slug: "plus", href: "/#pricing", tag: "Paid", external: false },
+  { name: "Vivaliux Edge + Consultancy", slug: "edge", href: "/#pricing", tag: "By arrangement", external: false },
 ] as const;
 
 export type ProductTag = (typeof PRODUCTS)[number]["tag"];
@@ -27,7 +29,7 @@ export const SITE = {
   email: "bpruess@vaultscaler.com",
   launchISO: "2026-06-15",
   description:
-    "Vivaliux is VaultScaler's private, local-first AI measurement app for living and controlled systems. It measures with a camera and edge compute, remembers every reading in an immutable local record, and tells you what changed — and how sure it is. Studio Habitat is our live public proof.",
+    "Vivaliux is VaultScaler's private, local-first AI measurement app for living and controlled systems. It measures with a camera and edge compute, remembers every reading in an immutable local record, and tells you what changed — and how sure it is. Free to start; a paid model that learns your plants; and an on-site edge unit installed by us.",
   keywords: [
     // Product / company
     "Vivaliux",
@@ -48,6 +50,5 @@ export const SITE = {
     "research lab measurement",
     "vineyard monitoring",
     "indoor and vertical farm monitoring",
-    "Studio Habitat",
   ],
 };

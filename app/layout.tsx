@@ -10,7 +10,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: "Vivaliux by VaultScaler | Private, local AI that measures, remembers, and predicts living systems.",
-  description: "Vivaliux is a private, local-first AI measurement app from VaultScaler for living and controlled systems — it measures with a camera and edge compute, remembers every reading, and tells you what changed and how sure it is. Studio Habitat is our live public proof.",
+  description: "Vivaliux is a private, local-first AI measurement app from VaultScaler for living and controlled systems — it measures with a camera and edge compute, remembers every reading, and tells you what changed and how sure it is. Free to start; a paid model that learns your plants; an on-site edge unit installed by us.",
   keywords: SITE.keywords,
   icons: {
     icon: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Vivaliux by VaultScaler | Private, local AI that measures, remembers, and predicts living systems.",
-    description: "Vivaliux is a private, local-first AI measurement app from VaultScaler for living and controlled systems. Measure with a camera and edge compute, remember every reading, and see what changed — and how sure it is. Studio Habitat is our live public proof.",
+    description: "Vivaliux is a private, local-first AI measurement app from VaultScaler for living and controlled systems. Measure with a camera and edge compute, remember every reading, and see what changed — and how sure it is. Free to start, with paid and on-site tiers.",
     url: "https://vaultscaler.com",
     siteName: "VaultScaler",
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Vivaliux by VaultScaler | Private, local AI that measures, remembers, and predicts living systems.",
-    description: "Vivaliux is a private, local-first AI measurement app from VaultScaler. Measure, remember, and see what changed — and how sure it is. Studio Habitat is our live public proof.",
+    description: "Vivaliux is a private, local-first AI measurement app from VaultScaler. Measure, remember, and see what changed — and how sure it is. Free to start, with paid and on-site tiers.",
     images: ["/og.jpg"],
   },
 };
@@ -82,16 +82,6 @@ export default function RootLayout({
         ],
       },
     },
-    owns: [
-      {
-        "@type": "SoftwareApplication",
-        name: "Studio Habitat",
-        applicationCategory: "BusinessApplication",
-        applicationSubCategory: "AI-assisted phenotyping lab (live public proof)",
-        operatingSystem: "Local-first (camera + edge compute)",
-        description: "Studio Habitat is VaultScaler's live public proof: an AI-assisted phenotyping lab that measures a real living system around the clock — surface coverage, image quality, anomaly surprise, and evidence validity from local observations — with every reading carrying its own uncertainty, separating real change from measurement artifact. It is Vivaliux's claims, held to account in public.",
-      },
-    ],
   };
 
   return (

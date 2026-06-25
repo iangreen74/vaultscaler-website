@@ -4,9 +4,9 @@ import { useState } from 'react';
 import { trackFormSubmit } from '@/lib/analytics';
 
 const productOptions = [
-  { value: 'platform', label: 'Vivaliux', desc: 'The local-first desktop app — measurement for living & controlled systems' },
-  { value: 'pilot', label: 'A pilot for my own system', desc: 'Research lab, vineyard, indoor/vertical farm, or other' },
-  { value: 'studio-habitat', label: 'Studio Habitat', desc: 'Our live public proof — the AI-assisted phenotyping lab' },
+  { value: 'free', label: 'Vivaliux Free', desc: 'The free, local honest instrument — measurement for living & controlled systems' },
+  { value: 'plus', label: 'Vivaliux Plus', desc: 'A small model trained on your own record (paid) — sharper at your operation' },
+  { value: 'edge', label: 'Vivaliux Edge + Consultancy', desc: 'An on-site edge unit + ML, installed and tuned by us (by arrangement)' },
 ];
 
 export default function ContactForm() {

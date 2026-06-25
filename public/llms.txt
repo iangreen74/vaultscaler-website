@@ -1,27 +1,41 @@
 # VaultScaler
 
-> VaultScaler is the company behind Vivaliux, a private, local-first AI measurement desktop app for living and controlled systems. Vivaliux measures with a camera and edge compute, remembers every reading in an immutable local record, and tells you what changed — and how sure it is. Studio Habitat is our live public proof. Founded in 2025.
+> VaultScaler is the company behind Vivaliux, a private, local-first AI measurement app for living and controlled systems. Vivaliux measures with a camera and edge compute, remembers every reading in an immutable local record, and tells you what changed — and how sure it is. It ships in three tiers: Vivaliux Free (the honest instrument), Vivaliux Plus (a small model trained on your own record), and Vivaliux Edge + Consultancy (an on-site edge unit installed by us). Founded in 2025.
 
-Vivaliux turns a camera and a small edge computer into an instrument. It measures what is in front of it locally, appends every reading to an immutable local record, and separates real change in the measurement from imaging or framing artifacts — reporting what changed and how confident it is, in measurement language. Prediction is earned from the local record over time; it is never claimed before the evidence supports it. Vivaliux is private by design: capture, measurement, and memory run on hardware the user controls, and nothing is sent anywhere unless the user chooses to.
+Vivaliux turns a camera into a measuring instrument. It measures what it can honestly see locally, appends every reading to an immutable local record, and separates real change in the measurement from imaging or framing artifacts — reporting what changed and how confident it is, in measurement language. Prediction is earned from the local record over time; it is never claimed before the evidence supports it. Vivaliux is private by design: capture, measurement, and memory run on hardware the user controls, and nothing is sent anywhere unless the user chooses to.
 
-## Capabilities
+Positioning note: VaultScaler claims what the instrument does and aspires to what the grower achieves. Better information is the foundation under every yield decision the grower makes — Vivaliux measures rigorously and coaches the user to better data, but it does not claim to increase yield or to diagnose biological, crop-health, medical, or agricultural outcomes.
 
-### Measure
-Local-first, engineering-grade measurement from a fixed camera and on-device vision (e.g. surface coverage, image quality, scene stability), computed on the edge with no required cloud round-trip.
+## Vivaliux Free — an honest instrument, free
 
-### Remember
-An append-only, tamper-evident local record. Every measurement is stored with its timestamp, confidence, and quality flags. Nothing is overwritten; the history itself is the asset and it belongs to the user.
+Free, local, no account, nothing uploaded. It does four honest things well and refuses to pretend it does more.
+
+### Measure, locally
+A camera and on-device vision turn a scene into engineering-grade measurements (surface coverage, image quality, scene stability), computed on the user's machine with no required cloud round-trip.
+
+### Track change over time
+Every reading is appended to a local, tamper-evident record. The user can watch how coverage fills in across days and weeks, with an honest rate of change. The history itself is the asset and it belongs to the user.
+
+### See if it's even
+Not one number for the whole frame: Vivaliux shows where coverage is dense and where it is sparse, so the user can see whether the canopy is filling in evenly or in patches.
 
 ### Catch real change
-Vivaliux distinguishes a real movement in the measurement from a lighting or framing artifact and states which it is, with its uncertainty. It does not present a change in the measurement as a change in the organism.
+Vivaliux distinguishes a real movement in the measurement from a lighting or framing artifact and states which it is, in plain language. It does not present a change in the measurement as a change in the organism.
+
+### Coaching to better data
+When the signal is weak, Vivaliux names the concrete fix (add light, refocus, reduce glare) and confirms plainly when the setup is good. Most measurement problems are setup problems; Vivaliux critiques its own input.
+
+## Vivaliux Plus — a model that learns your plants (paid)
+
+The free app measures every plant with the same honest, universal rules. Plus trains a small model on the user's own record — learning the visual patterns specific to their plants, their room, their lights — so the measurement gets sharper at that operation specifically. It runs on a normal computer (no special hardware) and stays on the user's machine. The honest instrument stays free.
+
+## Vivaliux Edge + Consultancy — the deep end, installed by us (by arrangement)
+
+A dedicated, always-on edge unit, installed and tuned on-site, running heavier machine learning on the imagery itself on hardware built for it. This is where the record the user has built earns its way toward genuine foresight: deeper insight over time, and the honest, earned path toward prediction. On the user's premises, private, maintained by VaultScaler. It is a partnership, not a download.
 
 ## Markets
 
 Research labs; vineyards; indoor and vertical farms; and other controlled and living systems that can be observed by a fixed camera and benefit from an honest, private, local record.
-
-## Studio Habitat (live public proof)
-
-Studio Habitat is VaultScaler's live, public proof — an AI-assisted phenotyping lab that measures a real living system around the clock and shows its work: surface coverage, image quality, anomaly surprise, and evidence validity, each with its own uncertainty. It is not a separate product; it is Vivaliux's claims, held to account in public.
 
 ## Company Information
 
@@ -33,10 +47,13 @@ Studio Habitat is VaultScaler's live, public proof — an AI-assisted phenotypin
 ## Frequently Asked Questions
 
 ### What is VaultScaler?
-VaultScaler is the company behind Vivaliux. It builds private, local-first AI measurement tools for living and controlled systems, and runs Studio Habitat as its live public proof.
+VaultScaler is the company behind Vivaliux. It builds private, local-first AI measurement tools for living and controlled systems.
 
 ### What is Vivaliux?
-Vivaliux is VaultScaler's private, local-first AI measurement desktop app for living and controlled systems. It measures with a camera and edge compute, remembers every reading in an immutable local record, and reports what changed and how sure it is.
+Vivaliux is VaultScaler's private, local-first AI measurement app for living and controlled systems. It measures with a camera and edge compute, remembers every reading in an immutable local record, and reports what changed and how sure it is. It ships as Vivaliux Free, Vivaliux Plus, and Vivaliux Edge + Consultancy.
+
+### What does each tier cost and include?
+Vivaliux Free is free and local: honest measurement, change over time and uniformity, catch-real-change, and coaching. Vivaliux Plus is paid and adds a small model trained on the user's own record. Vivaliux Edge + Consultancy is by arrangement and adds an on-site edge unit, heavier on-device machine learning, and consulting. Free and Plus run on the user's own computer; Edge runs on an on-site unit installed by VaultScaler.
 
 ### How does Vivaliux approach claims about living systems?
 It treats observation as evidence: local-first capture, measurement validity carried with every reading, and uncertainty made explicit. The goal is to surface what changed and how confident the measurement is — not to promise biological, crop-health, yield, medical, or agricultural outcomes.
@@ -46,6 +63,3 @@ Prediction is on the roadmap, not a present-tense claim. A forecast is only offe
 
 ### Is my data private?
 Yes. Capture, measurement, and memory run on hardware the user controls. No images or readings are sent anywhere unless the user explicitly chooses to. Privacy is the architecture, not a setting.
-
-### What is Studio Habitat?
-Studio Habitat is VaultScaler's live public proof: an AI-assisted phenotyping lab that measures a real living system and shows its work — surface coverage, image quality, anomaly surprise, and evidence validity — with uncertainty-aware measurement that separates real change from measurement artifact.

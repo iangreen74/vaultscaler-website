@@ -4,12 +4,12 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { trackNavClick } from '@/lib/analytics';
 
-// The nav reflects what actually exists: Vivaliux (the product), how it works, the
-// live public proof (Studio Habitat), and contact. No phantom products, no dropdown.
+// The nav reflects what actually exists: Vivaliux (the product), how it works,
+// the tier pricing, and contact. No phantom products, no dropdown.
 const NAV_LINKS = [
   { label: 'Vivaliux', href: '/#platform' },
   { label: 'How it works', href: '/#how' },
-  { label: 'Studio Habitat', href: '/#studio-habitat' },
+  { label: 'Pricing', href: '/#pricing' },
 ] as const;
 
 export default function Navigation() {
