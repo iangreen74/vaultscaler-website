@@ -1,41 +1,40 @@
 # VaultScaler
 
-> VaultScaler is the company behind Vivaliux, a private, local-first AI measurement app for living and controlled systems. Vivaliux measures with a camera and edge compute, remembers every reading in an immutable local record, and tells you what changed — and how sure it is. It ships in three tiers: Vivaliux Free (the honest instrument), Vivaliux Plus (a small model trained on your own record), and Vivaliux Edge + Consultancy (an on-site edge unit installed by us). Founded in 2025.
+> VaultScaler is an edge computer-vision company. It builds instruments that turn ordinary cameras into trustworthy measurements of the physical world — running entirely on hardware the customer owns, with data that stays on their machine. The camera does the seeing; VaultScaler makes the measurement trustworthy. Its first product is Vivaliux. Founded in 2025.
 
-Vivaliux turns a camera into a measuring instrument. It measures what it can honestly see locally, appends every reading to an immutable local record, and separates real change in the measurement from imaging or framing artifacts — reporting what changed and how confident it is, in measurement language. Prediction is earned from the local record over time; it is never claimed before the evidence supports it. Vivaliux is private by design: capture, measurement, and memory run on hardware the user controls, and nothing is sent anywhere unless the user chooses to.
+VaultScaler's approach has three parts. At the edge: instruments run on hardware the customer owns; data never leaves their site — no cloud dependency, no account, nothing phoned home. Honest by design: instruments measure what they can actually see, and say when not to trust a reading — no confident numbers nobody checked. Owned end to end: VaultScaler builds and trains its own computer vision on its own hardware; the intelligence is theirs, not rented from a platform that can cut them off.
 
-Positioning note: VaultScaler claims what the instrument does and aspires to what the grower achieves. Better information is the foundation under every yield decision the grower makes — Vivaliux measures rigorously and coaches the user to better data, but it does not claim to increase yield or to diagnose biological, crop-health, medical, or agricultural outcomes.
+VaultScaler is built to hold a family of edge instruments over time. Only real, shipping products are listed; there are no placeholder or unbuilt products. The first instrument is live today.
 
-## Vivaliux Free — an honest instrument, free
+## Vivaliux — honest measurement for living systems (product one)
+
+Vivaliux turns a camera into a measuring instrument. It measures what it can honestly see locally, appends every reading to an immutable local record, and separates real change in the measurement from imaging or framing artifacts — reporting what changed and how confident it is, in measurement language. Prediction is earned from the local record over time; it is never claimed before the evidence supports it. Capture, measurement, and memory run on hardware the user controls, and nothing is sent anywhere unless the user chooses to.
+
+Claim discipline: VaultScaler claims what the instrument does. Trustworthy information is the foundation under the decisions an operator makes — Vivaliux measures rigorously and coaches the user to better data, but it does not claim to increase yield or to diagnose biological, crop-health, medical, or agricultural outcomes. A change in the measurement is never sold as a change in the organism.
+
+Vivaliux ships in three tiers: Vivaliux Free (the honest instrument), Vivaliux Plus (a small model trained on the user's own record), and Vivaliux Edge + Consultancy (an on-site edge unit installed by VaultScaler).
+
+### Vivaliux Free — an honest instrument, free
 
 Free, local, no account, nothing uploaded. It does four honest things well and refuses to pretend it does more.
 
-### Measure, locally
-A camera and on-device vision turn a scene into engineering-grade measurements (surface coverage, image quality, scene stability), computed on the user's machine with no required cloud round-trip.
+- Measure, locally: a camera and on-device vision turn a scene into engineering-grade measurements (surface coverage, image quality, scene stability), computed on the user's machine with no required cloud round-trip.
+- Track change over time: every reading is appended to a local, tamper-evident record. The user can watch how coverage fills in across days and weeks, with an honest rate of change. The history itself is the asset and it belongs to the user.
+- See if it's even: not one number for the whole frame — Vivaliux shows where coverage is dense and where it is sparse, so the user can see whether the canopy is filling in evenly or in patches.
+- Catch real change: Vivaliux distinguishes a real movement in the measurement from a lighting or framing artifact and states which it is, in plain language. It does not present a change in the measurement as a change in the organism.
+- Coaching to better data: when the signal is weak, Vivaliux names the concrete fix (add light, refocus, reduce glare) and confirms plainly when the setup is good. Most measurement problems are setup problems; Vivaliux critiques its own input.
 
-### Track change over time
-Every reading is appended to a local, tamper-evident record. The user can watch how coverage fills in across days and weeks, with an honest rate of change. The history itself is the asset and it belongs to the user.
-
-### See if it's even
-Not one number for the whole frame: Vivaliux shows where coverage is dense and where it is sparse, so the user can see whether the canopy is filling in evenly or in patches.
-
-### Catch real change
-Vivaliux distinguishes a real movement in the measurement from a lighting or framing artifact and states which it is, in plain language. It does not present a change in the measurement as a change in the organism.
-
-### Coaching to better data
-When the signal is weak, Vivaliux names the concrete fix (add light, refocus, reduce glare) and confirms plainly when the setup is good. Most measurement problems are setup problems; Vivaliux critiques its own input.
-
-## Vivaliux Plus — a model that learns your plants (paid)
+### Vivaliux Plus — a model that learns your plants (paid)
 
 The free app measures every plant with the same honest, universal rules. Plus trains a small model on the user's own record — learning the visual patterns specific to their plants, their room, their lights — so the measurement gets sharper at that operation specifically. It runs on a normal computer (no special hardware) and stays on the user's machine. The honest instrument stays free.
 
-## Vivaliux Edge + Consultancy — the deep end, installed by us (by arrangement)
+### Vivaliux Edge + Consultancy — the deep end, installed by us (by arrangement)
 
-A dedicated, always-on edge unit, installed and tuned on-site, running heavier machine learning on the imagery itself on hardware built for it. This is where the record the user has built earns its way toward genuine foresight: deeper insight over time, and the honest, earned path toward prediction. On the user's premises, private, maintained by VaultScaler. It is a partnership, not a download.
+A dedicated, always-on edge unit, installed and tuned on-site, running heavier machine learning on the imagery itself on hardware built for it. This is where the record the user has built earns its way toward genuine foresight: deeper insight over time, and the honest, earned path toward prediction. On the user's premises, maintained by VaultScaler. It is a partnership, not a download.
 
 ## Markets
 
-Research labs; vineyards; indoor and vertical farms; and other controlled and living systems that can be observed by a fixed camera and benefit from an honest, private, local record.
+Research labs; vineyards; indoor and vertical farms; and other controlled and living systems that can be observed by a fixed camera and benefit from an honest measurement record the operator owns.
 
 ## Company Information
 
@@ -47,19 +46,19 @@ Research labs; vineyards; indoor and vertical farms; and other controlled and li
 ## Frequently Asked Questions
 
 ### What is VaultScaler?
-VaultScaler is the company behind Vivaliux. It builds private, local-first AI measurement tools for living and controlled systems.
+VaultScaler is an edge computer-vision company. It builds instruments that turn ordinary cameras into trustworthy measurements of the physical world, running on hardware the customer owns. Its first product is Vivaliux.
 
 ### What is Vivaliux?
-Vivaliux is VaultScaler's private, local-first AI measurement app for living and controlled systems. It measures with a camera and edge compute, remembers every reading in an immutable local record, and reports what changed and how sure it is. It ships as Vivaliux Free, Vivaliux Plus, and Vivaliux Edge + Consultancy.
+Vivaliux is VaultScaler's first instrument — honest measurement for living systems. It measures with a camera and on-device vision, remembers every reading in an immutable local record, and reports what changed and how sure it is. It runs on the user's own machine. It ships as Vivaliux Free, Vivaliux Plus, and Vivaliux Edge + Consultancy.
 
 ### What does each tier cost and include?
 Vivaliux Free is free and local: honest measurement, change over time and uniformity, catch-real-change, and coaching. Vivaliux Plus is paid and adds a small model trained on the user's own record. Vivaliux Edge + Consultancy is by arrangement and adds an on-site edge unit, heavier on-device machine learning, and consulting. Free and Plus run on the user's own computer; Edge runs on an on-site unit installed by VaultScaler.
 
 ### How does Vivaliux approach claims about living systems?
-It treats observation as evidence: local-first capture, measurement validity carried with every reading, and uncertainty made explicit. The goal is to surface what changed and how confident the measurement is — not to promise biological, crop-health, yield, medical, or agricultural outcomes.
+It treats observation as evidence: edge capture on owned hardware, measurement validity carried with every reading, and uncertainty made explicit. The goal is to surface what changed and how confident the measurement is — not to promise biological, crop-health, yield, medical, or agricultural outcomes.
 
 ### Does Vivaliux predict the future?
 Prediction is on the roadmap, not a present-tense claim. A forecast is only offered once the local record is long and clean enough to support it; foresight is earned from the user's own history.
 
-### Is my data private?
-Yes. Capture, measurement, and memory run on hardware the user controls. No images or readings are sent anywhere unless the user explicitly chooses to. Privacy is the architecture, not a setting.
+### Does my data leave my machine?
+No. Capture, measurement, and memory run on hardware the user controls. No images or readings are sent anywhere unless the user explicitly chooses to. Running on owned hardware is the architecture, not a setting.

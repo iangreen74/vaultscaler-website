@@ -2,13 +2,14 @@
 // contact form's interest options and the waitlist's ?product= attribution.
 // Don't hardcode a second list anywhere; every surface must agree.
 export const PRODUCTS = [
-  // Vivaliux is the product (the local-first measurement app); VaultScaler is the
-  // company. It ships as three tiers — Free (the honest instrument), Plus (a model
-  // trained on your own record), and Edge + Consultancy (an on-site unit installed
-  // by us). These are the only real things — no phantom products.
-  { name: "Vivaliux Free", slug: "free", href: "/#platform", tag: "Free", external: false },
-  { name: "Vivaliux Plus", slug: "plus", href: "/#pricing", tag: "Paid", external: false },
-  { name: "Vivaliux Edge + Consultancy", slug: "edge", href: "/#pricing", tag: "By arrangement", external: false },
+  // VaultScaler is the company (an edge computer-vision company); Vivaliux is
+  // product one, at /vivaliux. It ships as three tiers — Free (the honest
+  // instrument), Plus (a model trained on your own record), and Edge + Consultancy
+  // (an on-site unit installed by us). These are the only real things — no phantom
+  // products.
+  { name: "Vivaliux Free", slug: "free", href: "/vivaliux/#platform", tag: "Free", external: false },
+  { name: "Vivaliux Plus", slug: "plus", href: "/vivaliux/#pricing", tag: "Paid", external: false },
+  { name: "Vivaliux Edge + Consultancy", slug: "edge", href: "/vivaliux/#pricing", tag: "By arrangement", external: false },
 ] as const;
 
 export type ProductTag = (typeof PRODUCTS)[number]["tag"];
@@ -29,17 +30,19 @@ export const SITE = {
   email: "bpruess@vaultscaler.com",
   launchISO: "2026-06-15",
   description:
-    "Vivaliux is VaultScaler's private, local-first AI measurement app for living and controlled systems. It measures with a camera and edge compute, remembers every reading in an immutable local record, and tells you what changed — and how sure it is. Free to start; a paid model that learns your plants; and an on-site edge unit installed by us.",
+    "VaultScaler is an edge computer-vision company. It builds instruments that turn ordinary cameras into trustworthy measurements of the physical world — running on hardware you own, with data that stays on your machine. Its first product, Vivaliux, brings honest measurement to living systems: measure, remember, and see what really changed — and how sure it is.",
   keywords: [
-    // Product / company
+    // Company / product
+    "VaultScaler",
+    "edge computer-vision company",
     "Vivaliux",
     "Vivaliux app",
     // Positioning
-    "local-first AI",
-    "measurement platform",
-    "private AI",
+    "edge computer vision",
     "edge AI",
+    "computer-vision instrument",
     // Capability / category
+    "data stays on your machine",
     "measure living systems",
     "edge compute measurement",
     "uncertainty-aware measurement",

@@ -63,11 +63,15 @@ All agents follow these principles:
 - Optimize for long-term trust over short-term wins
 
 ## Messaging
-> Positioning: VaultScaler is a private, local-first AI **measurement platform** for living and
-> controlled systems (measure → remember → catch real change; prediction is earned, not promised).
-> Studio Habitat is our live public proof, not the company. Markets: research labs, vineyards,
-> indoor & vertical farms, and other controlled & living systems. Claim discipline: measurement
-> language only — a change in the measurement is never sold as a change in the organism.
+> Positioning (two-level): **VaultScaler is an edge computer-vision company** — it turns ordinary
+> cameras into instruments you can trust, running on hardware the customer owns (the company / door-
+> opener). **Vivaliux is product one** — honest measurement for living systems (measure → remember →
+> catch real change; prediction is earned, not promised). The homepage (`/`) is the company; the
+> product lives at `/vivaliux`. "Private" is a *capability* ("data never leaves your machine"), never
+> the headline. Markets: research labs, vineyards, indoor & vertical farms, and other controlled &
+> living systems. Claim discipline: measurement language only — a change in the measurement is never
+> sold as a change in the organism. No cannabis on the public site; no light/reflectance technical
+> claims; no fake/unbuilt products.
 
 ## Build & Development Commands
 
@@ -91,7 +95,7 @@ aws cloudfront create-invalidation --distribution-id E1Y23HE42FDF87 --paths "/*"
 
 ## Architecture
 
-**Next.js 14 static site** using App Router with `output: 'export'` for S3/CloudFront hosting.
+**Next.js 16 static site** using App Router with `output: 'export'` for S3/CloudFront hosting.
 
 ### Key Configuration Files
 - `lib/site.ts` - Central site config (name, URL, launch date, SEO keywords)

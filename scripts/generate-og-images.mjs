@@ -1,6 +1,7 @@
 /**
- * Generate the OG/social share image (1200x630) written to public/og.jpg,
- * matching the live site: "Vivaliux by VaultScaler" + the product tagline.
+ * Generate the OG/social share images (1200x630) written to public/.
+ *  - og.jpg          → the VaultScaler company homepage (an edge CV company)
+ *  - og-vivaliux.jpg → the Vivaliux product page (a VaultScaler instrument)
  * Run: node scripts/generate-og-images.mjs
  */
 import sharp from 'sharp';
@@ -89,9 +90,17 @@ const images = [
     filename: 'og.jpg',
     bg: ['#122E46', '#234D70', '#2a5f87'],
     accentColor: '#00e3ae',
-    productName: 'Vivaliux by VaultScaler',
-    headline: 'Private, local AI that measures, remembers, and predicts living systems.',
-    subline: '',
+    productName: 'VaultScaler',
+    headline: 'We turn ordinary cameras into instruments you can trust.',
+    subline: 'An edge computer-vision company.',
+  },
+  {
+    filename: 'og-vivaliux.jpg',
+    bg: ['#122E46', '#234D70', '#2a5f87'],
+    accentColor: '#00e3ae',
+    productName: 'Vivaliux',
+    headline: 'Honest measurement for living systems.',
+    subline: 'A VaultScaler instrument.',
   },
 ];
 

@@ -9,8 +9,11 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: "Vivaliux by VaultScaler | Private, local AI that measures, remembers, and predicts living systems.",
-  description: "Vivaliux is a private, local-first AI measurement app from VaultScaler for living and controlled systems — it measures with a camera and edge compute, remembers every reading, and tells you what changed and how sure it is. Free to start; a paid model that learns your plants; an on-site edge unit installed by us.",
+  title: {
+    default: "VaultScaler — an edge computer-vision company",
+    template: "%s",
+  },
+  description: "VaultScaler builds edge computer-vision instruments that measure the physical world honestly — and run entirely on hardware you own. The camera does the seeing; we make the measurement trustworthy. Nothing goes to the cloud.",
   keywords: SITE.keywords,
   icons: {
     icon: [
@@ -20,8 +23,8 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Vivaliux by VaultScaler | Private, local AI that measures, remembers, and predicts living systems.",
-    description: "Vivaliux is a private, local-first AI measurement app from VaultScaler for living and controlled systems. Measure with a camera and edge compute, remember every reading, and see what changed — and how sure it is. Free to start, with paid and on-site tiers.",
+    title: "VaultScaler — an edge computer-vision company",
+    description: "VaultScaler builds edge computer-vision instruments that measure the physical world honestly — and run entirely on hardware you own. The camera does the seeing; we make the measurement trustworthy. Nothing goes to the cloud.",
     url: "https://vaultscaler.com",
     siteName: "VaultScaler",
     images: [
@@ -29,7 +32,7 @@ export const metadata: Metadata = {
         url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: "Vivaliux by VaultScaler — private, local AI for measuring living systems",
+        alt: "VaultScaler — an edge computer-vision company",
       },
     ],
     locale: "en_US",
@@ -37,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vivaliux by VaultScaler | Private, local AI that measures, remembers, and predicts living systems.",
-    description: "Vivaliux is a private, local-first AI measurement app from VaultScaler. Measure, remember, and see what changed — and how sure it is. Free to start, with paid and on-site tiers.",
+    title: "VaultScaler — an edge computer-vision company",
+    description: "VaultScaler builds edge computer-vision instruments that measure the physical world honestly — and run on hardware you own. The camera does the seeing; we make the measurement trustworthy.",
     images: ["/og.jpg"],
   },
 };
@@ -71,13 +74,13 @@ export default function RootLayout({
         applicationCategory: "BusinessApplication",
         applicationSubCategory: "Local-first measurement desktop app",
         operatingSystem: "Local-first desktop (camera + edge compute)",
-        description: "Vivaliux is VaultScaler's private, local-first AI measurement desktop app for living and controlled systems. It measures with a camera and on-device vision, remembers every reading in an immutable local record, and reports what changed and how sure it is — separating real change from imaging artifact. Prediction is earned from the local record over time, never claimed before the evidence supports it.",
+        description: "Vivaliux is VaultScaler's edge computer-vision instrument for living and controlled systems. It measures with a camera and on-device vision, remembers every reading in an immutable local record, and reports what changed and how sure it is — separating real change from imaging artifact. It runs on hardware you own; nothing leaves your machine unless you choose. Prediction is earned from the local record over time, never claimed before the evidence supports it.",
         featureList: [
-          "Local-first measurement with camera and edge compute",
+          "Edge computer-vision measurement with camera and on-device compute",
           "Immutable, append-only local record of every reading",
           "Uncertainty-aware measurement (confidence on every reading)",
           "Separates real change from imaging artifact",
-          "Private by design — no data leaves the room unless you choose",
+          "Runs on hardware you own — no data leaves your site unless you choose",
           "No overclaiming — measurement language only",
         ],
       },

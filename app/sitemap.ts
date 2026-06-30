@@ -8,6 +8,7 @@ export const dynamic = "force-static";
 // We take the most recent commit date across these files as the page's lastModified.
 const ROUTE_SOURCES: Record<string, string[]> = {
   "": ["app/page.tsx", "app/layout.tsx"],
+  "vivaliux": ["app/vivaliux/page.tsx"],
   "contact": ["app/contact/page.tsx"],
   "waitlist": ["app/waitlist/page.tsx"],
   "privacy": ["app/privacy/page.tsx"],
@@ -35,10 +36,11 @@ function lastModifiedFor(files: string[]): string {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const mainRoutes = ["", "contact", "waitlist", "privacy"];
+  const mainRoutes = ["", "vivaliux", "contact", "waitlist", "privacy"];
 
   const priorityFor = (p: string): number => {
     if (p === "") return 1.0;
+    if (p === "vivaliux") return 0.9;
     return 0.3;
   };
 
