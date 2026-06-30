@@ -4,12 +4,13 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { trackNavClick } from '@/lib/analytics';
 
-// The nav reflects what actually exists: Vivaliux (the product), how it works,
-// the tier pricing, and contact. No phantom products, no dropdown.
+// Company-level nav: VaultScaler is the parent brand. Vivaliux is product one
+// (its own page at /vivaliux); Approach and Work-with-us are anchors on the
+// homepage. The primary CTA points at the product. No phantom products.
 const NAV_LINKS = [
-  { label: 'Vivaliux', href: '/#platform' },
-  { label: 'How it works', href: '/#how' },
-  { label: 'Pricing', href: '/#pricing' },
+  { label: 'Vivaliux', href: '/vivaliux/' },
+  { label: 'Approach', href: '/#approach' },
+  { label: 'Work with us', href: '/#work-with-us' },
 ] as const;
 
 export default function Navigation() {
@@ -52,11 +53,11 @@ export default function Navigation() {
                 </Link>
               ))}
               <Link
-                href="/contact/"
-                onClick={() => trackNavClick('Contact')}
+                href="/vivaliux/"
+                onClick={() => trackNavClick('See Vivaliux')}
                 className="text-sm font-semibold text-white bg-primary-3 hover:bg-primary-4 px-4 py-2 rounded-full transition-colors"
               >
-                Request a pilot
+                See Vivaliux
               </Link>
             </div>
 
@@ -94,11 +95,11 @@ export default function Navigation() {
                 </Link>
               ))}
               <Link
-                href="/contact/"
-                onClick={() => handleMobileNavClick('Contact')}
+                href="/vivaliux/"
+                onClick={() => handleMobileNavClick('See Vivaliux')}
                 className="block px-3 py-3 mt-1 rounded-md text-base font-semibold text-white bg-primary-3 hover:bg-primary-4"
               >
-                Request a pilot
+                See Vivaliux
               </Link>
             </div>
           </div>
