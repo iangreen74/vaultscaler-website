@@ -1,0 +1,7 @@
+# Local Terraform state, plugins, and crash logs — never commit
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+crash.log
+backend.hcl
