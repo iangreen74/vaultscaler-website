@@ -1,0 +1,71 @@
+name: deploy
+
+# Push-to-deploy CI/CD. The pipeline automates the mechanism; the decision stays
+# with the merge-to-main gate. Pull requests build only (required check); a push
+# to main builds and ships to S3 + CloudFront.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Least privilege at the top; the deploy job opts into id-token below.
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: build (required check)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build static export
+        run: npm run build
+
+      - name: Upload build output
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: out/
+          retention-days: 7
+          if-no-files-found: error
+
+  deploy:
+    name: deploy to production
+    needs: build
+    # Only a real push to main deploys — never a PR, never another branch.
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write   # mint the OIDC token to assume the AWS role
+      contents: read
+    # Serialize production deploys so overlapping main pushes can't race the bucket.
+    concurrency:
+      group: vaultscaler-deploy-production
+      cancel-in-progress: false
+    steps:
+      - name: Download build output
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: out
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: us-east-1
+
+      - name: Sync to S3
+        run: aws s3 sync out/ s3://vaultscaler-com-static-site --delete
+
+      - name: Invalidate CloudFront
+        run: aws cloudfront create-invalidation --distribution-id E1Y23HE42FDF87 --paths "/*"
