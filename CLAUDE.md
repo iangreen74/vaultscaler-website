@@ -73,6 +73,10 @@ All agents follow these principles:
 > sold as a change in the organism. No cannabis on the public site; no light/reflectance technical
 > claims; no fake/unbuilt products.
 
+Strategy and positioning are owned by the canonical VaultScaler doc set — *Project
+Instructions*, *Handover*, *Hyperlocal Doctrine*, *What VaultScaler Is*, *How We Decide*.
+Treat those as the source of truth; this file stays operational, not strategic.
+
 ## Build & Development Commands
 
 ```bash
@@ -85,13 +89,11 @@ npx serve out/       # Serve production build locally
 
 ## Deployment
 
-Static site deployed to AWS S3 + CloudFront:
-
-```bash
-npm run build
-aws s3 sync out/ s3://vaultscaler-com-static-site --delete
-aws cloudfront create-invalidation --distribution-id E1Y23HE42FDF87 --paths "/*"
-```
+Push-to-deploy CI/CD via GitHub Actions (`.github/workflows/deploy.yml`) — **no manual
+`aws s3 sync`**. Every PR runs the `build` job (required check); **merging to `main`**
+assumes a scoped AWS role via OIDC (`vars.AWS_DEPLOY_ROLE_ARN`, `us-east-1`), syncs to S3
+(`vaultscaler-com-static-site --delete`), and invalidates CloudFront (`E1Y23HE42FDF87`).
+Merge-to-`main` is the go-live gate and belongs to Ian; a PR build never deploys.
 
 ## Architecture
 
