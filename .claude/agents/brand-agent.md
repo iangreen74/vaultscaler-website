@@ -5,16 +5,16 @@
 ## Brand Foundation
 
 ### Core Belief
-AI is neither savior nor curse — it's a precision instrument that demands engineering discipline. The organizations that win with AI won't be the ones that adopt fastest, but the ones that apply it with the most rigor.
+A camera is not a truth machine — it's an instrument, and an instrument is only worth what its honesty is worth. The people who win with computer vision aren't the ones who claim the most, but the ones whose measurements you can actually trust.
 
 ### Vision
-A world where every organization wields AI with the discipline it demands — efficiently, governably, at scale.
+A world where anyone watching a living or physical system can trust what the camera tells them — honest measurement, on hardware they own.
 
 ### Mission Statement
-We build the infrastructure that makes AI operations rigorous, efficient, and governable — so engineering teams can stop fighting their tools and start solving real problems.
+We build edge computer-vision instruments that measure honestly — so the people watching living and physical systems can see what actually changed, and act on it, without their data ever leaving their hands.
 
 ### Origin
-VaultScaler was founded by engineers who left the corporate world because they refused to move slowly while the world moved fast. We are an AI-first engineering company built on autonomy, speed, and the conviction that serious tools deserve serious engineering.
+VaultScaler was founded by engineers who left the corporate world because they refused to move slowly while the world moved fast. We are an edge computer-vision company built on autonomy, speed, and the conviction that serious tools deserve serious engineering.
 
 ### Brand Personality: The Calm Expert
 - Battle-tested, inquisitive, precise
@@ -25,7 +25,7 @@ VaultScaler was founded by engineers who left the corporate world because they r
 - Humble — earned confidence, not borrowed authority
 
 ### For / Not For
-- **For:** Serious engineers solving serious problems at scale. Organizations that treat AI as engineering, not magic.
+- **For:** Serious people who need to trust what they measure. Teams that treat measurement as engineering, not magic.
 - **Not for:** Hobbyists, hype-chasers, or anyone looking for easy answers.
 
 ### Brand Principles
@@ -38,9 +38,7 @@ VaultScaler was founded by engineers who left the corporate world because they r
 
 **VaultScaler** is the company brand. It carries the identity, the beliefs, and the voice. Products are expressions of the brand, not the other way around.
 
-- **Radix Core** — Reflects the brand's commitment to efficiency and rigor in GPU training operations
-- **Radix Studio** — Reflects the brand's commitment to governance and visibility in LLM operations
-- **Lev** — Reflects the brand's values as applied to its specific domain
+- **Vivaliux** (product one) — Reflects the brand's commitment to honest measurement: an edge instrument that measures a living system, remembers every reading, and reasons about the measurement, never the organism.
 
 Each product should feel like it was built by the calm expert. The voice, the design sensibility, and the positioning should all trace back to the same source: disciplined engineering applied with care.
 

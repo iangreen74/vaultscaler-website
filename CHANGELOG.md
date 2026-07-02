@@ -1,41 +1,30 @@
 # Changelog
 
+## [2.0.0] - 2026-07-02
+
+### Changed
+- **Company-homepage restructure — two-level brand.** The homepage (`/`) is now
+  **VaultScaler**, an edge computer-vision company; **Vivaliux** is product one at
+  `/vivaliux`. Site copy leads with the instrument and the company, not "private."
+- **Deploy cutover to push-to-deploy CI/CD.** Production now ships via GitHub Actions
+  (`.github/workflows/deploy.yml`): PRs build as a required check; merging to `main`
+  deploys to S3 (`vaultscaler-com-static-site`) + CloudFront (`E1Y23HE42FDF87`) via a
+  scoped OIDC role. The manual `aws s3 sync` path is retired.
+- Upgraded to **Next.js 16** (App Router, static export).
+
+### Notes
+- Strategy and positioning are owned by the canonical VaultScaler doc set (Project
+  Instructions, Handover, Hyperlocal Doctrine, What VaultScaler Is, How We Decide).
+
 ## [1.0.0] - 2025-11-04
 
 ### Added
-- **Pre-launch website rebuild** with Next.js 14 + App Router
-- Complete site with 8 pages: Home, Product, Security, Pricing, Roadmap, Team, Docs, Contact
-- Accurate Radix Core messaging:
-  - Offline dashboard + read-only observer
-  - Zero egress by default
-  - 7-day local timeseries
-  - Install → insight < 60 seconds
-  - Radix+ license-gated engine (still offline)
+- Initial pre-launch website rebuild with Next.js + App Router.
 - **SEO infrastructure:**
   - Per-page metadata (titles, descriptions, Open Graph, Twitter Cards)
-  - JSON-LD structured data (Organization, SoftwareApplication, Product, TechArticle, ItemList)
+  - JSON-LD structured data (Organization, SoftwareApplication, Product, ItemList)
   - Dynamic `robots.ts` and `sitemap.ts`
   - Canonical URLs on all pages
-- **Team page** properly linked in main navigation (noindex for privacy)
-- **Docs hub** linking to 9 canonical GitHub docs (noindex)
-- Static export configuration for S3 + CloudFront deployment
-- Tailwind CSS with clean, minimal design
-- No analytics or third-party trackers
-
-### Technical
-- Next.js 14.2.15 with App Router
-- React 18.3.1 + TypeScript 5
-- Tailwind CSS 3.4.14
-- Static export via `output: 'export'`
-- Mobile-responsive design
-- Semantic HTML structure
-
-### Documentation
-- Comprehensive README with deployment instructions
-- S3 sync + CloudFront invalidation commands
-- Pre-launch checklist
-- Content update guide
-
----
-
-**Target launch: November 15, 2025**
+- Static export configuration for S3 + CloudFront deployment.
+- Tailwind CSS with a clean, minimal design.
+- No analytics or third-party trackers.

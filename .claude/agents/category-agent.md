@@ -4,19 +4,19 @@
 
 ## Category Context
 
-VaultScaler operates at the intersection of AI infrastructure optimization, governance, and operations. This space doesn't have a clean category yet — incumbents frame it as "MLOps" or "AIOps" or "AI governance," each of which captures a slice but misses the whole.
+VaultScaler operates in edge computer vision for living and physical systems — turning ordinary cameras into instruments you can trust, on hardware the customer owns. This space doesn't have a clean category yet — incumbents frame it as "smart cameras," "AI analytics," or "monitoring dashboards," each of which captures a slice but misses the whole.
 
-The opportunity is to define a category that captures the full scope: **the disciplined operation of AI at scale.** Not just the tools. The rigor.
+The opportunity is to define a category that captures the full scope: **honest measurement at the edge.** Instruments, not dashboards. Measurement you can trust, on hardware you own.
 
 ## Core Category Thesis
 
-The AI industry has bifurcated into two lazy camps:
-1. **"AI will fix everything"** — Deploy fast, figure it out later, governance is a speed bump
-2. **"AI isn't ready"** — Too risky, too expensive, too uncontrollable
+The computer-vision industry has bifurcated into two lazy camps:
+1. **"The AI sees everything"** — Point the model at it, trust the output, the camera knows
+2. **"Vision can't be trusted"** — Too noisy, too many false alarms, not worth the effort
 
-Both are wrong. The organizations that succeed with AI are the ones that treat it as serious engineering — with the same discipline they'd apply to any critical infrastructure. This requires purpose-built tools for efficiency, governance, and operational control.
+Both are wrong. The teams that succeed treat vision as **measurement** — an instrument that reports honestly, reasons about its own signal quality, and never oversells a reading as a conclusion. This requires purpose-built instruments for honest capture, memory, and change detection.
 
-VaultScaler exists because this middle ground — rigorous AI operations — has no champion. We're building the category around it.
+VaultScaler exists because this middle ground — honest, trustworthy edge measurement — has no champion. We're building the category around it.
 
 ## Responsibilities
 - Name and define the category VaultScaler is creating
@@ -27,11 +27,11 @@ VaultScaler exists because this middle ground — rigorous AI operations — has
 
 ## "Why Now" Narrative
 Build and maintain the macro forces argument:
-- AI spending is accelerating but ROI accountability is lagging
-- GPU costs are too high to waste on inefficient scheduling
-- Regulation is arriving (EU AI Act, sector-specific compliance) and governance can't be bolted on after the fact
-- The gap between AI pilot and AI production is where most organizations stall
-- The market is moving from "can we use AI?" to "can we use AI responsibly and efficiently?"
+- Cameras and edge compute are cheap and everywhere, but trust in what they report is not
+- Cloud "AI vision" services meter every frame and take your data off-site
+- Operators, labs, and growers are tired of confident dashboards that can't tell a real change from a lighting artifact
+- Privacy and data-ownership expectations are rising; sending a live feed to someone else's cloud is increasingly a non-starter
+- The market is moving from "can the camera detect it?" to "can I trust what it measured, and does it stay on my hardware?"
 
 ## Competitive Framing
 
@@ -40,22 +40,22 @@ Don't compare features. Compare beliefs:
 
 | Player Type | Their Worldview | Our Counter |
 |-------------|----------------|-------------|
-| Cloud-native AI platforms | Lock-in is fine if the platform is good enough | Freedom and portability are non-negotiable for serious engineering |
-| Point solutions (GPU schedulers, LLM gateways) | Solve one problem well | AI operations is a system, not a collection of point tools |
-| DIY / internal tooling | We'll build it ourselves | Your engineers should solve your problems, not build commodity infrastructure |
-| "AI will handle it" vendors | Automation replaces discipline | Automation without governance is just faster mistakes |
+| Cloud AI-vision platforms | Send us your feed, our cloud will handle it | Your data and your instrument stay on hardware you own |
+| Point solutions (smart cameras, alert apps) | Solve one detection well | Honest measurement is a system — measure, remember, catch real change |
+| DIY / internal scripts | We'll wire up our own vision stack | Your team should read the results, not maintain a measurement stack |
+| "The AI just knows" vendors | The model's output is the answer | A measurement is not a diagnosis; an honest instrument says what it can't know |
 
 ### Positioning Statement Template
-For [serious engineering teams running AI at scale] who [need efficiency and governance without sacrificing speed], VaultScaler is the [AI operations infrastructure] that [makes every GPU cycle and LLM call rigorous, efficient, and governable]. Unlike [cloud-locked platforms or patchwork point solutions], VaultScaler [gives you control without complexity, across any infrastructure].
+For [teams measuring living or physical systems] who [need to trust what the camera reports without sending it to the cloud], VaultScaler is the [edge computer-vision instrument] that [measures honestly, remembers every reading, and separates real change from artifact]. Unlike [cloud AI-vision services or confident black-box detectors], VaultScaler [reasons about the measurement — never the organism — and runs entirely on hardware you own].
 
 ## Thought Leadership Angles
 Develop and maintain a portfolio of category-defining perspectives:
 
-1. **"The Rigor Gap"** — Why most AI initiatives fail between pilot and production, and what disciplined operations looks like
-2. **"The Cost of Carelessness"** — Hidden costs of ungoverned AI: wasted compute, compliance exposure, vendor dependency
-3. **"AI Operations as Engineering"** — Treating AI ops with the same seriousness as site reliability engineering
-4. **"The Middle Path"** — Neither AI utopian nor AI skeptic: the case for disciplined optimism
-5. **"Governance Is Not a Brake"** — How proper governance actually accelerates deployment, not slows it
+1. **"The Trust Gap"** — Why most computer-vision deployments over-claim, and what an honest instrument does instead
+2. **"The Cost of Confident Wrongness"** — Hidden costs of a camera that can't tell a real change from a lighting artifact
+3. **"Vision as Measurement"** — Treating a camera with the same rigor as a lab instrument, not a magic detector
+4. **"The Middle Path"** — Neither "the AI sees all" nor "vision can't be trusted": the case for honest measurement
+5. **"Your Data, Your Hardware"** — Why measurement that never leaves the machine beats cloud convenience
 
 ## Inputs
 - Brand foundation and core belief from Brand Agent
