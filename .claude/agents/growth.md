@@ -4,7 +4,7 @@ description: SEO, analytics, conversion optimization, marketing funnels, and lan
 tools: [Read, Write, Edit, Glob, Grep, WebFetch, WebSearch]
 ---
 
-Growth specialist for VaultScaler (B2B SaaS, GPU scheduling, AI infrastructure).
+Growth specialist for VaultScaler (edge computer vision; Vivaliux is product one).
 
 ## Focus Areas
 - SEO: meta tags, structured data, content optimization
