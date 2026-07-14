@@ -1,5 +1,23 @@
 # Changelog
 
+## [3.0.0] - 2026-07-14
+
+### Changed
+- **Repositioned to edge computer-vision security for art.** The company is now
+  bespoke, consulting-led security for galleries, museums, and private collections —
+  on-premise, owned end to end, nothing leaving the building. Kept the three pillars
+  (at the edge / honest by design / owned end to end) and the doctrine ("the
+  intelligence is ours — not rented from a platform that can cut us off"; "nothing goes
+  to the cloud"); made them specific to art.
+- **Removed Vivaliux entirely** — product page, nav item, cards, contact interest
+  options, `lib/site.ts` product list, waitlist flow, and all vineyard/farm/living-
+  systems meta, keywords, JSON-LD, `llms.txt`, and OG assets. No stubs or redirects.
+- **New dark, gallery-at-night design.** Near-black grounds, warm off-white type, one
+  restrained alert-red used sparingly, serif display (Fraunces) + Inter body. Restraint
+  over decoration; typography carries it.
+- **New pages / nav:** Home · How it works · Approach · Contact (+ Privacy). Copy is the
+  approved positioning; SEO/OG/JSON-LD/`llms.txt` rewritten to art-security.
+
 ## [2.0.0] - 2026-07-02
 
 ### Changed

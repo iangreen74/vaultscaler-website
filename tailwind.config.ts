@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 
+// Gallery-at-night. Near-black grounds, warm off-white type, one restrained alert-red
+// used sparingly for emphasis/alarms only. Everything else is monochrome.
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,24 +11,32 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Pop colors (Mint greens - 2 shades)
-        'pop-light': '#00e3aeff',
-        'pop-dark': '#00d9a6ff',
-        'pop-backup': '#00e3aeff',
-        
-        // Primary colors (Brand blues - 4 shades, 1=lightest, 4=darkest)
-        'primary-1': '#D3E3F0',
-        'primary-2': '#95AFC5',
-        'primary-3': '#234D70',
-        'primary-4': '#122E46',
-
-        // Secondary colors (Greys - 6 shades, 1=lightest, 6=darkest)
-        'secondary-1': '#F9FAFB',
-        'secondary-2': '#F3F4F6',
-        'secondary-3': '#E5E7EB',
-        'secondary-4': '#D1D5DB',
-        'secondary-5': '#9CA3AF',
-        'secondary-6': '#6B7280',
+        // grounds (darkest -> a touch lighter for raised surfaces)
+        ink: {
+          DEFAULT: "#0a0a0b",
+          950: "#0a0a0b",
+          900: "#0d0d0f",
+          800: "#141416",
+          700: "#1b1b1e",
+          600: "#26262a",
+        },
+        // type
+        bone: "#ece9e3", // primary text — warm off-white, like lit paper
+        muted: "#9b9a93", // secondary
+        dim: "#6b6a63", // tertiary / captions
+        line: "#242427", // hairlines
+        // the single accent — an alarm red, used once or twice per page at most
+        alert: "#d43f31",
+      },
+      fontFamily: {
+        display: ["var(--font-display)", "Georgia", "Cambria", "Times New Roman", "serif"],
+        sans: ["var(--font-sans)", "system-ui", "-apple-system", "Segoe UI", "sans-serif"],
+      },
+      letterSpacing: {
+        eyebrow: "0.22em",
+      },
+      maxWidth: {
+        prose: "42rem",
       },
     },
   },

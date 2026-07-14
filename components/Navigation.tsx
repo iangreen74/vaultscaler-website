@@ -4,103 +4,91 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { trackNavClick } from '@/lib/analytics';
 
-// Company-level nav: VaultScaler is the parent brand. Vivaliux is product one
-// (its own page at /vivaliux); Approach and Work-with-us are anchors on the
-// homepage. The primary CTA points at the product. No phantom products.
 const NAV_LINKS = [
-  { label: 'Vivaliux', href: '/vivaliux/' },
-  { label: 'Approach', href: '/#approach' },
-  { label: 'Work with us', href: '/#work-with-us' },
+  { label: 'Home', href: '/' },
+  { label: 'How it works', href: '/how-it-works/' },
+  { label: 'Approach', href: '/approach/' },
+  { label: 'Contact', href: '/contact/' },
 ] as const;
 
 export default function Navigation() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
-  const handleMobileNavClick = (label: string) => {
+  const onNav = (label: string) => {
     trackNavClick(label);
-    setMobileMenuOpen(false);
+    setOpen(false);
   };
 
   return (
     <>
       <div aria-hidden className="h-16" />
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-ink/80 backdrop-blur-xl border-b border-line">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8">
           <div className="flex justify-between items-center h-16">
             <Link
               href="/"
               onClick={() => trackNavClick('Logo')}
-              className="flex items-center gap-2 text-xl font-semibold tracking-tight"
+              className="flex items-center gap-2.5 group"
             >
               <img
-                src="/brand/vaultscaler-icon-v1.0/svg/vaultscaler-icon-primary.svg"
+                src="/brand/vaultscaler-icon-v1.0/svg/vaultscaler-icon-inverse.svg"
                 alt=""
-                className="h-6 w-auto"
+                className="h-6 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
               />
-              <span className="text-primary-3">VaultScaler</span>
+              <span className="text-[15px] font-medium tracking-tight text-bone">VaultScaler</span>
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              {NAV_LINKS.map((l) => (
+            <div className="hidden md:flex items-center gap-9">
+              {NAV_LINKS.slice(1).map((l) => (
                 <Link
                   key={l.href}
                   href={l.href}
                   onClick={() => trackNavClick(l.label)}
-                  className="text-sm text-gray-700 hover:text-gray-900 transition-colors"
+                  className="text-sm text-muted hover:text-bone transition-colors"
                 >
                   {l.label}
                 </Link>
               ))}
               <Link
-                href="/vivaliux/"
-                onClick={() => trackNavClick('See Vivaliux')}
-                className="text-sm font-semibold text-white bg-primary-3 hover:bg-primary-4 px-4 py-2 rounded-full transition-colors"
+                href="/contact/"
+                onClick={() => trackNavClick('Talk to us')}
+                className="text-sm text-bone border border-line hover:border-bone px-4 py-1.5 rounded-full transition-colors"
               >
-                See Vivaliux
+                Talk to us
               </Link>
             </div>
 
-            {/* Mobile Menu Button */}
             <button
               type="button"
-              className="md:hidden p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-3"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-expanded={mobileMenuOpen}
-              aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              className="md:hidden p-2 -mr-2 text-muted hover:text-bone focus:outline-none"
+              onClick={() => setOpen(!open)}
+              aria-expanded={open}
+              aria-label={open ? 'Close menu' : 'Open menu'}
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                {mobileMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                {open ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
                 ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 7h16M4 12h16M4 17h16" />
                 )}
               </svg>
             </button>
           </div>
         </div>
 
-        {/* Mobile Menu Drawer */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200">
-            <div className="px-4 py-3 space-y-1">
+        {open && (
+          <div className="md:hidden bg-ink border-t border-line">
+            <div className="px-5 py-3">
               {NAV_LINKS.map((l) => (
                 <Link
                   key={l.href}
                   href={l.href}
-                  onClick={() => handleMobileNavClick(l.label)}
-                  className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                  onClick={() => onNav(l.label)}
+                  className="block px-1 py-3 text-base text-muted hover:text-bone border-b border-line/60 last:border-0"
                 >
                   {l.label}
                 </Link>
               ))}
-              <Link
-                href="/vivaliux/"
-                onClick={() => handleMobileNavClick('See Vivaliux')}
-                className="block px-3 py-3 mt-1 rounded-md text-base font-semibold text-white bg-primary-3 hover:bg-primary-4"
-              >
-                See Vivaliux
-              </Link>
             </div>
           </div>
         )}

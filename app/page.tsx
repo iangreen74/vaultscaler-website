@@ -1,194 +1,164 @@
-// Route: / (VaultScaler company homepage — an edge computer-vision company)
-// VaultScaler is the parent brand; Vivaliux is product one, at /vivaliux. The
-// structure is built to hold product two and three later without a redesign —
-// add cards to "What we build"; do not invent placeholder products.
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { SITE } from '@/lib/site';
-import JsonLd from '@/components/JsonLd';
-
-const TITLE = 'VaultScaler — an edge computer-vision company';
-const DESC =
-  'VaultScaler builds edge computer-vision instruments that measure the physical world honestly — and run entirely on hardware you own. The camera does the seeing; we make the measurement trustworthy. Nothing goes to the cloud.';
+// Route: / — VaultScaler homepage. Edge computer-vision security for art.
+import type { Metadata } from "next";
+import Link from "next/link";
+import JsonLd from "@/components/JsonLd";
+import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: TITLE,
-  description: DESC,
-  alternates: { canonical: `${SITE.url}/` },
-  keywords: SITE.keywords,
-  openGraph: {
-    title: TITLE,
-    description: DESC,
-    type: 'website',
-    url: `${SITE.url}/`,
-    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'VaultScaler — an edge computer-vision company' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: TITLE,
-    description: DESC,
-    images: ['/og.jpg'],
-  },
+  title: "VaultScaler — edge computer-vision security for art",
+  description:
+    "Private, on-premise security for galleries, museums, and private collections. It runs on hardware you own, in your building. Nothing it sees leaves the room. Nothing is attached to the artwork.",
+  alternates: { canonical: SITE.url },
 };
 
-const pillars = [
+const PROBLEMS = [
   {
-    k: 'At the edge',
-    h: 'At the edge.',
-    b: 'Our instruments run on hardware you own. Your data never leaves your site — no cloud dependency, no account, nothing phoned home.',
+    n: "01",
+    lead: "Your footage lives on someone else's server.",
+    body: "Cloud camera systems put your gallery, your collectors, and your transactions on infrastructure you don't control, viewable by staff you've never met, and reachable by anyone who breaches it. For a business built on discretion, that's not a feature. It's the risk.",
   },
   {
-    k: 'Honest by design',
-    h: 'Honest by design.',
-    b: 'They measure what they can actually see, and tell you when not to trust a reading. No confident numbers nobody checked.',
+    n: "02",
+    lead: "The alarms cry wolf, so they get switched off.",
+    body: "Conventional object protection can't tell the difference between a visitor leaning in to look and a work being lifted off the wall. The false alarms are constant — so most institutions quietly disconnect them. A system nobody trusts is a system nobody uses.",
   },
   {
-    k: 'Owned end to end',
-    h: 'Owned end to end.',
-    b: 'We build and train our own computer vision, on our own hardware. The intelligence is ours — not rented from a platform that can cut us off.',
+    n: "03",
+    lead: "The hardware is on the art.",
+    body: "Tags glued behind canvases. Laser curtains across the wall. Contacts and vibration sensors on the frame. It works, but it touches the work, it constrains the hang, and it tells every visitor that the art is wired.",
   },
 ];
 
 export default function Home() {
-  const webSiteSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'VaultScaler',
+  const pageLD = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "VaultScaler — edge computer-vision security for art",
     url: `${SITE.url}/`,
     description: SITE.description,
+    isPartOf: { "@type": "WebSite", name: "VaultScaler", url: SITE.url },
   };
 
   return (
     <>
-      <JsonLd data={webSiteSchema} />
+      <JsonLd data={pageLD} />
 
       {/* Hero */}
-      <section className="relative min-h-[clamp(520px,62vh,820px)] flex items-center bg-gradient-to-br from-primary-4 via-primary-3 to-primary-3 overflow-hidden pt-12 pb-16">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-1/4 -right-1/4 w-[60%] h-[60%] rounded-full bg-primary-2/20 blur-3xl" />
-          <div className="absolute -bottom-1/4 -left-1/4 w-[50%] h-[50%] rounded-full bg-primary-1/10 blur-3xl" />
-        </div>
-
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-3xl">
-            <p className="text-pop-light text-sm font-semibold uppercase tracking-wide mb-4">
-              An edge computer-vision company
-            </p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
-              We turn ordinary cameras into instruments you can trust.
-            </h1>
-
-            <p className="text-lg md:text-xl text-primary-1 max-w-2xl leading-relaxed mb-10">
-              VaultScaler builds edge computer-vision instruments that measure the physical world
-              honestly — and run entirely on hardware you own. The camera does the seeing; we make the
-              measurement trustworthy. Nothing goes to the cloud.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/vivaliux/"
-                className="inline-block px-8 py-4 bg-white text-primary-3 rounded-full font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl hover:scale-105 transform focus:outline-none focus:ring-4 focus:ring-white/50 text-center"
-              >
-                See Vivaliux
-              </Link>
-              <Link
-                href="#work-with-us"
-                className="inline-block px-8 py-4 border-2 border-white/40 text-white rounded-full font-semibold text-lg hover:bg-white/10 hover:border-white/60 transition-all focus:outline-none focus:ring-4 focus:ring-white/30 text-center"
-              >
-                Work with us
-              </Link>
-            </div>
+      <section className="relative overflow-hidden">
+        <div aria-hidden className="spotlight absolute inset-0" />
+        <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pt-24 pb-24 md:pt-36 md:pb-32">
+          <p className="eyebrow">Edge computer-vision security for art</p>
+          <h1 className="mt-7 font-display font-light text-[2.75rem] leading-[1.05] sm:text-6xl md:text-7xl text-bone max-w-4xl tracking-tight">
+            It watches the art.
+            <br />
+            Not your collectors.
+          </h1>
+          <p className="mt-8 text-lg md:text-xl leading-relaxed text-muted max-w-2xl">
+            VaultScaler builds private, on-premise security systems for galleries, museums,
+            and private collections. The system runs on hardware you own, in your building.
+            Nothing it sees ever leaves the room. Nothing is ever attached to the artwork.
+          </p>
+          <div className="mt-11 flex flex-wrap items-center gap-5">
+            <Link
+              href="/contact/"
+              className="inline-flex items-center rounded-full border border-bone/70 px-6 py-3 text-sm font-medium text-bone hover:bg-bone hover:text-ink transition-colors"
+            >
+              Talk to us
+            </Link>
+            <Link
+              href="/how-it-works/"
+              className="inline-flex items-center gap-2 text-sm text-muted hover:text-bone transition-colors"
+            >
+              How it works
+              <span aria-hidden>→</span>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* The approach — three pillars */}
-      <section id="approach" className="scroll-mt-20 py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-primary-3 max-w-3xl">
-            The approach
+      {/* The three problems */}
+      <section className="border-t border-line">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
+          <h2 className="font-display text-2xl md:text-3xl text-bone max-w-2xl">
+            Art security has been solved badly, in three specific ways.
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {pillars.map((p) => (
+          <div className="mt-14 md:mt-20">
+            {PROBLEMS.map((p) => (
               <div
-                key={p.k}
-                className="flex flex-col bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-primary-3 hover:shadow-lg transition-all"
+                key={p.n}
+                className="grid md:grid-cols-[6rem_1fr] gap-x-8 gap-y-3 py-10 border-t border-line first:border-t-0"
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{p.h}</h3>
-                <p className="text-gray-600 leading-relaxed">{p.b}</p>
+                <div className="font-display text-3xl md:text-4xl text-dim">{p.n}</div>
+                <div className="max-w-2xl">
+                  <h3 className="font-display text-xl md:text-2xl text-bone">{p.lead}</h3>
+                  <p className="mt-4 text-base md:text-lg leading-relaxed text-muted">{p.body}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* What we build — products */}
-      <section id="products" className="scroll-mt-20 py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900 max-w-3xl">
-            What we build
-          </h2>
-          <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mb-12">
-            VaultScaler builds a family of edge instruments — each one a camera turned into a
-            trustworthy measurement of something real. The first is live today.
-          </p>
-
-          {/* Product grid — built to hold product two and three later. No placeholders. */}
-          <div className="grid md:grid-cols-2 gap-8">
-            <Link
-              href="/vivaliux/"
-              className="group flex flex-col bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-primary-3 hover:shadow-lg transition-all"
-            >
-              <span className="inline-flex w-fit items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-pop-light/20 text-primary-4 mb-4">
-                <span className="w-1.5 h-1.5 rounded-full bg-pop-dark" />
-                Live today
-              </span>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Vivaliux</h3>
-              <p className="text-primary-3 font-semibold mb-4">Honest observability of living systems.</p>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                Vivaliux watches a living system through an ordinary camera, measures it honestly,
-                remembers every reading, and tells you what actually changed. Measure · Remember ·
-                Predict.
+      {/* What we do about it */}
+      <section className="border-t border-line bg-ink-900">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
+          <p className="eyebrow">What we do about it</p>
+          <div className="mt-14 grid md:grid-cols-2 gap-x-16 gap-y-14">
+            <div className="max-w-prose">
+              <h3 className="font-display text-2xl md:text-3xl text-bone">Nothing leaves the building.</h3>
+              <p className="mt-4 text-base md:text-lg leading-relaxed text-muted">
+                The intelligence runs on a box in your gallery. There is no cloud, no account,
+                no vendor portal, nothing phoned home. Not as a policy — as an architecture.
+                There is no server for anyone to subpoena, breach, or browse, because there isn&apos;t
+                a server.
               </p>
-              <span className="mt-auto inline-flex items-center gap-1.5 text-primary-3 font-semibold group-hover:gap-2.5 transition-all">
-                Explore Vivaliux <span aria-hidden>→</span>
-              </span>
-            </Link>
+            </div>
+            <div className="max-w-prose">
+              <h3 className="font-display text-2xl md:text-3xl text-bone">It knows the difference.</h3>
+              <p className="mt-4 text-base md:text-lg leading-relaxed text-muted">
+                Our system understands a person standing in front of a painting and a painting
+                that is no longer there. Someone admiring the work does not trigger an alarm.{" "}
+                <span className="text-alert">Someone removing it does.</span> That distinction is
+                the hardest problem in this field, and it&apos;s the one we built for first.
+              </p>
+            </div>
+            <div className="max-w-prose">
+              <h3 className="font-display text-2xl md:text-3xl text-bone">Nothing touches the artwork.</h3>
+              <p className="mt-4 text-base md:text-lg leading-relaxed text-muted">
+                The camera watches. The work hangs as the artist intended — unwired, untagged,
+                unconstrained. Rehang the room whenever you like; tell us and we&apos;ll re-teach
+                the system in minutes.
+              </p>
+            </div>
+            <div className="max-w-prose">
+              <h3 className="font-display text-2xl md:text-3xl text-bone">Fewer guards, better cover.</h3>
+              <p className="mt-4 text-base md:text-lg leading-relaxed text-muted">
+                The system doesn&apos;t blink, doesn&apos;t take breaks, and watches every piece
+                at once. It won&apos;t replace your people — but it means you need fewer of them,
+                and the ones you have know exactly where to go.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* The company — posture */}
-      <section className="py-20 bg-primary-4">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white leading-tight">
-            Built at the edge, built to last.
+      {/* Closing CTA */}
+      <section className="border-t border-line">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-24 md:py-32 text-center">
+          <h2 className="font-display font-light text-3xl md:text-5xl text-bone">
+            Have something worth protecting?
           </h2>
-          <p className="text-lg text-primary-1 leading-relaxed">
-            We think the durable technology of this era is built at the edge — on owned hardware,
-            close to a real problem, with data that stays where it belongs. So we build small, honest
-            instruments that do one real thing well. No cloud to depend on. No data land-grab. Just
-            useful tools, owned by the people who use them.
+          <p className="mt-5 text-lg text-muted max-w-xl mx-auto">
+            Tell us about your space and what&apos;s on the walls.
           </p>
-        </div>
-      </section>
-
-      {/* Work with us — low-key, near the foot */}
-      <section id="work-with-us" className="scroll-mt-20 py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 leading-tight">
-            Have a measurement problem in the physical world?
-          </h2>
-          <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mb-8">
-            If you&rsquo;ve got something real that a trustworthy camera-based instrument could
-            measure, we&rsquo;d like to hear about it.
-          </p>
-          <Link
-            href="/contact/"
-            className="inline-block px-8 py-4 bg-primary-3 text-white rounded-full font-bold text-lg hover:bg-primary-4 transition-all shadow-lg hover:scale-105 transform text-center"
-          >
-            Get in touch
-          </Link>
+          <div className="mt-10">
+            <Link
+              href="/contact/"
+              className="inline-flex items-center rounded-full border border-bone/70 px-7 py-3 text-sm font-medium text-bone hover:bg-bone hover:text-ink transition-colors"
+            >
+              Get in touch
+            </Link>
+          </div>
         </div>
       </section>
     </>

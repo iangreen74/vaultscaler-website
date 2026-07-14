@@ -1,26 +1,22 @@
-// Route: /docs
+// Route: /docs (internal placeholder, noindex)
 export const metadata = {
   title: "VaultScaler Documentation",
-  description: "VaultScaler product documentation coming soon.",
+  description: "VaultScaler documentation.",
   robots: { index: false, follow: false },
 };
 
 export default function DocsPlaceholder() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-white">
-      <div className="max-w-xl mx-auto px-4 text-center">
-        <h1 className="text-3xl font-bold mb-4">Documentation Not Public Yet</h1>
-        <p className="text-lg text-gray-700 mb-4">
-          Public documentation launches with our products in June 2026.
-        </p>
-        <p className="text-gray-600">
-          If you&apos;re an existing or prospective design partner and need technical details,
-          please contact us directly at{' '}
-          <a href="mailto:ian@vaultscaler.com" className="text-primary-3 underline">
+    <main className="min-h-[60vh] flex items-center justify-center">
+      <div className="max-w-xl mx-auto px-5 text-center">
+        <h1 className="font-display text-3xl text-bone mb-4">Not public yet</h1>
+        <p className="text-muted leading-relaxed">
+          Technical documentation is shared directly with clients. If you need details, write to us at{' '}
+          <a href="mailto:ian@vaultscaler.com" className="text-bone underline underline-offset-4">
             ian@vaultscaler.com
           </a>{' '}
           or{' '}
-          <a href="mailto:bpruess@vaultscaler.com" className="text-primary-3 underline">
+          <a href="mailto:bpruess@vaultscaler.com" className="text-bone underline underline-offset-4">
             bpruess@vaultscaler.com
           </a>.
         </p>
