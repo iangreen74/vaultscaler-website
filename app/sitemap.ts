@@ -5,12 +5,11 @@ import { SITE } from "@/lib/site";
 export const dynamic = "force-static";
 
 // Map each route to the source files that, if touched, mean the page changed.
-// We take the most recent commit date across these files as the page's lastModified.
 const ROUTE_SOURCES: Record<string, string[]> = {
   "": ["app/page.tsx", "app/layout.tsx"],
-  "vivaliux": ["app/vivaliux/page.tsx"],
+  "how-it-works": ["app/how-it-works/page.tsx"],
+  "approach": ["app/approach/page.tsx"],
   "contact": ["app/contact/page.tsx"],
-  "waitlist": ["app/waitlist/page.tsx"],
   "privacy": ["app/privacy/page.tsx"],
 };
 
@@ -19,9 +18,7 @@ function lastModifiedFor(files: string[]): string {
     const dates = files
       .map((file) => {
         try {
-          const out = execSync(`git log -1 --format=%cI -- "${file}"`, {
-            encoding: "utf8",
-          }).trim();
+          const out = execSync(`git log -1 --format=%cI -- "${file}"`, { encoding: "utf8" }).trim();
           return out || null;
         } catch {
           return null;
@@ -36,18 +33,18 @@ function lastModifiedFor(files: string[]): string {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const mainRoutes = ["", "vivaliux", "contact", "waitlist", "privacy"];
+  const mainRoutes = ["", "how-it-works", "approach", "contact", "privacy"];
 
   const priorityFor = (p: string): number => {
     if (p === "") return 1.0;
-    if (p === "vivaliux") return 0.9;
-    return 0.3;
+    if (p === "how-it-works" || p === "approach") return 0.8;
+    return 0.4;
   };
 
   return mainRoutes.map((p) => ({
     url: p ? `${SITE.url}/${p}/` : `${SITE.url}/`,
     lastModified: lastModifiedFor(ROUTE_SOURCES[p] ?? []),
-    changeFrequency: "weekly" as const,
+    changeFrequency: "monthly" as const,
     priority: priorityFor(p),
   }));
 }

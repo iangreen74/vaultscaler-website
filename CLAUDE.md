@@ -63,15 +63,16 @@ All agents follow these principles:
 - Optimize for long-term trust over short-term wins
 
 ## Messaging
-> Positioning (two-level): **VaultScaler is an edge computer-vision company** — it turns ordinary
-> cameras into instruments you can trust, running on hardware the customer owns (the company / door-
-> opener). **Vivaliux is product one** — honest measurement for living systems (measure → remember →
-> catch real change; prediction is earned, not promised). The homepage (`/`) is the company; the
-> product lives at `/vivaliux`. "Private" is a *capability* ("data never leaves your machine"), never
-> the headline. Markets: research labs, vineyards, indoor & vertical farms, and other controlled &
-> living systems. Claim discipline: measurement language only — a change in the measurement is never
-> sold as a change in the organism. No cannabis on the public site; no light/reflectance technical
-> claims; no fake/unbuilt products.
+> Positioning: **VaultScaler is edge computer-vision security for art** — bespoke, consulting-led
+> security for galleries, museums, and private collections. The intelligence runs on hardware the
+> customer owns, in their building; nothing it sees leaves the room, and nothing is attached to the
+> artwork. The three pillars survive and get specific: **at the edge** (on-premise, no cloud, no
+> server to breach), **honest by design** (it knows a visitor in front of a work from a work that's
+> gone — it doesn't cry wolf), **owned end to end** ("the intelligence is ours, not rented from a
+> platform that can cut us off"). Markets: commercial galleries, private collections, artist-run and
+> independent spaces, small museums. Voice: plain, declarative, unhurried, no hype. Design: dark
+> gallery-at-night, monochrome + one restrained alert-red. Nav: Home · How it works · Approach ·
+> Contact. Vivaliux and the old living-systems positioning are removed — do not reintroduce them.
 
 Strategy and positioning are owned by the canonical VaultScaler doc set — *Project
 Instructions*, *Handover*, *Hyperlocal Doctrine*, *What VaultScaler Is*, *How We Decide*.

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import SiteFooter from "@/components/SiteFooter";
@@ -7,13 +8,28 @@ import JsonLd from "@/components/JsonLd";
 import AnalyticsProvider from "@/components/AnalyticsProvider";
 import { SITE } from "@/lib/site";
 
+const display = Fraunces({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const sans = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const TITLE = "VaultScaler — edge computer-vision security for art";
+const DESC =
+  "VaultScaler builds private, on-premise security systems for galleries, museums, and private collections. The intelligence runs on hardware you own, in your building. Nothing it sees ever leaves the room, and nothing is ever attached to the artwork.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: {
-    default: "VaultScaler — an edge computer-vision company",
-    template: "%s",
-  },
-  description: "VaultScaler builds edge computer-vision instruments that measure the physical world honestly — and run entirely on hardware you own. The camera does the seeing; we make the measurement trustworthy. Nothing goes to the cloud.",
+  title: { default: TITLE, template: "%s" },
+  description: DESC,
   keywords: SITE.keywords,
   icons: {
     icon: [
@@ -23,40 +39,30 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "VaultScaler — an edge computer-vision company",
-    description: "VaultScaler builds edge computer-vision instruments that measure the physical world honestly — and run entirely on hardware you own. The camera does the seeing; we make the measurement trustworthy. Nothing goes to the cloud.",
-    url: "https://vaultscaler.com",
+    title: TITLE,
+    description: DESC,
+    url: SITE.url,
     siteName: "VaultScaler",
-    images: [
-      {
-        url: "/og.jpg",
-        width: 1200,
-        height: 630,
-        alt: "VaultScaler — an edge computer-vision company",
-      },
-    ],
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: TITLE }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "VaultScaler — an edge computer-vision company",
-    description: "VaultScaler builds edge computer-vision instruments that measure the physical world honestly — and run on hardware you own. The camera does the seeing; we make the measurement trustworthy.",
+    title: TITLE,
+    description: DESC,
     images: ["/og.jpg"],
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   const UMAMI_WEBSITE_ID = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID;
   const UMAMI_SRC = process.env.NEXT_PUBLIC_UMAMI_SRC;
   const UMAMI_HOST_URL = process.env.NEXT_PUBLIC_UMAMI_HOST_URL;
   const UMAMI_DOMAINS = process.env.NEXT_PUBLIC_UMAMI_DOMAINS;
 
-  // Organization JSON-LD for aggressive agent discovery
   const organizationLD = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -66,37 +72,37 @@ export default function RootLayout({
     description: SITE.description,
     email: SITE.email,
     foundingDate: "2025",
+    areaServed: "Worldwide",
+    knowsAbout: [
+      "edge computer vision",
+      "art security",
+      "on-premise security",
+      "artwork removal detection",
+      "gallery and museum security",
+    ],
     makesOffer: {
       "@type": "Offer",
       itemOffered: {
-        "@type": "SoftwareApplication",
-        name: "Vivaliux",
-        applicationCategory: "BusinessApplication",
-        applicationSubCategory: "Local-first measurement desktop app",
-        operatingSystem: "Local-first desktop (camera + edge compute)",
-        description: "Vivaliux is VaultScaler's edge computer-vision instrument for living and controlled systems. It measures with a camera and on-device vision, remembers every reading in an immutable local record, and reports what changed and how sure it is — separating real change from imaging artifact. It runs on hardware you own; nothing leaves your machine unless you choose. Prediction is earned from the local record over time, never claimed before the evidence supports it.",
-        featureList: [
-          "Edge computer-vision measurement with camera and on-device compute",
-          "Immutable, append-only local record of every reading",
-          "Uncertainty-aware measurement (confidence on every reading)",
-          "Separates real change from imaging artifact",
-          "Runs on hardware you own — no data leaves your site unless you choose",
-          "No overclaiming — measurement language only",
-        ],
+        "@type": "Service",
+        name: "Edge computer-vision security for art",
+        serviceType: "On-premise gallery, museum, and private-collection security",
+        description:
+          "Bespoke, consulting-led computer-vision security for art. The intelligence runs on hardware the customer owns, in their building — nothing leaves the room, and nothing is attached to the artwork. The system distinguishes a visitor in front of a work from a work being removed, so it does not cry wolf. Specified, built, installed, and tuned in person.",
+        provider: { "@type": "Organization", name: SITE.name },
+        areaServed: "Worldwide",
       },
     },
   };
 
   return (
-    <html lang="en">
+    <html lang="en" className={`${display.variable} ${sans.variable}`}>
       <head>
         <JsonLd data={organizationLD} />
       </head>
-      <body className="antialiased">
-        {/* Skip to main content link for keyboard accessibility (WCAG 2.4.1) */}
+      <body className="antialiased bg-ink text-bone">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary-1 focus:text-white focus:rounded focus:outline-none focus:ring-2 focus:ring-white"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-bone focus:text-ink focus:rounded focus:outline-none"
         >
           Skip to main content
         </a>
@@ -114,9 +120,7 @@ export default function RootLayout({
         ) : null}
         <Navigation />
         <AnalyticsProvider />
-        <main id="main-content">
-          {children}
-        </main>
+        <main id="main-content">{children}</main>
         <SiteFooter />
       </body>
     </html>

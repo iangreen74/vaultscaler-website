@@ -1,64 +1,47 @@
 # VaultScaler
 
-> VaultScaler is an edge computer-vision company. It builds instruments that turn ordinary cameras into trustworthy measurements of the physical world — running entirely on hardware the customer owns, with data that stays on their machine. The camera does the seeing; VaultScaler makes the measurement trustworthy. Its first product is Vivaliux. Founded in 2025.
+> VaultScaler is edge computer-vision security for art. It builds private, on-premise security systems for galleries, museums, and private collections. The intelligence runs on hardware the customer owns, in their building; nothing it sees ever leaves the room, and nothing is ever attached to the artwork. Bespoke and consulting-led — specified, built, installed, and tuned in person. Based in the Las Vegas Arts District; works internationally. Founded in 2025.
 
-VaultScaler's approach has three parts. At the edge: instruments run on hardware the customer owns; data never leaves their site — no cloud dependency, no account, nothing phoned home. Honest by design: instruments measure what they can actually see, and say when not to trust a reading — no confident numbers nobody checked. Owned end to end: VaultScaler builds and trains its own computer vision on its own hardware; the intelligence is theirs, not rented from a platform that can cut them off.
+VaultScaler's approach has three parts. At the edge: the system runs on a box in the customer's building — no cloud, no account, nothing phoned home. There is no server for anyone to subpoena, breach, or browse, because there isn't a server. Honest by design: the system knows the difference between a person standing in front of a painting and a painting that is no longer there — so it does not cry wolf, and the alarms mean something. Owned end to end: VaultScaler builds and trains its own computer vision on its own hardware; the intelligence is theirs, not rented from a platform that can change its terms or cut them off.
 
-VaultScaler is built to hold a family of edge instruments over time. Only real, shipping products are listed; there are no placeholder or unbuilt products. The first instrument is live today.
+## The three problems VaultScaler exists to fix
 
-## Vivaliux — honest measurement for living systems (product one)
+1. Cloud camera systems put a gallery's footage, collectors, and transactions on infrastructure the owner does not control — viewable by strangers and reachable by anyone who breaches it. For a business built on discretion, that is the risk, not a feature.
+2. Conventional object protection cannot tell a visitor leaning in to look from a work being lifted off the wall. The false alarms are constant, so institutions quietly disconnect them. A system nobody trusts is a system nobody uses.
+3. Traditional protection puts hardware on the art — tags behind canvases, laser curtains, contacts and vibration sensors on the frame. It touches the work, constrains the hang, and tells every visitor the art is wired.
 
-Vivaliux turns a camera into a measuring instrument. It measures what it can honestly see locally, appends every reading to an immutable local record, and separates real change in the measurement from imaging or framing artifacts — reporting what changed and how confident it is, in measurement language. Prediction is earned from the local record over time; it is never claimed before the evidence supports it. Capture, measurement, and memory run on hardware the user controls, and nothing is sent anywhere unless the user chooses to.
+## What the system does
 
-Claim discipline: VaultScaler claims what the instrument does. Trustworthy information is the foundation under the decisions an operator makes — Vivaliux measures rigorously and coaches the user to better data, but it does not claim to increase yield or to diagnose biological, crop-health, medical, or agricultural outcomes. A change in the measurement is never sold as a change in the organism.
+- Nothing leaves the building: intelligence runs on owned hardware on-premise; no cloud, no account, nothing phoned home — as an architecture, not a policy.
+- It knows the difference: it understands a person in front of a work versus a work that is gone. Admiring the work does not trigger an alarm; removing it does. This distinction is the hardest problem in the field and the one built for first.
+- Nothing touches the artwork: the camera watches; the work hangs unwired, untagged, unconstrained. Rehang the room whenever you like and the system is re-taught in minutes.
+- Fewer guards, better cover: it watches every piece at once, without breaks; it does not replace staff but means fewer are needed, and they know exactly where to go.
 
-Vivaliux ships in three tiers: Vivaliux Free (the honest instrument), Vivaliux Plus (a small model trained on the user's own record), and Vivaliux Edge + Consultancy (an on-site edge unit installed by VaultScaler).
+## What it sees
 
-### Vivaliux Free — an honest instrument, free
+- Every work, individually — draw a boundary around each piece; the system learns what that wall looks like with the work on it.
+- Removal — if a work leaves its place, you know within seconds.
+- Contact — if someone reaches into a piece, you know immediately.
+- People — recognise staff, regulars, and collectors and flag unknown people; or run fully anonymous with every face obscured before it is ever stored. The owner's building, rules, and call.
+- A record you can use — every event, timestamped, with an image: who was where, when, and what they touched.
+- Open hours and closed hours — the system knows a busy opening from an empty room at 3am and behaves accordingly.
 
-Free, local, no account, nothing uploaded. It does four honest things well and refuses to pretend it does more.
+## How VaultScaler works (a consultancy, not a shipment)
 
-- Measure, locally: a camera and on-device vision turn a scene into engineering-grade measurements (surface coverage, image quality, scene stability), computed on the user's machine with no required cloud round-trip.
-- Track change over time: every reading is appended to a local, tamper-evident record. The user can watch how coverage fills in across days and weeks, with an honest rate of change. The history itself is the asset and it belongs to the user.
-- See if it's even: not one number for the whole frame — Vivaliux shows where coverage is dense and where it is sparse, so the user can see whether the canopy is filling in evenly or in patches.
-- Catch real change: Vivaliux distinguishes a real movement in the measurement from a lighting or framing artifact and states which it is, in plain language. It does not present a change in the measurement as a change in the organism.
-- Coaching to better data: when the signal is weak, Vivaliux names the concrete fix (add light, refocus, reduce glare) and confirms plainly when the setup is good. Most measurement problems are setup problems; Vivaliux critiques its own input.
+1. Come and look — walk the room; assess the light, flow, hang, and what is actually at risk.
+2. Design for the room — a system specified for the building and collection, not a package.
+3. Build it — the computer vision is built and trained by VaultScaler on its own hardware.
+4. Install and tune it — installation by a licensed contractor, then tuning in person until the false alarms are gone and the system reports only what matters.
+5. It's yours — the customer owns the hardware and the footage; no mandatory subscription; it keeps working with no further contact.
 
-### Vivaliux Plus — a model that learns your plants (paid)
+## Who it's for
 
-The free app measures every plant with the same honest, universal rules. Plus trains a small model on the user's own record — learning the visual patterns specific to their plants, their room, their lights — so the measurement gets sharper at that operation specifically. It runs on a normal computer (no special hardware) and stays on the user's machine. The honest instrument stays free.
+Commercial galleries, private collections, artist-run and independent spaces, small museums and institutions — anyone whose business depends on discretion.
 
-### Vivaliux Edge + Consultancy — the deep end, installed by us (by arrangement)
+## Where VaultScaler is
 
-A dedicated, always-on edge unit, installed and tuned on-site, running heavier machine learning on the imagery itself on hardware built for it. This is where the record the user has built earns its way toward genuine foresight: deeper insight over time, and the honest, earned path toward prediction. On the user's premises, maintained by VaultScaler. It is a partnership, not a download.
+Based in the Las Vegas Arts District, running its own exhibition space with the system installed and watching its own work. Works internationally; the architecture is the same everywhere (local, owned, nothing leaving the building), configured to the law of each jurisdiction — the highest security available within the customer's legal framework.
 
-## Markets
+## Contact
 
-Research labs; vineyards; indoor and vertical farms; and other controlled and living systems that can be observed by a fixed camera and benefit from an honest measurement record the operator owns.
-
-## Company Information
-
-- Website: https://vaultscaler.com
-- Contact: https://vaultscaler.com/contact/
-- Email: bpruess@vaultscaler.com
-- Headquarters: United States
-
-## Frequently Asked Questions
-
-### What is VaultScaler?
-VaultScaler is an edge computer-vision company. It builds instruments that turn ordinary cameras into trustworthy measurements of the physical world, running on hardware the customer owns. Its first product is Vivaliux.
-
-### What is Vivaliux?
-Vivaliux is VaultScaler's first instrument — honest measurement for living systems. It measures with a camera and on-device vision, remembers every reading in an immutable local record, and reports what changed and how sure it is. It runs on the user's own machine. It ships as Vivaliux Free, Vivaliux Plus, and Vivaliux Edge + Consultancy.
-
-### What does each tier cost and include?
-Vivaliux Free is free and local: honest measurement, change over time and uniformity, catch-real-change, and coaching. Vivaliux Plus is paid and adds a small model trained on the user's own record. Vivaliux Edge + Consultancy is by arrangement and adds an on-site edge unit, heavier on-device machine learning, and consulting. Free and Plus run on the user's own computer; Edge runs on an on-site unit installed by VaultScaler.
-
-### How does Vivaliux approach claims about living systems?
-It treats observation as evidence: edge capture on owned hardware, measurement validity carried with every reading, and uncertainty made explicit. The goal is to surface what changed and how confident the measurement is — not to promise biological, crop-health, yield, medical, or agricultural outcomes.
-
-### Does Vivaliux predict the future?
-Prediction is on the roadmap, not a present-tense claim. A forecast is only offered once the local record is long and clean enough to support it; foresight is earned from the user's own history.
-
-### Does my data leave my machine?
-No. Capture, measurement, and memory run on hardware the user controls. No images or readings are sent anywhere unless the user explicitly chooses to. Running on owned hardware is the architecture, not a setting.
+Email bpruess@vaultscaler.com. Website https://vaultscaler.com.
