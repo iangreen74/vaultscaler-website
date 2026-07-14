@@ -38,7 +38,7 @@ const STEPS = [
   {
     n: "04",
     title: "We install and tune it.",
-    body: "Installation is handled by a licensed contractor. Then we stay until it's right — until the false alarms are gone and the system tells you only the things that matter.",
+    body: "Installation is carried out by a licensed contractor. Then we stay until it's right — until the false alarms are gone and the system tells you only the things that matter.",
   },
   {
     n: "05",
@@ -124,9 +124,9 @@ export default function Approach() {
               Built by a gallery owner.
             </h2>
             <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
-              VaultScaler is based in the Las Vegas Arts District, where we run our own
-              exhibition space. The system is installed there, watching our own work. If
-              you&apos;re nearby, don&apos;t take our word for any of this — come and see it running.
+              We&apos;re based in the Las Vegas Arts District, where we&apos;re opening our own
+              exhibition space — the same system runs there. If you&apos;re nearby, don&apos;t take
+              our word for any of this — come and see it.
             </p>
             <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
               We work internationally. The architecture is the same everywhere: local, owned,

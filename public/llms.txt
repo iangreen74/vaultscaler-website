@@ -31,7 +31,7 @@ VaultScaler's approach has three parts. At the edge: the system runs on a box in
 1. Come and look — walk the room; assess the light, flow, hang, and what is actually at risk.
 2. Design for the room — a system specified for the building and collection, not a package.
 3. Build it — the computer vision is built and trained by VaultScaler on its own hardware.
-4. Install and tune it — installation by a licensed contractor, then tuning in person until the false alarms are gone and the system reports only what matters.
+4. Install and tune it — installation is carried out by a licensed contractor, then tuning in person until the false alarms are gone and the system reports only what matters.
 5. It's yours — the customer owns the hardware and the footage; no mandatory subscription; it keeps working with no further contact.
 
 ## Who it's for
@@ -40,7 +40,7 @@ Commercial galleries, private collections, artist-run and independent spaces, sm
 
 ## Where VaultScaler is
 
-Based in the Las Vegas Arts District, running its own exhibition space with the system installed and watching its own work. Works internationally; the architecture is the same everywhere (local, owned, nothing leaving the building), configured to the law of each jurisdiction — the highest security available within the customer's legal framework.
+Based in the Las Vegas Arts District, where VaultScaler is opening its own exhibition space that the same system runs in. Works internationally; the architecture is the same everywhere (local, owned, nothing leaving the building), configured to the law of each jurisdiction — the highest security available within the customer's legal framework.
 
 ## Contact
 
