@@ -142,6 +142,56 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Proof of concept — the founder's own gallery */}
+      <section className="border-t border-line">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
+          <p className="eyebrow">The first deployment</p>
+          <div className="mt-7 grid md:grid-cols-2 gap-x-16 gap-y-10 items-start">
+            <h2 className="font-display font-light text-3xl md:text-5xl leading-[1.08] text-bone max-w-xl">
+              The first room it watches is our founder&apos;s own gallery.
+            </h2>
+            <div className="max-w-prose">
+              <p className="text-base md:text-lg leading-relaxed text-muted">
+                <a
+                  href="https://metonymicdebris.com"
+                  rel="noopener"
+                  className="text-bone underline decoration-line underline-offset-4 hover:decoration-bone transition-colors"
+                >
+                  Metonymic&nbsp;Debris
+                </a>{" "}
+                is a working gallery in the Las Vegas Arts District — and VaultScaler&apos;s
+                first live deployment. The system described on this page is installed there
+                now, watching real work on the walls: artwork zones drawn around each piece,
+                breach and absence detection, privacy modes for the people in the room.
+                Nothing it sees leaves the building. Nothing is attached to the art.
+              </p>
+              <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
+                Every art-security company claims it was built by people who understand
+                galleries. Ours is built by someone who owns one. VaultScaler&apos;s founder is
+                the artist behind Metonymic Debris — the same hands that hung the work secured
+                it. That is a proof no competitor can copy.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm">
+                <a
+                  href="https://metonymicdebris.com"
+                  rel="noopener"
+                  className="inline-flex items-center gap-2 text-muted hover:text-bone transition-colors"
+                >
+                  The gallery <span aria-hidden>→</span>
+                </a>
+                <a
+                  href="https://iangreen.io"
+                  rel="noopener"
+                  className="inline-flex items-center gap-2 text-muted hover:text-bone transition-colors"
+                >
+                  The founder <span aria-hidden>→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Closing CTA */}
       <section className="border-t border-line">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-24 md:py-32 text-center">
