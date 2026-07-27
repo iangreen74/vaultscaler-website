@@ -17,7 +17,7 @@ export const SITE = {
   email: "bpruess@vaultscaler.com",
   location: "Las Vegas Arts District",
   description:
-    "VaultScaler builds private, on-premise security systems for galleries, museums, and private collections. Edge computer vision runs on hardware you own, in your building — nothing it sees leaves the room, and nothing is ever attached to the artwork. The system knows the difference between a visitor in front of a painting and a painting that is no longer there, so the alarms mean something. Specified, built, installed, and tuned in person.",
+    "VaultScaler builds private, on-premise security systems for galleries, museums, and private collections. Edge computer vision runs on hardware you own, in your building, watching the whole space — including the people in it. The owner decides what it remembers: recognise known people and flag unknowns, or obscure every face before anything is stored. Nothing it sees ever leaves the building, and nothing is ever attached to the artwork. The system also knows the difference between a visitor in front of a painting and a painting that is no longer there, so the alarms mean something. Specified, built, installed, and tuned in person.",
   keywords: [
     // Company
     "VaultScaler",
@@ -39,6 +39,8 @@ export const SITE = {
     "false-alarm-free art protection",
     "non-contact artwork protection",
     "no tags on the artwork",
+    "owner-controlled face recognition",
+    "face obscuring privacy mode",
     "bespoke security consultancy",
   ],
 };

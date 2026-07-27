@@ -24,7 +24,7 @@ const sans = Inter({
 
 const TITLE = "VaultScaler — edge computer-vision security for art";
 const DESC =
-  "VaultScaler builds private, on-premise security systems for galleries, museums, and private collections. The intelligence runs on hardware you own, in your building. Nothing it sees ever leaves the room, and nothing is ever attached to the artwork.";
+  "VaultScaler builds private, on-premise security systems for galleries, museums, and private collections. It watches the whole space, and the owner decides what it remembers — recognise known people and flag unknowns, or obscure every face before anything is stored. Nothing it sees ever leaves the building, and nothing is ever attached to the artwork.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -87,7 +87,7 @@ export default function RootLayout({
         name: "Edge computer-vision security for art",
         serviceType: "On-premise gallery, museum, and private-collection security",
         description:
-          "Bespoke, consulting-led computer-vision security for art. The intelligence runs on hardware the customer owns, in their building — nothing leaves the room, and nothing is attached to the artwork. The system distinguishes a visitor in front of a work from a work being removed, so it does not cry wolf. Specified, built, installed, and tuned in person.",
+          "Bespoke, consulting-led computer-vision security for art. The intelligence runs on hardware the customer owns, in their building — nothing it sees leaves the building, and nothing is attached to the artwork. It watches the whole space, including the people in it; the owner decides whether to recognise known people and flag unknowns, or obscure every face before anything is stored. The system also distinguishes a visitor in front of a work from a work being removed, so it does not cry wolf. Specified, built, installed, and tuned in person.",
         provider: { "@type": "Organization", name: SITE.name },
         areaServed: "Worldwide",
       },

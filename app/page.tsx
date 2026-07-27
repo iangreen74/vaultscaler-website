@@ -7,7 +7,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "VaultScaler — edge computer-vision security for art",
   description:
-    "Private, on-premise security for galleries, museums, and private collections. It runs on hardware you own, in your building. Nothing it sees leaves the room. Nothing is attached to the artwork.",
+    "Private, on-premise security for galleries, museums, and private collections. It watches the whole space and you decide what it remembers — recognise your people or obscure every face. Nothing it sees ever leaves your building. Nothing is attached to the artwork.",
   alternates: { canonical: SITE.url },
 };
 
@@ -49,14 +49,17 @@ export default function Home() {
         <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pt-24 pb-24 md:pt-36 md:pb-32">
           <p className="eyebrow">Edge computer-vision security for art</p>
           <h1 className="mt-7 font-display font-light text-[2.75rem] leading-[1.05] sm:text-6xl md:text-7xl text-bone max-w-4xl tracking-tight">
-            It watches the art.
+            It watches everything in your building.
             <br />
-            Not your collectors.
+            And nothing ever leaves it.
           </h1>
           <p className="mt-8 text-lg md:text-xl leading-relaxed text-muted max-w-2xl">
-            VaultScaler builds private, on-premise security systems for galleries, museums,
-            and private collections. The system runs on hardware you own, in your building.
-            Nothing it sees ever leaves the room. Nothing is ever attached to the artwork.
+            VaultScaler builds private, on-premise security for galleries, museums, and
+            private collections. It watches the whole space — and you decide what it
+            remembers. Recognise your people and flag the ones you don&apos;t, or obscure
+            every face before anything is stored. Either way, nothing it sees ever leaves
+            your building. There&apos;s no cloud, and no server for anyone to breach —
+            because there isn&apos;t one.
           </p>
           <div className="mt-11 flex flex-wrap items-center gap-5">
             <Link
