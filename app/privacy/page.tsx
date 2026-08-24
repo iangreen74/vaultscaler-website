@@ -42,11 +42,9 @@ export default function PrivacyPage() {
           <div>
             <h2 className="font-display text-xl text-bone mb-3">How enquiries are handled</h2>
             <p className="text-muted leading-relaxed">
-              Contact-form submissions are processed by{' '}
-              <a href="https://formspree.io" className="text-bone underline underline-offset-4 hover:text-muted" target="_blank" rel="noopener noreferrer">Formspree</a>,
-              a third-party form service, under their own privacy policy. We use what you send only
-              to reply to you and to talk with you about your space. We will never sell, rent, or
-              share your information for marketing.
+              Enquiries come to us by email, directly — no third-party form service sits in
+              between. We use what you send only to reply to you and to talk with you about
+              your space. We will never sell, rent, or share your information for marketing.
             </p>
           </div>
 

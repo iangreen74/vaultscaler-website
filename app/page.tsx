@@ -5,9 +5,9 @@ import JsonLd from "@/components/JsonLd";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "VaultScaler — edge computer-vision security for art",
+  title: "VaultScaler — private, on-premise computer-vision security",
   description:
-    "Private, on-premise security for galleries, museums, and private collections. It watches the whole space and you decide what it remembers — recognise your people or obscure every face. Nothing it sees ever leaves your building. Nothing is attached to the artwork.",
+    "Private, on-premise computer-vision security — proven first on a working artist's own collection, built for private collections, galleries, museums, and other discreet spaces. It watches the whole space and you decide what it remembers — recognise your people or obscure every face. Nothing it sees ever leaves your building. Nothing is attached to what it protects.",
   alternates: { canonical: SITE.url },
 };
 
@@ -15,17 +15,17 @@ const PROBLEMS = [
   {
     n: "01",
     lead: "Your footage lives on someone else's server.",
-    body: "Cloud camera systems put your space, your collectors, and your transactions on infrastructure you don't control, viewable by staff you've never met, and reachable by anyone who breaches it. For a business built on discretion, that's not a feature. It's the risk.",
+    body: "Cloud camera systems put your space, the people who trust you, and what happens inside your walls on infrastructure you don't control — viewable by staff you've never met, reachable by anyone who breaches it. For anyone whose business depends on discretion, that's not a feature. It's the risk.",
   },
   {
     n: "02",
     lead: "The alarms cry wolf, so they get switched off.",
-    body: "Conventional object protection can't tell the difference between a visitor leaning in to look and a work being lifted off the wall. The false alarms are constant — so most institutions quietly disconnect them. A system nobody trusts is a system nobody uses.",
+    body: "Conventional motion and object sensors can't tell the difference between someone pausing to look and something actually being taken. The false alarms are constant — so most systems get quietly disconnected. A system nobody trusts is a system nobody uses.",
   },
   {
     n: "03",
-    lead: "The hardware is on the art.",
-    body: "Tags glued behind canvases. Laser curtains across the wall. Contacts and vibration sensors on the frame. It works, but it touches the work, it constrains the hang, and it tells every visitor that the art is wired.",
+    lead: "Sometimes the hardware touches the thing itself.",
+    body: "In a gallery, that's tags glued behind canvases, laser curtains across the wall, contacts and vibration sensors on the frame — it works, but it touches the piece, constrains how it's shown, and announces itself to every visitor. The same problem shows up anywhere something valuable can't be wired without the wiring diminishing it.",
   },
 ];
 
@@ -33,7 +33,7 @@ export default function Home() {
   const pageLD = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "VaultScaler — edge computer-vision security for art",
+    name: "VaultScaler — private, on-premise computer-vision security",
     url: `${SITE.url}/`,
     description: SITE.description,
     isPartOf: { "@type": "WebSite", name: "VaultScaler", url: SITE.url },
@@ -47,19 +47,20 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div aria-hidden className="spotlight absolute inset-0" />
         <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pt-24 pb-24 md:pt-36 md:pb-32">
-          <p className="eyebrow">Edge computer-vision security for art</p>
+          <p className="eyebrow">Private, on-premise AI security</p>
           <h1 className="mt-7 font-display font-light text-[2.75rem] leading-[1.05] sm:text-6xl md:text-7xl text-bone max-w-4xl tracking-tight">
             It watches everything in your building.
             <br />
             And nothing ever leaves it.
           </h1>
           <p className="mt-8 text-lg md:text-xl leading-relaxed text-muted max-w-2xl">
-            VaultScaler builds private, on-premise security for galleries, museums, and
-            private collections. It watches the whole space — and you decide what it
-            remembers. Recognise your people and flag the ones you don&apos;t, or obscure
-            every face before anything is stored. Either way, nothing it sees ever leaves
-            your building. There&apos;s no cloud, and no server for anyone to breach —
-            because there isn&apos;t one.
+            VaultScaler was built first to protect a working artist&apos;s own collection —
+            now it protects private collections, galleries, museums, and any space where
+            discretion is the whole point. It watches the whole space — and you decide
+            what it remembers. Recognise your people and flag the ones you don&apos;t, or
+            obscure every face before anything is stored. Either way, nothing it sees ever
+            leaves your building. There&apos;s no cloud, and no server for anyone to breach
+            — because there isn&apos;t one.
           </p>
           <div className="mt-11 flex flex-wrap items-center gap-5">
             <Link
@@ -83,7 +84,7 @@ export default function Home() {
       <section className="border-t border-line">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
           <h2 className="font-display text-2xl md:text-3xl text-bone max-w-2xl">
-            Art security has been solved badly, in three specific ways.
+            Discreet security has been solved badly, in three specific ways.
           </h2>
           <div className="mt-14 md:mt-20">
             {PROBLEMS.map((p) => (
