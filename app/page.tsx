@@ -15,7 +15,7 @@ const PROBLEMS = [
   {
     n: "01",
     lead: "Your footage lives on someone else's server.",
-    body: "Cloud camera systems put your gallery, your collectors, and your transactions on infrastructure you don't control, viewable by staff you've never met, and reachable by anyone who breaches it. For a business built on discretion, that's not a feature. It's the risk.",
+    body: "Cloud camera systems put your space, your collectors, and your transactions on infrastructure you don't control, viewable by staff you've never met, and reachable by anyone who breaches it. For a business built on discretion, that's not a feature. It's the risk.",
   },
   {
     n: "02",
@@ -110,7 +110,7 @@ export default function Home() {
             <div className="max-w-prose">
               <h3 className="font-display text-2xl md:text-3xl text-bone">Nothing leaves the building.</h3>
               <p className="mt-4 text-base md:text-lg leading-relaxed text-muted">
-                The intelligence runs on a box in your gallery. There is no cloud, no account,
+                The intelligence runs on a box in your building. There is no cloud, no account,
                 no vendor portal, nothing phoned home. Not as a policy — as an architecture.
                 There is no server for anyone to subpoena, breach, or browse, because there isn&apos;t
                 a server.
@@ -145,34 +145,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Proof of concept — the founder's own gallery */}
+      {/* Proof of concept — the founder's own studio */}
       <section className="border-t border-line">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
           <p className="eyebrow">The first deployment</p>
           <div className="mt-7 grid md:grid-cols-2 gap-x-16 gap-y-10 items-start">
             <h2 className="font-display font-light text-3xl md:text-5xl leading-[1.08] text-bone max-w-xl">
-              The first room it watches is our founder&apos;s own gallery.
+              The first room it watches is the founder&apos;s own studio.
             </h2>
             <div className="max-w-prose">
               <p className="text-base md:text-lg leading-relaxed text-muted">
+                VaultScaler&apos;s first live deployment protects{" "}
                 <a
-                  href="https://metonymicdebris.com"
+                  href="https://iangreen.io"
                   rel="noopener"
                   className="text-bone underline decoration-line underline-offset-4 hover:decoration-bone transition-colors"
                 >
-                  Metonymic&nbsp;Debris
+                  Ian Green&apos;s
                 </a>{" "}
-                is a working gallery in the Las Vegas Arts District — and VaultScaler&apos;s
-                first live deployment. The system described on this page is installed there
-                now, watching real work on the walls: artwork zones drawn around each piece,
-                breach and absence detection, privacy modes for the people in the room.
-                Nothing it sees leaves the building. Nothing is attached to the art.
+                own paintings, in his own studio. Artwork zones drawn around each piece,
+                breach and absence detection, privacy modes for the people in the room —
+                running now, on the same system described on this page. Nothing it sees
+                leaves the building. Nothing is attached to the art.
               </p>
               <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
-                Every art-security company claims it was built by people who understand
-                galleries. Ours is built by someone who owns one. VaultScaler&apos;s founder is
-                the artist behind Metonymic Debris — the same hands that hung the work secured
-                it. That is a proof no competitor can copy.
+                Every art-security company says it was built by people who understand
+                galleries. This one was built by an artist protecting his own work — the
+                same hands that hung the paintings secured them. That is a proof no
+                competitor can copy.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm">
                 <a
@@ -180,7 +180,7 @@ export default function Home() {
                   rel="noopener"
                   className="inline-flex items-center gap-2 text-muted hover:text-bone transition-colors"
                 >
-                  The gallery <span aria-hidden>→</span>
+                  The paintings <span aria-hidden>→</span>
                 </a>
                 <a
                   href="https://iangreen.io"

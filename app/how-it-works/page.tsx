@@ -93,7 +93,7 @@ export default function HowItWorks() {
           <div className="max-w-prose">
             <p className="eyebrow">And where it all lives</p>
             <h2 className="mt-6 font-display text-2xl md:text-3xl text-bone">
-              On a box in your gallery. Nowhere else.
+              On a box in your building. Nowhere else.
             </h2>
             <p className="mt-4 text-base md:text-lg leading-relaxed text-muted">
               The intelligence runs on hardware you own, in your building. There is no cloud,

@@ -7,12 +7,12 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Approach | VaultScaler",
   description:
-    "VaultScaler is a consultancy, not a shipment. We walk your room, design for your building, build and train the computer vision on our own hardware, install and tune it in person, and leave it yours. Built by a gallery owner in the Las Vegas Arts District.",
+    "VaultScaler is a design consultancy, not a shipment. We walk your room, design for your building, build and train the computer vision on our own hardware, and leave it yours. Installation is carried out by a licensed contractor. Built by an artist who protects his own work.",
   alternates: { canonical: `${SITE.url}/approach/` },
   openGraph: {
     title: "Approach | VaultScaler",
     description:
-      "A consultancy, not a shipment. We come and look, design for your room, build it, install and tune it, and it's yours. Built by a gallery owner.",
+      "A design consultancy, not a shipment. We come and look, design for your room, build it, and it's yours. A licensed contractor installs it. Built by an artist who protects his own work.",
     url: `${SITE.url}/approach/`,
     type: "website",
     images: ["/og.jpg"],
@@ -37,8 +37,8 @@ const STEPS = [
   },
   {
     n: "04",
-    title: "We install and tune it.",
-    body: "Installation is carried out by a licensed contractor. Then we stay until it's right — until the false alarms are gone and the system tells you only the things that matter.",
+    title: "A licensed contractor installs it.",
+    body: "We specify exactly what goes in and where. Installation and physical work is carried out by a licensed contractor — then we stay until it's right, until the false alarms are gone and the system tells you only the things that matter.",
   },
   {
     n: "05",
@@ -50,6 +50,7 @@ const STEPS = [
 const FOR = [
   "Commercial galleries",
   "Private collections",
+  "Private residences with something worth protecting",
   "Artist-run and independent spaces",
   "Small museums and institutions",
   "Anyone whose business depends on discretion",
@@ -62,7 +63,7 @@ export default function Approach() {
     name: "Approach — VaultScaler",
     url: `${SITE.url}/approach/`,
     description:
-      "A consultancy, not a shipment: walk the room, design for your building, build and train the vision on our own hardware, install and tune in person, and it's yours.",
+      "A design consultancy, not a shipment: walk the room, design for your building, build and train the vision on our own hardware, and it's yours. A licensed contractor installs it.",
   };
 
   return (
@@ -121,17 +122,18 @@ export default function Approach() {
           <div className="max-w-prose">
             <p className="eyebrow">Where we are</p>
             <h2 className="mt-6 font-display text-2xl md:text-3xl text-bone">
-              Built by a gallery owner.
+              Built by an artist who protects his own work.
             </h2>
             <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
-              We&apos;re based in the Las Vegas Arts District, where we&apos;re opening our own
-              exhibition space — the same system runs there. If you&apos;re nearby, don&apos;t take
-              our word for any of this — come and see it.
+              We&apos;re based in Las Vegas, where the founder&apos;s own studio runs the same
+              system described on this page. It isn&apos;t open to the public, but if
+              you&apos;re a serious enquiry, don&apos;t take our word for any of this — ask
+              and we&apos;ll show you the real thing.
             </p>
             <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
-              We work internationally. The architecture is the same everywhere: local, owned,
-              nothing leaving the building. What the system is permitted to do differs by
-              jurisdiction, and we configure it to the law where you are.
+              The architecture is the same everywhere: local, owned, nothing leaving the
+              building. What the system is permitted to do differs by jurisdiction, and we
+              configure it to the law where you are.
             </p>
             <p className="mt-6 font-display text-xl md:text-2xl text-bone">
               The highest security available to you, within the legal framework you&apos;re in.

@@ -14,10 +14,6 @@ export default function DocsPlaceholder() {
           Technical documentation is shared directly with clients. If you need details, write to us at{' '}
           <a href="mailto:ian@vaultscaler.com" className="text-bone underline underline-offset-4">
             ian@vaultscaler.com
-          </a>{' '}
-          or{' '}
-          <a href="mailto:bpruess@vaultscaler.com" className="text-bone underline underline-offset-4">
-            bpruess@vaultscaler.com
           </a>.
         </p>
       </div>
