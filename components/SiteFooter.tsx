@@ -16,8 +16,7 @@ export default function SiteFooter() {
             </div>
             <p className="mt-4 text-sm leading-relaxed text-dim">
               Edge computer-vision security for art. On-premise, owned end to end,
-              nothing leaving the building. Based in the Las Vegas Arts District; working
-              internationally.
+              nothing leaving the building. Based in Las Vegas.
             </p>
           </div>
 

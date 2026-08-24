@@ -19,7 +19,7 @@ export default function PrivacyPage() {
 
         <div className="mt-12 space-y-10">
           <div>
-            <h2 className="font-display text-xl text-bone mb-3">The systems we install</h2>
+            <h2 className="font-display text-xl text-bone mb-3">The systems we design</h2>
             <p className="text-muted leading-relaxed">
               This matters most, so it comes first. A VaultScaler security system runs entirely on
               hardware you own, in your building. There is no cloud, no account, and nothing phoned

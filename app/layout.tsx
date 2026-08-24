@@ -79,15 +79,16 @@ export default function RootLayout({
       "on-premise security",
       "artwork removal detection",
       "gallery and museum security",
+      "private collection and residence security",
     ],
     makesOffer: {
       "@type": "Offer",
       itemOffered: {
         "@type": "Service",
         name: "Edge computer-vision security for art",
-        serviceType: "On-premise gallery, museum, and private-collection security",
+        serviceType: "On-premise security design for galleries, museums, private collections, and other privacy-sensitive spaces",
         description:
-          "Bespoke, consulting-led computer-vision security for art. The intelligence runs on hardware the customer owns, in their building — nothing it sees leaves the building, and nothing is attached to the artwork. It watches the whole space, including the people in it; the owner decides whether to recognise known people and flag unknowns, or obscure every face before anything is stored. The system also distinguishes a visitor in front of a work from a work being removed, so it does not cry wolf. Specified, built, installed, and tuned in person.",
+          "Bespoke computer-vision security, anchored in art. VaultScaler designs, specifies, and configures the system; the intelligence runs on hardware the customer owns, in their building — nothing it sees leaves the building, and nothing is attached to the artwork. It watches the whole space, including the people in it; the owner decides whether to recognise known people and flag unknowns, or obscure every face before anything is stored. The system also distinguishes a visitor in front of a work from a work being removed, so it does not cry wolf. Installation is carried out by a licensed contractor.",
         provider: { "@type": "Organization", name: SITE.name },
         areaServed: "Worldwide",
       },
