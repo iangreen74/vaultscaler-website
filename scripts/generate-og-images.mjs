@@ -1,7 +1,5 @@
 /**
- * Generate the OG/social share images (1200x630) written to public/.
- *  - og.jpg          → the VaultScaler company homepage (an edge CV company)
- *  - og-vivaliux.jpg → the Vivaliux product page (a VaultScaler instrument)
+ * Generate the OG/social share image (1200x630) written to public/og.jpg.
  * Run: node scripts/generate-og-images.mjs
  */
 import sharp from 'sharp';
@@ -16,7 +14,7 @@ mkdirSync(publicDir, { recursive: true });
 const WIDTH = 1200;
 const HEIGHT = 630;
 
-function buildSvg({ bg, accentColor, productName, headline, subline }) {
+function buildSvg({ bg, accentColor, textColor, productName, headline, subline }) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
@@ -27,20 +25,20 @@ function buildSvg({ bg, accentColor, productName, headline, subline }) {
   <!-- Background -->
   <rect width="${WIDTH}" height="${HEIGHT}" fill="url(#bg)"/>
 
-  <!-- Accent bar top -->
+  <!-- Accent bar top — the one restrained use of alert-red -->
   <rect width="${WIDTH}" height="6" fill="${accentColor}"/>
 
   <!-- Product name (large) -->
-  <text x="80" y="210" fill="${accentColor}" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="72" font-weight="800">${escapeXml(productName)}</text>
+  <text x="80" y="210" fill="${textColor}" font-family="Georgia,Cambria,'Times New Roman',serif" font-size="72" font-weight="600">${escapeXml(productName)}</text>
 
   <!-- Headline (multi-line via tspan) -->
-  ${wrapText(headline, 40, 80, 290, '#ffffff', 48, 700)}
+  ${wrapText(headline, 40, 80, 290, textColor, 44, 500)}
 
   <!-- Subline -->
-  ${wrapText(subline, 60, 80, 290 + countLines(headline, 40) * 56 + 24, 'rgba(255,255,255,0.7)', 24, 400)}
+  ${wrapText(subline, 60, 80, 290 + countLines(headline, 40) * 52 + 26, 'rgba(236,233,227,0.6)', 24, 400)}
 
   <!-- Footer -->
-  <text x="80" y="${HEIGHT - 50}" fill="rgba(255,255,255,0.5)" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="22" font-weight="700" letter-spacing="1">vaultscaler.com</text>
+  <text x="80" y="${HEIGHT - 50}" fill="rgba(236,233,227,0.4)" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" font-size="22" font-weight="700" letter-spacing="1">vaultscaler.com</text>
 </svg>`;
 }
 
@@ -88,19 +86,14 @@ function escapeXml(s) {
 const images = [
   {
     filename: 'og.jpg',
-    bg: ['#122E46', '#234D70', '#2a5f87'],
-    accentColor: '#00e3ae',
+    // Gallery-at-night: near-black ground, warm off-white type, one restrained
+    // alert-red accent bar — matches tailwind.config.ts's ink/bone/alert tokens.
+    bg: ['#0a0a0b', '#141416', '#1b1b1e'],
+    accentColor: '#d43f31',
+    textColor: '#ece9e3',
     productName: 'VaultScaler',
-    headline: 'We turn ordinary cameras into instruments you can trust.',
-    subline: 'An edge computer-vision company.',
-  },
-  {
-    filename: 'og-vivaliux.jpg',
-    bg: ['#122E46', '#234D70', '#2a5f87'],
-    accentColor: '#00e3ae',
-    productName: 'Vivaliux',
-    headline: 'Honest measurement for living systems.',
-    subline: 'A VaultScaler instrument.',
+    headline: 'It watches everything in your building. And nothing ever leaves it.',
+    subline: 'Private, on-premise AI security.',
   },
 ];
 
