@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Have something worth protecting? Tell us about your space and what's on the walls. VaultScaler builds private, on-premise computer-vision security for galleries, museums, and private collections.",
   alternates: { canonical: `${SITE.url}/contact/` },
-  keywords: [...SITE.keywords, "contact", "consultation", "gallery security enquiry"],
+  keywords: [...SITE.keywords, "contact", "consultation", "private security enquiry"],
   openGraph: {
     title: "Contact | VaultScaler",
     description: "Tell us about your space and what's on the walls.",
@@ -66,13 +66,6 @@ export default function Page() {
       <section>
         <div className="max-w-3xl mx-auto px-5 sm:px-8 py-14 md:py-20">
           <ContactForm />
-          <p className="mt-8 text-sm text-dim text-center">
-            Prefer email? Write to{" "}
-            <a href={`mailto:${SITE.email}`} className="text-muted hover:text-bone underline underline-offset-4">
-              {SITE.email}
-            </a>
-            .
-          </p>
         </div>
       </section>
     </>

@@ -22,9 +22,9 @@ const sans = Inter({
   display: "swap",
 });
 
-const TITLE = "VaultScaler — edge computer-vision security for art";
+const TITLE = "VaultScaler — private, on-premise computer-vision security";
 const DESC =
-  "VaultScaler builds private, on-premise security systems for galleries, museums, and private collections. It watches the whole space, and the owner decides what it remembers — recognise known people and flag unknowns, or obscure every face before anything is stored. Nothing it sees ever leaves the building, and nothing is ever attached to the artwork.";
+  "VaultScaler builds private, on-premise computer-vision security — proven first on a working artist's own collection, and built for private collectors, galleries, museums, and other discreet, privacy-sensitive spaces. It watches the whole space, and the owner decides what it remembers — recognise known people and flag unknowns, or obscure every face before anything is stored. Nothing it sees ever leaves the building, and nothing is ever attached to what it protects.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -75,20 +75,21 @@ export default function RootLayout({
     areaServed: "Worldwide",
     knowsAbout: [
       "edge computer vision",
-      "art security",
       "on-premise security",
+      "art security",
       "artwork removal detection",
       "gallery and museum security",
       "private collection and residence security",
+      "discreet security consultancy",
     ],
     makesOffer: {
       "@type": "Offer",
       itemOffered: {
         "@type": "Service",
-        name: "Edge computer-vision security for art",
-        serviceType: "On-premise security design for galleries, museums, private collections, and other privacy-sensitive spaces",
+        name: "Private, on-premise computer-vision security",
+        serviceType: "On-premise security design for private collectors, galleries, museums, and other discreet, privacy-sensitive spaces",
         description:
-          "Bespoke computer-vision security, anchored in art. VaultScaler designs, specifies, and configures the system; the intelligence runs on hardware the customer owns, in their building — nothing it sees leaves the building, and nothing is attached to the artwork. It watches the whole space, including the people in it; the owner decides whether to recognise known people and flag unknowns, or obscure every face before anything is stored. The system also distinguishes a visitor in front of a work from a work being removed, so it does not cry wolf. Installation is carried out by a licensed contractor.",
+          "Bespoke computer-vision security, proven first on a working artist's own collection. VaultScaler designs, specifies, and configures the system; the intelligence runs on hardware the customer owns, in their building — nothing it sees leaves the building, and nothing is attached to what it protects. It watches the whole space, including the people in it; the owner decides whether to recognise known people and flag unknowns, or obscure every face before anything is stored. The system also distinguishes someone pausing to look from something being taken, so it does not cry wolf. Installation is carried out by a licensed contractor.",
         provider: { "@type": "Organization", name: SITE.name },
         areaServed: "Worldwide",
       },

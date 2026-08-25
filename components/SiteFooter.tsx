@@ -15,7 +15,7 @@ export default function SiteFooter() {
               <span className="text-[15px] font-medium tracking-tight text-bone">VaultScaler</span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-dim">
-              Edge computer-vision security for art. On-premise, owned end to end,
+              Private, on-premise computer-vision security. On-premise, owned end to end,
               nothing leaving the building. Based in Las Vegas.
             </p>
           </div>

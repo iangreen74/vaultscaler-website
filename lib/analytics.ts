@@ -96,14 +96,6 @@ export function trackDownload(fileName: string): void {
   });
 }
 
-export function trackFormSubmit(formName: string, interestCategory?: string): void {
-  trackEvent({
-    action: "submit",
-    category: "form",
-    label: interestCategory ? `${formName} - ${interestCategory}` : formName,
-  });
-}
-
 // Scroll depth tracking - tracks when user scrolls past percentage thresholds
 const scrollMilestones = [20, 40, 60, 80, 100];
 const reachedMilestones = new Set<number>();
