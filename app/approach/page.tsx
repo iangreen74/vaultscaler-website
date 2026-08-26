@@ -9,12 +9,12 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Approach | VaultScaler",
   description:
-    "VaultScaler is an architecture practice, not a shipment. We survey the site, design for your building, specify the hardware, build and tune the software ourselves, and hand physical installation to a licensed contractor. Built by an artist who protects his own work.",
+    "VaultScaler is an architecture practice, not a shipment. We survey the site, design for your building, specify the hardware, build and tune the software ourselves, and hand physical installation to a licensed contractor. Proven on the founder's own deployment.",
   alternates: { canonical: `${SITE.url}/approach/` },
   openGraph: {
     title: "Approach | VaultScaler",
     description:
-      "An architecture practice, not a shipment. We survey, design, specify, build and tune. A licensed contractor installs. Built by an artist who protects his own work.",
+      "An architecture practice, not a shipment. We survey, design, specify, build and tune. A licensed contractor installs. Proven on the founder's own deployment.",
     url: `${SITE.url}/approach/`,
     type: "website",
     images: ["/og.jpg"],
@@ -50,7 +50,7 @@ const STEPS = [
   {
     n: "06",
     title: "Ongoing care, if you want it.",
-    body: "Retuning after a rehang or a layout change, health monitoring, capability upgrades — delivered in person, because there's no other way in. Always optional, never a condition of purchase.",
+    body: "Retuning after a layout change, health monitoring, capability upgrades — delivered in person, because there's no other way in. Always optional, never a condition of purchase.",
   },
 ];
 
@@ -121,13 +121,13 @@ export default function Approach() {
           <div className="max-w-prose">
             <p className="eyebrow">Where we are</p>
             <h2 className="mt-6 font-display text-2xl md:text-3xl text-bone">
-              Built by an artist who protects his own work.
+              Proven on the founder&apos;s own deployment.
             </h2>
             <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
-              We&apos;re based in Las Vegas, where the founder&apos;s own studio runs the
-              same system described on this page. It isn&apos;t open to the public, but
-              if you&apos;re a serious enquiry, don&apos;t take our word for any of this
-              — ask and we&apos;ll show you the real thing.
+              We&apos;re based in Las Vegas, where the founder&apos;s own building runs
+              the same system described on this page. It isn&apos;t open to the public,
+              but if you&apos;re a serious enquiry, don&apos;t take our word for any of
+              this — ask and we&apos;ll show you the real thing.
             </p>
             <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
               The architecture is the same everywhere: local, owned, nothing leaving the

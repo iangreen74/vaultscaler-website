@@ -1,5 +1,54 @@
 # Changelog
 
+## [4.1.0] - 2026-08-26
+
+New hero, and art removed as the site's frame — both per direct feedback on [4.0.0].
+
+### Changed
+- **New hero.** Killed the previous headline ("It watches everything in your building.
+  And nothing ever leaves it.") — its "it" was ambiguous between the building and the
+  system, and anything that requires parsing fails. The new headline is the line that
+  used to close the page: **"Have something worth keeping private?"** It asks instead of
+  declaring, self-selects the reader, and names no vertical, no technology, and no
+  reason — deliberately. Supporting line: "Tell us about your space, your material, or
+  whatever you need to keep confidential." Below that, a short practice paragraph drawn
+  from §1 of the positioning document. Eyebrow unchanged (Private AI consultancy). The
+  closing CTA, no longer able to reuse the old hero line, is now "It stays between us." —
+  quieter, certain, doesn't repeat the opening.
+- **Architecture-practice method surfaced on the homepage without a click.** A condensed
+  six-step strip (Survey · Design · Specify · Build & tune · Licensed install · Ongoing
+  care) sits between "Why now" and the service-line cards, linking to `/approach` for the
+  full version. Previously this only existed on the Approach page.
+
+### Removed
+- **Art removed as the site's frame, everywhere.** Deleted the "first deployment" section
+  as written — the paintings, the studio-as-gallery, "every art-security company claims
+  it was built by people who understand galleries," and the links to the gallery and the
+  founder as art proof. Replaced with a shorter "Proof of operation" section: the system
+  is real, running, in the founder's own building — no paintings, no studio, no
+  art-security framing.
+  - Generalized problem 03 in the "solved badly" section: "tags glued behind canvases,
+    laser curtains" → protective hardware that has to touch or constrain the thing it
+    protects, stated as a universal pattern, not an art-specific one.
+  - Generalized the "It knows the difference" and "Nothing touches the artwork" proof
+    cards away from paintings/hanging language.
+  - `/how-it-works`'s entire `SEES` array was art-specific ("Every work, individually,"
+    "the work on it," "a busy opening," "your collectors") — rewritten object-agnostic.
+  - `/approach`'s "Where we are" section dropped "Built by an artist who protects his own
+    work" / "the founder's own studio" for "Proven on the founder's own deployment" / "the
+    founder's own building."
+  - Trimmed art-specific SEO keywords (`art security`, `gallery security`,
+    `artwork removal detection`, etc.) from `lib/site.ts` and the Organization JSON-LD's
+    `knowsAbout` — these are the technical "frame" search engines and AI crawlers read.
+    Kept `private collection security` / `private residence security` (not art-specific;
+    §3's "collections and cultural property" tier explicitly covers cars, watches, wine).
+  - `llms.txt` rewritten to match throughout.
+  - **Kept, per explicit instruction**: galleries, museums, and private collectors remain
+    as *one example* inside the homepage/`llms.txt` "who it's for" section — the only
+    place art vocabulary still appears anywhere on the site.
+- Regenerated `og.jpg` — both the headline (now matches the new hero) and, previously,
+  the subline (already updated in 4.0.0 to "A private AI consultancy").
+
 ## [4.0.0] - 2026-08-26
 
 Structural rebuild from `business/strategy/VaultScaler_Positioning_and_Services.md` (v1,

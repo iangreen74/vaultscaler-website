@@ -14,7 +14,7 @@ export const SITE = {
   location: "Las Vegas",
   tagline: "VaultScaler designs private AI systems for people who cannot afford to send their data anywhere.",
   description:
-    "VaultScaler is a private AI consultancy. It designs, specifies, and builds artificial-intelligence systems that run entirely on the client's own hardware, in the client's own building, with nothing sent to any external company. Security is the first application — real-time computer vision, on-premise, with owner-controlled face recognition or obfuscation and natural-language query over recorded events — proven first on a working artist's own collection. The same practice also offers a written security assessment, vendor-independent AI advisory, and bespoke private-knowledge systems, all deliverable without an installed camera. Designed and configured by VaultScaler; physical installation is carried out by a licensed contractor.",
+    "VaultScaler is a private AI consultancy. It designs, specifies, and builds artificial-intelligence systems that run entirely on the client's own hardware, in the client's own building, with nothing sent to any external company. Security is the first application — real-time computer vision, on-premise, with owner-controlled face recognition or obfuscation and natural-language query over recorded events — proven on the founder's own deployment. The same practice also offers a written security assessment, vendor-independent AI advisory, and bespoke private-knowledge systems, all deliverable without an installed camera. Designed and configured by VaultScaler; physical installation is carried out by a licensed contractor.",
   keywords: [
     // Company / category
     "VaultScaler",
@@ -35,19 +35,13 @@ export const SITE = {
     "private knowledge management",
     "agentic discovery",
     "local retrieval augmented generation",
-    // Vertical / capability
-    "art security",
-    "gallery security",
-    "museum security",
-    "private collection security",
-    "private residence security",
-    "fine art security",
-    "artwork removal detection",
-    "artwork absence detection",
-    "false-alarm-free art protection",
-    "non-contact artwork protection",
+    // Capability
+    "false-alarm-free protection",
+    "non-contact protection",
     "owner-controlled face recognition",
     "face obscuring privacy mode",
+    "private residence security",
+    "private collection security",
   ],
 };
 
@@ -80,7 +74,7 @@ export const SERVICES: Service[] = [
     whatYouGet:
       "A surveyed, designed, installed, and tuned system, plus an owner viewing station.",
     engagement:
-      "A design and configuration fee. Installation is carried out by a licensed contractor. An ongoing tuning retainer is available — for a rehang, a layout change, or a capability upgrade — always optional, never a condition of purchase.",
+      "A design and configuration fee. Installation is carried out by a licensed contractor. An ongoing tuning retainer is available — for a layout change or a capability upgrade — always optional, never a condition of purchase.",
   },
   {
     slug: "security-assessment",
@@ -115,7 +109,7 @@ export const SERVICES: Service[] = [
     statusTone: "build",
     summary: "The same primitive as the security query system, pointed at your archive instead of your rooms.",
     whatItIs:
-      "Ask questions of your own material — case files, records, correspondence, collection documentation — and have a local system search, read, and reason across it, entirely within your walls.",
+      "Ask questions of your own material — case files, records, correspondence, archives — and have a local system search, read, and reason across it, entirely within your walls.",
     whatYouGet: "A scoped, bespoke system, built around what you actually hold.",
     engagement:
       "A project fee. Said plainly: VaultScaler has built and verified this pattern — local retrieval, local reasoning, cited answers, and a proven guarantee against fabricated responses — inside the security product. Pointing it at documents instead of rooms is a build, not a finished product. Early clients get a bespoke system, not an off-the-shelf one.",
