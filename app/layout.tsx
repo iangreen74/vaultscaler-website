@@ -24,7 +24,7 @@ const sans = Inter({
 
 const TITLE = "VaultScaler — a private AI consultancy";
 const DESC =
-  "VaultScaler designs private AI systems for people who cannot afford to send their data anywhere. It designs, specifies, and builds systems that run entirely on the client's own hardware, with nothing sent to any external company. Security is the first application — real-time computer vision, on-premise, proven on a working artist's own collection — and not the only one: a written security assessment and vendor-independent AI advisory are deliverable today, with no installation required.";
+  "VaultScaler designs private AI systems for people who cannot afford to send their data anywhere. It designs, specifies, and builds systems that run entirely on the client's own hardware, with nothing sent to any external company. Security is the first application — real-time computer vision, on-premise, proven on the founder's own deployment — and not the only one: a written security assessment and vendor-independent AI advisory are deliverable today, with no installation required.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -82,9 +82,6 @@ export default function RootLayout({
       "security assessment",
       "private knowledge management",
       "agentic discovery",
-      "art security",
-      "artwork removal detection",
-      "gallery and museum security",
       "private collection and residence security",
       "discreet security consultancy",
     ],

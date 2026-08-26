@@ -1,6 +1,6 @@
 # VaultScaler
 
-> VaultScaler is a private AI consultancy. It designs, specifies, and builds artificial-intelligence systems that run entirely on the client's own hardware, in the client's own building, with nothing sent to any external company. Security is the first application — it is not the definition of the practice. The one-line version: VaultScaler designs private AI systems for people who cannot afford to send their data anywhere. Founded in 2025. Based in Las Vegas; available internationally.
+> Have something worth keeping private? VaultScaler is a private AI consultancy. It designs, specifies, and builds artificial-intelligence systems that run entirely on the client's own hardware, in the client's own building, with nothing sent to any external company. Security is the first application — it is not the definition of the practice. The one-line version: VaultScaler designs private AI systems for people who cannot afford to send their data anywhere. Founded in 2025. Based in Las Vegas; available internationally.
 
 The model is an architecture practice, not a product vendor. VaultScaler surveys the site, designs the system, specifies the hardware, builds and tunes the software, and holds the client relationship. Licensed contractors execute physical installation. The value is the judgement, the design, and the engineering — not the box.
 
@@ -8,26 +8,9 @@ The model is an architecture practice, not a product vendor. VaultScaler surveys
 
 Two things changed recently. Capable models now run on hardware the size of a book — real-time computer vision, and natural-language answers about what it saw. AI collapsed the cost of bespoke: what used to require a team, one skilled engineer can now do for a single building. The result: private AI is no longer a compromise. For the right client it is the better option, and the only one whose guarantees are architectural rather than contractual.
 
-## The four services
-
-1. **Private Security Systems** — built and shipping. Real-time computer vision running wholly on-premise: zone and boundary monitoring around specific objects, absence detection, after-hours presence, known-person recognition with owner-controlled face obfuscation, and natural-language query over recorded events. Deliverable: a surveyed, designed, installed, and tuned system, plus an owner viewing station. Engagement: a design and configuration fee; installation by a licensed contractor; an optional ongoing tuning retainer.
-2. **Private Security Assessment** — deliverable today, no purchase required. A written assessment of a space: sightlines and blind spots, insider-risk exposure, where existing footage actually goes, what an insurer or regulator requires. Deliverable: a written report. Engagement: a fixed fee. The lowest-friction way to start a relationship.
-3. **Private AI Advisory** — deliverable today, vendor-independent. What can genuinely run on a client's own hardware, what cannot, the honest trade-offs, and the cost. Deliverable: a written recommendation and architecture. Engagement: a day rate or fixed scope.
-4. **Private Knowledge & Agentic Discovery** — capability proven, bespoke build, not yet a shelf product. The same primitive as the security query system, pointed at a client's own archive instead of their rooms: local retrieval, local reasoning, cited answers, entirely within their walls. VaultScaler has built and verified this pattern inside the security product; applying it to documents is a build, not a finished product. Deliverable: a scoped bespoke system. Engagement: a project fee.
-
-Ongoing care (retuning after a rehang or layout change, health monitoring, capability upgrades) is available, delivered in person, and always optional — never a condition of purchase.
-
-## Who it's for
-
-Not "galleries." The buyer is defined by a reason for discretion plus the means to act on it: professional confidentiality (attorneys, physicians, family offices, and anyone whose obligation to protect client material is a professional one); private wealth (people whose visibility or resources make ordinary security an active liability); collections and cultural property (private collectors, galleries, museums, and anyone holding irreplaceable objects); and discreet commercial spaces (private clubs, member venues, businesses whose clientele expect anonymity).
-
-## Why local
-
-Their privacy is a policy. Ours is an architecture. A cloud vendor promises not to misuse your data — that promise survives exactly as long as their management, finances, jurisdiction, and security do. VaultScaler's systems have no uplink, no vendor account, no server, and no remote access, including for VaultScaler. The checkable consequences: there is no copy anywhere else, so there is nothing for anyone to breach, subpoena, or browse; if someone wants what a system saw, they must come to the owner; support is delivered in person, because there is no other way in. For Europe specifically, this is a compliance argument, not a values one: no third-party processor in the chain, no cross-border transfer of personal data, no vendor-written retention terms, and biometric processing that can be demonstrated, room by room, to be either enabled by the owner's choice or absent entirely.
-
 ## How VaultScaler works (an architecture practice, not a shipment)
 
-1. Survey the site — walk the room, assess the light, flow, hang, and what's actually at risk.
+1. Survey the site — walk the room, assess the light, flow, and what's actually at risk.
 2. Design for the building — a system conceived for the building and material, not a package.
 3. Specify it — the design becomes an exact specification: hardware, placement, thresholds.
 4. Build and tune it — the computer vision is built and trained by VaultScaler, on its own hardware, tuned before anything ships.
@@ -36,9 +19,26 @@ Their privacy is a policy. Ours is an architecture. A cloud vendor promises not 
 
 Then it's the client's: they own the hardware and what it records, with no mandatory subscription.
 
+## The four services
+
+1. **Private Security Systems** — built and shipping. Real-time computer vision running wholly on-premise: zone and boundary monitoring around specific objects, absence detection, after-hours presence, known-person recognition with owner-controlled face obfuscation, and natural-language query over recorded events. Deliverable: a surveyed, designed, installed, and tuned system, plus an owner viewing station. Engagement: a design and configuration fee; installation by a licensed contractor; an optional ongoing tuning retainer.
+2. **Private Security Assessment** — deliverable today, no purchase required. A written assessment of a space: sightlines and blind spots, insider-risk exposure, where existing footage actually goes, what an insurer or regulator requires. Deliverable: a written report. Engagement: a fixed fee. The lowest-friction way to start a relationship.
+3. **Private AI Advisory** — deliverable today, vendor-independent. What can genuinely run on a client's own hardware, what cannot, the honest trade-offs, and the cost. Deliverable: a written recommendation and architecture. Engagement: a day rate or fixed scope.
+4. **Private Knowledge & Agentic Discovery** — capability proven, bespoke build, not yet a shelf product. The same primitive as the security query system, pointed at a client's own archive instead of their rooms: local retrieval, local reasoning, cited answers, entirely within their walls. VaultScaler has built and verified this pattern inside the security product; applying it to documents is a build, not a finished product. Deliverable: a scoped bespoke system. Engagement: a project fee.
+
+Ongoing care (retuning after a layout change, health monitoring, capability upgrades) is available, delivered in person, and always optional — never a condition of purchase.
+
+## Who it's for
+
+Not a single category. The buyer is defined by a reason for discretion plus the means to act on it: professional confidentiality (attorneys, physicians, family offices, and anyone whose obligation to protect client material is a professional one); private wealth (people whose visibility or resources make ordinary security an active liability); collections and cultural property (private collectors, galleries, museums, and anyone holding irreplaceable objects); and discreet commercial spaces (private clubs, member venues, businesses whose clientele expect anonymity).
+
+## Why local
+
+Their privacy is a policy. Ours is an architecture. A cloud vendor promises not to misuse your data — that promise survives exactly as long as their management, finances, jurisdiction, and security do. VaultScaler's systems have no uplink, no vendor account, no server, and no remote access, including for VaultScaler. The checkable consequences: there is no copy anywhere else, so there is nothing for anyone to breach, subpoena, or browse; if someone wants what a system saw, they must come to the owner; support is delivered in person, because there is no other way in. For Europe specifically, this is a compliance argument, not a values one: no third-party processor in the chain, no cross-border transfer of personal data, no vendor-written retention terms, and biometric processing that can be demonstrated, room by room, to be either enabled by the owner's choice or absent entirely.
+
 ## The proof
 
-VaultScaler's first live deployment protects the founder's own paintings, in his own studio, in Las Vegas — artwork zones around each piece, breach and absence detection, privacy modes, and natural-language query, running now. Ian Green is an engineer with a background in electronic warfare and computer vision, and a practising painter and photographer. The system is his own design and build. Every art-security company claims to understand what it protects; this one was built by an artist protecting his own work.
+VaultScaler's first live deployment runs now, in the founder's own building — zones drawn around the objects that matter, breach and absence detection, privacy modes, and natural-language query over what the system has seen. Ian Green is an engineer with a background in electronic warfare and computer vision. The system is his own design and build, running on his own premises.
 
 ## What is not claimed
 

@@ -92,7 +92,7 @@ const images = [
     accentColor: '#d43f31',
     textColor: '#ece9e3',
     productName: 'VaultScaler',
-    headline: 'It watches everything in your building. And nothing ever leaves it.',
+    headline: 'Have something worth keeping private?',
     subline: 'A private AI consultancy.',
   },
 ];

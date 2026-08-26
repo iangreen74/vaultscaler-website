@@ -7,12 +7,12 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "How it works | VaultScaler",
   description:
-    "What a VaultScaler system sees: each work individually, removal within seconds, contact with a piece, the people in the room, and a timestamped record — all on hardware you own, nothing leaving the building.",
+    "What a VaultScaler system sees: each object individually, removal within seconds, contact with a boundary, the people in the room, and a timestamped record — all on hardware you own, nothing leaving the building.",
   alternates: { canonical: `${SITE.url}/how-it-works/` },
   openGraph: {
     title: "How it works | VaultScaler",
     description:
-      "Each work individually. Removal. Contact. People. A record you can actually use. Open hours and closed hours. On-premise, nothing leaving the building.",
+      "Each object individually. Removal. Contact. People. A record you can actually use. Open hours and closed hours. On-premise, nothing leaving the building.",
     url: `${SITE.url}/how-it-works/`,
     type: "website",
     images: ["/og.jpg"],
@@ -21,20 +21,20 @@ export const metadata: Metadata = {
 
 const SEES = [
   {
-    title: "Every work, individually.",
-    body: "Draw a boundary around each piece. The system learns what that wall looks like with the work on it.",
+    title: "Every object, individually.",
+    body: "Draw a boundary around whatever matters. The system learns what that space looks like with it in place.",
   },
   {
     title: "Removal.",
-    body: "If a work leaves its place, you know within seconds.",
+    body: "If something leaves its place, you know within seconds.",
   },
   {
     title: "Contact.",
-    body: "If someone reaches into a piece, you know immediately.",
+    body: "If someone reaches into a zone you've marked off-limits, you know immediately.",
   },
   {
     title: "People.",
-    body: "Recognise your staff, your regulars, your collectors — and flag the people you don't know. Or run it fully anonymous, with every face obscured before it's ever stored. Your building, your rules, your call.",
+    body: "Recognise your staff and your regulars — and flag the people you don't know. Or run it fully anonymous, with every face obscured before it's ever stored. Your building, your rules, your call.",
   },
   {
     title: "A record you can actually use.",
@@ -42,7 +42,7 @@ const SEES = [
   },
   {
     title: "Open hours and closed hours.",
-    body: "The system knows the difference between a busy opening and an empty room at 3am, and behaves accordingly.",
+    body: "The system knows the difference between a busy afternoon and an empty room at 3am, and behaves accordingly.",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function HowItWorks() {
     name: "How it works — VaultScaler",
     url: `${SITE.url}/how-it-works/`,
     description:
-      "What a VaultScaler system sees: each work individually, removal within seconds, contact, people, and a timestamped record — on-premise, nothing leaving the building.",
+      "What a VaultScaler system sees: each object individually, removal within seconds, contact, people, and a timestamped record — on-premise, nothing leaving the building.",
   };
 
   return (
