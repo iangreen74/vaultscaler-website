@@ -15,14 +15,16 @@ export default function SiteFooter() {
               <span className="text-[15px] font-medium tracking-tight text-bone">VaultScaler</span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-dim">
-              Private, on-premise computer-vision security. On-premise, owned end to end,
-              nothing leaving the building. Based in Las Vegas.
+              A private AI consultancy. On-premise, owned end to end, nothing leaving the
+              building. Based in Las Vegas.
             </p>
           </div>
 
           <nav className="flex flex-wrap gap-x-8 gap-y-3 text-sm" aria-label="Footer">
+            <Link href="/services/" className="text-muted hover:text-bone transition-colors">Services</Link>
             <Link href="/how-it-works/" className="text-muted hover:text-bone transition-colors">How it works</Link>
             <Link href="/approach/" className="text-muted hover:text-bone transition-colors">Approach</Link>
+            <Link href="/why-local/" className="text-muted hover:text-bone transition-colors">Why local</Link>
             <Link href="/contact/" className="text-muted hover:text-bone transition-colors">Contact</Link>
             <Link href="/privacy/" className="text-muted hover:text-bone transition-colors">Privacy</Link>
           </nav>

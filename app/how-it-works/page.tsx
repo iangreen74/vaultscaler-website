@@ -101,12 +101,19 @@ export default function HowItWorks() {
               breach, or browse. You own the hardware, and you own the footage.
             </p>
           </div>
-          <div className="mt-12">
+          <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3">
             <Link
               href="/approach/"
               className="inline-flex items-center gap-2 text-sm text-muted hover:text-bone transition-colors"
             >
               How we work with you
+              <span aria-hidden>→</span>
+            </Link>
+            <Link
+              href="/services/#security-systems"
+              className="inline-flex items-center gap-2 text-sm text-muted hover:text-bone transition-colors"
+            >
+              This is our Private Security Systems service
               <span aria-hidden>→</span>
             </Link>
           </div>

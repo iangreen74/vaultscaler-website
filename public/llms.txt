@@ -1,46 +1,48 @@
 # VaultScaler
 
-> VaultScaler is private, on-premise computer-vision security — proven first on a working artist's own collection, and built for private collectors, galleries, museums, and other discreet, privacy-sensitive spaces. It designs, specifies, and configures the system. The system watches the whole space — including the people in it — and the owner decides what it remembers: recognise known people and flag unknowns, or obscure every face before anything is ever stored. The intelligence runs on hardware the customer owns, in their building; nothing it sees ever leaves the building, and nothing is ever attached to what it protects. Bespoke and consulting-led — designed and configured by VaultScaler, installed by a licensed contractor. Based in Las Vegas. Founded in 2025.
+> VaultScaler is a private AI consultancy. It designs, specifies, and builds artificial-intelligence systems that run entirely on the client's own hardware, in the client's own building, with nothing sent to any external company. Security is the first application — it is not the definition of the practice. The one-line version: VaultScaler designs private AI systems for people who cannot afford to send their data anywhere. Founded in 2025. Based in Las Vegas; available internationally.
 
-VaultScaler's approach has three parts. At the edge: the system runs on a box in the customer's building — no cloud, no account, nothing phoned home. There is no server for anyone to subpoena, breach, or browse, because there isn't a server. Honest by design: the system knows the difference between someone pausing to look and something actually being taken — so it does not cry wolf, and the alarms mean something. Owned end to end: VaultScaler builds and trains its own computer vision on its own hardware; the intelligence is theirs, not rented from a platform that can change its terms or cut them off.
+The model is an architecture practice, not a product vendor. VaultScaler surveys the site, designs the system, specifies the hardware, builds and tunes the software, and holds the client relationship. Licensed contractors execute physical installation. The value is the judgement, the design, and the engineering — not the box.
 
-## The three problems VaultScaler exists to fix
+## Why now
 
-1. Cloud camera systems put a space's footage, the people who trust it, and what happens inside its walls on infrastructure the owner does not control — viewable by strangers and reachable by anyone who breaches it. For anyone whose business depends on discretion, that is the risk, not a feature.
-2. Conventional motion and object sensors cannot tell someone pausing to look from something actually being taken. The false alarms are constant, so most systems get quietly disconnected. A system nobody trusts is a system nobody uses.
-3. Sometimes the hardware touches the thing itself. In a gallery, that's tags behind canvases, laser curtains, contacts and vibration sensors on the frame — it works, but it touches the piece, constrains how it's shown, and announces itself to every visitor. The same problem shows up anywhere something valuable can't be wired without the wiring diminishing it.
+Two things changed recently. Capable models now run on hardware the size of a book — real-time computer vision, and natural-language answers about what it saw. AI collapsed the cost of bespoke: what used to require a team, one skilled engineer can now do for a single building. The result: private AI is no longer a compromise. For the right client it is the better option, and the only one whose guarantees are architectural rather than contractual.
 
-## What the system does
+## The four services
 
-- Nothing leaves the building: intelligence runs on owned hardware on-premise; no cloud, no account, nothing phoned home — as an architecture, not a policy.
-- It knows the difference: it understands a person in front of a work versus a work that is gone. Admiring the work does not trigger an alarm; removing it does. This distinction is the hardest problem in the field and the one built for first.
-- Nothing touches the artwork: the camera watches; the work hangs unwired, untagged, unconstrained. Rehang the room whenever you like and the system is re-taught in minutes.
-- Fewer guards, better cover: it watches every piece at once, without breaks; it does not replace staff but means fewer are needed, and they know exactly where to go.
+1. **Private Security Systems** — built and shipping. Real-time computer vision running wholly on-premise: zone and boundary monitoring around specific objects, absence detection, after-hours presence, known-person recognition with owner-controlled face obfuscation, and natural-language query over recorded events. Deliverable: a surveyed, designed, installed, and tuned system, plus an owner viewing station. Engagement: a design and configuration fee; installation by a licensed contractor; an optional ongoing tuning retainer.
+2. **Private Security Assessment** — deliverable today, no purchase required. A written assessment of a space: sightlines and blind spots, insider-risk exposure, where existing footage actually goes, what an insurer or regulator requires. Deliverable: a written report. Engagement: a fixed fee. The lowest-friction way to start a relationship.
+3. **Private AI Advisory** — deliverable today, vendor-independent. What can genuinely run on a client's own hardware, what cannot, the honest trade-offs, and the cost. Deliverable: a written recommendation and architecture. Engagement: a day rate or fixed scope.
+4. **Private Knowledge & Agentic Discovery** — capability proven, bespoke build, not yet a shelf product. The same primitive as the security query system, pointed at a client's own archive instead of their rooms: local retrieval, local reasoning, cited answers, entirely within their walls. VaultScaler has built and verified this pattern inside the security product; applying it to documents is a build, not a finished product. Deliverable: a scoped bespoke system. Engagement: a project fee.
 
-## What it sees
-
-- Every work, individually — draw a boundary around each piece; the system learns what that wall looks like with the work on it.
-- Removal — if a work leaves its place, you know within seconds.
-- Contact — if someone reaches into a piece, you know immediately.
-- People — recognise staff, regulars, and collectors and flag unknown people; or run fully anonymous with every face obscured before it is ever stored. The owner's building, rules, and call.
-- A record you can use — every event, timestamped, with an image: who was where, when, and what they touched.
-- Open hours and closed hours — the system knows a busy opening from an empty room at 3am and behaves accordingly.
-
-## How VaultScaler works (a consultancy, not a shipment)
-
-1. Come and look — walk the room; assess the light, flow, hang, and what is actually at risk.
-2. Design for the room — a system specified for the building and collection, not a package.
-3. Build it — the computer vision is built and trained by VaultScaler on its own hardware.
-4. A licensed contractor installs it — VaultScaler specifies exactly what goes in and where; installation and physical work is carried out by a licensed contractor, then VaultScaler tunes it in person until the false alarms are gone and the system reports only what matters.
-5. It's yours — the customer owns the hardware and the footage; no mandatory subscription; it keeps working with no further contact.
+Ongoing care (retuning after a rehang or layout change, health monitoring, capability upgrades) is available, delivered in person, and always optional — never a condition of purchase.
 
 ## Who it's for
 
-Commercial galleries, private collections, private residences with something worth protecting, artist-run and independent spaces, small museums and institutions — anyone whose business depends on discretion.
+Not "galleries." The buyer is defined by a reason for discretion plus the means to act on it: professional confidentiality (attorneys, physicians, family offices, and anyone whose obligation to protect client material is a professional one); private wealth (people whose visibility or resources make ordinary security an active liability); collections and cultural property (private collectors, galleries, museums, and anyone holding irreplaceable objects); and discreet commercial spaces (private clubs, member venues, businesses whose clientele expect anonymity).
 
-## Where VaultScaler is
+## Why local
 
-Based in Las Vegas, where the founder's own studio runs the same system described here — VaultScaler's first live deployment, protecting the founder's own paintings. The architecture is the same everywhere (local, owned, nothing leaving the building), configured to the law of each jurisdiction — the highest security available within the customer's legal framework.
+Their privacy is a policy. Ours is an architecture. A cloud vendor promises not to misuse your data — that promise survives exactly as long as their management, finances, jurisdiction, and security do. VaultScaler's systems have no uplink, no vendor account, no server, and no remote access, including for VaultScaler. The checkable consequences: there is no copy anywhere else, so there is nothing for anyone to breach, subpoena, or browse; if someone wants what a system saw, they must come to the owner; support is delivered in person, because there is no other way in. For Europe specifically, this is a compliance argument, not a values one: no third-party processor in the chain, no cross-border transfer of personal data, no vendor-written retention terms, and biometric processing that can be demonstrated, room by room, to be either enabled by the owner's choice or absent entirely.
+
+## How VaultScaler works (an architecture practice, not a shipment)
+
+1. Survey the site — walk the room, assess the light, flow, hang, and what's actually at risk.
+2. Design for the building — a system conceived for the building and material, not a package.
+3. Specify it — the design becomes an exact specification: hardware, placement, thresholds.
+4. Build and tune it — the computer vision is built and trained by VaultScaler, on its own hardware, tuned before anything ships.
+5. A licensed contractor installs it — VaultScaler specifies exactly what goes in and where; a licensed contractor carries out the physical work.
+6. Ongoing care, if wanted — retuning, health monitoring, capability upgrades, delivered in person, always optional.
+
+Then it's the client's: they own the hardware and what it records, with no mandatory subscription.
+
+## The proof
+
+VaultScaler's first live deployment protects the founder's own paintings, in his own studio, in Las Vegas — artwork zones around each piece, breach and absence detection, privacy modes, and natural-language query, running now. Ian Green is an engineer with a background in electronic warfare and computer vision, and a practising painter and photographer. The system is his own design and build. Every art-security company claims to understand what it protects; this one was built by an artist protecting his own work.
+
+## What is not claimed
+
+No client installations yet beyond the founder's own — these are first design partners, not "clients" in the plural. No international deployments yet, though the system is available internationally. No monitoring service, no alarm dispatch, no law-enforcement integration. Agentic discovery over documents is a capability and a build, not a finished product. VaultScaler does not physically install; licensed contractors do.
 
 ## Contact
 
