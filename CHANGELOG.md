@@ -1,5 +1,77 @@
 # Changelog
 
+## [4.0.0] - 2026-08-26
+
+Structural rebuild from `business/strategy/VaultScaler_Positioning_and_Services.md` (v1,
+the new single source of truth for site/sales copy). Previous passes widened the
+language but left the site's structure as a single-product security company; this pass
+changes the structure. Two pages added, one substantially revised, homepage restructured
+around the practice rather than one product.
+
+### Added
+- **`/services`** — the four ways to engage VaultScaler, one section each: Private
+  Security Systems (built and shipping), Private Security Assessment (written report,
+  fixed fee, no purchase required), Private AI Advisory (vendor-independent, day rate or
+  fixed scope), and Private Knowledge & Agentic Discovery (capability proven inside the
+  security product; applying it to documents is stated plainly as a bespoke build, not a
+  shelf product). Status labels are load-bearing, not decorative — only the first line
+  reads as shipping.
+- **`/why-local`** — the architecture-vs-policy argument ("their privacy is a policy,
+  ours is an architecture"): the checkable consequences (nothing to breach or subpoena,
+  the owner is the only path back to their own data, support delivered in person because
+  there's no other way in), and a GDPR passage written as a compliance argument, not a
+  values one.
+- **Data model**: `lib/site.ts` now exports a typed `SERVICES` array (name, status,
+  status tone, summary, deliverable, engagement) consumed by both the homepage service
+  cards and the Services page, so the two can't drift out of sync.
+
+### Changed
+- **Homepage restructured around the practice, not the product.** Headline kept exactly
+  verbatim ("It watches everything in your building. And nothing ever leaves it.") — it
+  already worked for every service line. Everything under it reframed: what VaultScaler
+  is (a private AI consultancy; security is the first application, not the definition),
+  why now (capable models on small hardware + AI collapsing the cost of bespoke), the
+  four service lines surfaced as cards linking into `/services/#slug` (not buried on a
+  sub-page), a "who it's for" section written as recognition (professional
+  confidentiality, private wealth, collections, discreet commercial spaces) rather than a
+  target list, and a "why local" pull-quote teasing the new page. The existing
+  three-problems/proof-of-concept sections are kept, now positioned as support for the
+  security line specifically rather than the whole pitch.
+- **`/approach` rewritten as the architecture-practice method**: survey → design →
+  specify → build and tune → licensed contractor installs → ongoing care if wanted. Six
+  explicit steps instead of five, adding "specify" as its own step (the judgement being
+  sold, not the box) and "ongoing care" in place of a vague closing step. Removed the
+  page's own "who it's for" list now that the homepage carries a fuller version — kept
+  the studio/jurisdiction section, added "available internationally" (permitted by §7)
+  and a cross-link to `/why-local`.
+- **Organization JSON-LD** (`layout.tsx`) replaced a single `makesOffer` with a full
+  `hasOfferCatalog` listing all four service lines, each with its own availability
+  (`PreOrder` for the one bespoke-build line, `InStock` for the rest) — this and `llms.txt`
+  are what search engines and AI crawlers actually read.
+- **`llms.txt` rewritten in full**: the practice, the thesis, all four services, who it's
+  for, the local/GDPR argument, the six-step method, the proof, and an explicit "what is
+  not claimed" section mirroring §7 of the positioning document.
+- Nav (`Navigation.tsx`, `SiteFooter.tsx`) gained **Services** and **Why local**.
+  `how-it-works` cross-links to the Services entry it supports. `contact` and `privacy`
+  copy widened past "your space and what's on the walls" to also cover advisory/discovery
+  material, with a new privacy passage stating that engagement material is reviewed on
+  hardware VaultScaler controls, never uploaded to a third-party AI service.
+- Regenerated `og.jpg`'s subline to "A private AI consultancy" to match the new eyebrow.
+
+### Not claimed (verified against §7 and `STATUS.md`)
+- No existing client installations beyond the founder's own studio — copy says "first
+  design partners," never "our clients" in the plural.
+- No claim of already operating internationally — "available internationally," matching
+  §7's exact permitted phrasing, not "working internationally."
+- No monitoring service, alarm dispatch, or law-enforcement integration mentioned
+  anywhere, because none exists.
+- Private Knowledge & Agentic Discovery is described as a proven pattern applied to a new
+  domain via bespoke builds — never as a finished, off-the-shelf product.
+- Every capability claim under Private Security Systems (zone/absence detection,
+  owner-controlled face recognition or obfuscation, natural-language query over events) is
+  checked against `business/product/STATUS.md` and `API_AUTH.md` — all verified shipped
+  and deployed, not roadmap.
+
 ## [3.3.0] - 2026-08-24
 
 ### Removed

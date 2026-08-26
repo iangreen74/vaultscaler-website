@@ -31,6 +31,16 @@ export default function PrivacyPage() {
           </div>
 
           <div>
+            <h2 className="font-display text-xl text-bone mb-3">Advisory and discovery engagements</h2>
+            <p className="text-muted leading-relaxed">
+              Material shared with us for an assessment, an advisory engagement, or a
+              bespoke build is handled the same way: reviewed on hardware we control, never
+              uploaded to a third-party AI service, and returned or deleted once the
+              engagement ends.
+            </p>
+          </div>
+
+          <div>
             <h2 className="font-display text-xl text-bone mb-3">This website</h2>
             <p className="text-muted leading-relaxed">
               When you contact us, we collect only what you submit: your name, email, the kind of

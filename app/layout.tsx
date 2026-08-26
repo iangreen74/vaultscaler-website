@@ -6,7 +6,7 @@ import Navigation from "@/components/Navigation";
 import SiteFooter from "@/components/SiteFooter";
 import JsonLd from "@/components/JsonLd";
 import AnalyticsProvider from "@/components/AnalyticsProvider";
-import { SITE } from "@/lib/site";
+import { SITE, SERVICES } from "@/lib/site";
 
 const display = Fraunces({
   subsets: ["latin"],
@@ -22,9 +22,9 @@ const sans = Inter({
   display: "swap",
 });
 
-const TITLE = "VaultScaler — private, on-premise computer-vision security";
+const TITLE = "VaultScaler — a private AI consultancy";
 const DESC =
-  "VaultScaler builds private, on-premise computer-vision security — proven first on a working artist's own collection, and built for private collectors, galleries, museums, and other discreet, privacy-sensitive spaces. It watches the whole space, and the owner decides what it remembers — recognise known people and flag unknowns, or obscure every face before anything is stored. Nothing it sees ever leaves the building, and nothing is ever attached to what it protects.";
+  "VaultScaler designs private AI systems for people who cannot afford to send their data anywhere. It designs, specifies, and builds systems that run entirely on the client's own hardware, with nothing sent to any external company. Security is the first application — real-time computer vision, on-premise, proven on a working artist's own collection — and not the only one: a written security assessment and vendor-independent AI advisory are deliverable today, with no installation required.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -74,25 +74,35 @@ export default function RootLayout({
     foundingDate: "2025",
     areaServed: "Worldwide",
     knowsAbout: [
+      "private AI consultancy",
+      "on-premise AI",
       "edge computer vision",
       "on-premise security",
+      "AI advisory",
+      "security assessment",
+      "private knowledge management",
+      "agentic discovery",
       "art security",
       "artwork removal detection",
       "gallery and museum security",
       "private collection and residence security",
       "discreet security consultancy",
     ],
-    makesOffer: {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Private, on-premise computer-vision security",
-        serviceType: "On-premise security design for private collectors, galleries, museums, and other discreet, privacy-sensitive spaces",
-        description:
-          "Bespoke computer-vision security, proven first on a working artist's own collection. VaultScaler designs, specifies, and configures the system; the intelligence runs on hardware the customer owns, in their building — nothing it sees leaves the building, and nothing is attached to what it protects. It watches the whole space, including the people in it; the owner decides whether to recognise known people and flag unknowns, or obscure every face before anything is stored. The system also distinguishes someone pausing to look from something being taken, so it does not cry wolf. Installation is carried out by a licensed contractor.",
-        provider: { "@type": "Organization", name: SITE.name },
-        areaServed: "Worldwide",
-      },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "VaultScaler service lines",
+      itemListElement: SERVICES.map((s, i) => ({
+        "@type": "Offer",
+        position: i + 1,
+        availability: s.statusTone === "build" ? "https://schema.org/PreOrder" : "https://schema.org/InStock",
+        itemOffered: {
+          "@type": "Service",
+          name: s.name,
+          description: `${s.whatItIs} ${s.whatYouGet}`,
+          provider: { "@type": "Organization", name: SITE.name },
+          areaServed: "Worldwide",
+        },
+      })),
     },
   };
 

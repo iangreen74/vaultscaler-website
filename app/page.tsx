@@ -1,13 +1,14 @@
-// Route: / — VaultScaler homepage. Edge computer-vision security for art.
+// Route: / — VaultScaler homepage. A private AI consultancy; security is the first
+// application, not the definition.
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
-import { SITE } from "@/lib/site";
+import { SITE, SERVICES } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "VaultScaler — private, on-premise computer-vision security",
+  title: "VaultScaler — a private AI consultancy",
   description:
-    "Private, on-premise computer-vision security — proven first on a working artist's own collection, built for private collections, galleries, museums, and other discreet spaces. It watches the whole space and you decide what it remembers — recognise your people or obscure every face. Nothing it sees ever leaves your building. Nothing is attached to what it protects.",
+    "VaultScaler designs private AI systems for people who cannot afford to send their data anywhere. Security is the first application — real-time computer vision, on-premise — and not the only one: a written security assessment and vendor-independent AI advisory are deliverable today, no installation required.",
   alternates: { canonical: SITE.url },
 };
 
@@ -29,11 +30,30 @@ const PROBLEMS = [
   },
 ];
 
+const WHO_ITS_FOR = [
+  {
+    title: "Professional confidentiality.",
+    body: "Attorneys, physicians, family offices, and anyone whose obligation to protect client material is a professional one, not just a preference. You don't need to be persuaded that privacy matters — you need to see that it's achievable.",
+  },
+  {
+    title: "Private wealth.",
+    body: "People whose visibility, resources, or public profile make ordinary security an active liability rather than an inconvenience.",
+  },
+  {
+    title: "Collections and cultural property.",
+    body: "Private collectors, galleries, museums, and anyone holding objects with loan obligations or value that can't be replaced.",
+  },
+  {
+    title: "Discreet commercial spaces.",
+    body: "Private clubs, member venues, and businesses whose clientele expect anonymity as a matter of course.",
+  },
+];
+
 export default function Home() {
   const pageLD = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "VaultScaler — private, on-premise computer-vision security",
+    name: "VaultScaler — a private AI consultancy",
     url: `${SITE.url}/`,
     description: SITE.description,
     isPartOf: { "@type": "WebSite", name: "VaultScaler", url: SITE.url },
@@ -47,20 +67,17 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div aria-hidden className="spotlight absolute inset-0" />
         <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pt-24 pb-24 md:pt-36 md:pb-32">
-          <p className="eyebrow">Private, on-premise AI security</p>
+          <p className="eyebrow">Private AI consultancy</p>
           <h1 className="mt-7 font-display font-light text-[2.75rem] leading-[1.05] sm:text-6xl md:text-7xl text-bone max-w-4xl tracking-tight">
             It watches everything in your building.
             <br />
             And nothing ever leaves it.
           </h1>
           <p className="mt-8 text-lg md:text-xl leading-relaxed text-muted max-w-2xl">
-            VaultScaler was built first to protect a working artist&apos;s own collection —
-            now it protects private collections, galleries, museums, and any space where
-            discretion is the whole point. It watches the whole space — and you decide
-            what it remembers. Recognise your people and flag the ones you don&apos;t, or
-            obscure every face before anything is stored. Either way, nothing it sees ever
-            leaves your building. There&apos;s no cloud, and no server for anyone to breach
-            — because there isn&apos;t one.
+            VaultScaler designs private AI systems for people who cannot afford to send
+            their data anywhere. Security is the first thing we built — real-time
+            computer vision that runs entirely on hardware you own, in your building, with
+            nothing sent to any outside company. It is not the only thing we do.
           </p>
           <div className="mt-11 flex flex-wrap items-center gap-5">
             <Link
@@ -70,18 +87,86 @@ export default function Home() {
               Talk to us
             </Link>
             <Link
-              href="/how-it-works/"
+              href="/services/"
               className="inline-flex items-center gap-2 text-sm text-muted hover:text-bone transition-colors"
             >
-              How it works
+              What we do
               <span aria-hidden>→</span>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* The three problems */}
+      {/* Why now */}
+      <section className="border-t border-line bg-ink-900">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
+          <p className="eyebrow">Why now</p>
+          <div className="mt-7 grid md:grid-cols-2 gap-x-16 gap-y-10 items-start">
+            <h2 className="font-display font-light text-3xl md:text-5xl leading-[1.08] text-bone max-w-xl">
+              Private AI stopped being a compromise.
+            </h2>
+            <div className="max-w-prose">
+              <p className="text-base md:text-lg leading-relaxed text-muted">
+                Two things changed. Capable models now run on hardware the size of a
+                book — real-time computer vision, natural-language answers about what it
+                saw, no data center required. And AI collapsed the cost of building
+                something bespoke: what used to take a team, one engineer can now do for
+                a single building.
+              </p>
+              <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
+                For the right client, a private system is no longer the weaker option.
+                It's the better one — the only one whose guarantees are architectural,
+                not contractual.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service lines */}
       <section className="border-t border-line">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
+          <p className="eyebrow">What we do</p>
+          <h2 className="mt-6 font-display text-2xl md:text-3xl text-bone max-w-2xl">
+            Four ways to engage us — most of them need no installed system at all.
+          </h2>
+          <div className="mt-14 grid md:grid-cols-2 gap-x-10 gap-y-10">
+            {SERVICES.map((s) => (
+              <Link
+                key={s.slug}
+                href={`/services/#${s.slug}`}
+                className="group block border border-line rounded-2xl p-7 md:p-8 bg-ink-900 hover:border-bone/40 transition-colors"
+              >
+                <div className="flex items-baseline justify-between gap-4">
+                  <span className="font-display text-2xl text-dim">{s.n}</span>
+                  <span
+                    className={
+                      "text-xs uppercase tracking-wide " +
+                      (s.statusTone === "shipping"
+                        ? "text-bone/70"
+                        : s.statusTone === "available"
+                          ? "text-muted"
+                          : "text-dim")
+                    }
+                  >
+                    {s.statusTone === "build" ? "Bespoke build" : s.statusTone === "shipping" ? "Shipping" : "Available now"}
+                  </span>
+                </div>
+                <h3 className="mt-4 font-display text-xl md:text-2xl text-bone group-hover:text-bone">
+                  {s.name}
+                </h3>
+                <p className="mt-3 text-base leading-relaxed text-muted">{s.summary}</p>
+                <span className="mt-5 inline-flex items-center gap-2 text-sm text-muted group-hover:text-bone transition-colors">
+                  Read more <span aria-hidden>→</span>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* The three problems (behind the security line) */}
+      <section className="border-t border-line bg-ink-900">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
           <h2 className="font-display text-2xl md:text-3xl text-bone max-w-2xl">
             Discreet security has been solved badly, in three specific ways.
@@ -104,7 +189,7 @@ export default function Home() {
       </section>
 
       {/* What we do about it */}
-      <section className="border-t border-line bg-ink-900">
+      <section className="border-t border-line">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
           <p className="eyebrow">What we do about it</p>
           <div className="mt-14 grid md:grid-cols-2 gap-x-16 gap-y-14">
@@ -147,7 +232,7 @@ export default function Home() {
       </section>
 
       {/* Proof of concept — the founder's own studio */}
-      <section className="border-t border-line">
+      <section className="border-t border-line bg-ink-900">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
           <p className="eyebrow">The first deployment</p>
           <div className="mt-7 grid md:grid-cols-2 gap-x-16 gap-y-10 items-start">
@@ -165,9 +250,10 @@ export default function Home() {
                   Ian Green&apos;s
                 </a>{" "}
                 own paintings, in his own studio. Artwork zones drawn around each piece,
-                breach and absence detection, privacy modes for the people in the room —
-                running now, on the same system described on this page. Nothing it sees
-                leaves the building. Nothing is attached to the art.
+                breach and absence detection, privacy modes, natural-language query over
+                what the system has seen — running now, on the same system described on
+                this page. Nothing it sees leaves the building. Nothing is attached to the
+                art.
               </p>
               <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
                 Every art-security company says it was built by people who understand
@@ -196,14 +282,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Who it's for */}
+      <section className="border-t border-line">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
+          <p className="eyebrow">Who it&apos;s for</p>
+          <h2 className="mt-6 font-display text-2xl md:text-3xl text-bone max-w-2xl">
+            The buyer isn&apos;t a category. It&apos;s a reason for discretion.
+          </h2>
+          <div className="mt-14 grid md:grid-cols-2 gap-x-16 gap-y-14">
+            {WHO_ITS_FOR.map((w) => (
+              <div key={w.title} className="max-w-prose">
+                <h3 className="font-display text-xl md:text-2xl text-bone">{w.title}</h3>
+                <p className="mt-4 text-base md:text-lg leading-relaxed text-muted">{w.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why local — teaser */}
+      <section className="border-t border-line bg-ink-900">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28 text-center">
+          <p className="font-display font-light text-2xl md:text-4xl leading-[1.2] text-bone max-w-3xl mx-auto">
+            Their privacy is a policy. Ours is an architecture.
+          </p>
+          <p className="mt-6 text-base md:text-lg text-muted max-w-xl mx-auto">
+            No uplink, no vendor account, no remote access — not even for us. If someone
+            wants what your system saw, they have to come to you.
+          </p>
+          <div className="mt-9">
+            <Link
+              href="/why-local/"
+              className="inline-flex items-center gap-2 text-sm text-muted hover:text-bone transition-colors"
+            >
+              Why local
+              <span aria-hidden>→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Closing CTA */}
       <section className="border-t border-line">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-24 md:py-32 text-center">
           <h2 className="font-display font-light text-3xl md:text-5xl text-bone">
-            Have something worth protecting?
+            Have something worth keeping private?
           </h2>
           <p className="mt-5 text-lg text-muted max-w-xl mx-auto">
-            Tell us about your space and what&apos;s on the walls.
+            Tell us about your space, your material, or what you need to keep confidential.
           </p>
           <div className="mt-10">
             <Link

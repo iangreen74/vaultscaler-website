@@ -1,4 +1,6 @@
-// Route: /approach — this is a consultancy, not a shipment.
+// Route: /approach — the architecture-practice method: survey, design, specify, build
+// and tune, licensed contractor installs, ongoing care if wanted. Professional method,
+// not a limitation — architects don't apologize for not laying bricks.
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
@@ -7,12 +9,12 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Approach | VaultScaler",
   description:
-    "VaultScaler is a design consultancy, not a shipment. We walk your room, design for your building, build and train the computer vision on our own hardware, and leave it yours. Installation is carried out by a licensed contractor. Built by an artist who protects his own work.",
+    "VaultScaler is an architecture practice, not a shipment. We survey the site, design for your building, specify the hardware, build and tune the software ourselves, and hand physical installation to a licensed contractor. Built by an artist who protects his own work.",
   alternates: { canonical: `${SITE.url}/approach/` },
   openGraph: {
     title: "Approach | VaultScaler",
     description:
-      "A design consultancy, not a shipment. We come and look, design for your room, build it, and it's yours. A licensed contractor installs it. Built by an artist who protects his own work.",
+      "An architecture practice, not a shipment. We survey, design, specify, build and tune. A licensed contractor installs. Built by an artist who protects his own work.",
     url: `${SITE.url}/approach/`,
     type: "website",
     images: ["/og.jpg"],
@@ -22,38 +24,34 @@ export const metadata: Metadata = {
 const STEPS = [
   {
     n: "01",
-    title: "We come and look.",
+    title: "We survey the site.",
     body: "Every space is different — the light, the flow, the hang, what's actually at risk. We start by walking the room with you.",
   },
   {
     n: "02",
-    title: "We design for your room.",
-    body: "Not a package. A system specified for your building, your collection, and the way you actually work.",
+    title: "We design for your building.",
+    body: "Not a package. A system conceived for your building, your material, and the way you actually work.",
   },
   {
     n: "03",
-    title: "We build it.",
-    body: "We build and train the computer vision ourselves, on our own hardware. The intelligence is ours, not licensed from a platform that can change its terms or cut us off.",
+    title: "We specify it.",
+    body: "The design becomes an exact specification — the hardware, the placement, the thresholds. This is the judgement a client is actually paying for, not the box.",
   },
   {
     n: "04",
-    title: "A licensed contractor installs it.",
-    body: "We specify exactly what goes in and where. Installation and physical work is carried out by a licensed contractor — then we stay until it's right, until the false alarms are gone and the system tells you only the things that matter.",
+    title: "We build and tune it.",
+    body: "We build and train the computer vision ourselves, on our own hardware, and tune it before anything ships. The intelligence is ours, not licensed from a platform that can change its terms or cut us off.",
   },
   {
     n: "05",
-    title: "It's yours.",
-    body: "You own the hardware. You own the footage. There is no mandatory subscription, and if you never speak to us again, it keeps working.",
+    title: "A licensed contractor installs it.",
+    body: "We specify exactly what goes in and where. Installation and physical work is carried out by a licensed contractor, and we're there to confirm it's right.",
   },
-];
-
-const FOR = [
-  "Commercial galleries",
-  "Private collections",
-  "Private residences with something worth protecting",
-  "Artist-run and independent spaces",
-  "Small museums and institutions",
-  "Anyone whose business depends on discretion",
+  {
+    n: "06",
+    title: "Ongoing care, if you want it.",
+    body: "Retuning after a rehang or a layout change, health monitoring, capability upgrades — delivered in person, because there's no other way in. Always optional, never a condition of purchase.",
+  },
 ];
 
 export default function Approach() {
@@ -63,7 +61,7 @@ export default function Approach() {
     name: "Approach — VaultScaler",
     url: `${SITE.url}/approach/`,
     description:
-      "A design consultancy, not a shipment: walk the room, design for your building, build and train the vision on our own hardware, and it's yours. A licensed contractor installs it.",
+      "An architecture practice: survey, design, specify, build and tune, licensed contractor installs, ongoing care if wanted.",
   };
 
   return (
@@ -75,11 +73,13 @@ export default function Approach() {
         <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pt-20 pb-16 md:pt-28 md:pb-20">
           <p className="eyebrow">Approach</p>
           <h1 className="mt-6 font-display font-light text-4xl md:text-6xl leading-[1.06] text-bone max-w-3xl tracking-tight">
-            A consultancy, not a shipment.
+            An architecture practice, not a shipment.
           </h1>
           <p className="mt-7 text-lg md:text-xl leading-relaxed text-muted max-w-2xl">
             We don&apos;t mail you a box. We design a system for your building, build the
-            intelligence ourselves, and stay until it tells you only the things that matter.
+            intelligence ourselves, and stay until it tells you only the things that
+            matter. Licensed contractors execute the physical work — the same way an
+            architect designs a building and a contractor builds it.
           </p>
         </div>
       </section>
@@ -102,17 +102,16 @@ export default function Approach() {
         </div>
       </section>
 
-      {/* Who it's for */}
+      {/* It's yours */}
       <section className="border-t border-line bg-ink-900">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-24">
-          <p className="eyebrow">Who it&apos;s for</p>
-          <ul className="mt-10 divide-y divide-line border-y border-line max-w-3xl">
-            {FOR.map((f) => (
-              <li key={f} className="py-5 font-display text-xl md:text-2xl text-bone">
-                {f}
-              </li>
-            ))}
-          </ul>
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-16 md:py-20">
+          <div className="max-w-prose">
+            <p className="eyebrow">And then it&apos;s yours</p>
+            <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
+              You own the hardware. You own what it records. There is no mandatory
+              subscription, and if you never speak to us again, it keeps working.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -125,15 +124,23 @@ export default function Approach() {
               Built by an artist who protects his own work.
             </h2>
             <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
-              We&apos;re based in Las Vegas, where the founder&apos;s own studio runs the same
-              system described on this page. It isn&apos;t open to the public, but if
-              you&apos;re a serious enquiry, don&apos;t take our word for any of this — ask
-              and we&apos;ll show you the real thing.
+              We&apos;re based in Las Vegas, where the founder&apos;s own studio runs the
+              same system described on this page. It isn&apos;t open to the public, but
+              if you&apos;re a serious enquiry, don&apos;t take our word for any of this
+              — ask and we&apos;ll show you the real thing.
             </p>
             <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
               The architecture is the same everywhere: local, owned, nothing leaving the
-              building. What the system is permitted to do differs by jurisdiction, and we
-              configure it to the law where you are.
+              building. The system is available internationally; what it&apos;s
+              permitted to do differs by jurisdiction, and we configure it to the law
+              where you are.{" "}
+              <Link
+                href="/why-local/"
+                className="text-bone underline decoration-line underline-offset-4 hover:decoration-bone transition-colors"
+              >
+                Why local
+              </Link>{" "}
+              covers the guarantee behind that in full.
             </p>
             <p className="mt-6 font-display text-xl md:text-2xl text-bone">
               The highest security available to you, within the legal framework you&apos;re in.

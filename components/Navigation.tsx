@@ -6,8 +6,10 @@ import { trackNavClick } from '@/lib/analytics';
 
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services/' },
   { label: 'How it works', href: '/how-it-works/' },
   { label: 'Approach', href: '/approach/' },
+  { label: 'Why local', href: '/why-local/' },
   { label: 'Contact', href: '/contact/' },
 ] as const;
 

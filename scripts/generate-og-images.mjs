@@ -93,7 +93,7 @@ const images = [
     textColor: '#ece9e3',
     productName: 'VaultScaler',
     headline: 'It watches everything in your building. And nothing ever leaves it.',
-    subline: 'Private, on-premise AI security.',
+    subline: 'A private AI consultancy.',
   },
 ];
 
