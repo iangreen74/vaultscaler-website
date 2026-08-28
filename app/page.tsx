@@ -291,6 +291,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* The founder */}
+      <section className="border-t border-line">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
+          <p className="eyebrow">The founder</p>
+          <div className="mt-7 grid md:grid-cols-2 gap-x-16 gap-y-10 items-start">
+            <h2 className="font-display font-light text-3xl md:text-5xl leading-[1.08] text-bone max-w-xl">
+              He learned this before he built it.
+            </h2>
+            <div className="max-w-prose">
+              <p className="text-base md:text-lg leading-relaxed text-muted">
+                Before VaultScaler, Ian Green spent nine years as an Electronic
+                Warfare Specialist with the New Zealand Defence Force
+                (2012–2021) — work built around telling signal from noise,
+                alongside infrastructure that had to be genuinely secure, not
+                nominally so: identity and access management, AWS-based
+                systems built for secure communications, and data analysis
+                applied to real operational problems.
+              </p>
+              <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
+                Then DevOps engineering in the private sector, then computer
+                vision and edge AI. None of it transfers as hardware, and
+                none of it transfers as a story. What carries over is the
+                judgement. The system VaultScaler installs is his own design
+                and build, every line of it.
+              </p>
+              <p className="mt-6 font-display italic text-xl md:text-2xl text-bone">
+                Most people building private systems learned it from a
+                whitepaper. This one learned it where the consequences were
+                real.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Who it's for */}
       <section className="border-t border-line bg-ink-900">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">

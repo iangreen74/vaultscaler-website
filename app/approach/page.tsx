@@ -115,8 +115,49 @@ export default function Approach() {
         </div>
       </section>
 
-      {/* Where we are */}
+      {/* Formation */}
       <section className="border-t border-line">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
+          <p className="eyebrow">Formation</p>
+          <h2 className="mt-6 font-display text-2xl md:text-3xl text-bone max-w-2xl">
+            He learned this before he built it.
+          </h2>
+          <div className="mt-10 max-w-prose">
+            <p className="text-base md:text-lg leading-relaxed text-muted">
+              Ian Green spent nine years, 2012 to 2021, as an Electronic
+              Warfare Specialist with the New Zealand Defence Force. The
+              discipline is about telling signal from noise — knowing what a
+              system is actually reporting, and trusting only what can be
+              verified. Alongside it ran infrastructure work: identity and
+              access management for secure data access, AWS-based systems
+              built for secure communications, Terraform and version control
+              introduced to make that infrastructure reliable, and data
+              analysis — Python, Pandas, NumPy, TensorFlow — applied to real
+              operational problems, not hypothetical ones.
+            </p>
+            <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
+              After that, DevOps engineering in the private sector — CI/CD,
+              cloud infrastructure, Kubernetes, at Vontier since 2022. Then
+              computer vision and edge AI, and VaultScaler.
+            </p>
+            <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
+              None of it transfers as hardware, and none of it transfers as a
+              story. What transfers is the judgement — the habit of building
+              a system that is actually self-contained, not one that merely
+              claims to be. The system VaultScaler installs in a client&apos;s
+              building is Ian&apos;s own design and build, every line of it.
+            </p>
+            <p className="mt-6 font-display italic text-xl md:text-2xl text-bone">
+              Most people building private systems learned it from a
+              whitepaper. This one learned it where the consequences were
+              real.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Where we are */}
+      <section className="border-t border-line bg-ink-900">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
           <div className="max-w-prose">
             <p className="eyebrow">Where we are</p>
