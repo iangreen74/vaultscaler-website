@@ -63,6 +63,20 @@ export default function RootLayout({
   const UMAMI_HOST_URL = process.env.NEXT_PUBLIC_UMAMI_HOST_URL;
   const UMAMI_DOMAINS = process.env.NEXT_PUBLIC_UMAMI_DOMAINS;
 
+  const personLD = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Ian Green",
+    jobTitle: "Founder",
+    worksFor: { "@type": "Organization", name: SITE.name, url: `${SITE.url}/` },
+    description:
+      "Founder of VaultScaler. Nine years as an Electronic Warfare Specialist with the New Zealand Defence Force (2012–2021), then DevOps engineering, then computer vision and edge AI. Designs and builds VaultScaler's systems himself.",
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: "Victoria University of Wellington",
+    },
+  };
+
   const organizationLD = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -72,6 +86,7 @@ export default function RootLayout({
     description: SITE.description,
     email: SITE.email,
     foundingDate: "2025",
+    founder: { "@type": "Person", name: "Ian Green" },
     areaServed: "Worldwide",
     knowsAbout: [
       "private AI consultancy",
@@ -107,6 +122,7 @@ export default function RootLayout({
     <html lang="en" className={`${display.variable} ${sans.variable}`}>
       <head>
         <JsonLd data={organizationLD} />
+        <JsonLd data={personLD} />
       </head>
       <body className="antialiased bg-ink text-bone">
         <a

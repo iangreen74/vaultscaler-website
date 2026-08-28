@@ -38,7 +38,11 @@ Their privacy is a policy. Ours is an architecture. A cloud vendor promises not 
 
 ## The proof
 
-VaultScaler's first live deployment runs now, in the founder's own building — zones drawn around the objects that matter, breach and absence detection, privacy modes, and natural-language query over what the system has seen. Ian Green is an engineer with a background in electronic warfare and computer vision. The system is his own design and build, running on his own premises.
+VaultScaler's first live deployment runs now, in the founder's own building — zones drawn around the objects that matter, breach and absence detection, privacy modes, and natural-language query over what the system has seen. The system is Ian Green's own design and build, running on his own premises.
+
+## The founder
+
+Before VaultScaler, Ian Green spent nine years (2012–2021) as an Electronic Warfare Specialist with the New Zealand Defence Force — work built around telling signal from noise, alongside infrastructure work that had to be genuinely secure: identity and access management, AWS-based systems built for secure communications, Terraform and version control, and data analysis applied to real operational problems. Then DevOps engineering in the private sector, then computer vision and edge AI, then VaultScaler. The judgement carries over; the hardware and the setting don't. The system VaultScaler installs is his own design and build, every line of it. Most people building private systems learned it from a whitepaper — this one learned it where the consequences were real.
 
 ## What is not claimed
 
