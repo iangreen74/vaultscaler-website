@@ -21,8 +21,8 @@ export default function SiteFooter() {
           </div>
 
           <nav className="flex flex-wrap gap-x-8 gap-y-3 text-sm" aria-label="Footer">
+            <Link href="/how-it-works/" className="text-muted hover:text-bone transition-colors">The Assessment</Link>
             <Link href="/services/" className="text-muted hover:text-bone transition-colors">Services</Link>
-            <Link href="/how-it-works/" className="text-muted hover:text-bone transition-colors">How it works</Link>
             <Link href="/approach/" className="text-muted hover:text-bone transition-colors">Approach</Link>
             <Link href="/why-local/" className="text-muted hover:text-bone transition-colors">Why local</Link>
             <Link href="/contact/" className="text-muted hover:text-bone transition-colors">Contact</Link>

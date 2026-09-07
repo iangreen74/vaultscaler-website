@@ -1,5 +1,34 @@
 # Changelog
 
+## [5.1.1] - 2026-09-07
+
+Phase 3: nav rename/reorder, and a real (pre-existing) nav wrap bug fixed along the
+way.
+
+### Changed
+- **Nav renamed and reordered.** `/how-it-works/` label changed from "How it works"
+  to "The Assessment" (the page no longer explains camera mechanics) and moved
+  first in the primary nav, ahead of Services — a cold visitor needs to know what
+  the thing is before what it costs. New order: The Assessment · Services ·
+  Approach · Why local · Contact. Applied to both header (`Navigation.tsx`) and
+  footer (`SiteFooter.tsx`) nav. Route unchanged (`/how-it-works/`) — no redirect
+  introduced. `/how-it-works/page.tsx`'s own title, OG title, JSON-LD name, and
+  eyebrow updated to match ("How it works | VaultScaler" → "The Assessment |
+  VaultScaler"); its meta *description* and OG description were already accurate
+  post-[5.1.0] and didn't need rewriting.
+- Homepage and `/approach/` meta (description, OG, Twitter) were checked against
+  the brief's suspicion that they still described the old systems-first framing —
+  both were already correct from [5.0.0]/[5.1.0] and needed no changes.
+
+### Fixed
+- **Nav wrapped onto two lines at the `md` breakpoint (768–900px)** — caught via a
+  Playwright screenshot, not by inspection. Confirmed pre-existing: "Why local" and
+  "Talk to us" wrapped too, neither of which this pass touched, so the label rename
+  only made a fragile fixed-height row (`h-16`) more likely to be hit, it didn't
+  cause the underlying issue. Fixed by narrowing the nav gap at `md` and restoring
+  it at `lg` (`gap-4 lg:gap-9`) and adding `whitespace-nowrap` to each nav item.
+  Reverified clean at 375/768/820/900/1024/1280px.
+
 ## [5.1.0] - 2026-09-07
 
 Repositioning Phase 2: `/how-it-works/` and `/approach/` rewritten to match [5.0.0]'s
