@@ -144,8 +144,8 @@ export default function Approach() {
               None of it transfers as hardware, and none of it transfers as a
               story. What transfers is the judgement — the habit of building
               a system that is actually self-contained, not one that merely
-              claims to be. The system VaultScaler installs in a client&apos;s
-              building is Ian&apos;s own design and build, every line of it.
+              claims to be. The system running in a client&apos;s building is
+              Ian&apos;s own design and build, every line of it.
             </p>
             <p className="mt-6 font-display italic text-xl md:text-2xl text-bone">
               Most people building private systems learned it from a

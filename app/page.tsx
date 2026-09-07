@@ -1,56 +1,96 @@
-// Route: / — VaultScaler homepage. A private AI consultancy; security is the first
-// application, not the definition.
+// Route: / — VaultScaler homepage. A private AI consultancy whose lead offering is
+// the Exposure Assessment. Systems work is real but secondary — it follows a finding,
+// it doesn't lead the pitch. Rewritten per the September 2026 repositioning brief.
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
-import { SITE, SERVICES } from "@/lib/site";
+import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "VaultScaler — a private AI consultancy",
+  title: "VaultScaler — The Exposure Assessment",
   description:
-    "Have something worth keeping private? VaultScaler designs private AI systems for people who cannot afford to send their data anywhere. Security is the first application — and not the only one.",
+    "Most security firms will secure your network. VaultScaler finds out how confidential material actually leaves your building — through the machines that watch it, the software your staff use, and your people — with a fixed-fee written assessment from $4,500. Where a finding calls for a system, we design and specify it, running entirely on hardware you own.",
   alternates: { canonical: SITE.url },
+  openGraph: {
+    title: "VaultScaler — The Exposure Assessment",
+    description:
+      "Most security firms will secure your network. We find out how confidential material actually leaves your building — machines, tools, and people — with a fixed-fee written assessment.",
+    url: SITE.url,
+    type: "website",
+    images: ["/og.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "VaultScaler — The Exposure Assessment",
+    description:
+      "Most security firms will secure your network. We find out how confidential material actually leaves your building — machines, tools, and people.",
+    images: ["/og.jpg"],
+  },
 };
 
-const METHOD = [
-  { n: "01", label: "Survey" },
-  { n: "02", label: "Design" },
-  { n: "03", label: "Specify" },
-  { n: "04", label: "Build & tune" },
-  { n: "05", label: "Licensed install" },
-  { n: "06", label: "Ongoing care" },
-];
-
-const PROBLEMS = [
+const CHANNELS = [
   {
     n: "01",
-    lead: "Your footage lives on someone else's server.",
-    body: "Cloud camera systems put your space, the people who trust you, and what happens inside your walls on infrastructure you don't control — viewable by staff you've never met, reachable by anyone who breaches it. For anyone whose business depends on discretion, that's not a feature. It's the risk.",
+    lead: "Machines.",
+    body: "Cameras, microphones, access control, conferencing hardware, printers. Most are cloud-connected by default, streaming the inside of a building — often including audio — to a vendor's servers in another state, retained under that vendor's terms, reachable by people you have never met.",
   },
   {
     n: "02",
-    lead: "The alarms cry wolf, so they get switched off.",
-    body: "Conventional motion and object sensors can't tell the difference between someone pausing to look and something actually being taken. The false alarms are constant — so most systems get quietly disconnected. A system nobody trusts is a system nobody uses.",
+    lead: "Tools.",
+    body: "AI services, SaaS platforms, third-party processors. Staff paste confidential material into consumer chat interfaces every day, on personal accounts, with no data processing agreement and no way to retrieve what was submitted. Most practices have no idea it is happening.",
   },
   {
     n: "03",
-    lead: "Sometimes the hardware touches the thing itself.",
-    body: "Tags, contacts, vibration sensors, wiring run across whatever it's guarding — it works, but it touches the object, constrains how it's kept or shown, and announces itself to everyone who sees it. The same problem shows up anywhere something valuable can't be protected without the protection itself getting in the way.",
+    lead: "People.",
+    body: "The channel every technical control ignores. Most breaches involve a person persuaded to do something rather than a system defeated — and voice cloning has moved that from a specialist capability to a consumer one.",
+  },
+];
+
+const WHAT_HAPPENS = [
+  "A half-day walkthrough of your premises",
+  "Structured interviews with your office administrator, your IT provider, and any staff you nominate",
+  "Review of vendor terms, system configurations, and publicly available information about the firm",
+  "A written report with rated findings and a prioritised remediation list, issued within six working days",
+  "An hour of debrief",
+];
+
+const PRICING = [
+  { size: "Under 10 staff", fee: "$4,500" },
+  { size: "10 to 24 staff", fee: "$6,500" },
+  { size: "25 to 75 staff", fee: "$9,500" },
+];
+
+const NOT_COVERED = [
+  {
+    title: "Network and endpoint security.",
+    body: "Firewalls, endpoint detection, patching, backups. That remains your IT provider's responsibility and we do not compete for it.",
+  },
+  {
+    title: "Legal, ethical or regulatory determinations.",
+    body: "We identify facts. Whether an arrangement satisfies your professional obligations is a question for your counsel.",
+  },
+  {
+    title: "Penetration testing or testing of staff.",
+    body: "No system is attacked and no employee is tested.",
+  },
+  {
+    title: "Investigation of individuals.",
+    body: "No person is investigated, profiled or surveilled.",
   },
 ];
 
 const WHO_ITS_FOR = [
   {
-    title: "Professional confidentiality.",
-    body: "Attorneys, physicians, family offices, and anyone whose obligation to protect client material is a professional one, not just a preference. You don't need to be persuaded that privacy matters — you need to see that it's achievable.",
+    title: "Professional practices.",
+    body: "Law firms, medical and dental practices, accounting firms — anyone whose duty to protect client material is a professional one. You do not need persuading that privacy matters. You need to know where yours is currently going.",
+  },
+  {
+    title: "Family offices and wealth management.",
+    body: "Where client information is the relationship, and a disclosure is not recoverable.",
   },
   {
     title: "Private wealth.",
-    body: "People whose visibility, resources, or public profile make ordinary security an active liability rather than an inconvenience.",
-  },
-  {
-    title: "Collections and cultural property.",
-    body: "Private collectors, galleries, museums, and anyone holding objects with loan obligations or value that can't be replaced.",
+    body: "People whose visibility or resources make ordinary security an active liability.",
   },
   {
     title: "Discreet commercial spaces.",
@@ -62,7 +102,7 @@ export default function Home() {
   const pageLD = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "VaultScaler — a private AI consultancy",
+    name: "VaultScaler — The Exposure Assessment",
     url: `${SITE.url}/`,
     description: SITE.description,
     isPartOf: { "@type": "WebSite", name: "VaultScaler", url: SITE.url },
@@ -76,215 +116,205 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div aria-hidden className="spotlight absolute inset-0" />
         <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pt-24 pb-24 md:pt-36 md:pb-32">
-          <p className="eyebrow">Private AI consultancy</p>
+          <p className="eyebrow">Private AI consultancy · Las Vegas</p>
           <h1 className="mt-7 font-display font-light text-[2.75rem] leading-[1.05] sm:text-6xl md:text-7xl text-bone max-w-4xl tracking-tight">
-            Have something worth keeping private?
+            Most security firms will secure your network.
           </h1>
           <p className="mt-8 text-lg md:text-xl leading-relaxed text-muted max-w-2xl">
-            Tell us about your space, your material, or whatever you need to keep
-            confidential.
-          </p>
-          <p className="mt-6 text-base md:text-lg leading-relaxed text-dim max-w-2xl">
-            VaultScaler designs and builds private AI systems — systems that run entirely
-            on hardware you own, in your own building, with nothing sent to any outside
-            company. Security is the first thing we build. It isn&apos;t the only thing
-            we do.
+            We find out how information actually leaves your building — through the
+            machines that watch it, the software your staff use, and your people. Then
+            we build what closes the gaps, running entirely on hardware you own.
           </p>
           <div className="mt-11 flex flex-wrap items-center gap-5">
             <Link
-              href="/contact/"
+              href="#exposure-assessment"
               className="inline-flex items-center rounded-full border border-bone/70 px-6 py-3 text-sm font-medium text-bone hover:bg-bone hover:text-ink transition-colors"
             >
-              Talk to us
+              The Exposure Assessment
             </Link>
             <Link
-              href="/services/"
+              href="/contact/"
               className="inline-flex items-center gap-2 text-sm text-muted hover:text-bone transition-colors"
             >
-              What we do
+              Talk to us
               <span aria-hidden>→</span>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* The problem: three channels */}
+      <section className="border-t border-line bg-ink-900">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
+          <p className="eyebrow">The problem</p>
+          <h2 className="mt-6 font-display text-2xl md:text-3xl text-bone max-w-2xl">
+            Information leaves a building three ways.
+          </h2>
+          <div className="mt-14 md:mt-20">
+            {CHANNELS.map((c) => (
+              <div
+                key={c.n}
+                className="grid md:grid-cols-[6rem_1fr] gap-x-8 gap-y-3 py-10 border-t border-line first:border-t-0"
+              >
+                <div className="font-display text-3xl md:text-4xl text-dim">{c.n}</div>
+                <div className="max-w-2xl">
+                  <h3 className="font-display text-xl md:text-2xl text-bone">{c.lead}</h3>
+                  <p className="mt-4 text-base md:text-lg leading-relaxed text-muted">{c.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-14 max-w-3xl border-t border-line pt-10">
+            <p className="text-base md:text-lg leading-relaxed text-muted">
+              Almost nobody assesses all three. Cybersecurity firms handle tools and
+              stop at the building&apos;s edge. Physical security firms handle machines
+              and ignore data. Neither examines how the two interact, and few examine
+              people at all. A camera is a machine problem until its audio reaches a
+              vendor. A shared alarm code is a machine problem until the cleaning
+              contractor&apos;s staff turnover makes it a people problem. The exposure
+              usually sits in the interaction.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Why now */}
-      <section className="border-t border-line bg-ink-900">
+      <section className="border-t border-line">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
-          <p className="eyebrow">Why now</p>
+          <p className="eyebrow">Why 2026</p>
           <div className="mt-7 grid md:grid-cols-2 gap-x-16 gap-y-10 items-start">
             <h2 className="font-display font-light text-3xl md:text-5xl leading-[1.08] text-bone max-w-xl">
-              Private AI stopped being a compromise.
+              The same three channels. All three newly dangerous.
             </h2>
             <div className="max-w-prose">
               <p className="text-base md:text-lg leading-relaxed text-muted">
-                Two things changed. Capable models now run on hardware the size of a
-                book — real-time computer vision, natural-language answers about what it
-                saw, no data center required. And AI collapsed the cost of building
-                something bespoke: what used to take a team, one engineer can now do for
-                a single building.
+                AI made every channel worse at once. Chat tools ingest and retain
+                whatever staff paste into them. Cameras are more capable and more
+                connected than they have ever been. And social engineering — long the
+                dominant route into any organisation — now has voice cloning, synthetic
+                video, and personalised pretexts generated at scale.
               </p>
               <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
-                For the right client, a private system is no longer the weaker option.
-                It's the better one — the only one whose guarantees are architectural,
-                not contractual.
+                The alternative also became viable. Capable models now run on hardware
+                the size of a book. What used to take a team to build for one building,
+                one engineer can now do. For the right client a private system is no
+                longer the weaker option — it is the only one whose guarantees are
+                architectural rather than contractual.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* How we work — the method, surfaced without a click */}
-      <section className="border-t border-line">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-24">
-          <p className="eyebrow">How we work</p>
-          <h2 className="mt-6 font-display text-2xl md:text-3xl text-bone max-w-2xl">
-            Ian designs the system. A licensed contractor installs it.
-          </h2>
-          <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-x-6 gap-y-8">
-            {METHOD.map((m) => (
-              <div key={m.n}>
-                <div className="font-display text-2xl text-dim">{m.n}</div>
-                <p className="mt-2 text-sm font-medium text-bone">{m.label}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-10">
-            <Link
-              href="/approach/"
-              className="inline-flex items-center gap-2 text-sm text-muted hover:text-bone transition-colors"
-            >
-              The full method
-              <span aria-hidden>→</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Service lines */}
-      <section className="border-t border-line bg-ink-900">
+      {/* The Exposure Assessment */}
+      <section id="exposure-assessment" className="scroll-mt-20 border-t border-line bg-ink-900">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
           <p className="eyebrow">What we do</p>
           <h2 className="mt-6 font-display text-2xl md:text-3xl text-bone max-w-2xl">
-            Four ways to engage us — most of them need no installed system at all.
+            The Exposure Assessment.
           </h2>
-          <div className="mt-14 grid md:grid-cols-2 gap-x-10 gap-y-10">
-            {SERVICES.map((s) => (
-              <Link
-                key={s.slug}
-                href={`/services/#${s.slug}`}
-                className="group block border border-line rounded-2xl p-7 md:p-8 bg-ink-900 hover:border-bone/40 transition-colors"
-              >
-                <div className="flex items-baseline justify-between gap-4">
-                  <span className="font-display text-2xl text-dim">{s.n}</span>
-                  <span
-                    className={
-                      "text-xs uppercase tracking-wide " +
-                      (s.statusTone === "shipping"
-                        ? "text-bone/70"
-                        : s.statusTone === "available"
-                          ? "text-muted"
-                          : "text-dim")
-                    }
-                  >
-                    {s.statusTone === "build" ? "Bespoke build" : s.statusTone === "shipping" ? "Shipping" : "Available now"}
-                  </span>
-                </div>
-                <h3 className="mt-4 font-display text-xl md:text-2xl text-bone group-hover:text-bone">
-                  {s.name}
-                </h3>
-                <p className="mt-3 text-base leading-relaxed text-muted">{s.summary}</p>
-                <span className="mt-5 inline-flex items-center gap-2 text-sm text-muted group-hover:text-bone transition-colors">
-                  Read more <span aria-hidden>→</span>
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+          <p className="mt-5 text-base md:text-lg leading-relaxed text-muted max-w-2xl">
+            A fixed-fee written assessment of how confidential material can leave your
+            premises. Deliberately wider than an IT security review, and deliberately
+            outside what your IT provider already covers.
+          </p>
 
-      {/* The three problems (behind the security line) */}
-      <section className="border-t border-line">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
-          <h2 className="font-display text-2xl md:text-3xl text-bone max-w-2xl">
-            Discreet security has been solved badly, in three specific ways.
-          </h2>
-          <div className="mt-14 md:mt-20">
-            {PROBLEMS.map((p) => (
-              <div
-                key={p.n}
-                className="grid md:grid-cols-[6rem_1fr] gap-x-8 gap-y-3 py-10 border-t border-line first:border-t-0"
-              >
-                <div className="font-display text-3xl md:text-4xl text-dim">{p.n}</div>
-                <div className="max-w-2xl">
-                  <h3 className="font-display text-xl md:text-2xl text-bone">{p.lead}</h3>
-                  <p className="mt-4 text-base md:text-lg leading-relaxed text-muted">{p.body}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* What we do about it */}
-      <section className="border-t border-line bg-ink-900">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
-          <p className="eyebrow">What we do about it</p>
           <div className="mt-14 grid md:grid-cols-2 gap-x-16 gap-y-14">
-            <div className="max-w-prose">
-              <h3 className="font-display text-2xl md:text-3xl text-bone">Nothing leaves the building.</h3>
-              <p className="mt-4 text-base md:text-lg leading-relaxed text-muted">
-                The intelligence runs on a box in your building. There is no cloud, no account,
-                no vendor portal, nothing phoned home. Not as a policy — as an architecture.
-                There is no server for anyone to subpoena, breach, or browse, because there isn&apos;t
-                a server.
-              </p>
+            <div className="min-w-0">
+              <p className="eyebrow">What happens</p>
+              <ul className="mt-5 space-y-3">
+                {WHAT_HAPPENS.map((item) => (
+                  <li key={item} className="flex gap-3 text-base md:text-lg leading-relaxed text-muted">
+                    <span aria-hidden className="text-dim">—</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="max-w-prose">
-              <h3 className="font-display text-2xl md:text-3xl text-bone">It knows the difference.</h3>
-              <p className="mt-4 text-base md:text-lg leading-relaxed text-muted">
-                Our system understands the difference between someone standing near
-                something and something that&apos;s gone. Someone pausing to look does
-                not trigger an alarm.{" "}
-                <span className="text-alert">Someone removing it does.</span> That distinction is
-                the hardest problem in this field, and it&apos;s the one we built for first.
-              </p>
-            </div>
-            <div className="max-w-prose">
-              <h3 className="font-display text-2xl md:text-3xl text-bone">Nothing touches what it&apos;s watching.</h3>
-              <p className="mt-4 text-base md:text-lg leading-relaxed text-muted">
-                The camera watches. Whatever it&apos;s protecting stays exactly as it
-                was — unwired, untagged, unconstrained. Change the layout whenever you
-                like; tell us and we&apos;ll re-teach the system in minutes.
-              </p>
-            </div>
-            <div className="max-w-prose">
-              <h3 className="font-display text-2xl md:text-3xl text-bone">Fewer guards, better cover.</h3>
-              <p className="mt-4 text-base md:text-lg leading-relaxed text-muted">
-                The system doesn&apos;t blink, doesn&apos;t take breaks, and watches every zone
-                at once. It won&apos;t replace your people — but it means you need fewer of them,
-                and the ones you have know exactly where to go.
+
+            <div className="min-w-0">
+              <p className="eyebrow">What it costs</p>
+              <div className="mt-5 overflow-x-auto">
+                <table className="w-full min-w-[380px] text-left border-collapse">
+                  <thead>
+                    <tr className="border-b border-line">
+                      <th className="pb-3 pr-6 font-display text-base font-normal text-bone">
+                        Practice size
+                      </th>
+                      <th className="pb-3 font-display text-base font-normal text-bone">Fee</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {PRICING.map((row) => (
+                      <tr key={row.size} className="border-b border-line/60">
+                        <td className="py-4 pr-6 text-muted">{row.size}</td>
+                        <td className="py-4 font-display text-lg text-bone">{row.fee}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-4 text-sm text-dim">
+                Fixed. No expenses, no hourly overrun, no change orders.
               </p>
             </div>
           </div>
+
+          <div className="mt-14 max-w-2xl">
+            <p className="eyebrow">What it does not cover</p>
+            <ul className="mt-5 space-y-4">
+              {NOT_COVERED.map((item) => (
+                <li key={item.title} className="text-base md:text-lg leading-relaxed">
+                  <span className="text-bone">{item.title}</span>{" "}
+                  <span className="text-muted">{item.body}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <p className="mt-14 max-w-2xl font-display italic text-xl md:text-2xl text-bone">
+            Most of what an assessment finds costs nothing to fix. We have no
+            commercial interest in those items and recommend you do them regardless.
+          </p>
         </div>
       </section>
 
-      {/* Proof of operation */}
+      {/* What follows */}
       <section className="border-t border-line">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
-          <p className="eyebrow">Proof of operation</p>
+          <p className="eyebrow">After the assessment</p>
           <div className="mt-7 grid md:grid-cols-2 gap-x-16 gap-y-10 items-start">
             <h2 className="font-display font-light text-3xl md:text-5xl leading-[1.08] text-bone max-w-xl">
-              The first room it watches is the founder&apos;s own.
+              Where a finding calls for a system, we build it.
             </h2>
             <div className="max-w-prose">
               <p className="text-base md:text-lg leading-relaxed text-muted">
-                VaultScaler&apos;s first live deployment runs now, in Ian Green&apos;s
-                own building — zones drawn around the objects that matter, breach and
-                absence detection, privacy modes, natural-language query over what the
-                system has seen. The same system described on this page. Nothing it sees
-                leaves the building.
+                Some exposures close with a setting change. Others need something
+                replaced. Where that happens we design and specify the system,
+                configure the software, and manage the work — a local model that
+                handles drafting and summarisation with nothing leaving the premises; a
+                gateway that routes requests locally by default; on-premise recording
+                with no vendor access.
+              </p>
+              <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
+                VaultScaler designs and specifies. Licensed Nevada contractors perform
+                any physical installation and invoice you directly. We do not sell or
+                supply hardware.
+              </p>
+              <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
+                This is quoted separately, and you are under no obligation to proceed.
+                Also available: an{" "}
+                <Link
+                  href="/services/#advisory-retainer"
+                  className="text-bone underline decoration-line underline-offset-4 hover:decoration-bone transition-colors"
+                >
+                  ongoing advisory retainer
+                </Link>
+                , from $1,200 a month, for practices that want the assessment kept
+                current rather than repeated.
+              </p>
+              <p className="mt-5 text-base md:text-lg leading-relaxed text-bone">
+                Nothing leaves the building. Not as a policy — as an architecture.
               </p>
             </div>
           </div>
@@ -296,7 +326,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
           <p className="eyebrow">Who it&apos;s for</p>
           <h2 className="mt-6 font-display text-2xl md:text-3xl text-bone max-w-2xl">
-            The buyer isn&apos;t a category. It&apos;s a reason for discretion.
+            Practices where confidentiality is an obligation, not a preference.
           </h2>
           <div className="mt-14 grid md:grid-cols-2 gap-x-16 gap-y-14">
             {WHO_ITS_FOR.map((w) => (
@@ -309,38 +339,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why local — teaser */}
+      {/* Proof */}
       <section className="border-t border-line">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28 text-center">
-          <p className="font-display font-light text-2xl md:text-4xl leading-[1.2] text-bone max-w-3xl mx-auto">
-            Their privacy is a policy. Ours is an architecture.
-          </p>
-          <p className="mt-6 text-base md:text-lg text-muted max-w-xl mx-auto">
-            No uplink, no vendor account, no remote access — not even for us. If someone
-            wants what your system saw, they have to come to you.
-          </p>
-          <div className="mt-9">
-            <Link
-              href="/why-local/"
-              className="inline-flex items-center gap-2 text-sm text-muted hover:text-bone transition-colors"
-            >
-              Why local
-              <span aria-hidden>→</span>
-            </Link>
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
+          <p className="eyebrow">Proof</p>
+          <div className="mt-7 grid md:grid-cols-2 gap-x-16 gap-y-10 items-start">
+            <h2 className="font-display font-light text-3xl md:text-5xl leading-[1.08] text-bone max-w-xl">
+              The first room it watches is the founder&apos;s own.
+            </h2>
+            <div className="max-w-prose">
+              <p className="text-base md:text-lg leading-relaxed text-muted">
+                VaultScaler&apos;s first live deployment runs in Ian Green&apos;s own
+                building — zones drawn around what matters, breach and absence
+                detection, privacy applied before anything is written to disk, and
+                natural-language query over what the system has seen. It answers with
+                no network connection at all. Nothing it sees leaves the building.
+              </p>
+              <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
+                There are no client deployments yet. This is the founder&apos;s own
+                system, and it is described here because it is the only one we can show
+                you honestly.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Closing */}
+      {/* Close */}
       <section className="border-t border-line">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-24 md:py-32 text-center">
-          <h2 className="font-display font-light text-3xl md:text-5xl text-bone">
-            It stays between us.
+          <h2 className="font-display font-light text-2xl md:text-4xl leading-[1.2] text-bone max-w-3xl mx-auto">
+            Their privacy is a policy. Ours is an architecture.
           </h2>
-          <p className="mt-5 text-lg text-muted max-w-xl mx-auto">
-            Whenever you&apos;re ready.
+          <p className="mt-6 text-base md:text-lg text-muted max-w-xl mx-auto">
+            No uplink, no vendor account, no remote access — not even for us. If
+            someone wants what your system saw, they have to come to you.
           </p>
-          <div className="mt-10">
+          <p className="mt-9 text-lg text-bone">It stays between us.</p>
+          <p className="mt-2 text-lg text-muted">Whenever you&apos;re ready.</p>
+          <div className="mt-9">
             <Link
               href="/contact/"
               className="inline-flex items-center rounded-full border border-bone/70 px-7 py-3 text-sm font-medium text-bone hover:bg-bone hover:text-ink transition-colors"

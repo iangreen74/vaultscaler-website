@@ -24,7 +24,7 @@ const sans = Inter({
 
 const TITLE = "VaultScaler — a private AI consultancy";
 const DESC =
-  "VaultScaler designs private AI systems for people who cannot afford to send their data anywhere. It designs, specifies, and builds systems that run entirely on the client's own hardware, with nothing sent to any external company. Security is the first application — real-time computer vision, on-premise, proven on the founder's own deployment — and not the only one: a written security assessment and vendor-independent AI advisory are deliverable today, with no installation required.";
+  "VaultScaler is a private AI consultancy. Its lead offering is a fixed-fee written assessment of how confidential material actually leaves a building — through machines, tools, and people. Where a finding calls for a system, VaultScaler designs and specifies it, running entirely on hardware the client owns, with nothing sent to any external company. Licensed Nevada contractors carry out any physical installation.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -90,15 +90,15 @@ export default function RootLayout({
     areaServed: "Worldwide",
     knowsAbout: [
       "private AI consultancy",
+      "confidentiality exposure assessment",
+      "insider risk assessment",
+      "social engineering risk assessment",
       "on-premise AI",
-      "edge computer vision",
       "on-premise security",
       "AI advisory",
-      "security assessment",
-      "private knowledge management",
-      "agentic discovery",
-      "private collection and residence security",
+      "vendor-independent AI advisory",
       "discreet security consultancy",
+      "law firm and medical practice confidentiality",
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",

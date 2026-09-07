@@ -1,48 +1,40 @@
 # VaultScaler
 
-> Have something worth keeping private? VaultScaler is a private AI consultancy. It designs, specifies, and builds artificial-intelligence systems that run entirely on the client's own hardware, in the client's own building, with nothing sent to any external company. Security is the first application — it is not the definition of the practice. The one-line version: VaultScaler designs private AI systems for people who cannot afford to send their data anywhere. Founded in 2025. Based in Las Vegas; available internationally.
+> Most security firms will secure your network. VaultScaler finds out how confidential information actually leaves your building — through the machines that watch it, the software your staff use, and your people. Its lead offering is the Exposure Assessment, a fixed-fee written assessment, deliverable today. Where a finding calls for a system, VaultScaler designs and specifies it, running entirely on hardware the client owns, with nothing sent to any external company. Founded in 2025. Based in Las Vegas; available internationally.
 
-The model is an architecture practice, not a product vendor. VaultScaler surveys the site, designs the system, specifies the hardware, builds and tunes the software, and holds the client relationship. Licensed contractors execute physical installation. The value is the judgement, the design, and the engineering — not the box.
+VaultScaler is a private AI consultancy, not a security-systems vendor. The assessment leads; systems work is secondary and follows only where a finding calls for it.
+
+## The problem: three channels
+
+Information leaves a building three ways. **Machines** — cameras, microphones, access control, conferencing hardware, printers — are cloud-connected by default, streaming the inside of a building to a vendor's servers, retained under that vendor's terms. **Tools** — AI services, SaaS platforms, third-party processors — receive confidential material pasted into consumer chat interfaces on personal accounts, with no data processing agreement. **People** are the channel every technical control ignores: most breaches involve a person persuaded to do something rather than a system defeated, and voice cloning has moved that from a specialist capability to a consumer one. Almost nobody assesses all three — cybersecurity firms stop at the building's edge, physical security firms ignore data, and few examine people at all. The exposure usually sits in the interaction between channels.
 
 ## Why now
 
-Two things changed recently. Capable models now run on hardware the size of a book — real-time computer vision, and natural-language answers about what it saw. AI collapsed the cost of bespoke: what used to require a team, one skilled engineer can now do for a single building. The result: private AI is no longer a compromise. For the right client it is the better option, and the only one whose guarantees are architectural rather than contractual.
+AI made every channel worse at once: chat tools ingest and retain whatever staff paste into them, cameras are more capable and connected than ever, and social engineering now has voice cloning and synthetic video at scale. The alternative also became viable — capable models now run on hardware the size of a book, and what used to take a team, one engineer can now do for a single building. For the right client a private system is no longer the weaker option — it is the only one whose guarantees are architectural rather than contractual.
 
-## How VaultScaler works (an architecture practice, not a shipment)
+## The Exposure Assessment (the lead offering)
 
-1. Survey the site — walk the room, assess the light, flow, and what's actually at risk.
-2. Design for the building — a system conceived for the building and material, not a package.
-3. Specify it — the design becomes an exact specification: hardware, placement, thresholds.
-4. Build and tune it — the computer vision is built and trained by VaultScaler, on its own hardware, tuned before anything ships.
-5. A licensed contractor installs it — VaultScaler specifies exactly what goes in and where; a licensed contractor carries out the physical work.
-6. Ongoing care, if wanted — retuning, health monitoring, capability upgrades, delivered in person, always optional.
+A fixed-fee written assessment of how confidential material can leave your premises — deliberately wider than an IT security review, and outside what your IT provider already covers. What happens: a half-day walkthrough, structured interviews with your office administrator, your IT provider, and any staff you nominate, a review of vendor terms and system configurations, and a written report with rated findings and a prioritised remediation list within six working days, plus an hour of debrief. Cost: a fixed fee by practice size — $4,500 under 10 staff, $6,500 for 10 to 24, $9,500 for 25 to 75. What it does not cover: network and endpoint security (that's your IT provider's territory), legal/ethical/regulatory determinations (a question for your counsel), penetration testing or testing of staff, and investigation of individuals. Most of what an assessment finds costs nothing to fix, and VaultScaler has no commercial interest in those items.
 
-Then it's the client's: they own the hardware and what it records, with no mandatory subscription.
+## After the assessment
 
-## The four services
-
-1. **Private Security Systems** — built and shipping. Real-time computer vision running wholly on-premise: zone and boundary monitoring around specific objects, absence detection, after-hours presence, known-person recognition with owner-controlled face obfuscation, and natural-language query over recorded events. Deliverable: a surveyed, designed, installed, and tuned system, plus an owner viewing station. Engagement: a design and configuration fee; installation by a licensed contractor; an optional ongoing tuning retainer.
-2. **Private Security Assessment** — deliverable today, no purchase required. A written assessment of a space: sightlines and blind spots, insider-risk exposure, where existing footage actually goes, what an insurer or regulator requires. Deliverable: a written report. Engagement: a fixed fee. The lowest-friction way to start a relationship.
-3. **Private AI Advisory** — deliverable today, vendor-independent. What can genuinely run on a client's own hardware, what cannot, the honest trade-offs, and the cost. Deliverable: a written recommendation and architecture. Engagement: a day rate or fixed scope.
-4. **Private Knowledge & Agentic Discovery** — capability proven, bespoke build, not yet a shelf product. The same primitive as the security query system, pointed at a client's own archive instead of their rooms: local retrieval, local reasoning, cited answers, entirely within their walls. VaultScaler has built and verified this pattern inside the security product; applying it to documents is a build, not a finished product. Deliverable: a scoped bespoke system. Engagement: a project fee.
-
-Ongoing care (retuning after a layout change, health monitoring, capability upgrades) is available, delivered in person, and always optional — never a condition of purchase.
+Where a finding calls for a system, VaultScaler designs and specifies it — a local model for drafting and summarisation with nothing leaving the premises, a gateway that routes requests locally by default, on-premise recording with no vendor access. VaultScaler designs and specifies; licensed Nevada contractors carry out any physical installation and invoice the client directly — VaultScaler does not sell or supply hardware. This is quoted separately, and the client is under no obligation to proceed. An ongoing advisory retainer is also available, from $1,200 a month, for practices that want the assessment kept current rather than repeated. Nothing leaves the building. Not as a policy — as an architecture.
 
 ## Who it's for
 
-Not a single category. The buyer is defined by a reason for discretion plus the means to act on it: professional confidentiality (attorneys, physicians, family offices, and anyone whose obligation to protect client material is a professional one); private wealth (people whose visibility or resources make ordinary security an active liability); collections and cultural property (private collectors, galleries, museums, and anyone holding irreplaceable objects); and discreet commercial spaces (private clubs, member venues, businesses whose clientele expect anonymity).
+Not a single category. The buyer is defined by a reason for discretion plus the means to act on it: professional practices (law firms, medical and dental practices, accounting firms, and anyone whose duty to protect client material is a professional one); family offices and wealth management (where client information is the relationship, and a disclosure is not recoverable); private wealth (people whose visibility or resources make ordinary security an active liability); and discreet commercial spaces (private clubs, member venues, businesses whose clientele expect anonymity).
 
 ## Why local
 
 Their privacy is a policy. Ours is an architecture. A cloud vendor promises not to misuse your data — that promise survives exactly as long as their management, finances, jurisdiction, and security do. VaultScaler's systems have no uplink, no vendor account, no server, and no remote access, including for VaultScaler. The checkable consequences: there is no copy anywhere else, so there is nothing for anyone to breach, subpoena, or browse; if someone wants what a system saw, they must come to the owner; support is delivered in person, because there is no other way in. For Europe specifically, this is a compliance argument, not a values one: no third-party processor in the chain, no cross-border transfer of personal data, no vendor-written retention terms, and biometric processing that can be demonstrated, room by room, to be either enabled by the owner's choice or absent entirely.
 
-## The proof
+## Proof
 
-VaultScaler's first live deployment runs now, in the founder's own building — zones drawn around the objects that matter, breach and absence detection, privacy modes, and natural-language query over what the system has seen. Ian Green is an engineer with a background in electronic warfare and computer vision. The system is his own design and build, running on his own premises.
+VaultScaler's first live deployment runs in Ian Green's own building — zones drawn around what matters, breach and absence detection, privacy applied before anything is written to disk, and natural-language query over what the system has seen, answered with no network connection at all. There are no client deployments yet. This is the founder's own system, described here because it is the only one VaultScaler can show honestly. Ian Green is an engineer with a background in electronic warfare and computer vision.
 
 ## What is not claimed
 
-No client installations yet beyond the founder's own — these are first design partners, not "clients" in the plural. No international deployments yet, though the system is available internationally. No monitoring service, no alarm dispatch, no law-enforcement integration. Agentic discovery over documents is a capability and a build, not a finished product. VaultScaler does not physically install; licensed contractors do.
+No client deployments yet beyond the founder's own — these are first design partners, not "clients" in the plural. No international deployments yet, though the system is available internationally. No monitoring service, no alarm dispatch, no law-enforcement integration. VaultScaler does not perform network and endpoint security, legal/ethical/regulatory determinations, penetration testing, staff testing, or investigation of individuals. VaultScaler does not sell, supply, or physically install hardware; licensed Nevada contractors carry out any physical installation and invoice the client directly.
 
 ## Contact
 

@@ -92,8 +92,8 @@ const images = [
     accentColor: '#d43f31',
     textColor: '#ece9e3',
     productName: 'VaultScaler',
-    headline: 'Have something worth keeping private?',
-    subline: 'A private AI consultancy.',
+    headline: 'Most security firms will secure your network.',
+    subline: 'The Exposure Assessment — a private AI consultancy.',
   },
 ];
 
