@@ -9,12 +9,12 @@ import JsonLd from "@/components/JsonLd";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "How it works | VaultScaler",
+  title: "The Assessment | VaultScaler",
   description:
     "Information leaves a building three ways: through the machines that watch it, the software staff use, and the people who work there. An Exposure Assessment looks at all three. Here is what actually happens during one, from the pre-visit questionnaire to the written report.",
   alternates: { canonical: `${SITE.url}/how-it-works/` },
   openGraph: {
-    title: "How it works | VaultScaler",
+    title: "The Assessment | VaultScaler",
     description:
       "Machines, tools, and people — the three ways confidential information actually leaves a building, and what happens during an Exposure Assessment that looks at all three.",
     url: `${SITE.url}/how-it-works/`,
@@ -46,7 +46,7 @@ export default function HowItWorks() {
   const ld = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "How it works — VaultScaler",
+    name: "The Assessment — VaultScaler",
     url: `${SITE.url}/how-it-works/`,
     description:
       "The three ways information leaves a building — machines, tools, and people — and what actually happens during an Exposure Assessment that looks at all three.",
@@ -59,7 +59,7 @@ export default function HowItWorks() {
       <section className="relative overflow-hidden border-b border-line">
         <div aria-hidden className="spotlight absolute inset-0" />
         <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pt-20 pb-16 md:pt-28 md:pb-20">
-          <p className="eyebrow">How it works</p>
+          <p className="eyebrow">The Assessment</p>
           <h1 className="mt-6 font-display font-light text-4xl md:text-6xl leading-[1.06] text-bone max-w-3xl tracking-tight">
             Three ways information leaves a building.
           </h1>

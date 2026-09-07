@@ -6,8 +6,8 @@ import { trackNavClick } from '@/lib/analytics';
 
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
+  { label: 'The Assessment', href: '/how-it-works/' },
   { label: 'Services', href: '/services/' },
-  { label: 'How it works', href: '/how-it-works/' },
   { label: 'Approach', href: '/approach/' },
   { label: 'Why local', href: '/why-local/' },
   { label: 'Contact', href: '/contact/' },
@@ -40,13 +40,13 @@ export default function Navigation() {
               <span className="text-[15px] font-medium tracking-tight text-bone">VaultScaler</span>
             </Link>
 
-            <div className="hidden md:flex items-center gap-9">
+            <div className="hidden md:flex items-center gap-4 lg:gap-9">
               {NAV_LINKS.slice(1).map((l) => (
                 <Link
                   key={l.href}
                   href={l.href}
                   onClick={() => trackNavClick(l.label)}
-                  className="text-sm text-muted hover:text-bone transition-colors"
+                  className="whitespace-nowrap text-sm text-muted hover:text-bone transition-colors"
                 >
                   {l.label}
                 </Link>
@@ -54,7 +54,7 @@ export default function Navigation() {
               <Link
                 href="/contact/"
                 onClick={() => trackNavClick('Talk to us')}
-                className="text-sm text-bone border border-line hover:border-bone px-4 py-1.5 rounded-full transition-colors"
+                className="whitespace-nowrap text-sm text-bone border border-line hover:border-bone px-4 py-1.5 rounded-full transition-colors"
               >
                 Talk to us
               </Link>
