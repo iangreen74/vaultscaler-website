@@ -53,6 +53,18 @@ const TONE_CLASS: Record<string, string> = {
   build: "text-dim",
 };
 
+// Moved here from the old /how-it-works/, which used to describe this capability
+// as the site's lead product. It's accurate and useful, just no longer the lead —
+// a secondary example of what a systems engagement can include, not a pitch on
+// its own.
+const COMPUTER_VISION_CAPABILITY = [
+  "Every object, individually — draw a boundary around whatever matters.",
+  "Removal — if something leaves its place, you know within seconds.",
+  "Contact — if someone reaches into a zone marked off-limits, you know immediately.",
+  "People — recognise staff and regulars, flag anyone unknown, or run fully anonymous with every face obscured before it's stored.",
+  "A record you can use — every event, timestamped, with an image.",
+];
+
 export default function Services() {
   const ld = {
     "@context": "https://schema.org",
@@ -170,6 +182,19 @@ export default function Services() {
                       commercial interest in those items and recommend you do them
                       regardless.
                     </p>
+                  </div>
+                )}
+
+                {s.slug === "security-systems" && (
+                  <div className="mt-10 pt-8 border-t border-line/60">
+                    <p className="eyebrow">One example: on-premise computer vision</p>
+                    <ul className="mt-4 space-y-2">
+                      {COMPUTER_VISION_CAPABILITY.map((item) => (
+                        <li key={item} className="text-sm md:text-base leading-relaxed text-muted">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 )}
               </div>
