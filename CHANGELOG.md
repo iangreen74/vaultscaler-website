@@ -1,5 +1,38 @@
 # Changelog
 
+## [4.2.0] - 2026-08-28
+
+Founder story added — the site explained what VaultScaler does but never why this
+founder is the one doing it.
+
+### Added
+- **"The founder" section on the homepage**, placed after the architecture-practice
+  method strip and before "Who it's for." Three short paragraphs: nine years as an
+  Electronic Warfare Specialist with the New Zealand Defence Force (2012–2021, sourced
+  from `career/resume/iangreenresume_updated.md` and `iangreenresume_v3.pdf` in the
+  vault), then DevOps engineering, then computer vision and edge AI — closing on "Most
+  people building private systems learned it from a whitepaper. This one learned it
+  where the consequences were real."
+- **Expanded "Formation" section on `/approach`**, between "And then it's yours" and
+  "Where we are," with more room for the same story: the specific NZDF duties
+  (identity and access management, AWS-based systems for secure communications,
+  Terraform and version control, data analysis with Python/Pandas/NumPy/TensorFlow),
+  then Vontier (2022–present), then VaultScaler.
+- **JSON-LD `Person` entity for Ian Green**, added to `app/layout.tsx` and emitted
+  site-wide, plus a `founder` reference on the `Organization` entity. No `Person`
+  schema existed before this change.
+- **`llms.txt`** gained a "The founder" section mirroring the homepage copy.
+
+### Notes
+- No claim beyond the documented resume record. Nothing implying classified work,
+  clearances, or NZDF endorsement of VaultScaler.
+- Deliberately did **not** claim NZDF service involved deployment "in the field" across
+  "varied locations" without reliable infrastructure — the record documents the role,
+  dates, and duties, but not physical deployment locations or connectivity conditions,
+  so that specific framing was left out rather than inferred.
+- No art, painting, or gallery framing — consistent with [4.1.0]'s removal of art as
+  the site's frame.
+
 ## [4.1.0] - 2026-08-26
 
 New hero, and art removed as the site's frame — both per direct feedback on [4.0.0].
