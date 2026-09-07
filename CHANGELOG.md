@@ -1,5 +1,66 @@
 # Changelog
 
+## [5.0.0] - 2026-09-07
+
+Repositioning: the Exposure Assessment becomes the lead offering; systems work becomes
+secondary. Full rewrite of the homepage and Services page per the September 2026
+repositioning brief — the company changed (from a security-systems consultancy to a
+professional advisory practice whose product is a fixed-fee confidentiality
+assessment), and the site previously still argued for the old business.
+
+### Changed
+- **Homepage rewritten in full.** New hero ("Most security firms will secure your
+  network."), a new "three channels" problem framing (machines / tools / people,
+  replacing the old footage/false-alarms/hardware-contact problems block), a "why
+  2026" section, the Exposure Assessment as its own anchored section (method,
+  pricing table by practice size, explicit exclusions), an "after the assessment"
+  section positioning systems work as secondary and contractor-installed, "who it's
+  for" rewritten around professional practices instead of art/collections, and a
+  shortened proof section stating plainly there are no client deployments yet. The
+  six-step "how we work" method strip, the four-card service grid, the "what we do
+  about it" capability cards (including the unsupported "fewer guards, better cover"
+  staffing claim), and the standalone founder/NZDF bio section are all removed from
+  the homepage — none appear in the new structure. "Nothing leaves the building. Not
+  as a policy — as an architecture." is preserved verbatim inside the new "after the
+  assessment" section, since the card it used to live in was cut.
+- **Services page rewritten in full.** Two-plus-one structure: the Exposure
+  Assessment (expanded with pricing table and exclusions), an Ongoing Advisory
+  Retainer, and a clearly secondary "Systems Design & Configuration" block —
+  Private Knowledge & Agentic Discovery is now mentioned only as an example inside
+  that block, not listed as its own service. The old four-service model (Private
+  Security Systems / Private Security Assessment / Private AI Advisory / Private
+  Knowledge & Agentic Discovery) is gone. Kept the `security-systems` slug on the
+  new systems block specifically so `/how-it-works`'s existing anchor link keeps
+  resolving.
+- **`lib/site.ts`**: `SITE.description` and `SITE.keywords` rewritten to lead with
+  the assessment; `SERVICES` rebuilt for the new three-block structure with an added
+  `statusLabel` field (replacing the old shipping/available/build label mapping,
+  which no longer fit a professional-services model).
+- **`app/layout.tsx`**: root `DESC` and the Organization JSON-LD's `knowsAbout`
+  updated to match. `Person` JSON-LD (added in an earlier pass) is unchanged.
+- **`public/llms.txt`** rewritten to match throughout — three channels, the
+  assessment as lead offering with pricing, systems as secondary, "who it's for"
+  without art-market language, and an updated proof/what's-not-claimed section.
+- **`public/og.jpg`** regenerated with the new headline via
+  `scripts/generate-og-images.mjs`.
+- Fixed a stale line on `/approach` ("The system VaultScaler installs in a client's
+  building...") that contradicted the now-explicit rule that VaultScaler never
+  installs — changed to "The system running in a client's building..." `/approach`
+  is otherwise unchanged; it still needs a Phase 2 pass (see PR description).
+
+### Fixed
+- **Mobile layout bug in the pricing table.** The table's `min-w-[380px]` (needed
+  so its two columns don't crush on narrow screens) was blowing out the page width
+  at 375px, because its grid-item ancestor had no `min-w-0` — CSS Grid gives items
+  an implicit `min-width: auto`, so the track expanded to the table's min-content
+  width instead of letting the inner `overflow-x-auto` wrapper scroll it. Caught via
+  a Playwright check at 375px width (`scrollWidth` vs `clientWidth`), not by
+  inspection. Fixed on both the homepage and Services page.
+
+### Removed
+- Art-market references, the staffing-reduction claim, and stale capability
+  keywords — see PR description for the full removal grep report.
+
 ## [4.1.0] - 2026-08-26
 
 New hero, and art removed as the site's frame — both per direct feedback on [4.0.0].
