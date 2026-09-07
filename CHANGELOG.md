@@ -1,5 +1,47 @@
 # Changelog
 
+## [5.1.0] - 2026-09-07
+
+Repositioning Phase 2: `/how-it-works/` and `/approach/` rewritten to match [5.0.0]'s
+homepage/services repositioning, plus a real honesty-discipline bug fix.
+
+### Fixed
+- **`/approach/` claimed a client building exists.** "The system running in a
+  client's building is Ian's own design and build" implied a client deployment
+  that doesn't exist — VaultScaler has none yet. Corrected across the page's
+  rewrite to state plainly there are no client deployments.
+
+### Changed
+- **`/how-it-works/` rewritten** from an exclusively camera-capability page ("What
+  it sees" — object removal, zone contact, person recognition) into the
+  three-channels-plus-assessment-method explainer: Machines / Tools / People, why
+  the exposure usually sits in the interaction between them, and what actually
+  happens during an engagement (before the visit, on the day, the report, the
+  debrief). The old camera-capability content wasn't deleted — it's now a short,
+  explicitly secondary list inside the "Systems Design & Configuration" block on
+  `/services/`, labeled "One example: on-premise computer vision."
+- **`/approach/` rewritten** from the six-step systems-engagement method (survey /
+  design / specify / build & tune / licensed install / ongoing care) into the
+  founder-background page: the NZDF formation story (expanded), the DevOps/cloud
+  bridge, the "VaultScaler is the first against the second" argument, a condensed
+  paragraph on how systems work still gets built when an assessment calls for it,
+  and a proof section with the corrected honesty language above.
+- **Homepage's "three channels" section shortened** — full treatment now lives on
+  `/how-it-works/`; the homepage keeps three short paragraphs and links through.
+- **`/why-local/`**: added a short framing line stating this describes systems that
+  follow an assessment, not lead it. GDPR section reviewed and left as-is — it's an
+  architectural claim, not a specific compliance certification, so it doesn't
+  violate the no-legal-determinations rule.
+- **`/services/`**: removed the duplicated fee prose under "How it works" for the
+  Exposure Assessment (the pricing table already states it); the "engagement" copy
+  now just points to the table instead of repeating the dollar figures.
+
+### Note on this PR's brief
+The brief's Task 0 premise — that the Phase 1 homepage rewrite failed to deploy and
+was still live in its old form — was checked and found to be false: `/` and
+`/services/` were both already live with [5.0.0]'s content at verification time,
+confirmed via direct fetch. See PR description for the full finding.
+
 ## [5.0.0] - 2026-09-07
 
 Repositioning: the Exposure Assessment becomes the lead offering; systems work becomes

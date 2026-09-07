@@ -73,7 +73,7 @@ export const SERVICES: Service[] = [
     whatYouGet:
       "A written report with rated findings and a prioritised remediation list, issued within six working days, plus an hour of debrief.",
     engagement:
-      "A fixed fee by practice size — $4,500 under 10 staff, $6,500 for 10 to 24, $9,500 for 25 to 75. No expenses, no hourly overrun, no change orders.",
+      "A fixed fee by practice size — see pricing below. No expenses, no hourly overrun, no change orders.",
   },
   {
     slug: "advisory-retainer",

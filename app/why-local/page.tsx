@@ -68,6 +68,12 @@ export default function WhyLocal() {
             their security do. VaultScaler&apos;s systems have no uplink, no vendor
             account, no server, and no remote access — including for VaultScaler.
           </p>
+          <p className="mt-5 text-sm text-dim max-w-2xl">
+            This describes the systems VaultScaler builds where an Exposure
+            Assessment finds one is needed — they follow an assessment, they
+            don&apos;t lead it. The architecture holds regardless of what prompted
+            the build.
+          </p>
         </div>
       </section>
 

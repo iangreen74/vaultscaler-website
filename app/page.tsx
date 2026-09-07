@@ -32,17 +32,17 @@ const CHANNELS = [
   {
     n: "01",
     lead: "Machines.",
-    body: "Cameras, microphones, access control, conferencing hardware, printers. Most are cloud-connected by default, streaming the inside of a building — often including audio — to a vendor's servers in another state, retained under that vendor's terms, reachable by people you have never met.",
+    body: "Cameras, microphones, access control, conferencing hardware, printers — most cloud-connected by default, streaming the inside of a building to a vendor's servers, reachable by people you have never met.",
   },
   {
     n: "02",
     lead: "Tools.",
-    body: "AI services, SaaS platforms, third-party processors. Staff paste confidential material into consumer chat interfaces every day, on personal accounts, with no data processing agreement and no way to retrieve what was submitted. Most practices have no idea it is happening.",
+    body: "AI services, SaaS platforms, third-party processors. Staff paste confidential material into consumer chat interfaces every day, on personal accounts, with no data processing agreement.",
   },
   {
     n: "03",
     lead: "People.",
-    body: "The channel every technical control ignores. Most breaches involve a person persuaded to do something rather than a system defeated — and voice cloning has moved that from a specialist capability to a consumer one.",
+    body: "The channel every technical control ignores. Most breaches involve a person persuaded to do something rather than a system defeated.",
   },
 ];
 
@@ -143,37 +143,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The problem: three channels */}
+      {/* The problem: three channels — short version; full treatment on /how-it-works/ */}
       <section className="border-t border-line bg-ink-900">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
           <p className="eyebrow">The problem</p>
           <h2 className="mt-6 font-display text-2xl md:text-3xl text-bone max-w-2xl">
             Information leaves a building three ways.
           </h2>
-          <div className="mt-14 md:mt-20">
+          <div className="mt-14 grid md:grid-cols-3 gap-x-10 gap-y-10">
             {CHANNELS.map((c) => (
-              <div
-                key={c.n}
-                className="grid md:grid-cols-[6rem_1fr] gap-x-8 gap-y-3 py-10 border-t border-line first:border-t-0"
-              >
-                <div className="font-display text-3xl md:text-4xl text-dim">{c.n}</div>
-                <div className="max-w-2xl">
-                  <h3 className="font-display text-xl md:text-2xl text-bone">{c.lead}</h3>
-                  <p className="mt-4 text-base md:text-lg leading-relaxed text-muted">{c.body}</p>
-                </div>
+              <div key={c.n}>
+                <h3 className="font-display text-xl md:text-2xl text-bone">{c.lead}</h3>
+                <p className="mt-3 text-base leading-relaxed text-muted">{c.body}</p>
               </div>
             ))}
           </div>
-          <div className="mt-14 max-w-3xl border-t border-line pt-10">
-            <p className="text-base md:text-lg leading-relaxed text-muted">
-              Almost nobody assesses all three. Cybersecurity firms handle tools and
-              stop at the building&apos;s edge. Physical security firms handle machines
-              and ignore data. Neither examines how the two interact, and few examine
-              people at all. A camera is a machine problem until its audio reaches a
-              vendor. A shared alarm code is a machine problem until the cleaning
-              contractor&apos;s staff turnover makes it a people problem. The exposure
-              usually sits in the interaction.
-            </p>
+          <p className="mt-12 max-w-2xl text-base md:text-lg leading-relaxed text-muted">
+            Almost nobody assesses all three, and the exposure usually sits in the
+            interaction between them.
+          </p>
+          <div className="mt-8">
+            <Link
+              href="/how-it-works/"
+              className="inline-flex items-center gap-2 text-sm text-muted hover:text-bone transition-colors"
+            >
+              How an assessment looks at all three
+              <span aria-hidden>→</span>
+            </Link>
           </div>
         </div>
       </section>
