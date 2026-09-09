@@ -30,14 +30,11 @@ export default function Navigation() {
             <Link
               href="/"
               onClick={() => trackNavClick('Logo')}
-              className="flex items-center gap-2.5 group"
+              className="flex items-center group"
             >
-              <img
-                src="/brand/vaultscaler-icon-v1.0/svg/vaultscaler-icon-inverse.svg"
-                alt=""
-                className="h-6 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
-              />
-              <span className="text-[15px] font-medium tracking-tight text-bone">VaultScaler</span>
+              <span className="font-display text-[19px] leading-none tracking-[0.02em] text-bone opacity-90 group-hover:opacity-100 transition-opacity">
+                VaultScaler
+              </span>
             </Link>
 
             <div className="hidden md:flex items-center gap-4 lg:gap-9">
