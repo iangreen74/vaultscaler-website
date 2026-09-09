@@ -6,14 +6,9 @@ export default function SiteFooter() {
       <div className="max-w-6xl mx-auto px-5 sm:px-8 py-14">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
           <div className="max-w-sm">
-            <div className="flex items-center gap-2.5">
-              <img
-                src="/brand/vaultscaler-icon-v1.0/svg/vaultscaler-icon-inverse.svg"
-                alt=""
-                className="h-6 w-auto opacity-90"
-              />
-              <span className="text-[15px] font-medium tracking-tight text-bone">VaultScaler</span>
-            </div>
+            <span className="font-display text-[19px] leading-none tracking-[0.02em] text-bone opacity-90">
+              VaultScaler
+            </span>
             <p className="mt-4 text-sm leading-relaxed text-dim">
               A private AI consultancy. On-premise, owned end to end, nothing leaving the
               building. Based in Las Vegas.
