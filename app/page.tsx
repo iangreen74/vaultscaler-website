@@ -335,32 +335,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Proof */}
-      <section className="border-t border-line">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
-          <p className="eyebrow">Proof</p>
-          <div className="mt-7 grid md:grid-cols-2 gap-x-16 gap-y-10 items-start">
-            <h2 className="font-display font-light text-3xl md:text-5xl leading-[1.08] text-bone max-w-xl">
-              The first room it watches is the founder&apos;s own.
-            </h2>
-            <div className="max-w-prose">
-              <p className="text-base md:text-lg leading-relaxed text-muted">
-                VaultScaler&apos;s first live deployment runs in Ian Green&apos;s own
-                building — zones drawn around what matters, breach and absence
-                detection, privacy applied before anything is written to disk, and
-                natural-language query over what the system has seen. It answers with
-                no network connection at all. Nothing it sees leaves the building.
-              </p>
-              <p className="mt-5 text-base md:text-lg leading-relaxed text-muted">
-                There are no client deployments yet. This is the founder&apos;s own
-                system, and it is described here because it is the only one we can show
-                you honestly.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Close */}
       <section className="border-t border-line">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-24 md:py-32 text-center">

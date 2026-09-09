@@ -1,5 +1,34 @@
 # Changelog
 
+## [5.1.2] - 2026-09-09
+
+Phase 4: remove the homepage "Proof" section.
+
+### Removed
+- **Homepage "Proof" section deleted in full** — eyebrow, heading ("The first room
+  it watches is the founder's own"), and both paragraphs, including the "no client
+  deployments yet" disclaimer. Not replaced with anything. Reasoning: it offered
+  evidence for the systems line, which is now secondary and licence-gated, while
+  the site leads with the Exposure Assessment; and it put "no client deployments"
+  in display type on a marketing page rather than in a conversation where it can be
+  framed. `llms.txt`'s equivalent `## Proof` section removed too, for consistency —
+  it carried the identical claim under an identical heading.
+- Homepage now runs "Who it's for" straight into the closing "Their privacy is a
+  policy" section. Verified via screenshot at desktop and mobile widths that the
+  transition and spacing read cleanly with no leftover gap.
+
+### Not changed, and why
+- `/approach/`'s own "Proof" section (same underlying claim, different context —
+  background/credibility for a reader already deep in the page, not a lead claim)
+  left untouched, per explicit instruction. See PR description for the
+  consistency question this raises.
+- `lib/site.ts`'s `SITE.description` still contains one sentence — "The first live
+  deployment runs in the founder's own building" — embedded in the Organization
+  JSON-LD on every page. Checked against the same honesty test applied everywhere
+  else on the site: it explicitly attributes the deployment to the founder, not a
+  client, so it doesn't imply a client deployment. Left as is; it's structured
+  metadata, not the marketing section this pass targeted.
+
 ## [5.1.1] - 2026-09-07
 
 Phase 3: nav rename/reorder, and a real (pre-existing) nav wrap bug fixed along the

@@ -28,10 +28,6 @@ Not a single category. The buyer is defined by a reason for discretion plus the 
 
 Their privacy is a policy. Ours is an architecture. A cloud vendor promises not to misuse your data — that promise survives exactly as long as their management, finances, jurisdiction, and security do. VaultScaler's systems have no uplink, no vendor account, no server, and no remote access, including for VaultScaler. The checkable consequences: there is no copy anywhere else, so there is nothing for anyone to breach, subpoena, or browse; if someone wants what a system saw, they must come to the owner; support is delivered in person, because there is no other way in. For Europe specifically, this is a compliance argument, not a values one: no third-party processor in the chain, no cross-border transfer of personal data, no vendor-written retention terms, and biometric processing that can be demonstrated, room by room, to be either enabled by the owner's choice or absent entirely.
 
-## Proof
-
-VaultScaler's first live deployment runs in Ian Green's own building — zones drawn around what matters, breach and absence detection, privacy applied before anything is written to disk, and natural-language query over what the system has seen, answered with no network connection at all. There are no client deployments yet. This is the founder's own system, described here because it is the only one VaultScaler can show honestly. Ian Green is an engineer with a background in electronic warfare and computer vision.
-
 ## What is not claimed
 
 No client deployments yet beyond the founder's own — these are first design partners, not "clients" in the plural. No international deployments yet, though the system is available internationally. No monitoring service, no alarm dispatch, no law-enforcement integration. VaultScaler does not perform network and endpoint security, legal/ethical/regulatory determinations, penetration testing, staff testing, or investigation of individuals. VaultScaler does not sell, supply, or physically install hardware; licensed Nevada contractors carry out any physical installation and invoice the client directly.
