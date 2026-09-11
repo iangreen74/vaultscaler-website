@@ -59,8 +59,20 @@ manual `aws s3 sync`** — the pipeline is the only path to production.
   (`vaultscaler-com-static-site`, `--delete`), and invalidates CloudFront
   (`E1Y23HE42FDF87`). Production deploys are serialized so overlapping merges can't race.
 
-**Merge-to-`main` is the go-live gate, and it belongs to Ian.** Opening or building a PR
-never deploys; only a real push to `main` does.
+**Merge-to-`main` is the go-live gate.** Opening or building a PR never deploys; only a real
+push to `main` does.
+
+As of 2026-09-11, Claude Code owns this loop end to end (branch → PR → merge → deploy)
+without asking, for both this site and iangreen.io — but only once the deploy pipeline
+itself enforces the gate a human review used to: build succeeds, post-deploy content
+verification passes (diff the live site against the built artifact, not just a 200), and a
+rollback path exists and has been tested. **This pipeline does not have those two checks
+yet** — it invalidates CloudFront and stops; there is no post-deploy diff and no rollback
+step. Add them before treating merges here as autonomous; until then, this repo still
+effectively wants Ian's go before merging to `main`. See `~/Desktop/ian-green/business/product/iangreen-io/CLAUDE.md`
+for the full policy and the exception list (money, DNS/domain, destroying/recreating AWS
+infra, deleting repos/branches, force-pushing, new public business claims — all still
+Ian's regardless of pipeline state).
 
 ## Configuration
 
