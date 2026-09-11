@@ -94,7 +94,16 @@ Push-to-deploy CI/CD via GitHub Actions (`.github/workflows/deploy.yml`) — **n
 `aws s3 sync`**. Every PR runs the `build` job (required check); **merging to `main`**
 assumes a scoped AWS role via OIDC (`vars.AWS_DEPLOY_ROLE_ARN`, `us-east-1`), syncs to S3
 (`vaultscaler-com-static-site --delete`), and invalidates CloudFront (`E1Y23HE42FDF87`).
-Merge-to-`main` is the go-live gate and belongs to Ian; a PR build never deploys.
+Merge-to-`main` is the go-live gate; a PR build never deploys.
+
+**Standing gate change (2026-09-11):** Claude Code owns branch → PR → merge → deploy on
+this repo without asking, same as iangreen.io — but only once merging here is gated by
+machine verification at least as strict as a human reviewer: build succeeds, post-deploy
+content diff against the live site passes, and rollback is tested and works. **This
+workflow doesn't have the diff or rollback steps yet** (it invalidates CloudFront and
+stops) — add them first. Until then this repo is still effectively "Ian approves before
+merge." Full policy + exceptions (money, DNS, destroying/recreating AWS infra, deleting
+repos/branches, force-push, new public business claims): `~/Desktop/ian-green/business/product/iangreen-io/CLAUDE.md`.
 
 ## Architecture
 
