@@ -6,7 +6,7 @@ import Navigation from "@/components/Navigation";
 import SiteFooter from "@/components/SiteFooter";
 import JsonLd from "@/components/JsonLd";
 import AnalyticsProvider from "@/components/AnalyticsProvider";
-import { SITE, SERVICES } from "@/lib/site";
+import { SITE } from "@/lib/site";
 
 const display = Fraunces({
   subsets: ["latin"],
@@ -22,9 +22,8 @@ const sans = Inter({
   display: "swap",
 });
 
-const TITLE = "VaultScaler — a private AI consultancy";
-const DESC =
-  "VaultScaler is a private AI consultancy. Its lead offering is a fixed-fee written assessment of how confidential material actually leaves a building — through machines, tools, and people. Where a finding calls for a system, VaultScaler designs and specifies it, running entirely on hardware the client owns, with nothing sent to any external company. Licensed Nevada contractors carry out any physical installation.";
+const TITLE = "VaultScaler — thoughtfully designed software";
+const DESC = SITE.description;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -43,7 +42,7 @@ export const metadata: Metadata = {
     description: DESC,
     url: SITE.url,
     siteName: "VaultScaler",
-    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: TITLE }],
+    images: [{ url: "/takes/writing.jpg", width: 1600, height: 974, alt: "The Takes window" }],
     locale: "en_US",
     type: "website",
   },
@@ -51,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: TITLE,
     description: DESC,
-    images: ["/og.jpg"],
+    images: ["/takes/writing.jpg"],
   },
 };
 
@@ -69,8 +68,7 @@ export default function RootLayout({
     name: "Ian Green",
     jobTitle: "Founder",
     worksFor: { "@type": "Organization", name: SITE.name, url: `${SITE.url}/` },
-    description:
-      "Founder of VaultScaler. Nine years as an Electronic Warfare Specialist with the New Zealand Defence Force (2012–2021), then DevOps engineering, then computer vision and edge AI. Designs and builds VaultScaler's systems himself.",
+    description: "Founder of VaultScaler.",
     alumniOf: {
       "@type": "CollegeOrUniversity",
       name: "Victoria University of Wellington",
@@ -88,34 +86,7 @@ export default function RootLayout({
     foundingDate: "2025",
     founder: { "@type": "Person", name: "Ian Green" },
     areaServed: "Worldwide",
-    knowsAbout: [
-      "private AI consultancy",
-      "confidentiality exposure assessment",
-      "insider risk assessment",
-      "social engineering risk assessment",
-      "on-premise AI",
-      "on-premise security",
-      "AI advisory",
-      "vendor-independent AI advisory",
-      "discreet security consultancy",
-      "law firm and medical practice confidentiality",
-    ],
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "VaultScaler service lines",
-      itemListElement: SERVICES.map((s, i) => ({
-        "@type": "Offer",
-        position: i + 1,
-        availability: s.statusTone === "build" ? "https://schema.org/PreOrder" : "https://schema.org/InStock",
-        itemOffered: {
-          "@type": "Service",
-          name: s.name,
-          description: `${s.whatItIs} ${s.whatYouGet}`,
-          provider: { "@type": "Organization", name: SITE.name },
-          areaServed: "Worldwide",
-        },
-      })),
-    },
+    knowsAbout: ["software for writers", "Mac software", "local speech transcription"],
   };
 
   return (

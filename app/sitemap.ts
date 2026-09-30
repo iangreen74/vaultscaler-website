@@ -7,10 +7,10 @@ export const dynamic = "force-static";
 // Map each route to the source files that, if touched, mean the page changed.
 const ROUTE_SOURCES: Record<string, string[]> = {
   "": ["app/page.tsx", "app/layout.tsx"],
-  "services": ["app/services/page.tsx", "lib/site.ts"],
-  "how-it-works": ["app/how-it-works/page.tsx"],
-  "approach": ["app/approach/page.tsx"],
-  "why-local": ["app/why-local/page.tsx"],
+  "takes": ["app/takes/page.tsx", "lib/site.ts"],
+  "takes/release-notes": ["app/takes/release-notes/page.tsx"],
+  "takes/support": ["app/takes/support/page.tsx"],
+  "takes/privacy": ["app/takes/privacy/page.tsx"],
   "contact": ["app/contact/page.tsx"],
   "privacy": ["app/privacy/page.tsx"],
 };
@@ -35,14 +35,9 @@ function lastModifiedFor(files: string[]): string {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const mainRoutes = ["", "services", "how-it-works", "approach", "why-local", "contact", "privacy"];
+  const mainRoutes = ["", "takes", "takes/release-notes", "takes/support", "takes/privacy", "contact", "privacy"];
 
-  const priorityFor = (p: string): number => {
-    if (p === "") return 1.0;
-    if (p === "services") return 0.9;
-    if (p === "how-it-works" || p === "approach" || p === "why-local") return 0.8;
-    return 0.4;
-  };
+  const priorityFor = (p: string): number => (p === "" || p === "takes" ? 1.0 : p.startsWith("takes/") ? 0.7 : 0.4);
 
   return mainRoutes.map((p) => ({
     url: p ? `${SITE.url}/${p}/` : `${SITE.url}/`,

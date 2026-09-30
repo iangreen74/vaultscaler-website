@@ -27,10 +27,21 @@ const config: Config = {
         line: "#242427", // hairlines
         // the single accent — an alarm red, used once or twice per page at most
         alert: "#d43f31",
+        // Takes: the app's own ivory paper and ink (see public/app.css in the Takes repository)
+        paper: {
+          DEFAULT: "#f4f1ea",
+          deep: "#ebe6db",
+          ink: "#141311",
+          soft: "#4f4838", // secondary text on paper (contrast ≥ 7:1)
+          accent: "#7a6f5a",
+          rule: "#d9d2c3",
+          rec: "#9e3226", // the app's recording red, darkened for text contrast on paper
+        },
       },
       fontFamily: {
         display: ["var(--font-display)", "Georgia", "Cambria", "Times New Roman", "serif"],
         sans: ["var(--font-sans)", "system-ui", "-apple-system", "Segoe UI", "sans-serif"],
+        takes: ["Newsreader", "Georgia", "Cambria", "Times New Roman", "serif"],
       },
       letterSpacing: {
         eyebrow: "0.22em",
