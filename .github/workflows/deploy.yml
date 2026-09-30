@@ -79,9 +79,13 @@ jobs:
           # serve a stale page for up to an hour after a merge with no way to force a
           # revalidation from this end. must-revalidate so a stale copy is never served
           # once it's actually expired, at any layer.
+          # Takes releases (disk images, update zips, appcasts) live in the same bucket but are
+          # not part of the site build: never delete them from here.
           aws s3 sync out/ s3://vaultscaler-com-static-site \
             --delete \
             --exclude "_next/static/*" \
+            --exclude "takes/downloads/*" \
+            --exclude "takes/updates/*" \
             --cache-control "no-cache, must-revalidate"
 
       - name: Invalidate CloudFront
