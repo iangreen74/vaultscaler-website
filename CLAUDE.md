@@ -63,16 +63,14 @@ All agents follow these principles:
 - Optimize for long-term trust over short-term wins
 
 ## Messaging
-> Positioning: **VaultScaler is edge computer-vision security for art** — bespoke, consulting-led
-> security for galleries, museums, and private collections. The intelligence runs on hardware the
-> customer owns, in their building; nothing it sees leaves the room, and nothing is attached to the
-> artwork. The three pillars survive and get specific: **at the edge** (on-premise, no cloud, no
-> server to breach), **honest by design** (it knows a visitor in front of a work from a work that's
-> gone — it doesn't cry wolf), **owned end to end** ("the intelligence is ours, not rented from a
-> platform that can cut us off"). Markets: commercial galleries, private collections, artist-run and
-> independent spaces, small museums. Voice: plain, declarative, unhurried, no hype. Design: dark
-> gallery-at-night, monochrome + one restrained alert-red. Nav: Home · How it works · Approach ·
-> Contact. Vivaliux and the old living-systems positioning are removed — do not reintroduce them.
+> Positioning (September 2026 transition): **VaultScaler makes thoughtfully designed software.**
+> Takes — "A writing workspace built around speaking." — is the featured product (/takes). The
+> consultancy offers (Exposure Assessment, services) are retired: their routes show a noindex
+> notice and are out of navigation and the sitemap. Voice: plain, declarative, unhurried, no hype.
+> Design: the dark, restrained site frame; Takes pages use the app's own ivory paper and Newsreader.
+> Never claim: pricing, testimonials, customer numbers, hands-free use, flawless transcription,
+> zero data loss, or Windows/Linux availability. No download link until a signed, notarized release
+> has been verified (lib/site.ts, TAKES.downloadAvailable). Screenshots: synthetic writing only.
 
 Strategy and positioning are owned by the canonical VaultScaler doc set — *Project
 Instructions*, *Handover*, *Hyperlocal Doctrine*, *What VaultScaler Is*, *How We Decide*.

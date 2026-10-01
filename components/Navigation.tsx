@@ -6,10 +6,9 @@ import { trackNavClick } from '@/lib/analytics';
 
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
-  { label: 'The Assessment', href: '/how-it-works/' },
-  { label: 'Services', href: '/services/' },
-  { label: 'Approach', href: '/approach/' },
-  { label: 'Why local', href: '/why-local/' },
+  { label: 'Takes', href: '/takes/' },
+  { label: 'Release notes', href: '/takes/release-notes/' },
+  { label: 'Support', href: '/takes/support/' },
   { label: 'Contact', href: '/contact/' },
 ] as const;
 
@@ -48,13 +47,7 @@ export default function Navigation() {
                   {l.label}
                 </Link>
               ))}
-              <Link
-                href="/contact/"
-                onClick={() => trackNavClick('Talk to us')}
-                className="whitespace-nowrap text-sm text-bone border border-line hover:border-bone px-4 py-1.5 rounded-full transition-colors"
-              >
-                Talk to us
-              </Link>
+
             </div>
 
             <button

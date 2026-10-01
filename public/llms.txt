@@ -1,37 +1,22 @@
 # VaultScaler
 
-> Most security firms will secure your network. VaultScaler finds out how confidential information actually leaves your building — through the machines that watch it, the software your staff use, and your people. Its lead offering is the Exposure Assessment, a fixed-fee written assessment, deliverable today. Where a finding calls for a system, VaultScaler designs and specifies it, running entirely on hardware the client owns, with nothing sent to any external company. Founded in 2025. Based in Las Vegas; available internationally.
+> VaultScaler makes thoughtfully designed software. Its first product is Takes, a writing workspace built around speaking. Based in Las Vegas.
 
-VaultScaler is a private AI consultancy, not a security-systems vendor. The assessment leads; systems work is secondary and follows only where a finding calls for it.
+VaultScaler no longer offers consulting services.
 
-## The problem: three channels
+## Takes
 
-Information leaves a building three ways. **Machines** — cameras, microphones, access control, conferencing hardware, printers — are cloud-connected by default, streaming the inside of a building to a vendor's servers, retained under that vendor's terms. **Tools** — AI services, SaaS platforms, third-party processors — receive confidential material pasted into consumer chat interfaces on personal accounts, with no data processing agreement. **People** are the channel every technical control ignores: most breaches involve a person persuaded to do something rather than a system defeated, and voice cloning has moved that from a specialist capability to a consumer one. Almost nobody assesses all three — cybersecurity firms stop at the building's edge, physical security firms ignore data, and few examine people at all. The exposure usually sits in the interaction between channels.
+Takes is a writing workspace built around speaking. You say a thought and Takes keeps it as a take: the words, recognised on your Mac, and the original recording. You gather the takes you want into a manuscript, arrange them with chapter and section headings, and return to your work where you left it. Each book, essay or article is its own project, with a history of earlier versions.
 
-## Why now
+- Platforms: macOS 13 or later on Apple silicon. Not available for Intel Macs, Windows or Linux.
+- Availability: the first Mac preview is being prepared and is not yet available to download.
+- Privacy: recordings, writing and transcription stay on the Mac. No account, no analytics. The app uses the internet only to check for and download signed updates from vaultscaler.com.
+- Limits: transcription makes mistakes (the recording is kept so you can check); English only; not hands-free.
 
-AI made every channel worse at once: chat tools ingest and retain whatever staff paste into them, cameras are more capable and connected than ever, and social engineering now has voice cloning and synthetic video at scale. The alternative also became viable — capable models now run on hardware the size of a book, and what used to take a team, one engineer can now do for a single building. For the right client a private system is no longer the weaker option — it is the only one whose guarantees are architectural rather than contractual.
+## Pages
 
-## The Exposure Assessment (the lead offering)
-
-A fixed-fee written assessment of how confidential material can leave your premises — deliberately wider than an IT security review, and outside what your IT provider already covers. What happens: a half-day walkthrough, structured interviews with your office administrator, your IT provider, and any staff you nominate, a review of vendor terms and system configurations, and a written report with rated findings and a prioritised remediation list within six working days, plus an hour of debrief. Cost: a fixed fee by practice size — $4,500 under 10 staff, $6,500 for 10 to 24, $9,500 for 25 to 75. What it does not cover: network and endpoint security (that's your IT provider's territory), legal/ethical/regulatory determinations (a question for your counsel), penetration testing or testing of staff, and investigation of individuals. Most of what an assessment finds costs nothing to fix, and VaultScaler has no commercial interest in those items.
-
-## After the assessment
-
-Where a finding calls for a system, VaultScaler designs and specifies it — a local model for drafting and summarisation with nothing leaving the premises, a gateway that routes requests locally by default, on-premise recording with no vendor access. VaultScaler designs and specifies; licensed Nevada contractors carry out any physical installation and invoice the client directly — VaultScaler does not sell or supply hardware. This is quoted separately, and the client is under no obligation to proceed. An ongoing advisory retainer is also available, from $1,200 a month, for practices that want the assessment kept current rather than repeated. Nothing leaves the building. Not as a policy — as an architecture.
-
-## Who it's for
-
-Not a single category. The buyer is defined by a reason for discretion plus the means to act on it: professional practices (law firms, medical and dental practices, accounting firms, and anyone whose duty to protect client material is a professional one); family offices and wealth management (where client information is the relationship, and a disclosure is not recoverable); private wealth (people whose visibility or resources make ordinary security an active liability); and discreet commercial spaces (private clubs, member venues, businesses whose clientele expect anonymity).
-
-## Why local
-
-Their privacy is a policy. Ours is an architecture. A cloud vendor promises not to misuse your data — that promise survives exactly as long as their management, finances, jurisdiction, and security do. VaultScaler's systems have no uplink, no vendor account, no server, and no remote access, including for VaultScaler. The checkable consequences: there is no copy anywhere else, so there is nothing for anyone to breach, subpoena, or browse; if someone wants what a system saw, they must come to the owner; support is delivered in person, because there is no other way in. For Europe specifically, this is a compliance argument, not a values one: no third-party processor in the chain, no cross-border transfer of personal data, no vendor-written retention terms, and biometric processing that can be demonstrated, room by room, to be either enabled by the owner's choice or absent entirely.
-
-## What is not claimed
-
-No client deployments yet beyond the founder's own — these are first design partners, not "clients" in the plural. No international deployments yet, though the system is available internationally. No monitoring service, no alarm dispatch, no law-enforcement integration. VaultScaler does not perform network and endpoint security, legal/ethical/regulatory determinations, penetration testing, staff testing, or investigation of individuals. VaultScaler does not sell, supply, or physically install hardware; licensed Nevada contractors carry out any physical installation and invoice the client directly.
-
-## Contact
-
-Email ian@vaultscaler.com. Website https://vaultscaler.com.
+- https://vaultscaler.com/takes/ — Takes
+- https://vaultscaler.com/takes/release-notes/ — release notes
+- https://vaultscaler.com/takes/support/ — support
+- https://vaultscaler.com/takes/privacy/ — Takes privacy
+- https://vaultscaler.com/contact/ — contact: ian@vaultscaler.com

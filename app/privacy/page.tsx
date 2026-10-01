@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { SITE } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Privacy | VaultScaler',
   description:
-    "How VaultScaler handles data on this website — and how our security systems handle yours: on-premise, owned by you, nothing leaving your building.",
+    "How vaultscaler.com and VaultScaler handle data: no cookies, no analytics, request logging off. Takes has its own privacy page.",
   alternates: { canonical: `${SITE.url}/privacy/` },
   robots: { index: true, follow: true },
 };
@@ -15,63 +16,39 @@ export default function PrivacyPage() {
       <div className="max-w-3xl mx-auto px-5 sm:px-8">
         <p className="eyebrow">Privacy</p>
         <h1 className="mt-6 font-display font-light text-4xl md:text-5xl text-bone">Privacy</h1>
-        <p className="mt-3 text-sm text-dim">Last updated: 14 July 2026</p>
+        <p className="mt-3 text-sm text-muted">Last updated: draft for review, September 2026</p>
 
         <div className="mt-12 space-y-10">
           <div>
-            <h2 className="font-display text-xl text-bone mb-3">The systems we design</h2>
-            <p className="text-muted leading-relaxed">
-              This matters most, so it comes first. A VaultScaler security system runs entirely on
-              hardware you own, in your building. There is no cloud, no account, and nothing phoned
-              home. Footage and events stay on the premises, under your control. Faces can be
-              recognised or obscured before anything is ever stored — that is your decision, and we
-              configure the system to the law where you are. We do not receive, hold, or have any
-              way to browse your footage.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="font-display text-xl text-bone mb-3">Advisory and discovery engagements</h2>
-            <p className="text-muted leading-relaxed">
-              Material shared with us for an assessment, an advisory engagement, or a
-              bespoke build is handled the same way: reviewed on hardware we control, never
-              uploaded to a third-party AI service, and returned or deleted once the
-              engagement ends.
-            </p>
-          </div>
-
-          <div>
             <h2 className="font-display text-xl text-bone mb-3">This website</h2>
             <p className="text-muted leading-relaxed">
-              When you contact us, we collect only what you submit: your name, email, the kind of
-              space you&apos;re protecting, and your message. We don&apos;t collect payment
-              information or browsing history.
+              vaultscaler.com sets no cookies and loads no analytics or tracking scripts. It is served by Amazon Web
+              Services (S3 and CloudFront), with request logging turned off. If that ever changes, this notice will say
+              so first.
             </p>
           </div>
 
           <div>
-            <h2 className="font-display text-xl text-bone mb-3">How enquiries are handled</h2>
+            <h2 className="font-display text-xl text-bone mb-3">Takes</h2>
             <p className="text-muted leading-relaxed">
-              Enquiries come to us by email, directly — no third-party form service sits in
-              between. We use what you send only to reply to you and to talk with you about
-              your space. We will never sell, rent, or share your information for marketing.
+              Takes, our Mac app, records and transcribes on your Mac and has no account or analytics. It uses the
+              internet only to check for and download updates. The details are on the{' '}
+              <Link href="/takes/privacy/" className="text-bone underline underline-offset-4 hover:text-muted">Takes privacy page</Link>.
             </p>
           </div>
 
           <div>
-            <h2 className="font-display text-xl text-bone mb-3">Analytics</h2>
+            <h2 className="font-display text-xl text-bone mb-3">Email</h2>
             <p className="text-muted leading-relaxed">
-              We use Umami, a privacy-focused analytics tool that uses no cookies, collects no
-              personal data, and does not track visitors across sites — only aggregate figures like
-              page views and country. We respect your browser&apos;s Do Not Track setting.
+              If you write to us, we receive what you send and use it only to reply. We never sell, rent or share it.
             </p>
           </div>
 
           <div>
             <h2 className="font-display text-xl text-bone mb-3">Your rights &amp; contact</h2>
             <p className="text-muted leading-relaxed">
-              Ask us to delete your data or stop contacting you at any time, and with any questions
-              about this policy, at{' '}
+              Ask us to delete your messages or stop contacting you at any time, and send any questions about this
+              notice, to{' '}
               <a href={`mailto:${SITE.email}`} className="text-bone underline underline-offset-4 hover:text-muted">{SITE.email}</a>.
             </p>
           </div>
