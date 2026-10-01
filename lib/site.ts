@@ -9,12 +9,11 @@ export const SITE = {
   location: "Las Vegas",
   tagline: "Thoughtfully designed software, made in Las Vegas.",
   description:
-    "VaultScaler makes thoughtfully designed software. Its first product is Takes, a writing workspace for the Mac built around speaking: say a thought, keep every take, arrange them into a manuscript, and return to your work. Transcription happens on your Mac.",
+    "VaultScaler makes thoughtfully designed software. Its first product is Takes, a writing workspace built around speaking: say a thought, keep every take, arrange them into a manuscript, and return to your work. Transcription happens on your Mac.",
   keywords: [
     "VaultScaler",
     "Takes",
-    "Takes for Mac",
-    "writing app for Mac",
+    "writing workspace",
     "dictation writing workspace",
     "speak to write",
     "local transcription",

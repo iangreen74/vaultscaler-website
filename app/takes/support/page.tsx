@@ -6,7 +6,7 @@ import { TakesPage, TakesSubnav } from "@/components/TakesChrome";
 
 export const metadata: Metadata = {
   title: "Takes — support",
-  description: "Help with Takes for Mac: microphone permission, where your writing is kept, backups, recognition mistakes, updates and uninstalling.",
+  description: "Help with Takes: microphone permission, where your writing is kept, backups, recognition mistakes, updates and uninstalling.",
   alternates: { canonical: `${SITE.url}/takes/support/` },
 };
 

@@ -7,7 +7,7 @@ import { SITE, TAKES } from "@/lib/site";
 import { TakesPage, TakesSubnav, Shot, Availability } from "@/components/TakesChrome";
 
 const DESC =
-  "Takes is a writing workspace for the Mac built around speaking. Say a thought and keep it as a take — the words and the recording. Arrange takes into a manuscript, and come back to your work where you left it. Transcription happens on your Mac.";
+  "Takes is a writing workspace built around speaking. Say a thought and keep it as a take — the words and the recording. Arrange takes into a manuscript, and come back to your work where you left it. Transcription happens on your Mac.";
 
 export const metadata: Metadata = {
   title: "Takes — a writing workspace built around speaking",
@@ -65,7 +65,7 @@ export default function TakesProductPage() {
       <TakesSubnav current="/takes/" />
       <div className="max-w-5xl mx-auto px-5 sm:px-8">
         <header className="pt-14 sm:pt-20 pb-6 max-w-3xl">
-          <p className="text-[15px] tracking-[0.18em] uppercase text-paper-soft">Takes · for Mac</p>
+          <p className="text-[15px] tracking-[0.18em] uppercase text-paper-soft">Takes</p>
           <h1 className="mt-5 text-[2.4rem] sm:text-[3.4rem] leading-[1.08] font-normal tracking-[-0.01em]">
             {TAKES.headline}
           </h1>

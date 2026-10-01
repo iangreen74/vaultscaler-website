@@ -17,7 +17,7 @@ export default function Retired() {
         <h1 className="mt-6 font-display font-light text-4xl text-bone">VaultScaler no longer offers consulting services.</h1>
         <p className="mt-6 text-muted leading-relaxed">
           VaultScaler now makes software. Its first product is <Link href="/takes/" className="text-bone underline underline-offset-4 hover:text-muted">Takes</Link>,
-          a writing workspace for the Mac built around speaking. For anything else, write to{" "}
+          a writing workspace built around speaking. For anything else, write to{" "}
           <a href={`mailto:${SITE.email}`} className="text-bone underline underline-offset-4 hover:text-muted">{SITE.email}</a>.
         </p>
       </div>

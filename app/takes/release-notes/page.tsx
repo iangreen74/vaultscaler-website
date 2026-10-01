@@ -7,7 +7,7 @@ import { TakesPage, TakesSubnav } from "@/components/TakesChrome";
 
 export const metadata: Metadata = {
   title: "Takes — release notes",
-  description: "What is in each release of Takes for Mac, and what is known not to work yet.",
+  description: "What is in each release of Takes, what it runs on, and what is known not to work yet.",
   alternates: { canonical: `${SITE.url}/takes/release-notes/` },
 };
 

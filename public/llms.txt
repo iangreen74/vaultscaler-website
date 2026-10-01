@@ -1,6 +1,6 @@
 # VaultScaler
 
-> VaultScaler makes thoughtfully designed software. Its first product is Takes, a writing workspace for the Mac built around speaking. Based in Las Vegas.
+> VaultScaler makes thoughtfully designed software. Its first product is Takes, a writing workspace built around speaking. Based in Las Vegas.
 
 VaultScaler no longer offers consulting services.
 

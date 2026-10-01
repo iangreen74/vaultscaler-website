@@ -32,8 +32,7 @@ export default function Home() {
             Thoughtfully designed software.
           </h1>
           <p className="mt-6 text-lg md:text-xl text-muted max-w-2xl leading-relaxed">
-            VaultScaler makes a small number of carefully made tools. The first is Takes, a writing workspace for the Mac built
-            around speaking.
+            VaultScaler makes a small number of carefully made tools. The first is Takes, a writing workspace built around speaking.
           </p>
         </div>
       </section>
@@ -42,7 +41,7 @@ export default function Home() {
         <div className="rounded-2xl bg-paper text-paper-ink font-takes overflow-hidden">
           <div className="grid md:grid-cols-[1fr_1.35fr] gap-0">
             <div className="p-8 md:p-12 flex flex-col">
-              <p className="text-[14px] tracking-[0.18em] uppercase text-paper-soft">Takes · for Mac</p>
+              <p className="text-[14px] tracking-[0.18em] uppercase text-paper-soft">Takes</p>
               <h2 id="takes" className="mt-4 text-[2rem] md:text-[2.4rem] leading-[1.12] font-normal">{TAKES.headline}</h2>
               <p className="mt-5 text-[1.15rem] leading-relaxed text-paper-soft">
                 Speak a thought and keep it as a take — the words and the recording. Arrange your takes into a manuscript, and return

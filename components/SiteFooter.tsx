@@ -10,8 +10,8 @@ export default function SiteFooter() {
               VaultScaler
             </span>
             <p className="mt-4 text-sm leading-relaxed text-muted">
-              Thoughtfully designed software. Makers of Takes, a writing workspace for the Mac
-              built around speaking. Based in Las Vegas.
+              Thoughtfully designed software. Makers of Takes, a writing workspace built around
+              speaking. Based in Las Vegas.
             </p>
           </div>
 
